@@ -1,6 +1,6 @@
 [submodule "modules/boost"]
 	path = modules/boost
-	url = git@github.com:haldayne/boost.git
+	url = https://github.com/haldayne/boost.git
 [submodule "modules/customs"]
 	path = modules/customs
-	url = git@github.com:haldayne/customs.git
+	url = https://github.com/haldayne/customs.git
