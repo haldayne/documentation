@@ -1,0 +1,809 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>API Documentation » \Haldayne\Boost\Map</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">API Documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Haldayne.html"><i class="icon-th"></i> Haldayne</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">85</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div xmlns:php="http://php.net/xsl" class="btn-toolbar">
+<div class="btn-group visibility" data-toggle="buttons-checkbox">
+<button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button>
+</div>
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+</div>
+<ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list">
+<li class="nav-header">
+<i title="Methods" class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct() :: Create a new map."><span class="description">Create a new map.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_contains" title="contains() :: Determine if a key exists the map."><span class="description">Determine if a key exists the map.</span><pre>contains()</pre></a></li>
+<li class="method public "><a href="#method_count" title="count() :: Count the number of items in the map."><span class="description">Count the number of items in the map.</span><pre>count()</pre></a></li>
+<li class="method public "><a href="#method_diff" title="diff() :: Return a new map containing those keys and values that are not present in
+the given collection."><span class="description">Return a new map containing those keys and values that are not present in
+the given collection.</span><pre>diff()</pre></a></li>
+<li class="method public "><a href="#method_find" title="find() :: Return a new map containing only members of this map that pass the callable."><span class="description">Return a new map containing only members of this map that pass the callable.</span><pre>find()</pre></a></li>
+<li class="method public "><a href="#method_first" title="first() :: Return a new map containing the first N elements matching the callable."><span class="description">Return a new map containing the first N elements matching the callable.</span><pre>first()</pre></a></li>
+<li class="method public "><a href="#method_forget" title="forget() :: Remove a key and its corresponding value from the map."><span class="description">Remove a key and its corresponding value from the map.</span><pre>forget()</pre></a></li>
+<li class="method public "><a href="#method_get" title="get() :: Get the value corresponding to the given key."><span class="description">Get the value corresponding to the given key.</span><pre>get()</pre></a></li>
+<li class="method public "><a href="#method_getIterator" title="getIterator() :: Get an iterator for a copy of the map."><span class="description">Get an iterator for a copy of the map.</span><pre>getIterator()</pre></a></li>
+<li class="method public "><a href="#method_intersect" title="intersect() :: Return a new map containing those keys and values that are present in
+the given collection."><span class="description">Return a new map containing those keys and values that are present in
+the given collection.</span><pre>intersect()</pre></a></li>
+<li class="method public "><a href="#method_isEmpty" title="isEmpty() :: Determine if any key and their values have been set into the map."><span class="description">Determine if any key and their values have been set into the map.</span><pre>isEmpty()</pre></a></li>
+<li class="method public "><a href="#method_last" title="last() :: Return a new map containing the last N elements matching the callable."><span class="description">Return a new map containing the last N elements matching the callable.</span><pre>last()</pre></a></li>
+<li class="method public "><a href="#method_offsetExists" title="offsetExists() :: Determine if a value exists at a given key."><span class="description">Determine if a value exists at a given key.</span><pre>offsetExists()</pre></a></li>
+<li class="method public "><a href="#method_offsetGet" title="offsetGet() :: Get a value at a given key."><span class="description">Get a value at a given key.</span><pre>offsetGet()</pre></a></li>
+<li class="method public "><a href="#method_offsetSet" title="offsetSet() :: Set the value at a given key."><span class="description">Set the value at a given key.</span><pre>offsetSet()</pre></a></li>
+<li class="method public "><a href="#method_offsetUnset" title="offsetUnset() :: Unset the value at a given key."><span class="description">Unset the value at a given key.</span><pre>offsetUnset()</pre></a></li>
+<li class="method public "><a href="#method_partition" title="partition() :: Returns a new map, where elements from this map have been placed into
+new map elements. The return value of the code determines the key for
+each new bucket."><span class="description">Returns a new map, where elements from this map have been placed into
+new map elements. The return value of the code determines the key for
+each new bucket.</span><pre>partition()</pre></a></li>
+<li class="method public "><a href="#method_set" title="set() :: Set a key and its corresponding value into the map."><span class="description">Set a key and its corresponding value into the map.</span><pre>set()</pre></a></li>
+<li class="method public "><a href="#method_toArray" title="toArray() :: Copy this map into an array, recursing as necessary to convert contained
+collections into arrays."><span class="description">Copy this map into an array, recursing as necessary to convert contained
+collections into arrays.</span><pre>toArray()</pre></a></li>
+<li class="method public "><a href="#method_toJson" title="toJson() :: Return a JSON representation of the object."><span class="description">Return a JSON representation of the object.</span><pre>toJson()</pre></a></li>
+<li class="method public "><a href="#method_walk" title="walk() :: Execute the given code over each element of the map. The code receives
+the value and then the key as formal parameters."><span class="description">Execute the given code over each element of the map. The code receives
+the value and then the key as formal parameters.</span><pre>walk()</pre></a></li>
+<li class="method public "><a href="#method_walk_backward" title="walk_backward() :: Like `walk`, except walk from the end toward the front."><span class="description">Like `walk`, except walk from the end toward the front.</span><pre>walk_backward()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="method private "><a href="#method_call" title="call() :: Calls the given code with the given value and key as first &amp; second argument."><span class="description">Calls the given code with the given value and key as first &amp; second argument.</span><pre>call()</pre></a></li>
+<li class="method private "><a href="#method_code_to_callable" title="code_to_callable() :: Return a callable from the given code, if possible."><span class="description">Return a callable from the given code, if possible.</span><pre>code_to_callable()</pre></a></li>
+<li class="method private "><a href="#method_collection_to_array" title="collection_to_array() :: Give me a native PHP array, regardless of what kind of collection-like
+structure is given."><span class="description">Give me a native PHP array, regardless of what kind of collection-like
+structure is given.</span><pre>collection_to_array()</pre></a></li>
+<li class="method private "><a href="#method_grep" title="grep() :: Finds elements for which the given code passes, optionally limited to a
+maximum count."><span class="description">Finds elements for which the given code passes, optionally limited to a
+maximum count.</span><pre>grep()</pre></a></li>
+<li class="method private "><a href="#method_hash_to_key" title="hash_to_key() :: Lookup the key for the given hash."><span class="description">Lookup the key for the given hash.</span><pre>hash_to_key()</pre></a></li>
+<li class="method private "><a href="#method_key_to_hash" title="key_to_hash() :: Lookup the hash for the given key. If a hash does not yet exist, one is
+created."><span class="description">Lookup the hash for the given key. If a hash does not yet exist, one is
+created.</span><pre>key_to_hash()</pre></a></li>
+<li class="method private "><a href="#method_passes" title='passes() :: Decide if the given value is considered "passing" or "failing".'><span class="description">Decide if the given value is considered "passing" or "failing".</span><pre>passes()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i title="Properties" class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property_array" title="$array() :: The internal array representation of the map."><span class="description"></span><pre>$array</pre></a></li>
+<li class="property private "><a href="#property_guard" title="$guard() :: The guard code protecting sets."><span class="description"></span><pre>$guard</pre></a></li>
+<li class="property private "><a href="#property_map_code_to_callable" title="$map_code_to_callable() :: Track string code we've made into callables."><span class="description"></span><pre>$map_code_to_callable</pre></a></li>
+<li class="property private "><a href="#property_map_key_to_hash" title="$map_key_to_hash() :: Track hashes we've created for non-string keys."><span class="description"></span><pre>$map_key_to_hash</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i title="Constants" class="icon-custom icon-constant"></i> Constants
+                    <ul>
+<li class="constant  "><a href="#constant_LOOSE" title="LOOSE() :: Should the comparison be made loosely?"><span class="description">Should the comparison be made loosely?</span><pre>LOOSE</pre></a></li>
+<li class="constant  "><a href="#constant_STRICT" title="STRICT() :: Should the comparison be made strictly?"><span class="description">Should the comparison be made strictly?</span><pre>STRICT</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a xmlns:php="http://php.net/xsl" id="\Haldayne\Boost\Map"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
+<li>
+<a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Haldayne.html">Haldayne</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Haldayne.Boost.html">Boost</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Haldayne.Boost.Map.html">Map</a>
+</li>
+</ul>
+<div xmlns:php="http://php.net/xsl" class="element class">
+<p class="short_description">An improvement on PHP associative arrays.</p>
+<div class="details">
+<div class="long_description"><p>Sports a fluent interface accepting callables to drive array operations,
+similar in spirit to jQuery. Supports keys of any type: scalars, even
+arrays and objects!  Used in place of <code>array ()</code> and <code>[]</code>, your code will
+be easier to write <em>and</em> read.</p>
+<p>In the API, a formal variable named <code>$collection</code> must be one of:</p>
+<ul>
+<li>Haldayne\Boost\Map</li>
+<li>Haldayne\Boost\Contract\Arrayable</li>
+<li>Haldayne\Boost\Contract\Jsonable</li>
+<li>\Traversable</li>
+<li>object</li>
+<li>array</li>
+</ul>
+<p>In the API, a formal variable named <code>$code</code> must be either a callable or
+a string representing actual PHP code. When giving a string, be mindful:
+user-supplied string code is a security risk, and string code you write is
+checked only at run-time. Also, be mindful that these strings can contain
+<code>$v</code> and <code>$k</code>, which represent the value and key being passed in.</p>
+<p>In the API, a formal variable named <code>$key</code> may be of <em>any</em> type.</p>
+<p>As much as possible, method names were chosen to reflect synonymous usage in
+the PHP engine itself. When not possible or relevant, the names may reflect
+usage from Laravel.</p></div>
+<table class="table table-bordered"><tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr></table>
+<h3>
+<i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="public">
+<h2>Create a new map.</h2>
+<pre>__construct(\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array $collection<code> = null</code>, callable $guard<code> = null</code>) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Initialize the map with the given collection, if any. Accepts any kind
+of collection: array, object, Traversable, another Map, etc. Optionally,
+wrap every key,value sets into the map with the given guard code: if the
+guard code fails, the set will throw an exception.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$collection</h4>
+<code>\Haldayne\Boost\Map</code><code>\Haldayne\Boost\Contract\Arrayable</code><code>\Haldayne\Boost\Contract\Jsonable</code><code>\Haldayne\Boost\Traversable</code><code>object</code><code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$guard</h4>
+<code>callable</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\InvalidArgumentException</code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_contains"></a><div class="element clickable method public method_contains " data-toggle="collapse" data-target=".method_contains .collapse" title="public">
+<h2>Determine if a key exists the map.</h2>
+<pre>contains(mixed $key) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This is the object method equivalent of the magic isset($map[$key]);</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_count"></a><div class="element clickable method public method_count " data-toggle="collapse" data-target=".method_count .collapse" title="public">
+<h2>Count the number of items in the map.</h2>
+<pre>count() : integer</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>integer</code></div>
+</div></div>
+</div>
+<a id="method_diff"></a><div class="element clickable method public method_diff " data-toggle="collapse" data-target=".method_diff .collapse" title="public">
+<h2>Return a new map containing those keys and values that are not present in
+the given collection.</h2>
+<pre>diff(\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array $collection, \Haldayne\Boost\enum $comparison<code> = \Haldayne\Boost\Map::LOOSE</code>) : \Haldayne\Boost\Map</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If comparison is loose, then only those elements whose values match will
+be removed.  Otherwise, comparison is strict, and elements whose keys
+and values match will be removed.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$collection</h4>
+<code>\Haldayne\Boost\Map</code><code>\Haldayne\Boost\Contract\Arrayable</code><code>\Haldayne\Boost\Contract\Jsonable</code><code>\Haldayne\Boost\Traversable</code><code>object</code><code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$comparison</h4>
+<code>\Haldayne\Boost\enum</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
+</div></div>
+</div>
+<a id="method_find"></a><div class="element clickable method public method_find " data-toggle="collapse" data-target=".method_find .collapse" title="public">
+<h2>Return a new map containing only members of this map that pass the callable.</h2>
+<pre>find(callable|string $code) : \Haldayne\Boost\Map</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>An all-purpose &quot;grep&quot;. You give a function deciding whether an element is
+in or out, and this returns a new map of those that are in. Ex, find the
+odd numbers:</p>
+<pre><code>$nums = new Map(range(0, 3));
+$odds = $m-&gt;find('return 1 == ($v % 2);');</code></pre></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$code</h4>
+<code>callable</code><code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
+</div></div>
+</div>
+<a id="method_first"></a><div class="element clickable method public method_first " data-toggle="collapse" data-target=".method_first .collapse" title="public">
+<h2>Return a new map containing the first N elements matching the callable.</h2>
+<pre>first(callable|string $code, integer $n<code> = 1</code>) : \Haldayne\Boost\Map</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Like <code>grep</code>, but stop after finding N elements.</p>
+<pre><code>$nums = new Map(range(0, 3));
+$odds = $m-&gt;all('return 1 == ($v % 2);');</code></pre></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$code</h4>
+<code>callable</code><code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$n</h4>
+<code>integer</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
+</div></div>
+</div>
+<a id="method_forget"></a><div class="element clickable method public method_forget " data-toggle="collapse" data-target=".method_forget .collapse" title="public">
+<h2>Remove a key and its corresponding value from the map.</h2>
+<pre>forget(mixed $key) : \Haldayne\Boost\Map</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This is the object method equivalent of the magic unset($map[$key]);</p></div>
+<table class="table table-bordered"><tr>
+<th>fluent</th>
+<td>This method is part of a fluent interface and will return the same instance</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
+</div></div>
+</div>
+<a id="method_get"></a><div class="element clickable method public method_get " data-toggle="collapse" data-target=".method_get .collapse" title="public">
+<h2>Get the value corresponding to the given key.</h2>
+<pre>get(mixed $key, mixed $default<code> = null</code>) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the key does not exist in the map, return the default.</p>
+<p>This is the object method equivalent of the magic $map[$key].</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_getIterator"></a><div class="element clickable method public method_getIterator " data-toggle="collapse" data-target=".method_getIterator .collapse" title="public">
+<h2>Get an iterator for a copy of the map.</h2>
+<pre>getIterator() : \ArrayIterator</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\ArrayIterator</code></div>
+</div></div>
+</div>
+<a id="method_intersect"></a><div class="element clickable method public method_intersect " data-toggle="collapse" data-target=".method_intersect .collapse" title="public">
+<h2>Return a new map containing those keys and values that are present in
+the given collection.</h2>
+<pre>intersect(\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array $collection, \Haldayne\Boost\enum $comparison<code> = \Haldayne\Boost\Map::LOOSE</code>) : \Haldayne\Boost\Map</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If comparison is loose, then only those elements whose value match will
+be included.  Otherise, comparison is strict, and elements whose keys &amp;
+values match will be included.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$collection</h4>
+<code>\Haldayne\Boost\Map</code><code>\Haldayne\Boost\Contract\Arrayable</code><code>\Haldayne\Boost\Contract\Jsonable</code><code>\Haldayne\Boost\Traversable</code><code>object</code><code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$comparison</h4>
+<code>\Haldayne\Boost\enum</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
+</div></div>
+</div>
+<a id="method_isEmpty"></a><div class="element clickable method public method_isEmpty " data-toggle="collapse" data-target=".method_isEmpty .collapse" title="public">
+<h2>Determine if any key and their values have been set into the map.</h2>
+<pre>isEmpty() : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_last"></a><div class="element clickable method public method_last " data-toggle="collapse" data-target=".method_last .collapse" title="public">
+<h2>Return a new map containing the last N elements matching the callable.</h2>
+<pre>last(callable|string $code, integer $n<code> = 1</code>) : \Haldayne\Boost\Map</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Like <code>grep</code>, but stop after finding N elements.</p>
+<pre><code>$nums = new Map(range(0, 3));
+$odds = $m-&gt;all('return 1 == ($v % 2);');</code></pre></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$code</h4>
+<code>callable</code><code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$n</h4>
+<code>integer</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
+</div></div>
+</div>
+<a id="method_offsetExists"></a><div class="element clickable method public method_offsetExists " data-toggle="collapse" data-target=".method_offsetExists .collapse" title="public">
+<h2>Determine if a value exists at a given key.</h2>
+<pre>offsetExists(mixed $key) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_offsetGet"></a><div class="element clickable method public method_offsetGet " data-toggle="collapse" data-target=".method_offsetGet .collapse" title="public">
+<h2>Get a value at a given key.</h2>
+<pre>offsetGet(mixed $key) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_offsetSet"></a><div class="element clickable method public method_offsetSet " data-toggle="collapse" data-target=".method_offsetSet .collapse" title="public">
+<h2>Set the value at a given key.</h2>
+<pre>offsetSet(mixed $key, mixed $value) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If key is null, the value is appended to the array using numeric indexes.
+If the map was constructed with a set guard, then pass the value to the
+guard. If the guard fails, the set throws an exception.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\UnexpectedValueException</code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_offsetUnset"></a><div class="element clickable method public method_offsetUnset " data-toggle="collapse" data-target=".method_offsetUnset .collapse" title="public">
+<h2>Unset the value at a given key.</h2>
+<pre>offsetUnset(mixed $key) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>mixed</code>
+</div>
+</div></div>
+</div>
+<a id="method_partition"></a><div class="element clickable method public method_partition " data-toggle="collapse" data-target=".method_partition .collapse" title="public">
+<h2>Returns a new map, where elements from this map have been placed into
+new map elements. The return value of the code determines the key for
+each new bucket.</h2>
+<pre>partition(callable|string $code) : \Haldayne\Boost\MapOfMaps</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The code is called for each item in the map. The code receives the value
+and key, respectively.  The code may return a scalar key and that scalar
+becomes the key for a new map, into which that element is placed. If the
+code returns a non-scalar, it explodes.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$code</h4>
+<code>callable</code><code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\UnexpectedValueException</code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Haldayne\Boost\MapOfMaps</code></div>
+</div></div>
+</div>
+<a id="method_set"></a><div class="element clickable method public method_set " data-toggle="collapse" data-target=".method_set .collapse" title="public">
+<h2>Set a key and its corresponding value into the map.</h2>
+<pre>set(mixed $key, mixed $value) : \Haldayne\Boost\Map</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This is the object method equivalent of the magic $map[$key] = 'foo'.</p></div>
+<table class="table table-bordered"><tr>
+<th>fluent</th>
+<td>This method is part of a fluent interface and will return the same instance</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
+</div></div>
+</div>
+<a id="method_toArray"></a><div class="element clickable method public method_toArray " data-toggle="collapse" data-target=".method_toArray .collapse" title="public">
+<h2>Copy this map into an array, recursing as necessary to convert contained
+collections into arrays.</h2>
+<pre>toArray() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Haldayne\Boost\Contract\Arrayable::toArray()</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_toJson"></a><div class="element clickable method public method_toJson " data-toggle="collapse" data-target=".method_toJson .collapse" title="public">
+<h2>Return a JSON representation of the object.</h2>
+<pre>toJson($options<code> = 0</code>) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Haldayne\Boost\Contract\Jsonable::toJson()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_walk"></a><div class="element clickable method public method_walk " data-toggle="collapse" data-target=".method_walk .collapse" title="public">
+<h2>Execute the given code over each element of the map. The code receives
+the value and then the key as formal parameters.</h2>
+<pre>walk(callable|string $code) : \Haldayne\Boost\Map</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The items are walked in the order they exist in the map. If the code
+returns boolean false, then the iteration halts. Values can be modified
+from within the callback, but not keys.</p>
+<p>Example:</p>
+<pre><code>$map-&gt;each(function (&amp;$value, $key) { $value++; return true; })-&gt;sum();
+$map-&gt;each('$v++; return true;')-&gt;sum();</code></pre></div>
+<table class="table table-bordered"><tr>
+<th>fluent</th>
+<td>This method is part of a fluent interface and will return the same instance</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$code</h4>
+<code>callable</code><code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
+</div></div>
+</div>
+<a id="method_walk_backward"></a><div class="element clickable method public method_walk_backward " data-toggle="collapse" data-target=".method_walk_backward .collapse" title="public">
+<h2>Like `walk`, except walk from the end toward the front.</h2>
+<pre>walk_backward(callable|string $code) : \Haldayne\Boost\Map</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>fluent</th>
+<td>This method is part of a fluent interface and will return the same instance</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$code</h4>
+<code>callable</code><code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
+</div></div>
+</div>
+<a id="method_call"></a><div class="element clickable method private method_call " data-toggle="collapse" data-target=".method_call .collapse" title="private">
+<h2>Calls the given code with the given value and key as first &amp; second argument.</h2>
+<pre>call(callable|string $code, mixed $value, string $key) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$code</h4>
+<code>callable</code><code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\InvalidArgumentException</code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_code_to_callable"></a><div class="element clickable method private method_code_to_callable " data-toggle="collapse" data-target=".method_code_to_callable .collapse" title="private">
+<h2>Return a callable from the given code, if possible.</h2>
+<pre>code_to_callable(callable|string $code) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>When you give a callable, this returns immediately. When you give a
+string, caches and returns an anonymous function created from that
+string code. Otherwise, it explodes.</p>
+<p>If given a string, then the value is passed in by-reference, allowing
+that code to update the value.  Updating keys would induce undefined
+behavior on iterations, so we don't allow that.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$code</h4>
+<code>callable</code><code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\InvalidArgumentException</code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_collection_to_array"></a><div class="element clickable method private method_collection_to_array " data-toggle="collapse" data-target=".method_collection_to_array .collapse" title="private">
+<h2>Give me a native PHP array, regardless of what kind of collection-like
+structure is given.</h2>
+<pre>collection_to_array($collection) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$collection</h4></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\InvalidArgumentException</code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_grep"></a><div class="element clickable method private method_grep " data-toggle="collapse" data-target=".method_grep .collapse" title="private">
+<h2>Finds elements for which the given code passes, optionally limited to a
+maximum count.</h2>
+<pre>grep(callable|string $code, integer|null $limit<code> = null</code>) : \Haldayne\Boost\Map</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If limit is null, no limit on number of matches. If limit is positive,
+return that many from the front of the array. If limit is negative,
+return that many from the end of the array.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$code</h4>
+<code>callable</code><code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$limit</h4>
+<code>integer</code><code>null</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
+</div></div>
+</div>
+<a id="method_hash_to_key"></a><div class="element clickable method private method_hash_to_key " data-toggle="collapse" data-target=".method_hash_to_key .collapse" title="private">
+<h2>Lookup the key for the given hash.</h2>
+<pre>hash_to_key(string $hash) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$hash</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_key_to_hash"></a><div class="element clickable method private method_key_to_hash " data-toggle="collapse" data-target=".method_key_to_hash .collapse" title="private">
+<h2>Lookup the hash for the given key. If a hash does not yet exist, one is
+created.</h2>
+<pre>key_to_hash(mixed $key) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_passes"></a><div class="element clickable method private method_passes " data-toggle="collapse" data-target=".method_passes .collapse" title="private">
+<h2>Decide if the given value is considered "passing" or "failing".</h2>
+<pre>passes(mixed $value) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<h3>
+<i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_array"> </a><div class="element clickable property private property_array" data-toggle="collapse" data-target=".property_array .collapse" title="private">
+<h2>The internal array representation of the map.</h2>
+<pre>$array : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_guard"> </a><div class="element clickable property private property_guard" data-toggle="collapse" data-target=".property_guard .collapse" title="private">
+<h2>The guard code protecting sets.</h2>
+<pre>$guard : callable | string | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>null</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_map_code_to_callable"> </a><div class="element clickable property private property_map_code_to_callable" data-toggle="collapse" data-target=".property_map_code_to_callable .collapse" title="private">
+<h2>Track string code we've made into callables.</h2>
+<pre>$map_code_to_callable : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_map_key_to_hash"> </a><div class="element clickable property private property_map_key_to_hash" data-toggle="collapse" data-target=".property_map_key_to_hash .collapse" title="private">
+<h2>Track hashes we've created for non-string keys.</h2>
+<pre>$map_key_to_hash : array</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>array()</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i title="Constants" class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_LOOSE"> </a><div class="element clickable constant  constant_LOOSE" data-toggle="collapse" data-target=".constant_LOOSE .collapse" title="">
+<h2>Should the comparison be made loosely?</h2>
+<pre>LOOSE = true </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="%5CHaldayne%5CBoost%5CMap::diff"></a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="%5CHaldayne%5CBoost%5CMap::intersect"></a></td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="constant_STRICT"> </a><div class="element clickable constant  constant_STRICT" data-toggle="collapse" data-target=".constant_STRICT .collapse" title="">
+<h2>Should the comparison be made strictly?</h2>
+<pre>STRICT = false </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="%5CHaldayne%5CBoost%5CMap::diff"></a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="%5CHaldayne%5CBoost%5CMap::intersect"></a></td>
+</tr>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
+            generated on 2015-10-08T16:17:47-04:00.<br></footer></div>
+</div>
+</body>
+</html>
