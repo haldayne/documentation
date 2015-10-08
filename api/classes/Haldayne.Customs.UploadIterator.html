@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">85</span></a></li>
+                <span class="label label-info">79</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -63,8 +63,7 @@
 <li class="nav-header">
 <i title="Methods" class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public "><a href="#method___construct" title="__construct() :: "><span class="description">__construct()
-        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method___construct" title="__construct() :: Create a new UploadIterator."><span class="description">Create a new UploadIterator.</span><pre>__construct()</pre></a></li>
 <li class="method public "><a href="#method_count" title="count() :: "><span class="description">count()
         </span><pre>count()</pre></a></li>
 <li class="method public "><a href="#method_current" title="current() :: "><span class="description">current()
@@ -73,10 +72,8 @@
         </span><pre>key()</pre></a></li>
 <li class="method public "><a href="#method_next" title="next() :: "><span class="description">next()
         </span><pre>next()</pre></a></li>
-<li class="method public "><a href="#method_offsetExists" title="offsetExists() :: "><span class="description">offsetExists()
-        </span><pre>offsetExists()</pre></a></li>
-<li class="method public "><a href="#method_offsetGet" title="offsetGet() :: "><span class="description">offsetGet()
-        </span><pre>offsetGet()</pre></a></li>
+<li class="method public "><a href="#method_offsetExists" title="offsetExists() :: Implements isset() checks on the iterator."><span class="description">Implements isset() checks on the iterator.</span><pre>offsetExists()</pre></a></li>
+<li class="method public "><a href="#method_offsetGet" title="offsetGet() :: Implements bracket get access to the iterator."><span class="description">Implements bracket get access to the iterator.</span><pre>offsetGet()</pre></a></li>
 <li class="method public "><a href="#method_offsetSet" title="offsetSet() :: "><span class="description">offsetSet()
         </span><pre>offsetSet()</pre></a></li>
 <li class="method public "><a href="#method_offsetUnset" title="offsetUnset() :: "><span class="description">offsetUnset()
@@ -147,14 +144,23 @@ an exception if one would be warranted by the error.</span><pre>wrap()</pre></a>
 <h3>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
 <a id="method___construct"></a><div class="element clickable method public method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="public">
-<h2>__construct()
-        </h2>
+<h2>Create a new UploadIterator.</h2>
 <pre>__construct(array $input<code> = null</code>) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
+<div class="long_description"><p>With no arguments, creates an iterator over the $_FILES super-global.
+You may instead pass your own array having the same format as $_FILES.
+If any of the files indicate a security concern or a server problem
+that prevented their storage, then the constructor throws an exception.</p></div>
 <h3>Parameters</h3>
-<div class="subelement argument"><h4>$input</h4></div>
+<div class="subelement argument">
+<h4>$input</h4>
+<code>array</code><p>An alternate $_FILES-like array to iterate over.</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\Haldayne\Customs\UploadException</code></th>
+<td></td>
+</tr></table>
 </div></div>
 </div>
 <a id="method_count"></a><div class="element clickable method public method_count " data-toggle="collapse" data-target=".method_count .collapse" title="public">
@@ -186,25 +192,40 @@ an exception if one would be warranted by the error.</span><pre>wrap()</pre></a>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <a id="method_offsetExists"></a><div class="element clickable method public method_offsetExists " data-toggle="collapse" data-target=".method_offsetExists .collapse" title="public">
-<h2>offsetExists()
-        </h2>
-<pre>offsetExists($offset) </pre>
+<h2>Implements isset() checks on the iterator.</h2>
+<pre>offsetExists(integer $offset) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
+<div class="long_description"><pre><code>$it = new Haldayne\Customs\UploadIterator;
+if (isset($it[0])) { ... }</code></pre></div>
 <h3>Parameters</h3>
-<div class="subelement argument"><h4>$offset</h4></div>
+<div class="subelement argument">
+<h4>$offset</h4>
+<code>integer</code><p>The</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
 <a id="method_offsetGet"></a><div class="element clickable method public method_offsetGet " data-toggle="collapse" data-target=".method_offsetGet .collapse" title="public">
-<h2>offsetGet()
-        </h2>
-<pre>offsetGet($offset) </pre>
+<h2>Implements bracket get access to the iterator.</h2>
+<pre>offsetGet(integer $offset) : \Haldayne\Customs\Haldayne\Customs\UploadFile | \Haldayne\Customs\Haldayne\Customs\UploadError</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
+<div class="long_description"><pre><code>$it = new Haldayne\Customs\UploadIterator;
+$it[0];</code></pre></div>
 <h3>Parameters</h3>
-<div class="subelement argument"><h4>$offset</h4></div>
+<div class="subelement argument">
+<h4>$offset</h4>
+<code>integer</code><p>The</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\Haldayne\Customs\OutOfBoundsException</code></th>
+<td>When the offset does not exist.</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\Haldayne\Customs\Haldayne\Customs\UploadFile</code><code>\Haldayne\Customs\Haldayne\Customs\UploadError</code>
+</div>
 </div></div>
 </div>
 <a id="method_offsetSet"></a><div class="element clickable method public method_offsetSet " data-toggle="collapse" data-target=".method_offsetSet .collapse" title="public">
@@ -358,7 +379,7 @@ an exception if one would be warranted by the error.</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2015-10-08T17:00:48-04:00.<br></footer></div>
+            generated on 2015-10-08T17:13:29-04:00.<br></footer></div>
 </div>
 </body>
 </html>

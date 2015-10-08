@@ -388,7 +388,7 @@ Second, if the auto-append syntax was given:
     </parse_markers>
     <source>eJyNUstu2zAQvOsrBkYApYZj99w8itR16wJ9GK17cg1jTdESUYoUxFVip8i/d0U/kKo5hBeJy9mdnd25elsVVeKo1KEipTElm9HO6V/jJrAvw2WSjPr9BH2MfVl6h1Jz4bOAUFCtM5DE8sBoKuspk8DGWB2GkjBKaB24JsVQlkLA7eH6M0Injg3vkj8J5FTN2hqFTeMUGyFZrZR3gm4Un58VXNqv0uCrCN0ntOeMCxMubo7PuMYJehlBj0n8xP7b08dHzeBCVM6/fMYd1YbWVqNVj42v0RY8KBkeUo6Z8/YpAqmqar81JbEOsZivTW4cWbtDbu60i7ABrPmt3xzTgSvjqkbYd5W+TtshpRG3/1/QMsXopsP5TvDGIXhhVRQOdHrbjjS2osg5z1hr1Jqb2ulsCHwwdeCBBBU1QR9rzaYzlORyWc5efVw5ZMxMxhmXIx2mIgUp0kHLEzTujbWSVD1R0Zc5+eGa6hMjKKAnwZUEex0gXgpcvRS4kJjQPyz/Q59eep0p/tAiMhvAbOL4qGF/ITvULkPYifot7qVE3FxX6OIZmtfL3gCa1dEgo2cNnGueHrx43vXtvmTXvv9adoTZ92/zyXg+eY/b2ad9VHzHWrE088Toj8lfiGwiow==</source>
   </file>
-  <file path="customs/src/UploadIterator.php" generated-path="customs.src.UploadIterator.html" hash="e744c4edd83e6dd2c65bab2960825384" package="Default">
+  <file path="customs/src/UploadIterator.php" generated-path="customs.src.UploadIterator.html" hash="8162fa8b95e3572341c1e1adf24a07fb" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -406,39 +406,48 @@ Second, if the auto-append syntax was given:
         <long-description></long-description>
         <tag name="package" line="7" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="Haldayne\Customs" line="86" package="Default">
+      <property static="false" visibility="private" namespace="Haldayne\Customs" line="121" package="Default">
         <name>$input</name>
         <full_name>\Haldayne\Customs\UploadIterator::input</full_name>
         <default></default>
-        <docblock line="86">
+        <docblock line="121">
           <description></description>
           <long-description></long-description>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="Haldayne\Customs" line="87" package="Default">
+      <property static="false" visibility="private" namespace="Haldayne\Customs" line="122" package="Default">
         <name>$files</name>
         <full_name>\Haldayne\Customs\UploadIterator::files</full_name>
         <default></default>
-        <docblock line="87">
+        <docblock line="122">
           <description></description>
           <long-description></long-description>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="Haldayne\Customs" line="88" package="Default">
+      <property static="false" visibility="private" namespace="Haldayne\Customs" line="123" package="Default">
         <name>$index</name>
         <full_name>\Haldayne\Customs\UploadIterator::index</full_name>
         <default></default>
-        <docblock line="88">
+        <docblock line="123">
           <description></description>
           <long-description></long-description>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="9" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="21" package="Default">
         <name>__construct</name>
         <full_name>\Haldayne\Customs\UploadIterator::__construct()</full_name>
-        <docblock line="9">
-          <description></description>
-          <long-description></long-description>
+        <docblock line="21">
+          <description>Create a new UploadIterator.</description>
+          <long-description>With no arguments, creates an iterator over the $_FILES super-global.
+You may instead pass your own array having the same format as $_FILES.
+If any of the files indicate a security concern or a server problem
+that prevented their storage, then the constructor throws an exception.</long-description>
+          <tag name="param" line="21" description="&lt;p&gt;An alternate $_FILES-like array to iterate over.&lt;/p&gt;" type="array" variable="$input">
+            <type>array</type>
+          </tag>
+          <tag name="throws" line="21" description="" type="\Haldayne\Customs\UploadException">
+            <type>\Haldayne\Customs\UploadException</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$input</name>
@@ -446,36 +455,58 @@ Second, if the auto-append syntax was given:
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="17" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="40" package="Default">
         <name>offsetExists</name>
         <full_name>\Haldayne\Customs\UploadIterator::offsetExists()</full_name>
-        <docblock line="17">
-          <description></description>
-          <long-description></long-description>
+        <docblock line="40">
+          <description>Implements isset() checks on the iterator.</description>
+          <long-description>```
+$it = new Haldayne\Customs\UploadIterator;
+if (isset($it[0])) { ... }
+```</long-description>
+          <tag name="param" line="40" description="&lt;p&gt;The&lt;/p&gt;" type="integer" variable="$offset">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="40" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$offset</name>
           <default></default>
-          <type/>
+          <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="22" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="57" package="Default">
         <name>offsetGet</name>
         <full_name>\Haldayne\Customs\UploadIterator::offsetGet()</full_name>
-        <docblock line="22">
-          <description></description>
-          <long-description></long-description>
+        <docblock line="57">
+          <description>Implements bracket get access to the iterator.</description>
+          <long-description>```
+$it = new Haldayne\Customs\UploadIterator;
+$it[0];
+```</long-description>
+          <tag name="param" line="57" description="&lt;p&gt;The&lt;/p&gt;" type="integer" variable="$offset">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="57" description="" type="\Haldayne\Customs\Haldayne\Customs\UploadFile|\Haldayne\Customs\Haldayne\Customs\UploadError">
+            <type>\Haldayne\Customs\Haldayne\Customs\UploadFile</type>
+            <type>\Haldayne\Customs\Haldayne\Customs\UploadError</type>
+          </tag>
+          <tag name="throws" line="57" description="When the offset does not exist." type="\Haldayne\Customs\OutOfBoundsException">
+            <type>\Haldayne\Customs\OutOfBoundsException</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$offset</name>
           <default></default>
-          <type/>
+          <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="31" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="66" package="Default">
         <name>offsetSet</name>
         <full_name>\Haldayne\Customs\UploadIterator::offsetSet()</full_name>
-        <docblock line="31">
+        <docblock line="66">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -490,10 +521,10 @@ Second, if the auto-append syntax was given:
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="36" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="71" package="Default">
         <name>offsetUnset</name>
         <full_name>\Haldayne\Customs\UploadIterator::offsetUnset()</full_name>
-        <docblock line="36">
+        <docblock line="71">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -503,50 +534,50 @@ Second, if the auto-append syntax was given:
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="43" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="78" package="Default">
         <name>current</name>
         <full_name>\Haldayne\Customs\UploadIterator::current()</full_name>
-        <docblock line="43">
+        <docblock line="78">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="48" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="83" package="Default">
         <name>key</name>
         <full_name>\Haldayne\Customs\UploadIterator::key()</full_name>
-        <docblock line="48">
+        <docblock line="83">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="53" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="88" package="Default">
         <name>next</name>
         <full_name>\Haldayne\Customs\UploadIterator::next()</full_name>
-        <docblock line="53">
+        <docblock line="88">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="58" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="93" package="Default">
         <name>rewind</name>
         <full_name>\Haldayne\Customs\UploadIterator::rewind()</full_name>
-        <docblock line="58">
+        <docblock line="93">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="63" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="98" package="Default">
         <name>valid</name>
         <full_name>\Haldayne\Customs\UploadIterator::valid()</full_name>
-        <docblock line="63">
+        <docblock line="98">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="68" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="103" package="Default">
         <name>seek</name>
         <full_name>\Haldayne\Customs\UploadIterator::seek()</full_name>
-        <docblock line="68">
+        <docblock line="103">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -556,37 +587,37 @@ Second, if the auto-append syntax was given:
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="79" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="114" package="Default">
         <name>count</name>
         <full_name>\Haldayne\Customs\UploadIterator::count()</full_name>
-        <docblock line="79">
+        <docblock line="114">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="95" package="Default">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="130" package="Default">
         <name>import</name>
         <full_name>\Haldayne\Customs\UploadIterator::import()</full_name>
-        <docblock line="95">
+        <docblock line="130">
           <description>Import a structure purporting to be a valid $_FILES format into a flat
 array of UploadFile or UploadError. Resolve all recursive structure and
 reconstitues the HTML form name.</description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="118" package="Default">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="153" package="Default">
         <name>names</name>
         <full_name>\Haldayne\Customs\UploadIterator::names()</full_name>
-        <docblock line="118">
+        <docblock line="153">
           <description>Using the "name" key in the input as a model, figure out all the
 HTML names.</description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="150" package="Default">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="185" package="Default">
         <name>reducer</name>
         <full_name>\Haldayne\Customs\UploadIterator::reducer()</full_name>
-        <docblock line="150">
+        <docblock line="185">
           <description>Companion to `names`, which recursively traverses the iterator,
 appending new keys onto the base-so-far.</description>
           <long-description></long-description>
@@ -607,10 +638,10 @@ appending new keys onto the base-so-far.</description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="167" package="Default">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="202" package="Default">
         <name>gather</name>
         <full_name>\Haldayne\Customs\UploadIterator::gather()</full_name>
-        <docblock line="167">
+        <docblock line="202">
           <description>Given an HTML name, gather all its information into a standard
 info structure.</description>
           <long-description></long-description>
@@ -621,24 +652,24 @@ info structure.</description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="198" package="Default">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="233" package="Default">
         <name>wrap</name>
         <full_name>\Haldayne\Customs\UploadIterator::wrap()</full_name>
-        <docblock line="198">
+        <docblock line="233">
           <description>Wrap the file upload information in an appropriate object class, raising
 an exception if one would be warranted by the error.</description>
           <long-description></long-description>
-          <tag name="param" line="198" description="&lt;p&gt;The HTML form element name&lt;/p&gt;" type="string" variable="$name">
+          <tag name="param" line="233" description="&lt;p&gt;The HTML form element name&lt;/p&gt;" type="string" variable="$name">
             <type>string</type>
           </tag>
-          <tag name="param" line="198" description="&lt;p&gt;The file upload information&lt;/p&gt;" type="array" variable="$info">
+          <tag name="param" line="233" description="&lt;p&gt;The file upload information&lt;/p&gt;" type="array" variable="$info">
             <type>array</type>
           </tag>
-          <tag name="return" line="198" description="" type="\Haldayne\Customs\UploadFile|\Haldayne\Customs\UploadError">
+          <tag name="return" line="233" description="" type="\Haldayne\Customs\UploadFile|\Haldayne\Customs\UploadError">
             <type>\Haldayne\Customs\UploadFile</type>
             <type>\Haldayne\Customs\UploadError</type>
           </tag>
-          <tag name="throws" line="198" description="" type="\Haldayne\Customs\UploadException">
+          <tag name="throws" line="233" description="" type="\Haldayne\Customs\UploadException">
             <type>\Haldayne\Customs\UploadException</type>
           </tag>
         </docblock>
@@ -656,34 +687,28 @@ an exception if one would be warranted by the error.</description>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="9" code="PPC:ERR-50015">Argument $input is missing from the Docblock of __construct</error>
-      <error line="9" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="17" code="PPC:ERR-50015">Argument $offset is missing from the Docblock of offsetExists</error>
-      <error line="17" code="PPC:ERR-50008">No summary for method offsetExists()</error>
-      <error line="22" code="PPC:ERR-50015">Argument $offset is missing from the Docblock of offsetGet</error>
-      <error line="22" code="PPC:ERR-50008">No summary for method offsetGet()</error>
-      <error line="31" code="PPC:ERR-50015">Argument $offset is missing from the Docblock of offsetSet</error>
-      <error line="31" code="PPC:ERR-50015">Argument $value is missing from the Docblock of offsetSet</error>
-      <error line="31" code="PPC:ERR-50008">No summary for method offsetSet()</error>
-      <error line="36" code="PPC:ERR-50015">Argument $offset is missing from the Docblock of offsetUnset</error>
-      <error line="36" code="PPC:ERR-50008">No summary for method offsetUnset()</error>
-      <error line="43" code="PPC:ERR-50008">No summary for method current()</error>
-      <error line="48" code="PPC:ERR-50008">No summary for method key()</error>
-      <error line="53" code="PPC:ERR-50008">No summary for method next()</error>
-      <error line="58" code="PPC:ERR-50008">No summary for method rewind()</error>
-      <error line="63" code="PPC:ERR-50008">No summary for method valid()</error>
-      <error line="68" code="PPC:ERR-50015">Argument $position is missing from the Docblock of seek</error>
-      <error line="68" code="PPC:ERR-50008">No summary for method seek()</error>
-      <error line="79" code="PPC:ERR-50008">No summary for method count()</error>
-      <error line="150" code="PPC:ERR-50015">Argument $it is missing from the Docblock of reducer</error>
-      <error line="150" code="PPC:ERR-50015">Argument $base is missing from the Docblock of reducer</error>
-      <error line="150" code="PPC:ERR-50015">Argument $names is missing from the Docblock of reducer</error>
-      <error line="167" code="PPC:ERR-50015">Argument $name is missing from the Docblock of gather</error>
-      <error line="86" code="PPC:ERR-50007">No summary for property $input</error>
-      <error line="87" code="PPC:ERR-50007">No summary for property $files</error>
-      <error line="88" code="PPC:ERR-50007">No summary for property $index</error>
+      <error line="66" code="PPC:ERR-50015">Argument $offset is missing from the Docblock of offsetSet</error>
+      <error line="66" code="PPC:ERR-50015">Argument $value is missing from the Docblock of offsetSet</error>
+      <error line="66" code="PPC:ERR-50008">No summary for method offsetSet()</error>
+      <error line="71" code="PPC:ERR-50015">Argument $offset is missing from the Docblock of offsetUnset</error>
+      <error line="71" code="PPC:ERR-50008">No summary for method offsetUnset()</error>
+      <error line="78" code="PPC:ERR-50008">No summary for method current()</error>
+      <error line="83" code="PPC:ERR-50008">No summary for method key()</error>
+      <error line="88" code="PPC:ERR-50008">No summary for method next()</error>
+      <error line="93" code="PPC:ERR-50008">No summary for method rewind()</error>
+      <error line="98" code="PPC:ERR-50008">No summary for method valid()</error>
+      <error line="103" code="PPC:ERR-50015">Argument $position is missing from the Docblock of seek</error>
+      <error line="103" code="PPC:ERR-50008">No summary for method seek()</error>
+      <error line="114" code="PPC:ERR-50008">No summary for method count()</error>
+      <error line="185" code="PPC:ERR-50015">Argument $it is missing from the Docblock of reducer</error>
+      <error line="185" code="PPC:ERR-50015">Argument $base is missing from the Docblock of reducer</error>
+      <error line="185" code="PPC:ERR-50015">Argument $names is missing from the Docblock of reducer</error>
+      <error line="202" code="PPC:ERR-50015">Argument $name is missing from the Docblock of gather</error>
+      <error line="121" code="PPC:ERR-50007">No summary for property $input</error>
+      <error line="122" code="PPC:ERR-50007">No summary for property $files</error>
+      <error line="123" code="PPC:ERR-50007">No summary for property $index</error>
     </parse_markers>
-    <source>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</source>
+    <source>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</source>
   </file>
   <file path="customs/src/UploadFailure.php" generated-path="customs.src.UploadFailure.html" hash="819bf55d301d4382f4b3e8703260b17f" package="Default">
     <docblock line="0">
