@@ -1,0 +1,20 @@
+{
+    "name": "haldayne/documentation",
+    "description": "Combined documentation for all Haldayne PHP Componentry.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bishop Bettini", "email": "bishop@php.net"
+        }
+    ],
+    "require": {
+        "php": "^5.5.0",
+        "phing/phing": "^2.0",
+        "phpdocumentor/phpdocumentor": "^2.8",
+        "phploc/phploc": "^2.1"
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "stable"
+}
