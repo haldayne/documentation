@@ -1,6 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project title="API Documentation" version="2.8.5">
   <partials/>
+  <file path="customs/src/UploadException.php" generated-path="customs.src.UploadException.html" hash="8e792e362b7e7230be6f8e65edcdcf66" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Haldayne\Customs" line="4" package="Default">
+      <extends>\RuntimeException</extends>
+      <name>UploadException</name>
+      <full_name>\Haldayne\Customs\UploadException</full_name>
+      <docblock line="4">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="4" description="Default"/>
+      </docblock>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="4" code="PPC:ERR-50005">No summary for class \Haldayne\Customs\UploadException</error>
+    </parse_markers>
+    <source>eJw9yTEKgDAMAMA9r8g/FBxEcBbcuoQ2YKFNA0mhIv7dzVtvXvRSEKpsSpFxp5LoFg5rN2/VJoBYyAxPLY3SNiKr5ybIw1mSYTi6eK78Dzzwwgd5kx/k</source>
+  </file>
+  <file path="boost/src/Arrayable.php" generated-path="boost.src.Arrayable.html" hash="e64f162d7869faba45837c236c8466cc" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJyzsS/IKODKS8xNLS5ITE5V8EjMSUmszEuNcUksSQwuKSpNLiktSrXm4srMK0ktSgMq4QIA4kcScg==</source>
+  </file>
+  <file path="boost/src/Contract/Arrayable.php" generated-path="boost.src.Contract.Arrayable.html" hash="7f7c51100037144d3e52566dd96cb54e" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <interface namespace="Haldayne\Boost\Contract" line="4" package="Default">
+      <name>Arrayable</name>
+      <full_name>\Haldayne\Boost\Contract\Arrayable</full_name>
+      <docblock line="4">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="4" description="Default"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Contract" line="9" package="Default">
+        <name>toArray</name>
+        <full_name>\Haldayne\Boost\Contract\Arrayable::toArray()</full_name>
+        <docblock line="9">
+          <description>Return a native PHP array representation of the object.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="4" code="PPC:ERR-50009">No summary for interface ""</error>
+    </parse_markers>
+    <source>eJwtjbEOgkAQRPv9ii2VQj4AE6M2lISaZjmXgMHdy95iQoz/Llyc5hXzJnO+xDGC0ItTpMBY0/ygVbi7qSbv7ipuFLwCmMTZht25mtFK/czwAdxSFkUmFtiyLyZIKOTTm7GpG6RdR+NonFh8K1RQB/SRUfsnBz/952VmXPp5CjgsErLqmg8Pxwq+8AMxFDjF</source>
+  </file>
+  <file path="boost/src/Contract/Jsonable.php" generated-path="boost.src.Contract.Jsonable.html" hash="9d44ae119de918bed5ae503ebcfaa745" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <interface namespace="Haldayne\Boost\Contract" line="4" package="Default">
+      <name>Jsonable</name>
+      <full_name>\Haldayne\Boost\Contract\Jsonable</full_name>
+      <docblock line="4">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="4" description="Default"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Contract" line="9" package="Default">
+        <name>toJson</name>
+        <full_name>\Haldayne\Boost\Contract\Jsonable::toJson()</full_name>
+        <docblock line="9">
+          <description>Return a JSON representation of the object.</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="4" code="PPC:ERR-50009">No summary for interface ""</error>
+    </parse_markers>
+    <source>eJwtjTEOwjAMRXefwiNkoAcoEhIsqAOVYO3iBEcNKnaUuANC3B1a8Ze3vKe/P+Qxg9CTa6bAeKbpTi/h4ahabTipWKFgLUAS4xIXp6sq5CeGN+BvjXMr0eGVbS6ChN2tv2DhXLiyGFlSQY1oI6P6Bwfb/ZNmZZ79lALGWcKqmi4fm20LH/gC88czZw==</source>
+  </file>
+  <file path="customs/src/UploadFile.php" generated-path="customs.src.UploadFile.html" hash="b36e7c5ea10781f35b3bdfbf8e4d19fd" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJyFVE1v00AQvftXzCGHNgrNPaVAlQaoRKBqwwGpUjV2JvHCenfZj4CB/ndmd+vEDS3xxdJ45s2bN2/88rWpTaGwIWewIniPcomtottpcF437rQoguuF56Ihjo2HwwKGcE3GkiPlHSCshCTwNXqo0UFJpMCFqiLnVkHKFoKRGpe0POHKcVFJdA4+p9jbWEk/Pamlg/PSeYuVz59mygvfFr8L4Cd1jc8QppbQE3dV9AN0+ZUqD7ZjI9Savwz73Yfb9onnyQNOB/fGoMUGuHOsHdS+kR9ZE1jUPPti/gE2aAWWTDNKBZW23MlotYzpXvPYwj0C7hAVN//TwaoOUluxFgpl1iyGR8CarcWGRStbhuMeUvAo+3gdVCqMUJ4aoy3aFhzZDdkMadDXT/Iap7cJpRQVrIKqvNAK7u4qrRg6VP5oO/woEx7lZsepMO8hQaBlepPJk6XHp9u8QaTw4lUa/QwGeaq48Bj5Jy2RP0tLvb0xMuZdqpU+yhRy+n2xb4Z35JNkWzV7AsIaNwSBVdB2J8cIxApQtfs+uNCgdHQS+5V12eZn1AjBRRzlFZTBw1I4I7EdsdsrjHfS6tBBVagiFCvjfD4L4dk4yqNQDhyumGGN0elk3f/XsyY/faTb0f42LPlgVV/sQ1rtfJPmq7XMXo4T51M5gS86QBPpN3pDOzE6qJJYkKy1pe+BODFdMPvuG5FJHx6g9s/NEfVufzKJDRb6kAg3yeGx4oAAkeUhAeaX8xlvE2X7K15Ncgf153uWRvwHnj8UPkckOjjm3W4TH9EZw9X1p8VsuphdwPnVZY4aqz3/x/gXNdhtsBfMU90XfwF5mcMH</source>
+  </file>
   <file path="customs/tests/UploadIteratorTest.php" generated-path="customs.tests.UploadIteratorTest.html" hash="98d01fe1d56ec7c6c655c747c269ef99" package="Default">
     <docblock line="0">
       <description></description>
@@ -285,39 +387,6 @@ Second, if the auto-append syntax was given:
       <error line="37" code="PPC:ERR-50007">No summary for property $htmlName</error>
     </parse_markers>
     <source>eJyNUstu2zAQvOsrBkYApYZj99w8itR16wJ9GK17cg1jTdESUYoUxFVip8i/d0U/kKo5hBeJy9mdnd25elsVVeKo1KEipTElm9HO6V/jJrAvw2WSjPr9BH2MfVl6h1Jz4bOAUFCtM5DE8sBoKuspk8DGWB2GkjBKaB24JsVQlkLA7eH6M0Injg3vkj8J5FTN2hqFTeMUGyFZrZR3gm4Un58VXNqv0uCrCN0ntOeMCxMubo7PuMYJehlBj0n8xP7b08dHzeBCVM6/fMYd1YbWVqNVj42v0RY8KBkeUo6Z8/YpAqmqar81JbEOsZivTW4cWbtDbu60i7ABrPmt3xzTgSvjqkbYd5W+TtshpRG3/1/QMsXopsP5TvDGIXhhVRQOdHrbjjS2osg5z1hr1Jqb2ulsCHwwdeCBBBU1QR9rzaYzlORyWc5efVw5ZMxMxhmXIx2mIgUp0kHLEzTujbWSVD1R0Zc5+eGa6hMjKKAnwZUEex0gXgpcvRS4kJjQPyz/Q59eep0p/tAiMhvAbOL4qGF/ITvULkPYifot7qVE3FxX6OIZmtfL3gCa1dEgo2cNnGueHrx43vXtvmTXvv9adoTZ92/zyXg+eY/b2ad9VHzHWrE088Toj8lfiGwiow==</source>
-  </file>
-  <file path="customs/src/UploadException.php" generated-path="customs.src.UploadException.html" hash="8e792e362b7e7230be6f8e65edcdcf66" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="Haldayne\Customs" line="4" package="Default">
-      <extends>\RuntimeException</extends>
-      <name>UploadException</name>
-      <full_name>\Haldayne\Customs\UploadException</full_name>
-      <docblock line="4">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="4" description="Default"/>
-      </docblock>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="4" code="PPC:ERR-50005">No summary for class \Haldayne\Customs\UploadException</error>
-    </parse_markers>
-    <source>eJw9yTEKgDAMAMA9r8g/FBxEcBbcuoQ2YKFNA0mhIv7dzVtvXvRSEKpsSpFxp5LoFg5rN2/VJoBYyAxPLY3SNiKr5ybIw1mSYTi6eK78Dzzwwgd5kx/k</source>
-  </file>
-  <file path="customs/src/UploadFile.php" generated-path="customs.src.UploadFile.html" hash="b36e7c5ea10781f35b3bdfbf8e4d19fd" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-    </parse_markers>
-    <source>eJyFVE1v00AQvftXzCGHNgrNPaVAlQaoRKBqwwGpUjV2JvHCenfZj4CB/ndmd+vEDS3xxdJ45s2bN2/88rWpTaGwIWewIniPcomtottpcF437rQoguuF56Ihjo2HwwKGcE3GkiPlHSCshCTwNXqo0UFJpMCFqiLnVkHKFoKRGpe0POHKcVFJdA4+p9jbWEk/Pamlg/PSeYuVz59mygvfFr8L4Cd1jc8QppbQE3dV9AN0+ZUqD7ZjI9Savwz73Yfb9onnyQNOB/fGoMUGuHOsHdS+kR9ZE1jUPPti/gE2aAWWTDNKBZW23MlotYzpXvPYwj0C7hAVN//TwaoOUluxFgpl1iyGR8CarcWGRStbhuMeUvAo+3gdVCqMUJ4aoy3aFhzZDdkMadDXT/Iap7cJpRQVrIKqvNAK7u4qrRg6VP5oO/woEx7lZsepMO8hQaBlepPJk6XHp9u8QaTw4lUa/QwGeaq48Bj5Jy2RP0tLvb0xMuZdqpU+yhRy+n2xb4Z35JNkWzV7AsIaNwSBVdB2J8cIxApQtfs+uNCgdHQS+5V12eZn1AjBRRzlFZTBw1I4I7EdsdsrjHfS6tBBVagiFCvjfD4L4dk4yqNQDhyumGGN0elk3f/XsyY/faTb0f42LPlgVV/sQ1rtfJPmq7XMXo4T51M5gS86QBPpN3pDOzE6qJJYkKy1pe+BODFdMPvuG5FJHx6g9s/NEfVufzKJDRb6kAg3yeGx4oAAkeUhAeaX8xlvE2X7K15Ncgf153uWRvwHnj8UPkckOjjm3W4TH9EZw9X1p8VsuphdwPnVZY4aqz3/x/gXNdhtsBfMU90XfwF5mcMH</source>
   </file>
   <file path="customs/src/UploadIterator.php" generated-path="customs.src.UploadIterator.html" hash="e744c4edd83e6dd2c65bab2960825384" package="Default">
     <docblock line="0">
@@ -2612,75 +2681,6 @@ return that many from the end of the array.</long-description>
       <error line="12" code="PPC:ERR-50015">Argument $collection is missing from the Docblock of __construct</error>
     </parse_markers>
     <source>eJx9UE1PwzAMvedX+DBpWzXR+wYCgRBwQPwAQJOXum2kxInyMYbQ/jtpSjlUAh/iyPZ7fs+X1653gtFQcCgJHlE3+Mn0dmttiDsh6qoSUMGTcZoMcQyAYNCBbYcULnKzFlJjCPCM7qXNTwA6ReKmVMSXgByFZogK7jxhpEzD9DGjKgN1yS4dtJLQJpZRWYb9XloO0ScZVwtptaaxfgWctF4XzLiqoNFnrdvtH6gNvMIi9ipsYNkl9M0S3te7gj6Lud57DskTxJ6gU0fi/FPcgRoukQ1Osqfxm7wbDRh1ogYWR9SJflueYvIMB2s1If/rt8hajfi5ux+asQkqG0SWlM/4MIAmH2fxDQTsi9Y=</source>
-  </file>
-  <file path="boost/src/Arrayable.php" generated-path="boost.src.Arrayable.html" hash="e64f162d7869faba45837c236c8466cc" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-    </parse_markers>
-    <source>eJyzsS/IKODKS8xNLS5ITE5V8EjMSUmszEuNcUksSQwuKSpNLiktSrXm4srMK0ktSgMq4QIA4kcScg==</source>
-  </file>
-  <file path="boost/src/Contract/Arrayable.php" generated-path="boost.src.Contract.Arrayable.html" hash="7f7c51100037144d3e52566dd96cb54e" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <interface namespace="Haldayne\Boost\Contract" line="4" package="Default">
-      <name>Arrayable</name>
-      <full_name>\Haldayne\Boost\Contract\Arrayable</full_name>
-      <docblock line="4">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="4" description="Default"/>
-      </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Contract" line="9" package="Default">
-        <name>toArray</name>
-        <full_name>\Haldayne\Boost\Contract\Arrayable::toArray()</full_name>
-        <docblock line="9">
-          <description>Return a native PHP array representation of the object.</description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-    </interface>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="4" code="PPC:ERR-50009">No summary for interface ""</error>
-    </parse_markers>
-    <source>eJwtjbEOgkAQRPv9ii2VQj4AE6M2lISaZjmXgMHdy95iQoz/Llyc5hXzJnO+xDGC0ItTpMBY0/ygVbi7qSbv7ipuFLwCmMTZht25mtFK/czwAdxSFkUmFtiyLyZIKOTTm7GpG6RdR+NonFh8K1RQB/SRUfsnBz/952VmXPp5CjgsErLqmg8Pxwq+8AMxFDjF</source>
-  </file>
-  <file path="boost/src/Contract/Jsonable.php" generated-path="boost.src.Contract.Jsonable.html" hash="9d44ae119de918bed5ae503ebcfaa745" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <interface namespace="Haldayne\Boost\Contract" line="4" package="Default">
-      <name>Jsonable</name>
-      <full_name>\Haldayne\Boost\Contract\Jsonable</full_name>
-      <docblock line="4">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="4" description="Default"/>
-      </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Contract" line="9" package="Default">
-        <name>toJson</name>
-        <full_name>\Haldayne\Boost\Contract\Jsonable::toJson()</full_name>
-        <docblock line="9">
-          <description>Return a JSON representation of the object.</description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-    </interface>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="4" code="PPC:ERR-50009">No summary for interface ""</error>
-    </parse_markers>
-    <source>eJwtjTEOwjAMRXefwiNkoAcoEhIsqAOVYO3iBEcNKnaUuANC3B1a8Ze3vKe/P+Qxg9CTa6bAeKbpTi/h4ahabTipWKFgLUAS4xIXp6sq5CeGN+BvjXMr0eGVbS6ChN2tv2DhXLiyGFlSQY1oI6P6Bwfb/ZNmZZ79lALGWcKqmi4fm20LH/gC88czZw==</source>
   </file>
   <package name="Default" full_name="Default"/>
   <package name="global" full_name="global"/>

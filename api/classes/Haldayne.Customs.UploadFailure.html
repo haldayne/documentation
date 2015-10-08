@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta charset="utf-8">
-<title>API Documentation » \Haldayne\Customs\AbstractUploadEntity</title>
+<title>API Documentation » \Haldayne\Customs\UploadFailure</title>
 <meta name="author" content="Mike van Riel">
 <meta name="description" content="">
 <link href="../css/template.css" rel="stylesheet" media="all">
@@ -63,22 +63,19 @@
 <li class="nav-header">
 <i title="Methods" class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public "><a href="#method___construct" title="__construct() :: "><span class="description">__construct()
-        </span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#method_getHtmlName" title="getHtmlName() :: Get the HTML variable name for this upload."><span class="description">Get the HTML variable name for this upload.</span><pre>getHtmlName()</pre></a></li>
+<li class="method public "><a href="#method_getFailureReason" title="getFailureReason() :: "><span class="description">getFailureReason()
+        </span><pre>getFailureReason()</pre></a></li>
+<li class="method public "><a href="#method_getFile" title="getFile() :: Return the part of the file we got, if any."><span class="description">Return the part of the file we got, if any.</span><pre>getFile()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header">
 <i title="Properties" class="icon-custom icon-property"></i> Properties
-                    <ul></ul>
-</li>
-<li class="nav-header protected">» Protected
-                    <ul><li class="property protected "><a href="#property_htmlName" title="$htmlName() :: "><span class="description"></span><pre>$htmlName</pre></a></li></ul>
+                    <ul><li class="property public "><a href="#property_failure_codes" title="$failure_codes() :: The possible failure codes and an English description."><span class="description"></span><pre>$failure_codes</pre></a></li></ul>
 </li>
 </ul>
 </div>
 <div class="span8">
-<a xmlns:php="http://php.net/xsl" id="\Haldayne\Customs\AbstractUploadEntity"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
+<a xmlns:php="http://php.net/xsl" id="\Haldayne\Customs\UploadFailure"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
 <li>
 <a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
@@ -87,11 +84,11 @@
 <span class="divider">\</span><a href="../namespaces/Haldayne.Customs.html">Customs</a>
 </li>
 <li class="active">
-<span class="divider">\</span><a href="../classes/Haldayne.Customs.AbstractUploadEntity.html">AbstractUploadEntity</a>
+<span class="divider">\</span><a href="../classes/Haldayne.Customs.UploadFailure.html">UploadFailure</a>
 </li>
 </ul>
 <div xmlns:php="http://php.net/xsl" class="element class">
-<p class="short_description">Common methods shared amongst uploaded files.</p>
+<p class="short_description">Represents a file that did not successfully upload.</p>
 <div class="details">
 <div class="long_description"></div>
 <table class="table table-bordered"><tr>
@@ -100,46 +97,29 @@
 </tr></table>
 <h3>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
-<a id="method___construct"></a><div class="element clickable method public method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="public">
-<h2>__construct()
+<a id="method_getFailureReason"></a><div class="element clickable method public method_getFailureReason " data-toggle="collapse" data-target=".method_getFailureReason .collapse" title="public">
+<h2>getFailureReason()
         </h2>
-<pre>__construct($htmlName) </pre>
+<pre>getFailureReason() </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<h3>Parameters</h3>
-<div class="subelement argument"><h4>$htmlName</h4></div>
-</div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a id="method_getHtmlName"></a><div class="element clickable method public method_getHtmlName " data-toggle="collapse" data-target=".method_getHtmlName .collapse" title="public">
-<h2>Get the HTML variable name for this upload.</h2>
-<pre>getHtmlName() </pre>
+<a id="method_getFile"></a><div class="element clickable method public method_getFile " data-toggle="collapse" data-target=".method_getFile .collapse" title="public">
+<h2>Return the part of the file we got, if any.</h2>
+<pre>getFile() </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"><p>This name approximates the originally given name, like:</p>
-<input type='file' name='file[a]' />
-<p>But in some cases the exact name cannot be returned.  First, because
-PHP mangles HTML names containing '.' or ' ', these will map:</p>
-<ul>
-<li>foo.bar returned as &quot;foo_bar&quot;</li>
-<li>foo bar returned as &quot;foo_bar&quot;</li>
-<li>foo_bar returned as &quot;foo_bar&quot;</li>
-<li>foo[bar.baz] returned as &quot;foo[bar.baz]&quot;</li>
-</ul>
-<p>Second, if the auto-append syntax was given:</p>
-<ul>
-<li>foo[] returned as &quot;foo[0]&quot;, etc.</li>
-</ul></div></div></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
-<a id="property_htmlName"> </a><div class="element clickable property protected property_htmlName" data-toggle="collapse" data-target=".property_htmlName .collapse" title="protected">
-<h2>$htmlName</h2>
-<pre>$htmlName </pre>
+<a id="property_failure_codes"> </a><div class="element clickable property public property_failure_codes" data-toggle="collapse" data-target=".property_failure_codes .collapse" title="public">
+<h2>The possible failure codes and an English description.</h2>
+<pre>$failure_codes </pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
-<div class="subelement argument"></div>
+<div class="subelement argument"><code>array(UPLOAD_ERR_INI_SIZE => 'The file size exceeds the server-allowed limit.', UPLOAD_ERR_FORM_SIZE => 'The file size exceeds the form-allowed upload limit.', UPLOAD_ERR_PARTIAL => 'The file was only partially uploaded.', UPLOAD_ERR_NO_FILE => 'No file was uploaded.', UPLOAD_ERR_CANT_WRITE => 'The server failed to write the file.', UPLOAD_ERR_NO_TMP_DIR => 'A server misconfiguration .', UPLOAD_ERR_EXTENSION => 'A PHP server extension cancelled the upload.')</code></div>
 </div></div>
-<div class="labels"></div>
+<div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
@@ -149,7 +129,7 @@ PHP mangles HTML names containing '.' or ' ', these will map:</p>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2015-10-08T16:17:47-04:00.<br></footer></div>
+            generated on 2015-10-08T17:00:48-04:00.<br></footer></div>
 </div>
 </body>
 </html>

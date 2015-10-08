@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta charset="utf-8">
-<title>API Documentation » \Haldayne\Customs\UploadFailure</title>
+<title>API Documentation » \Haldayne\Boost\Contract\Arrayable</title>
 <meta name="author" content="Mike van Riel">
 <meta name="description" content="">
 <link href="../css/template.css" rel="stylesheet" media="all">
@@ -59,36 +59,29 @@
 <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
 </div>
 </div>
-<ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list">
-<li class="nav-header">
+<ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list"><li class="nav-header">
 <i title="Methods" class="icon-custom icon-method"></i> Methods
-                    <ul>
-<li class="method public "><a href="#method_getFailureReason" title="getFailureReason() :: "><span class="description">getFailureReason()
-        </span><pre>getFailureReason()</pre></a></li>
-<li class="method public "><a href="#method_getFile" title="getFile() :: Return the part of the file we got, if any."><span class="description">Return the part of the file we got, if any.</span><pre>getFile()</pre></a></li>
-</ul>
-</li>
-<li class="nav-header">
-<i title="Properties" class="icon-custom icon-property"></i> Properties
-                    <ul><li class="property public "><a href="#property_failure_codes" title="$failure_codes() :: The possible failure codes and an English description."><span class="description"></span><pre>$failure_codes</pre></a></li></ul>
-</li>
-</ul>
+                    <ul><li class="method public "><a href="#method_toArray" title="toArray() :: Return a native PHP array representation of the object."><span class="description">Return a native PHP array representation of the object.</span><pre>toArray()</pre></a></li></ul>
+</li></ul>
 </div>
 <div class="span8">
-<a xmlns:php="http://php.net/xsl" id="\Haldayne\Customs\UploadFailure"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
+<a xmlns:php="http://php.net/xsl" id="\Haldayne\Boost\Contract\Arrayable"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
 <li>
 <a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/Haldayne.html">Haldayne</a></li>
 <li>
-<span class="divider">\</span><a href="../namespaces/Haldayne.Customs.html">Customs</a>
+<span class="divider">\</span><a href="../namespaces/Haldayne.Boost.html">Boost</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/Haldayne.Boost.Contract.html">Contract</a>
 </li>
 <li class="active">
-<span class="divider">\</span><a href="../classes/Haldayne.Customs.UploadFailure.html">UploadFailure</a>
+<span class="divider">\</span><a href="../classes/Haldayne.Boost.Contract.Arrayable.html">Arrayable</a>
 </li>
 </ul>
-<div xmlns:php="http://php.net/xsl" class="element class">
-<p class="short_description">Represents a file that did not successfully upload.</p>
+<div xmlns:php="http://php.net/xsl" class="element interface">
+<p class="short_description"></p>
 <div class="details">
 <div class="long_description"></div>
 <table class="table table-bordered"><tr>
@@ -97,29 +90,10 @@
 </tr></table>
 <h3>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
-<a id="method_getFailureReason"></a><div class="element clickable method public method_getFailureReason " data-toggle="collapse" data-target=".method_getFailureReason .collapse" title="public">
-<h2>getFailureReason()
-        </h2>
-<pre>getFailureReason() </pre>
+<a id="method_toArray"></a><div class="element clickable method public method_toArray " data-toggle="collapse" data-target=".method_toArray .collapse" title="public">
+<h2>Return a native PHP array representation of the object.</h2>
+<pre>toArray() </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="method_getFile"></a><div class="element clickable method public method_getFile " data-toggle="collapse" data-target=".method_getFile .collapse" title="public">
-<h2>Return the part of the file we got, if any.</h2>
-<pre>getFile() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<h3>
-<i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
-<a id="property_failure_codes"> </a><div class="element clickable property public property_failure_codes" data-toggle="collapse" data-target=".property_failure_codes .collapse" title="public">
-<h2>The possible failure codes and an English description.</h2>
-<pre>$failure_codes </pre>
-<div class="row collapse"><div class="detail-description">
-<h3>Default</h3>
-<div class="subelement argument"><code>array(UPLOAD_ERR_INI_SIZE => 'The file size exceeds the server-allowed limit.', UPLOAD_ERR_FORM_SIZE => 'The file size exceeds the form-allowed upload limit.', UPLOAD_ERR_PARTIAL => 'The file was only partially uploaded.', UPLOAD_ERR_NO_FILE => 'No file was uploaded.', UPLOAD_ERR_CANT_WRITE => 'The server failed to write the file.', UPLOAD_ERR_NO_TMP_DIR => 'A server misconfiguration .', UPLOAD_ERR_EXTENSION => 'A PHP server extension cancelled the upload.')</code></div>
-</div></div>
-<div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
@@ -129,7 +103,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2015-10-08T16:17:47-04:00.<br></footer></div>
+            generated on 2015-10-08T17:00:48-04:00.<br></footer></div>
 </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Haldayne PHP Componentry" default="docs">
-    <target name="docs">
-         <phpdoc2 destdir="./build" template="responsive">
+<project name="Haldayne PHP Componentry" default="apidoc">
+    <target name="apidoc">
+         <phpdoc2 destdir="./api" template="responsive">
              <fileset dir="./modules">
                  <include name="**/*.php" />
              </fileset>
