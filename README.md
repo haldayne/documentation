@@ -1,1 +1,1 @@
-Unused branch. Refer to [gh-branches](https://github.com/haldayne/documentation/tree/master) instead.
+Unused branch. Refer to [gh-branches](https://github.com/haldayne/documentation/tree/gh-branches) instead.
