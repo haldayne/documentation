@@ -388,7 +388,7 @@ Second, if the auto-append syntax was given:
     </parse_markers>
     <source>eJyNUstu2zAQvOsrBkYApYZj99w8itR16wJ9GK17cg1jTdESUYoUxFVip8i/d0U/kKo5hBeJy9mdnd25elsVVeKo1KEipTElm9HO6V/jJrAvw2WSjPr9BH2MfVl6h1Jz4bOAUFCtM5DE8sBoKuspk8DGWB2GkjBKaB24JsVQlkLA7eH6M0Injg3vkj8J5FTN2hqFTeMUGyFZrZR3gm4Un58VXNqv0uCrCN0ntOeMCxMubo7PuMYJehlBj0n8xP7b08dHzeBCVM6/fMYd1YbWVqNVj42v0RY8KBkeUo6Z8/YpAqmqar81JbEOsZivTW4cWbtDbu60i7ABrPmt3xzTgSvjqkbYd5W+TtshpRG3/1/QMsXopsP5TvDGIXhhVRQOdHrbjjS2osg5z1hr1Jqb2ulsCHwwdeCBBBU1QR9rzaYzlORyWc5efVw5ZMxMxhmXIx2mIgUp0kHLEzTujbWSVD1R0Zc5+eGa6hMjKKAnwZUEex0gXgpcvRS4kJjQPyz/Q59eep0p/tAiMhvAbOL4qGF/ITvULkPYifot7qVE3FxX6OIZmtfL3gCa1dEgo2cNnGueHrx43vXtvmTXvv9adoTZ92/zyXg+eY/b2ad9VHzHWrE088Toj8lfiGwiow==</source>
   </file>
-  <file path="customs/src/UploadIterator.php" generated-path="customs.src.UploadIterator.html" hash="8162fa8b95e3572341c1e1adf24a07fb" package="Default">
+  <file path="customs/src/UploadIterator.php" generated-path="customs.src.UploadIterator.html" hash="ab57e8946f14cf541b0a62988babb8ba" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -464,7 +464,7 @@ that prevented their storage, then the constructor throws an exception.</long-de
 $it = new Haldayne\Customs\UploadIterator;
 if (isset($it[0])) { ... }
 ```</long-description>
-          <tag name="param" line="40" description="&lt;p&gt;The&lt;/p&gt;" type="integer" variable="$offset">
+          <tag name="param" line="40" description="&lt;p&gt;The offset to check.&lt;/p&gt;" type="integer" variable="$offset">
             <type>integer</type>
           </tag>
           <tag name="return" line="40" description="" type="boolean">
@@ -486,15 +486,15 @@ if (isset($it[0])) { ... }
 $it = new Haldayne\Customs\UploadIterator;
 $it[0];
 ```</long-description>
-          <tag name="param" line="57" description="&lt;p&gt;The&lt;/p&gt;" type="integer" variable="$offset">
+          <tag name="param" line="57" description="&lt;p&gt;The offset to check.&lt;/p&gt;" type="integer" variable="$offset">
             <type>integer</type>
           </tag>
-          <tag name="return" line="57" description="" type="\Haldayne\Customs\Haldayne\Customs\UploadFile|\Haldayne\Customs\Haldayne\Customs\UploadError">
-            <type>\Haldayne\Customs\Haldayne\Customs\UploadFile</type>
-            <type>\Haldayne\Customs\Haldayne\Customs\UploadError</type>
+          <tag name="return" line="57" description="" type="\Haldayne\Customs\UploadFile|\Haldayne\Customs\UploadError">
+            <type>\Haldayne\Customs\UploadFile</type>
+            <type>\Haldayne\Customs\UploadError</type>
           </tag>
-          <tag name="throws" line="57" description="When the offset does not exist." type="\Haldayne\Customs\OutOfBoundsException">
-            <type>\Haldayne\Customs\OutOfBoundsException</type>
+          <tag name="throws" line="57" description="When the offset does not exist." type="\OutOfBoundsException">
+            <type>\OutOfBoundsException</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -708,7 +708,7 @@ an exception if one would be warranted by the error.</description>
       <error line="122" code="PPC:ERR-50007">No summary for property $files</error>
       <error line="123" code="PPC:ERR-50007">No summary for property $index</error>
     </parse_markers>
-    <source>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</source>
+    <source>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</source>
   </file>
   <file path="customs/src/UploadFailure.php" generated-path="customs.src.UploadFailure.html" hash="819bf55d301d4382f4b3e8703260b17f" package="Default">
     <docblock line="0">

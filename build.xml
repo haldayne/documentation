@@ -7,5 +7,7 @@
                  <include name="**/*.php" />
              </fileset>
          </phpdoc2>
+         <exec command="git commit -am 'Updates to latest'" dir="." />
+         <exec command="git push origin gh-pages" dir="." />
      </target>
 </project>
