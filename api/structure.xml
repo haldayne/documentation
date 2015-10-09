@@ -205,226 +205,6 @@ Second, if the auto-append syntax was given:
     </parse_markers>
     <source>eJyFVE1vEzEQve+vmEMPbRSSe0qBKg1QiUBFwwGpUjW7mWQNXtv4I7BA/ztjO5tsAyV7WWk8897M8xs/f2lqUyhsyBmsCN6iXGKr6G4anNeNOy+K4HrhuWiIY+PBoIABfCRjyZHyDhBWQhL4Gj3U6KAkUuBCVZFzqyBlC8FIjUtajrhyXFQSnYNPKfY6VtIPT2rp4LJ03mLl89FMeeHb4lcB/CXW+A1gagk9Maui76DLL1R5sF03Qq35ZNBnH+zoU5+jLU4H98qgxQaYOdae1L6R71kTWNQ8+2L+DjZoBZbcZpQKKm2ZyWi1jOle89jCPQLuEBWT/+5gVQeprVgLhTJrFsNDYM3WYsOilS3DMYcUPMohXgeVCiOUp8Zoi7YFR3ZDNkMa9PUTfQnlyTL3NjBOfxNKKSpYBVV5oRXc31daMVeo/OlOjWGeYJjZz1JhvpgEgZb7nUz+WXp2vss7iT09e5G0uMiIfx2mGS7S3d7dGhn9ca1W+jQT5/SH4tATb8gn5Xai9nSENW4IAouh7V6VIYgVoGoP7XClQeloKLYtq7HLz6gRgos4yjdRBg9L4YzEdsimrzCuS6tDB1WhilCsh/N5O4Rn/yiPQjlwuOIOa4yGJ+tG/72UNflpGibqETs5PbwDSz5Y1Zf4mFZ7+6T5ai2zpePEeWNG8FkHaGL7jd7QXowOqiQWJGtt6VsgTkyLzPb7SmTSwRbqcOscUe8JmEwiwUIfE+E2GT1WHBEgdnlMgPn1fMa3ibL9GZcnuYP68z3ZRnwKL7eFTzUSHRzz7vaJjxsaw83HD4vZdDG7gsub6xw1Vnt+0Pit6q1HL5jneij+ADDjw/0=</source>
   </file>
-  <file path="customs/tests/UploadIteratorTest.php" generated-path="customs.tests.UploadIteratorTest.html" hash="98d01fe1d56ec7c6c655c747c269ef99" package="Haldayne">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Haldayne"/>
-    </docblock>
-    <namespace-alias name="Faker">\Faker</namespace-alias>
-    <namespace-alias name="vfs">\org\bovigo\vfs</namespace-alias>
-    <class final="false" abstract="false" namespace="Haldayne\Customs" line="7" package="Haldayne">
-      <extends>\PHPUnit_Framework_TestCase</extends>
-      <name>UploadIteratorTest</name>
-      <full_name>\Haldayne\Customs\UploadIteratorTest</full_name>
-      <docblock line="7">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="7" description="Haldayne"/>
-      </docblock>
-      <property static="true" visibility="public" namespace="Haldayne\Customs" line="54" package="Haldayne">
-        <name>$faker</name>
-        <full_name>\Haldayne\Customs\UploadIteratorTest::faker</full_name>
-        <default></default>
-        <docblock line="54">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="true" visibility="public" namespace="Haldayne\Customs" line="55" package="Haldayne">
-        <name>$vfs</name>
-        <full_name>\Haldayne\Customs\UploadIteratorTest::vfs</full_name>
-        <default></default>
-        <docblock line="55">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="9" package="Haldayne">
-        <name>test_construction</name>
-        <full_name>\Haldayne\Customs\UploadIteratorTest::test_construction()</full_name>
-        <docblock line="9">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="17" package="Haldayne">
-        <name>test_no_upload</name>
-        <full_name>\Haldayne\Customs\UploadIteratorTest::test_no_upload()</full_name>
-        <docblock line="17">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="23" package="Haldayne">
-        <name>test_single_upload</name>
-        <full_name>\Haldayne\Customs\UploadIteratorTest::test_single_upload()</full_name>
-        <docblock line="23">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="37" package="Haldayne">
-        <name>test_multiple_upload</name>
-        <full_name>\Haldayne\Customs\UploadIteratorTest::test_multiple_upload()</full_name>
-        <docblock line="37">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="57" package="Haldayne">
-        <name>setupBeforeClass</name>
-        <full_name>\Haldayne\Customs\UploadIteratorTest::setupBeforeClass()</full_name>
-        <docblock line="57">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="74" package="Haldayne">
-        <name>provides_single_upload_info</name>
-        <full_name>\Haldayne\Customs\UploadIteratorTest::provides_single_upload_info()</full_name>
-        <docblock line="74">
-          <description>Emulates a populated upload from an HTML form like:
-&lt;input type='file' name='foo' /&gt;
-&lt;input type='file' name='bar' /&gt;
-&lt;input type='file' name='baz' /&gt;</description>
-          <long-description></long-description>
-          <tag name="param" line="74" description="&lt;p&gt;The number of file inputs to include, defaults to 1&lt;/p&gt;" type="integer" variable="$n">
-            <type>integer</type>
-          </tag>
-          <tag name="param" line="74" description="" type="array" variable="$defaults">
-            <type>array</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$n</name>
-          <default>1</default>
-          <type>integer</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$defaults</name>
-          <default>array()</default>
-          <type>array</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="95" package="Haldayne">
-        <name>provides_multiple_upload_info</name>
-        <full_name>\Haldayne\Customs\UploadIteratorTest::provides_multiple_upload_info()</full_name>
-        <docblock line="95">
-          <description>Emulates a populated upload from an HTML form like:
-&lt;input type='file' name='foo[bar]' /&gt;
-&lt;input type='file' name='foo[baz]' /&gt;
-&lt;input type='file' name='foo[2]' /&gt;
-&lt;input type='file' name='bar[0]' /&gt;
-&lt;input type='file' name='bar[x]' /&gt;</description>
-          <long-description></long-description>
-          <tag name="param" line="95" description="&lt;p&gt;The number of outer file inputs to include, defaults to 1&lt;/p&gt;" type="integer" variable="$m">
-            <type>integer</type>
-          </tag>
-          <tag name="param" line="95" description="&lt;p&gt;The number of inner file inputs to include, defaults to 1&lt;/p&gt;" type="integer" variable="$n">
-            <type>integer</type>
-          </tag>
-          <tag name="param" line="95" description="" type="array" variable="$defaults">
-            <type>array</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$m</name>
-          <default>1</default>
-          <type>integer</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$n</name>
-          <default>1</default>
-          <type>integer</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$defaults</name>
-          <default>array()</default>
-          <type>array</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="117" package="Haldayne">
-        <name>provides_info</name>
-        <full_name>\Haldayne\Customs\UploadIteratorTest::provides_info()</full_name>
-        <docblock line="117">
-          <description>Provides data you'd find in a $_FILES entry: name, type, etc.</description>
-          <long-description></long-description>
-          <tag name="param" line="117" description="&lt;p&gt;Override otherwise random values&lt;/p&gt;" type="array" variable="$defaults">
-            <type>array</type>
-          </tag>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$defaults</name>
-          <default>array()</default>
-          <type>array</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="145" package="Haldayne">
-        <name>provides_file</name>
-        <full_name>\Haldayne\Customs\UploadIteratorTest::provides_file()</full_name>
-        <docblock line="145">
-          <description>Provides a SplFileInfo corresponding to a random file.</description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="167" package="Haldayne">
-        <name>provides_name</name>
-        <full_name>\Haldayne\Customs\UploadIteratorTest::provides_name()</full_name>
-        <docblock line="167">
-          <description>Return a random, unique HTML name. Technically, this could be any
-character from the ISO-10646 standard and PHP is meant to handle these.</description>
-          <long-description>However, PHP mangles two characters: '.' and ' '.  We omit these
-characters from this generation so that we can test them specifically.
-PHP also interprets [] specially, so we omit those here as we test
-them specifically elsewhere.</long-description>
-          <tag name="see" line="167" description="" link="http://stackoverflow.com/q/3424860/2908724"/>
-          <tag name="see" line="167" description="" link="https://bugs.php.net/bug.php?id=34882"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$mangle</name>
-          <default>true</default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="175" package="Haldayne">
-        <name>provides_mangled_name</name>
-        <full_name>\Haldayne\Customs\UploadIteratorTest::provides_mangled_name()</full_name>
-        <docblock line="175">
-          <description>Always returns some kind of unique mangled name.</description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="183" package="Haldayne">
-        <name>mangle_names</name>
-        <full_name>\Haldayne\Customs\UploadIteratorTest::mangle_names()</full_name>
-        <docblock line="183">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$info</name>
-          <default></default>
-          <type>array</type>
-        </argument>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="7" code="PPC:ERR-50005">No summary for class \Haldayne\Customs\UploadIteratorTest</error>
-      <error line="9" code="PPC:ERR-50008">No summary for method test_construction()</error>
-      <error line="17" code="PPC:ERR-50008">No summary for method test_no_upload()</error>
-      <error line="23" code="PPC:ERR-50008">No summary for method test_single_upload()</error>
-      <error line="37" code="PPC:ERR-50008">No summary for method test_multiple_upload()</error>
-      <error line="57" code="PPC:ERR-50008">No summary for method setupBeforeClass()</error>
-      <error line="167" code="PPC:ERR-50015">Argument $mangle is missing from the Docblock of provides_name</error>
-      <error line="183" code="PPC:ERR-50015">Argument $info is missing from the Docblock of mangle_names</error>
-      <error line="183" code="PPC:ERR-50008">No summary for method mangle_names()</error>
-      <error line="54" code="PPC:ERR-50007">No summary for property $faker</error>
-      <error line="55" code="PPC:ERR-50007">No summary for property $vfs</error>
-    </parse_markers>
-    <source>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</source>
-  </file>
   <file path="customs/src/UploadError.php" generated-path="customs.src.UploadError.html" hash="ba85560108e188117aa57f1238caf14e" package="Haldayne">
     <docblock line="0">
       <description></description>
@@ -933,251 +713,6 @@ an exception if one would be warranted by the error.</description>
     </parse_markers>
     <source>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</source>
   </file>
-  <file path="boost/tests/CollectionTest.php" generated-path="boost.tests.CollectionTest.html" hash="19ca109010f0d6d3f3a1faadcb880718" package="Haldayne">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Haldayne"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="Haldayne\DataStructure" line="4" package="Haldayne">
-      <extends>\PHPUnit_Framework_TestCase</extends>
-      <name>CollectionTest</name>
-      <full_name>\Haldayne\DataStructure\CollectionTest</full_name>
-      <docblock line="4">
-        <description></description>
-        <long-description></long-description>
-        <tag name="package" line="4" description="Haldayne"/>
-      </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="7" package="Haldayne">
-        <name>test_construction_valid</name>
-        <full_name>\Haldayne\DataStructure\CollectionTest::test_construction_valid()</full_name>
-        <docblock line="7">
-          <description></description>
-          <long-description></long-description>
-          <tag name="dataProvider" line="7" description="provides_valid_items"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$items</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="16" package="Haldayne">
-        <name>test_construction_invalid</name>
-        <full_name>\Haldayne\DataStructure\CollectionTest::test_construction_invalid()</full_name>
-        <docblock line="16">
-          <description></description>
-          <long-description></long-description>
-          <tag name="dataProvider" line="16" description="provides_invalid_items"/>
-          <tag name="expectedException" line="16" description="InvalidArgumentException"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$items</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="22" package="Haldayne">
-        <name>test_all</name>
-        <full_name>\Haldayne\DataStructure\CollectionTest::test_all()</full_name>
-        <docblock line="22">
-          <description></description>
-          <long-description></long-description>
-          <tag name="dataProvider" line="22" description="provides_valid_items"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$items</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$array</name>
-          <default></default>
-          <type>array</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="28" package="Haldayne">
-        <name>test_contains_get_set_forget</name>
-        <full_name>\Haldayne\DataStructure\CollectionTest::test_contains_get_set_forget()</full_name>
-        <docblock line="28">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="45" package="Haldayne">
-        <name>test_isEmpty</name>
-        <full_name>\Haldayne\DataStructure\CollectionTest::test_isEmpty()</full_name>
-        <docblock line="45">
-          <description></description>
-          <long-description></long-description>
-          <tag name="dataProvider" line="45" description="provides_valid_items"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$items</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$array</name>
-          <default></default>
-          <type>array</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="54" package="Haldayne">
-        <name>test_diff</name>
-        <full_name>\Haldayne\DataStructure\CollectionTest::test_diff()</full_name>
-        <docblock line="54">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="68" package="Haldayne">
-        <name>test_intersect</name>
-        <full_name>\Haldayne\DataStructure\CollectionTest::test_intersect()</full_name>
-        <docblock line="68">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="82" package="Haldayne">
-        <name>test_each</name>
-        <full_name>\Haldayne\DataStructure\CollectionTest::test_each()</full_name>
-        <docblock line="82">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="104" package="Haldayne">
-        <name>test_partition</name>
-        <full_name>\Haldayne\DataStructure\CollectionTest::test_partition()</full_name>
-        <docblock line="104">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="137" package="Haldayne">
-        <name>test_count</name>
-        <full_name>\Haldayne\DataStructure\CollectionTest::test_count()</full_name>
-        <docblock line="137">
-          <description></description>
-          <long-description></long-description>
-          <tag name="dataProvider" line="137" description="provides_valid_items"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$items</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$array</name>
-          <default></default>
-          <type>array</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="145" package="Haldayne">
-        <name>test_toArray</name>
-        <full_name>\Haldayne\DataStructure\CollectionTest::test_toArray()</full_name>
-        <docblock line="145">
-          <description></description>
-          <long-description></long-description>
-          <tag name="dataProvider" line="145" description="provides_valid_items"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$items</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$array</name>
-          <default></default>
-          <type>array</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="154" package="Haldayne">
-        <name>test_toJson</name>
-        <full_name>\Haldayne\DataStructure\CollectionTest::test_toJson()</full_name>
-        <docblock line="154">
-          <description></description>
-          <long-description></long-description>
-          <tag name="dataProvider" line="154" description="provides_valid_items"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$items</name>
-          <default></default>
-          <type/>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$array</name>
-          <default></default>
-          <type>array</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="162" package="Haldayne">
-        <name>test_array_access</name>
-        <full_name>\Haldayne\DataStructure\CollectionTest::test_array_access()</full_name>
-        <docblock line="162">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="179" package="Haldayne">
-        <name>test_iterator_aggregate</name>
-        <full_name>\Haldayne\DataStructure\CollectionTest::test_iterator_aggregate()</full_name>
-        <docblock line="179">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\DataStructure" line="195" package="Haldayne">
-        <name>provides_valid_items</name>
-        <full_name>\Haldayne\DataStructure\CollectionTest::provides_valid_items()</full_name>
-        <docblock line="195">
-          <description>Provides a structure to initialize a Collection, and the corresponding
-native PHP array.</description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\DataStructure" line="210" package="Haldayne">
-        <name>provides_invalid_items</name>
-        <full_name>\Haldayne\DataStructure\CollectionTest::provides_invalid_items()</full_name>
-        <docblock line="210">
-          <description>Provides types that cannot be made into a Collection.</description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="4" code="PPC:ERR-50005">No summary for class \Haldayne\DataStructure\CollectionTest</error>
-      <error line="7" code="PPC:ERR-50015">Argument $items is missing from the Docblock of test_construction_valid</error>
-      <error line="7" code="PPC:ERR-50008">No summary for method test_construction_valid()</error>
-      <error line="16" code="PPC:ERR-50015">Argument $items is missing from the Docblock of test_construction_invalid</error>
-      <error line="16" code="PPC:ERR-50008">No summary for method test_construction_invalid()</error>
-      <error line="22" code="PPC:ERR-50015">Argument $items is missing from the Docblock of test_all</error>
-      <error line="22" code="PPC:ERR-50015">Argument $array is missing from the Docblock of test_all</error>
-      <error line="22" code="PPC:ERR-50008">No summary for method test_all()</error>
-      <error line="28" code="PPC:ERR-50008">No summary for method test_contains_get_set_forget()</error>
-      <error line="45" code="PPC:ERR-50015">Argument $items is missing from the Docblock of test_isEmpty</error>
-      <error line="45" code="PPC:ERR-50015">Argument $array is missing from the Docblock of test_isEmpty</error>
-      <error line="45" code="PPC:ERR-50008">No summary for method test_isEmpty()</error>
-      <error line="54" code="PPC:ERR-50008">No summary for method test_diff()</error>
-      <error line="68" code="PPC:ERR-50008">No summary for method test_intersect()</error>
-      <error line="82" code="PPC:ERR-50008">No summary for method test_each()</error>
-      <error line="104" code="PPC:ERR-50008">No summary for method test_partition()</error>
-      <error line="137" code="PPC:ERR-50015">Argument $items is missing from the Docblock of test_count</error>
-      <error line="137" code="PPC:ERR-50015">Argument $array is missing from the Docblock of test_count</error>
-      <error line="137" code="PPC:ERR-50008">No summary for method test_count()</error>
-      <error line="145" code="PPC:ERR-50015">Argument $items is missing from the Docblock of test_toArray</error>
-      <error line="145" code="PPC:ERR-50015">Argument $array is missing from the Docblock of test_toArray</error>
-      <error line="145" code="PPC:ERR-50008">No summary for method test_toArray()</error>
-      <error line="154" code="PPC:ERR-50015">Argument $items is missing from the Docblock of test_toJson</error>
-      <error line="154" code="PPC:ERR-50015">Argument $array is missing from the Docblock of test_toJson</error>
-      <error line="154" code="PPC:ERR-50008">No summary for method test_toJson()</error>
-      <error line="162" code="PPC:ERR-50008">No summary for method test_array_access()</error>
-      <error line="179" code="PPC:ERR-50008">No summary for method test_iterator_aggregate()</error>
-    </parse_markers>
-    <source>eJy9WFtX4zYQfs+vmAe6tmmyCdA8FJrdsil7oKctORv6FDg5iq0EdR3ZlWSWtIf/3pF8iS9xYkogHBLbmss3M5+kkX/6GN6HLU6WVIbEpXBJfI+sOL39hSgyViJyVSToWavl+kRKGAa+T13FAn5DpQL6qCj3JNyOLkd/cqamnwVa+haIr1M9PiSStv5tAX66h4fws4c2RyJ4YB4VEMYXcvpAfOZNmaJLCYddIx1GM5+5MI+48QUKjU3dgEsDCJ/ESvaB0XKMTuxHfzj9lgOaCp2Z8adWCicWr0XFeA5XJksfQ7RKvYtHl4YG2lUsdy4W0ZJylQ0kKk3jSdy9KKKXJpj4fmK6DUQIsoID81NGc+DCYCskI6Tumex8QNJQocbICjs21kZ1fIyunGIAdTlShHE5XVA1lfg/DwRe2k0gTcAiVhusmf5yLbirQ3cjIkSHqFJvds+pk/1MfFkS7heEBQLRwwnQ3vaUuJgO8Qxf9cCMPROrVtCujzbiknoEE/LJegGy2NmnWmeJnz76Gdb6qaa97+yd00xeLEO1ek1eZ0P604PBYABuEHGVEN5pFwR0wCkoJxtpMBU8Np83471FwtCnhvqE45++IhYMPkBuJL5PBPTUWNt8TKhiPE56OcXaKWQSMTnK26w6QbY8rqd+I3/tXGCnp79dX48vpsPr30fnX67G13+8AZpi4kp4xjdfroY3jQH1CiV4Frxd5GBcUSER19syZO32OTQp5qGS4e1lqXP5EqbsC9A+ybIVxS46UOLeN2KCIHxB9Tr9Y3n9NiYyq/YBLrgRRRRf6cqBSFKw3+nrqYyWbXgXD+sbJ+fR2EqE4PuBuT4rjmZ6ZtzcrSWetqboqNfOrG8VPMH4cgDzRaxNCW6RJ/8nJY/l+Nkc7COzKcRyxVH9ERRbbA5zvdsXs/MEFJ9tUDHkmxiLmiQxErg7q7PdK9ltmOEJmJlxBIZ+DXgXEqGYyWKZfN0uzFZgcO5q2uYiYqqTzcb4dr1OPdDFgtGOS2YzsqClti6dlGsg5XqVK+AzPMfYB18Z9zBIfRBy0Ab2+X7gYY/TsVLuOMUcJpk1ik0ZWzAwqRQrDtVM+x1pwIJUtePEJOrHZvGo5KqgVTKiFxgVnOuepdiZlIqIpGswgXrlCbS7NO2NUySlsJlDtqH8d3DswEew6APlFpyCFXieta8ixEZNEg37MRCTzOONSdeeY2Gzn+tlQ/+elIWb5trgT7rfrplUEvAoAWyJPNAHTDxsD3V3SWY+3VuXnPSrTXrkSj6LvS7YmxtoR7f5WrDc4tcEaVKz1xjTdL/RCTerbrN4f5UB33O42uRrRvsX2p9S7up1Mit/HLpx3TDyW5Onc9elUm7ZWoyDKTFir3D8Z1IfWA/cSe9ux9k/k+wXJCO+NtBMf4un/GF+clQwqO8xWDx8NzibV3T7RndYp1tMRX8XwGHspH/XsNJX2CkTFYjzxULQBVF024kmkZ2SVLhadWK6oLTM+f5nI6VJPhqWbEcLqlJYdl20V1wqwl16PbetmK6pik4Aq1O7+DvCiqNfLWQ8Gd1hEBaWhTRnnUFnAPq1K6SzXgI+6lTeWCbDEgjI9A0tqAAYx30Vl4d/KI6sA8fJzz1Q9xTcQAgqw4B7jC9Sa5wo9kBhdDmKF4n3yUBhbcH4Vb5Em5ajSn2Snbu4x06AR77fhsldeU+c4LPNz7OWvI8rTO6mKlkqubPZXl3H33ea2L8dK2+o34ZXzd/VvWTOSqZWof6+JwpcwnmgYEZhSTyK1cMS5uv2vEIU3lc3LQWyh1aDPP6h0uvgw/ebnlpIQORSpSGd4NwPKbet8D487XaXdBmIlZ6mwnI2Juyp9R+/jMFY</source>
-  </file>
   <file path="boost/src/functions/bytes.php" generated-path="boost.src.functions.bytes.html" hash="cd88e37dcbb860416d5a3cf0b72d5b0f" package="Haldayne">
     <docblock line="0">
       <description></description>
@@ -1204,6 +739,43 @@ native PHP array.</description>
       <error line="28" code="PPC:ERR-50011">No summary for function \Haldayne\Boost\bytes()</error>
     </parse_markers>
     <source>eJyVk01r3DAQhu/+FXMo3fV2Y0OhoWQLLaWHHEPppRBYyfLsWsQeLfpoupT8944ka52UQqkultE7z7wzI334eBpOFckJ3UkqhFs59vJMeP/ZGOd3VdVuNhVsQGjy0J09urXzVtOxFnAFX9EHS+AHBApThxbMIatAE0jI0oYBkXF3ewe9UWFC8o6DpE+RglUjkoBDIOW1IbAJ6/7GjZznaPg2aE7GWhtwC4FGdDlQTF3WCMCfHslF8iATwfxAa3XfIy3ZvZnz/pFWDdJK5dG6Usd3E0BJAtSstBw1noFL0mljcrxIbp/VxKbPJlhQpmefxsa/CIugSbqHFNUFPforlmZT8MgZFkRwCOvYxHfN9Zv6ZnYjhIiftmXMA5ZIdhzkyH6UCWVyW7Z6lLZPLeLKHgdMBZRGzZilW9zW2KnRyH4+jhZeXpH7PG7p5sy7xVPcfXKIMHh/umlbvmkNoW8nSeytRWpLaU2ObVgBXy43pIzm35xSQVPsZpJ2KjjH7i4tLOeMbCt9gPVbeM2j0fsj+vXqgon6fdGu6hp+VcDrgskP4dX8EubTuOYbNHX77L1otrB632m/qndJ+lQ9AY7cy//kvoQusOo3dMVFvg==</source>
+  </file>
+  <file path="boost/src/functions/ini_size_to_bytes.php" generated-path="boost.src.functions.ini_size_to_bytes.html" hash="f8b51cf1d348af60aab41d14d8e6504b" package="Haldayne">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Haldayne"/>
+    </docblock>
+    <function namespace="Haldayne\Boost" line="21" package="Haldayne">
+      <name>ini_size_to_bytes</name>
+      <full_name>\Haldayne\Boost\ini_size_to_bytes()</full_name>
+      <docblock line="21">
+        <description>`int ini_size_to_bytes(string)` - Convert a short-hand bytes specification
+into integer bytes.</description>
+        <long-description>Some PHP ini values (like `upload_max_filesize`) allow you to specify the
+number of bytes in a short-hand, like "10M" or "1G". But, when you call
+`ini_get` you'll get these actual short-hand values, instead of the byte
+equivalent (which usually you want).
+
+This function converts a super-set of documented short-hand into bytes:
+  * An optional leading +
+  * Number specification in hex, octal, or decimal
+  * Kilo-, Mega-, Giga-, and Tera-bytes expressed using single or double
+    characters in either lower or upper case: "k", "kB", "G", "Pb", etc.</long-description>
+        <tag name="package" line="21" description="Haldayne"/>
+        <tag name="see" line="21" description="Documents the short-hand" link="http://php.net/manual/en/faq.using.php#faq.using.shorthandbytes"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$string</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="21" code="PPC:ERR-50015">Argument $string is missing from the Docblock of ini_size_to_bytes</error>
+    </parse_markers>
+    <source>eJyNU++PGjcQ/b5/xYhEWrgs7JFejgsUtb1UukhVopOaj5XAuwysdV574x8BWuV/74x3gYNEbZAwxp55780bz8+/NFWTaFGja0SJ8F6oldhr/OveGOdnSZJfXSVwBUupPUgtF07+jQtvFsXeo+s7b6XeDJYwhHdGf0HrQYCrjPXDSugVxChwDZZyLUvhpdGMRmCGF9ygbWNGdMw3f5oa4fH9I3PBF6ECpfeVfEJYhkYZsVrUYrdYS4UsZDkAoZTZwt4EIMiWaA++QgbToS6IwKw7HVKfqcsgAvfG1x96YCxtHnojuA8+g22FOoKWhN/VLxcb9Es+TZUC2jONQxClD0I9r7rVnRGf8yhWLIBCowjGws9BUgiSo/1tJcsKgiMEtY+MW6H94GDHp0o6WAddsnNQthY7riI0aIeORBD4ypShJjhcPVcRTY6FTxkK6PubBtMwFOlVpIx6B68Olx9bt86axZZVuMvAlF6ojF1a0XUt1CHrD6nMMIMPuBH08yDjD9N/QiuGre+4ayw6R/KCY0peFEYwEwqFLRZAWQlLbqKNrUJJplmg9nIPLYSGSqaGOJxC76mX0XLP6wMvjwWt6MuDcb86RKi8b6Z5Ti98pNHntdBkc446X4vPoyhlRHcvTv+ie2xeq/v3zlcX23eylgjy5NiVb6fiZTcWyT8Jl5XngErWUguP1MO6UbiTfj+FjeHn21YYI7tEmANtvIkXRzQaxg5ti2ScTj2ZYen9FSbQ2On9saXpq5QN4yNvhVTxrEgzWFnTcC31BZuiTX0gyjif2M5D7EVIkT4T1D1MKKg58UyuoX8N83kspDHuWeL1Lh0MoHUmUnRTOucHS2NxCh3fdiq+kn80aP8F+qOYd+eQ/59yiD/WWgflZUPDysXSbGtQwvnT241xbis9zXXfhYJgTvTD8ZlOfsyQ+nR6pL+aw/j67ds34/Ht68lkcjuDwqJ4ml2kbC5TJj9NbsZ3r29mHPPdlPoy5ebuDeO3n++mPF2mdPjfpHTuWPTB6kPKLPma/As65/eq</source>
   </file>
   <file path="boost/src/Map.php" generated-path="boost.src.Map.html" hash="45924a737ff130f87a0dd2eb70320765" package="Haldayne">
     <docblock line="0">
@@ -2918,7 +2490,6 @@ return that many from the end of the array.</long-description>
       <namespace name="Contract" full_name="Haldayne\Boost\Contract"/>
     </namespace>
     <namespace name="Customs" full_name="Haldayne\Customs"/>
-    <namespace name="DataStructure" full_name="Haldayne\DataStructure"/>
   </namespace>
   <deprecated count="0"/>
 </project>

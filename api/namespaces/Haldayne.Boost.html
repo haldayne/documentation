@@ -34,7 +34,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">68</span></a></li>
+                <span class="label label-info">30</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -67,6 +67,9 @@
 <i title="Functions" class="icon-custom icon-function"></i> Functions</li>
 <li class="function  "><a href="#function_bytes" title="bytes() :: "><span class="description">bytes()
         </span><pre>bytes</pre></a></li>
+<li class="function  "><a href="#function_ini_size_to_bytes" title="ini_size_to_bytes() :: `int ini_size_to_bytes(string)` - Convert a short-hand bytes specification
+into integer bytes."><span class="description">`int ini_size_to_bytes(string)` - Convert a short-hand bytes specification
+into integer bytes.</span><pre>ini_size_to_bytes</pre></a></li>
 <li class="nav-header">
 <i title="Classes" class="icon-custom icon-class"></i> Classes</li>
 <li><a href="#Map" title="An improvement on PHP associative arrays.">Map</a></li>
@@ -97,6 +100,37 @@
 <th>package</th>
 <td><a href="../packages/Haldayne.html">Haldayne</a></td>
 </tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$string</h4></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_ini_size_to_bytes"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_ini_size_to_bytes " data-toggle="collapse" data-target=".function_ini_size_to_bytes .collapse" title="">
+<h2>`int ini_size_to_bytes(string)` - Convert a short-hand bytes specification
+into integer bytes.</h2>
+<pre>ini_size_to_bytes($string) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Some PHP ini values (like <code>upload_max_filesize</code>) allow you to specify the
+number of bytes in a short-hand, like &quot;10M&quot; or &quot;1G&quot;. But, when you call
+<code>ini_get</code> you'll get these actual short-hand values, instead of the byte
+equivalent (which usually you want).</p>
+<p>This function converts a super-set of documented short-hand into bytes:</p>
+<ul>
+<li>An optional leading +</li>
+<li>Number specification in hex, octal, or decimal</li>
+<li>Kilo-, Mega-, Giga-, and Tera-bytes expressed using single or double
+characters in either lower or upper case: &quot;k&quot;, &quot;kB&quot;, &quot;G&quot;, &quot;Pb&quot;, etc.</li>
+</ul></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/Haldayne.html">Haldayne</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://php.net/manual/en/faq.using.php#faq.using.shorthandbytes">Documents the short-hand</a></td>
+</tr>
+</table>
 <h3>Parameters</h3>
 <div class="subelement argument"><h4>$string</h4></div>
 </div></div>
@@ -153,7 +187,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2015-10-09T13:58:29-04:00.<br></footer></div>
+            generated on 2015-10-09T14:19:36-04:00.<br></footer></div>
 </div>
 </body>
 </html>
