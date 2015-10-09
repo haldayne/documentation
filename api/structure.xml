@@ -82,6 +82,112 @@ attempting to bypass the normal PHP file upload safeguards.</long-description>
     </parse_markers>
     <source>eJyzsS/IKODKS8xNLS5ITE5V8EjMSUmszEuNcUksSQwuKSpNLiktSrXm4srMK0ktSgMq4QIA4kcScg==</source>
   </file>
+  <file path="customs/src/ServerProblemException.php" generated-path="customs.src.ServerProblemException.html" hash="8097133c02c2a2d55dcc6b0b09df5f00" package="Haldayne">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Haldayne"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Haldayne\Customs" line="20" package="Haldayne">
+      <extends>\Haldayne\Customs\UploadException</extends>
+      <name>ServerProblemException</name>
+      <full_name>\Haldayne\Customs\ServerProblemException</full_name>
+      <docblock line="20">
+        <description>A specific kind of UploadException: the server had a problem.</description>
+        <long-description>It's recommended that you also log the temporary directory and currently
+installed extensions for their diagnostic value. The exception message
+does not include these details for security.
+
+```
+try {
+    $it = new UploadIterator;
+} catch (ServerProblemException $ex) {
+    error_log($ex-&gt;getDiagnosticMessage());
+    throw $ex;
+}</long-description>
+        <tag name="package" line="20" description="Haldayne"/>
+        <tag name="inherited_from" description="\Haldayne\Customs\UploadException" refers="\Haldayne\Customs\UploadException" link="/classes/Haldayne.Customs.UploadException.html"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="Haldayne\Customs" line="56" package="Haldayne">
+        <name>$htmlName</name>
+        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::htmlName</full_name>
+        <default></default>
+        <docblock line="56">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="56" description="&lt;p&gt;The HTML name we were given.&lt;/p&gt;" type="string" variable="$htmlName">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="29" package="Haldayne">
+        <name>getMessage</name>
+        <full_name>\Haldayne\Customs\ServerProblemException::getMessage()</full_name>
+        <docblock line="29">
+          <description>Return the message specific for this exception code.</description>
+          <long-description></long-description>
+          <tag name="return" line="29" description="" type="string">
+            <type>string</type>
+          </tag>
+          <tag name="api" line="29" description=""/>
+          <tag name="since" line="29" description="1.0.0"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="54" package="Haldayne">
+        <name>getDiagnosticMessage</name>
+        <full_name>\Haldayne\Customs\ServerProblemException::getDiagnosticMessage()</full_name>
+        <docblock line="54">
+          <description>Returns a string containing deeper diagnostics of the temporary
+directory and installed extensions.</description>
+          <long-description></long-description>
+          <tag name="return" line="54" description="" type="string">
+            <type>string</type>
+          </tag>
+          <tag name="api" line="54" description=""/>
+          <tag name="since" line="54" description="1.0.0"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="38" package="Haldayne">
+        <name>setHtmlName</name>
+        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::setHtmlName()</full_name>
+        <docblock line="38">
+          <description>Set the HTML variable name.</description>
+          <long-description></long-description>
+          <tag name="param" line="38" description="&lt;p&gt;The HTML variable name.&lt;/p&gt;" type="string" variable="$htmlName">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="38" description="" type="\Haldayne\Customs\ServerProblemException">
+            <type>\Haldayne\Customs\ServerProblemException</type>
+          </tag>
+          <tag name="api" line="38" description=""/>
+          <tag name="since" line="38" description="1.0.0"/>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$htmlName</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <inherited_from>\Haldayne\Customs\HtmlNameAccessorTrait</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="48" package="Haldayne">
+        <name>getHtmlName</name>
+        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::getHtmlName()</full_name>
+        <docblock line="48">
+          <description>Get the HTML variable name.</description>
+          <long-description></long-description>
+          <tag name="return" line="48" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Haldayne\Customs\HtmlNameAccessorTrait</inherited_from>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJy1VE1vGjEQve+vmAMRH0pIeoUmLSJURUoIAqJUaquNs54FC2OvbG8IqvjvHe9nSEhv9YE145k3z88z8/lLskoCxTZoExYhfGeSs53CX8PUOr2x/SA473QC6MAAbIKRiEUEa6E46BjuE6kZH71EmDihVQ/cCsGieUYDK8aBQWL0k8RNlwA8xtg1LRiM9GaDiiOnAOZgp1Ng0mqQeplBONwk2jCzAy7I22naMUoZpcagcnLnsYSyjklJIPjiUFkiYCHWxiMIQ5FsqbR1RPeZyRS7sCBkLLkCXdiyJXokrtGC0o4gI5ly9AgWgaNjQuaYFim3cLvyIo+Pj/7jiNgfv/GrIRxcgsJtocvYoWHEve8d9hAxF62gNc/kmea6VNJBA1/aNRQao01IcrTIfna1RHddXec2J95qt/ulu1sZvfUQeaqc43kQSWYtfJAwE43bt28YEAda2Zv71YEZutSo7F0KzepCyOUW9pWukebYLWJLiK8mx7DOCLWsrCwR1d6S9gifuhfdi8J2nn2T9En6RKmKMniSohIgc8j5+mW3IlO44RmdXXki7VfHEaM3vZ/e3A2uw9FsFk7uwsXtNLwez3qVj18F1+atsERqSUVcl2OsJafaFgq2K0G5nIYVmTJx0kzIJjXMRxmHg8kifJiNF6PjGb9Rufme0LClWisR/f+agdRURyTEv/KMfixGk/n4bnI8zUDVHQNPBLjGj27AMWapdEdxCpmLmuhXLvsg/z1eR5b0zMuAKkVRgym/5YgJvu5Z68fLwSgoYQ4nwrEh8H+r70gjvqnDRq7jg177fFPmVjQWhlrFYtnrlWdmXZy12rV0JdGEAl3cOlC9eWJ7mRokwOXPE/v7FGKDvhdpbBeGWoPM0Dw9QAjD4c1gPg/DQ3PjHaXDcy7sOvSpwixV671/+zBAbMiBY6t52jz1ioXeHXlYs6PZVUUU198H++AvKiD6Ng==</source>
+  </file>
   <file path="boost/src/functions/ini_size_to_bytes.php" generated-path="boost.src.functions.ini_size_to_bytes.html" hash="f8b51cf1d348af60aab41d14d8e6504b" package="Haldayne">
     <docblock line="0">
       <description></description>
@@ -147,6 +253,104 @@ This function converts a super-set of documented short-hand into bytes:
       <error line="4" code="PPC:ERR-50009">No summary for interface ""</error>
     </parse_markers>
     <source>eJwtjbEOgkAQRPv9ii2VQj4AE6M2lISaZjmXgMHdy95iQoz/Llyc5hXzJnO+xDGC0ItTpMBY0/ygVbi7qSbv7ipuFLwCmMTZht25mtFK/czwAdxSFkUmFtiyLyZIKOTTm7GpG6RdR+NonFh8K1RQB/SRUfsnBz/952VmXPp5CjgsErLqmg8Pxwq+8AMxFDjF</source>
+  </file>
+  <file path="customs/src/SecurityConcernException.php" generated-path="customs.src.SecurityConcernException.html" hash="4bffdbd821ae16d1f0df875d6f018cb4" package="Haldayne">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Haldayne"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Haldayne\Customs" line="7" package="Haldayne">
+      <extends>\Haldayne\Customs\UploadException</extends>
+      <name>SecurityConcernException</name>
+      <full_name>\Haldayne\Customs\SecurityConcernException</full_name>
+      <docblock line="7">
+        <description>A specific kind of UploadException: the upload is suspicious.</description>
+        <long-description>Occurs when the *server* had a problem, or the *client* appears to be
+attempting to bypass the normal PHP file upload safeguards.</long-description>
+        <tag name="package" line="7" description="Haldayne"/>
+        <tag name="inherited_from" description="\Haldayne\Customs\UploadException" refers="\Haldayne\Customs\UploadException" link="/classes/Haldayne.Customs.UploadException.html"/>
+      </docblock>
+      <constant namespace="Haldayne\Customs" line="9" package="Haldayne">
+        <name>NOT_UPLOADED</name>
+        <full_name>\Haldayne\Customs\SecurityConcernException::NOT_UPLOADED</full_name>
+        <value>1</value>
+        <docblock line="9">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Haldayne\Customs" line="10" package="Haldayne">
+        <name>UNKNOWN_CODE</name>
+        <full_name>\Haldayne\Customs\SecurityConcernException::UNKNOWN_CODE</full_name>
+        <value>2</value>
+        <docblock line="10">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <property static="false" visibility="private" namespace="Haldayne\Customs" line="56" package="Haldayne">
+        <name>$htmlName</name>
+        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::htmlName</full_name>
+        <default></default>
+        <docblock line="56">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="56" description="&lt;p&gt;The HTML name we were given.&lt;/p&gt;" type="string" variable="$htmlName">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="17" package="Haldayne">
+        <name>getMessage</name>
+        <full_name>\Haldayne\Customs\SecurityConcernException::getMessage()</full_name>
+        <docblock line="17">
+          <description>Return the message specific for this exception code.</description>
+          <long-description></long-description>
+          <tag name="api" line="17" description=""/>
+          <tag name="since" line="17" description="1.0.0"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="38" package="Haldayne">
+        <name>setHtmlName</name>
+        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::setHtmlName()</full_name>
+        <docblock line="38">
+          <description>Set the HTML variable name.</description>
+          <long-description></long-description>
+          <tag name="param" line="38" description="&lt;p&gt;The HTML variable name.&lt;/p&gt;" type="string" variable="$htmlName">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="38" description="" type="\Haldayne\Customs\SecurityConcernException">
+            <type>\Haldayne\Customs\SecurityConcernException</type>
+          </tag>
+          <tag name="api" line="38" description=""/>
+          <tag name="since" line="38" description="1.0.0"/>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$htmlName</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <inherited_from>\Haldayne\Customs\HtmlNameAccessorTrait</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="48" package="Haldayne">
+        <name>getHtmlName</name>
+        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::getHtmlName()</full_name>
+        <docblock line="48">
+          <description>Get the HTML variable name.</description>
+          <long-description></long-description>
+          <tag name="return" line="48" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Haldayne\Customs\HtmlNameAccessorTrait</inherited_from>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJyFUVlrAjEQfs+vmIeCB9Sjj9pLVBDaulKVvhQkzc66wTUJOwkqxf/e7OF2aQudh92Qb/IdM7cPJjZM8T2S4QJhxpOQnxS+jx1ZvachY912m0EbRkAGhYykgJ1UIegI1ibRPJweBRortRqAjRFcfgmSgBwZKaR21PEEXSYSTgRLFC6V9jTWSmCqqteAR4sqpJ+s7JOBL6EVWZgHq8168RyMJtMJ3EF/WMPW86d58DbfjIPJ1GM33noG5vazasMrWpeq3KXPS3yL35kinXrAu8bKkNAhdi5vH7mR1Zmk9w79Tq/TK++6+d+4jyTjckrkDFu0L4VQs5U3FFmyooO0IobmVSZ6fZ9ptWqw4OTNWW6lGAzqqQdVS1Zpkaix8pEimSAcOIHSttwChj5Tqt02hkWwXDXKkfwSqI/uH4HY75YrcGqn9EHBYra4bBzT1M8wC1LXCTHiLrF/spbZy10Mq5YzK75n9gUg6sZV</source>
   </file>
   <file path="boost/src/Contract/Jsonable.php" generated-path="boost.src.Contract.Jsonable.html" hash="9d44ae119de918bed5ae503ebcfaa745" package="Default">
     <docblock line="0">
@@ -589,211 +793,7 @@ pass-by-reference `$maximum` will indicate the maximum possible size.</long-desc
     </parse_markers>
     <source>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</source>
   </file>
-  <file path="customs/src/ServerProblemException.php" generated-path="customs.src.ServerProblemException.html" hash="8097133c02c2a2d55dcc6b0b09df5f00" package="Haldayne">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Haldayne"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="Haldayne\Customs" line="20" package="Haldayne">
-      <extends>\Haldayne\Customs\UploadException</extends>
-      <name>ServerProblemException</name>
-      <full_name>\Haldayne\Customs\ServerProblemException</full_name>
-      <docblock line="20">
-        <description>A specific kind of UploadException: the server had a problem.</description>
-        <long-description>It's recommended that you also log the temporary directory and currently
-installed extensions for their diagnostic value. The exception message
-does not include these details for security.
-
-```
-try {
-    $it = new UploadIterator;
-} catch (ServerProblemException $ex) {
-    error_log($ex-&gt;getDiagnosticMessage());
-    throw $ex;
-}</long-description>
-        <tag name="package" line="20" description="Haldayne"/>
-        <tag name="inherited_from" description="\Haldayne\Customs\UploadException" refers="\Haldayne\Customs\UploadException" link="/classes/Haldayne.Customs.UploadException.html"/>
-      </docblock>
-      <property static="false" visibility="private" namespace="Haldayne\Customs" line="56" package="Haldayne">
-        <name>$htmlName</name>
-        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::htmlName</full_name>
-        <default></default>
-        <docblock line="56">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="56" description="&lt;p&gt;The HTML name we were given.&lt;/p&gt;" type="string" variable="$htmlName">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="29" package="Haldayne">
-        <name>getMessage</name>
-        <full_name>\Haldayne\Customs\ServerProblemException::getMessage()</full_name>
-        <docblock line="29">
-          <description>Return the message specific for this exception code.</description>
-          <long-description></long-description>
-          <tag name="return" line="29" description="" type="string">
-            <type>string</type>
-          </tag>
-          <tag name="api" line="29" description=""/>
-          <tag name="since" line="29" description="1.0.0"/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="54" package="Haldayne">
-        <name>getDiagnosticMessage</name>
-        <full_name>\Haldayne\Customs\ServerProblemException::getDiagnosticMessage()</full_name>
-        <docblock line="54">
-          <description>Returns a string containing deeper diagnostics of the temporary
-directory and installed extensions.</description>
-          <long-description></long-description>
-          <tag name="return" line="54" description="" type="string">
-            <type>string</type>
-          </tag>
-          <tag name="api" line="54" description=""/>
-          <tag name="since" line="54" description="1.0.0"/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="38" package="Haldayne">
-        <name>setHtmlName</name>
-        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::setHtmlName()</full_name>
-        <docblock line="38">
-          <description>Set the HTML variable name.</description>
-          <long-description></long-description>
-          <tag name="param" line="38" description="&lt;p&gt;The HTML variable name.&lt;/p&gt;" type="string" variable="$htmlName">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="38" description="" type="\Haldayne\Customs\ServerProblemException">
-            <type>\Haldayne\Customs\ServerProblemException</type>
-          </tag>
-          <tag name="api" line="38" description=""/>
-          <tag name="since" line="38" description="1.0.0"/>
-          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$htmlName</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <inherited_from>\Haldayne\Customs\HtmlNameAccessorTrait</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="48" package="Haldayne">
-        <name>getHtmlName</name>
-        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::getHtmlName()</full_name>
-        <docblock line="48">
-          <description>Get the HTML variable name.</description>
-          <long-description></long-description>
-          <tag name="return" line="48" description="" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-        <inherited_from>\Haldayne\Customs\HtmlNameAccessorTrait</inherited_from>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-    </parse_markers>
-    <source>eJy1VE1vGjEQve+vmAMRH0pIeoUmLSJURUoIAqJUaquNs54FC2OvbG8IqvjvHe9nSEhv9YE145k3z88z8/lLskoCxTZoExYhfGeSs53CX8PUOr2x/SA473QC6MAAbIKRiEUEa6E46BjuE6kZH71EmDihVQ/cCsGieUYDK8aBQWL0k8RNlwA8xtg1LRiM9GaDiiOnAOZgp1Ng0mqQeplBONwk2jCzAy7I22naMUoZpcagcnLnsYSyjklJIPjiUFkiYCHWxiMIQ5FsqbR1RPeZyRS7sCBkLLkCXdiyJXokrtGC0o4gI5ly9AgWgaNjQuaYFim3cLvyIo+Pj/7jiNgfv/GrIRxcgsJtocvYoWHEve8d9hAxF62gNc/kmea6VNJBA1/aNRQao01IcrTIfna1RHddXec2J95qt/ulu1sZvfUQeaqc43kQSWYtfJAwE43bt28YEAda2Zv71YEZutSo7F0KzepCyOUW9pWukebYLWJLiK8mx7DOCLWsrCwR1d6S9gifuhfdi8J2nn2T9En6RKmKMniSohIgc8j5+mW3IlO44RmdXXki7VfHEaM3vZ/e3A2uw9FsFk7uwsXtNLwez3qVj18F1+atsERqSUVcl2OsJafaFgq2K0G5nIYVmTJx0kzIJjXMRxmHg8kifJiNF6PjGb9Rufme0LClWisR/f+agdRURyTEv/KMfixGk/n4bnI8zUDVHQNPBLjGj27AMWapdEdxCpmLmuhXLvsg/z1eR5b0zMuAKkVRgym/5YgJvu5Z68fLwSgoYQ4nwrEh8H+r70gjvqnDRq7jg177fFPmVjQWhlrFYtnrlWdmXZy12rV0JdGEAl3cOlC9eWJ7mRokwOXPE/v7FGKDvhdpbBeGWoPM0Dw9QAjD4c1gPg/DQ3PjHaXDcy7sOvSpwixV671/+zBAbMiBY6t52jz1ioXeHXlYs6PZVUUU198H++AvKiD6Ng==</source>
-  </file>
-  <file path="customs/src/SecurityConcernException.php" generated-path="customs.src.SecurityConcernException.html" hash="4bffdbd821ae16d1f0df875d6f018cb4" package="Haldayne">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Haldayne"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="Haldayne\Customs" line="7" package="Haldayne">
-      <extends>\Haldayne\Customs\UploadException</extends>
-      <name>SecurityConcernException</name>
-      <full_name>\Haldayne\Customs\SecurityConcernException</full_name>
-      <docblock line="7">
-        <description>A specific kind of UploadException: the upload is suspicious.</description>
-        <long-description>Occurs when the *server* had a problem, or the *client* appears to be
-attempting to bypass the normal PHP file upload safeguards.</long-description>
-        <tag name="package" line="7" description="Haldayne"/>
-        <tag name="inherited_from" description="\Haldayne\Customs\UploadException" refers="\Haldayne\Customs\UploadException" link="/classes/Haldayne.Customs.UploadException.html"/>
-      </docblock>
-      <constant namespace="Haldayne\Customs" line="9" package="Haldayne">
-        <name>NOT_UPLOADED</name>
-        <full_name>\Haldayne\Customs\SecurityConcernException::NOT_UPLOADED</full_name>
-        <value>1</value>
-        <docblock line="9">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
-      <constant namespace="Haldayne\Customs" line="10" package="Haldayne">
-        <name>UNKNOWN_CODE</name>
-        <full_name>\Haldayne\Customs\SecurityConcernException::UNKNOWN_CODE</full_name>
-        <value>2</value>
-        <docblock line="10">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </constant>
-      <property static="false" visibility="private" namespace="Haldayne\Customs" line="56" package="Haldayne">
-        <name>$htmlName</name>
-        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::htmlName</full_name>
-        <default></default>
-        <docblock line="56">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="56" description="&lt;p&gt;The HTML name we were given.&lt;/p&gt;" type="string" variable="$htmlName">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="17" package="Haldayne">
-        <name>getMessage</name>
-        <full_name>\Haldayne\Customs\SecurityConcernException::getMessage()</full_name>
-        <docblock line="17">
-          <description>Return the message specific for this exception code.</description>
-          <long-description></long-description>
-          <tag name="api" line="17" description=""/>
-          <tag name="since" line="17" description="1.0.0"/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="38" package="Haldayne">
-        <name>setHtmlName</name>
-        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::setHtmlName()</full_name>
-        <docblock line="38">
-          <description>Set the HTML variable name.</description>
-          <long-description></long-description>
-          <tag name="param" line="38" description="&lt;p&gt;The HTML variable name.&lt;/p&gt;" type="string" variable="$htmlName">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="38" description="" type="\Haldayne\Customs\SecurityConcernException">
-            <type>\Haldayne\Customs\SecurityConcernException</type>
-          </tag>
-          <tag name="api" line="38" description=""/>
-          <tag name="since" line="38" description="1.0.0"/>
-          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$htmlName</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <inherited_from>\Haldayne\Customs\HtmlNameAccessorTrait</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="48" package="Haldayne">
-        <name>getHtmlName</name>
-        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::getHtmlName()</full_name>
-        <docblock line="48">
-          <description>Get the HTML variable name.</description>
-          <long-description></long-description>
-          <tag name="return" line="48" description="" type="string">
-            <type>string</type>
-          </tag>
-        </docblock>
-        <inherited_from>\Haldayne\Customs\HtmlNameAccessorTrait</inherited_from>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-    </parse_markers>
-    <source>eJyFUVlrAjEQfs+vmIeCB9Sjj9pLVBDaulKVvhQkzc66wTUJOwkqxf/e7OF2aQudh92Qb/IdM7cPJjZM8T2S4QJhxpOQnxS+jx1ZvachY912m0EbRkAGhYykgJ1UIegI1ibRPJweBRortRqAjRFcfgmSgBwZKaR21PEEXSYSTgRLFC6V9jTWSmCqqteAR4sqpJ+s7JOBL6EVWZgHq8168RyMJtMJ3EF/WMPW86d58DbfjIPJ1GM33noG5vazasMrWpeq3KXPS3yL35kinXrAu8bKkNAhdi5vH7mR1Zmk9w79Tq/TK++6+d+4jyTjckrkDFu0L4VQs5U3FFmyooO0IobmVSZ6fZ9ptWqw4OTNWW6lGAzqqQdVS1Zpkaix8pEimSAcOIHSttwChj5Tqt02hkWwXDXKkfwSqI/uH4HY75YrcGqn9EHBYra4bBzT1M8wC1LXCTHiLrF/spbZy10Mq5YzK75n9gUg6sZV</source>
-  </file>
-  <file path="customs/src/UploadConfig.php" generated-path="customs.src.UploadConfig.html" hash="be1025a1f50c24fe613ed7f7ef2eb054" package="Haldayne">
+  <file path="customs/src/UploadConfig.php" generated-path="customs.src.UploadConfig.html" hash="71605930815e055f6fd89fbe30f7ee9f" package="Haldayne">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -831,7 +831,7 @@ using the PHP configuration and run-time information.</long-description>
           <long-description>Specified at the system level by the `upload_tmp_dir` ini directive.
 If that directory isn't writeable, then PHP falls back to the system
 temporary directory, which is specified at the system level by the
-`sys_temp_dir` ini directive.</long-description>
+`sys_temp_dir` ini directive (and we can just ask `sys_get_temp_dir`).</long-description>
           <tag name="return" line="40" description="" type="string|null">
             <type>string</type>
             <type>null</type>
@@ -840,59 +840,63 @@ temporary directory, which is specified at the system level by the
           <tag name="since" line="40" description="1.0.0"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="67" package="Haldayne">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="65" package="Haldayne">
         <name>systemMaxUploadBytes</name>
         <full_name>\Haldayne\Customs\UploadConfig::systemMaxUploadBytes()</full_name>
-        <docblock line="67">
+        <docblock line="65">
           <description>What is the maximum file size supported system-wide?</description>
           <long-description>Controlled by the system-level directive `upload_max_filesize`, but
 also constrained by the system-level directive `post_max_size`. The
 *lower* of the two values defines the *upper* limit of the maximum
-file size.</long-description>
-          <tag name="return" line="67" description="Integer bytes if limit applies, null if unlimited" type="integer|null">
+file size.
+
+If the number of returned bytes equals `PHP_INT_MAX`, there is
+effectively no limit.</long-description>
+          <tag name="return" line="65" description="Bytes" type="integer">
             <type>integer</type>
-            <type>null</type>
           </tag>
-          <tag name="api" line="67" description=""/>
-          <tag name="since" line="67" description="1.0.0"/>
+          <tag name="api" line="65" description=""/>
+          <tag name="since" line="65" description="1.0.0"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="87" package="Haldayne">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="88" package="Haldayne">
         <name>formMaxUploadBytes</name>
         <full_name>\Haldayne\Customs\UploadConfig::formMaxUploadBytes()</full_name>
-        <docblock line="87">
+        <docblock line="88">
           <description>What is the maximum file size reported for the submitted form?</description>
           <long-description>If you include a hidden input element named `MAX_FILE_SIZE` in your
 form, then all file inputs that come *after* that hidden input element
-will be limited to the number of bytes given in the `MAX_FILE_SIZE`.</long-description>
-          <tag name="return" line="87" description="Integer bytes if limit applies, null if unlimited" type="integer|null">
+will be limited to the number of bytes given in the `MAX_FILE_SIZE`.
+
+If the number of returned bytes equals `PHP_INT_MAX`, there is
+effectively no limit.</long-description>
+          <tag name="return" line="88" description="Bytes" type="integer">
             <type>integer</type>
-            <type>null</type>
           </tag>
-          <tag name="api" line="87" description=""/>
-          <tag name="since" line="87" description="1.0.0"/>
+          <tag name="api" line="88" description=""/>
+          <tag name="since" line="88" description="1.0.0"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="103" package="Haldayne">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="107" package="Haldayne">
         <name>maxFileUploads</name>
         <full_name>\Haldayne\Customs\UploadConfig::maxFileUploads()</full_name>
-        <docblock line="103">
+        <docblock line="107">
           <description>How many simultaneous file uploads do we support?</description>
-          <long-description></long-description>
-          <tag name="return" line="103" description="Integer bytes if limit applies, null if unlimited" type="integer|null">
+          <long-description>If the number of returned uploads equals `PHP_INT_MAX`, there is
+effectively no limit.</long-description>
+          <tag name="return" line="107" description="Number of uploads" type="integer">
             <type>integer</type>
-            <type>null</type>
           </tag>
-          <tag name="api" line="103" description=""/>
-          <tag name="since" line="103" description="1.0.0"/>
+          <tag name="api" line="107" description=""/>
+          <tag name="since" line="107" description="1.0.0"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="private" namespace="Haldayne\Customs" line="121" package="Haldayne">
+      <method final="false" abstract="false" static="true" visibility="private" namespace="Haldayne\Customs" line="125" package="Haldayne">
         <name>limit</name>
         <full_name>\Haldayne\Customs\UploadConfig::limit()</full_name>
-        <docblock line="121">
+        <docblock line="125">
           <description>Given two values which follow the "0 or fewer is unlimited" pattern,
-return the limiting number or null if neither would limit.</description>
+return the limiting number or PHP_INT_MAX if neither would limit.</description>
           <long-description></long-description>
         </docblock>
         <argument line="0" by_reference="false">
@@ -909,10 +913,10 @@ return the limiting number or null if neither would limit.</description>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="121" code="PPC:ERR-50015">Argument $a is missing from the Docblock of limit</error>
-      <error line="121" code="PPC:ERR-50015">Argument $b is missing from the Docblock of limit</error>
+      <error line="125" code="PPC:ERR-50015">Argument $a is missing from the Docblock of limit</error>
+      <error line="125" code="PPC:ERR-50015">Argument $b is missing from the Docblock of limit</error>
     </parse_markers>
-    <source>eJzNV1tv2zYUfvevOOiC+gJHTl/TBG1WpIuBFTWabB12gUJJVESEIgVe4nhb/vsOSUmRZDsJtj1UD7FCnfOdCz99hzp5VxXVSJCS6oqkFC4Iz8hG0N8/WG1kqd+ORovZbAQz+EKNVQKYyKUqiWFSAEmkNWAKCrbikmSQSpGzG6v84wi9nOOlLCncEW6pRgO8z5iiqeEbyJUsvfvqYjXwhc+4rjQQRSElPLWcGJo5OKuZuNntBURkoKw4NAzDdDJtUnmvKYXCmOp4scC6I0HNoiTCEr6gYsEEi1KpaISPvnP/aEwzyhmnh6E+jRiLUcqJ1vCTX/ngw4/+GgFevlHumsEZpu0c68ZooIIknGbvaoPG7rKiKcsZzYCERuqNNrQETu8oh2Tj164dUlwjXWNdrG4hu6NRg9T8vldhnxIpebtGKtbeY/twn99ER9FRvbbwv5VNOEtBG+xYCrkVqW8p0+ch9cnUm4VS3VUHmrhIU0wqvqFmMu7mOp6+9dYPo2F/lgLWBZYc6pBqA2vGedutBHeJ8gxwA6FSMqXabfq/a17AjE1ZxRhtX/uWOVr3EmJajA2sFTPU1T93aMJzLiecY44kvQUjO4EbLLytpCKI0aLNsVyWFggK+gVZN0jX+Cx2cE+kPtx4bRT26m9h+f+y/6F9X6W6RdQVMcUWDw4wJTiFlgH9hjcccBfLYcK0W504pym8fo0didseh9VpB7vDM/fsEaqm1K743Z4No+Oy2TwZxnkjTIsw6SA8AOWaviy93bz/6jiGJHD7XpJ7Vtoy6IRmf+IfWyFxUOdqThyuWUaHrEfJMUpyfCMbitfGgUAtP1rmY5zYxXAhrueQWNNAEa6lU1CkDGHiecBKauPhPFQEV49MnXG5pmoGMvcIZi0byc9ojtih5BkW6Kw4K5lpbOs+NEhtO/YRnAnj2Y0iYugNVZi1QXzc3gBLqoozqufgjXDZCv/AjY///j6E3nwi92EAfO9ib70SiwUgh1CDTRGSwkGmQ56PtG26ifeBva7o2MjY201aPve6Pp52+HjwuMNPQ+xgggcaanko9vjY5zxpM5x3I+3V9Ke5rWhNbafpnmQ2wSD1SjlkOerxRlqsKeU2o0CgYFlG3eZXeOSgnJZUGHDnlgyuP539En9c/ngeXy5/PXcy6XxVSyiEr9UbhTuk5GF0kHx/JpmR3Dhm+pVdsRo0P6dwPtWUaiaAsGWCVERKBzbe4AvjEMIM6if4bRLbtekZWjsFJUqRTXxLNzG9Z9roybhX3Bi5Eq8+X17t01csEoVhEox+Gzj/8UKxdQ14Xmwv5BqJKDZIwNJyQwSVVvePZZmEdau7Qw5+G/uCr9JHTDnsy06pwQoKgvpsgpjjzFBwaQuJgTpqU1S12EB3WDaSMDyyeR8dQDr6EgZsWI6CS+QgdnmH5pxuiUpIZN6D72pRqMjPpq2yXCz/WsZ3RHW0NKwN8uwbd3PbLXf+Z94BG0jdAlZflj+fXZ3D2Wq5xbYf/BvfGXzhxJfjqEYeOhl4dQSofTnFQel0smXJK6gICqES8warzs85eRv3xdMojGppJihzH0mwlhbPyt4w6jNKsTv8bNqiVF0vwVqTHXxCaD+53LdXneI8qDq21ql6LfL+WU8cjuAEDog71vm7ZI8GIE4Tvb/v3chte3xsXMCoQg6C1iLhYmPck1OMi8EPEn+7J3oQj0FYKXyAfrn1ENtZ7lPyhI6P9bUONZceRv8Ar3WtyQ==</source>
+    <source>eJzdV1tv2zYUfvevOOiCxjYcO3tNE7RZka4G1tZosnXYBTItUTEXitR4ieNt+e87vEiWZLkduu5lfogVivzO7Tvfoc+fl+tyIEhBdUlSCq8Jz8hW0F9eWm1koZ8NBrPxeABjeE+NVQKYyKUqiGFSAFlJa8CsKdiSS5JBKkXObq3yr6d4yh28lgWFe8It1bgBnzOmaGr4FnIlC3988XrROQvvcF1pIIpCSnhqOTE0c3BWM3HbfwqIyEBZcWIYmml4WrnyQlMKa2PKs9kM454KamYFEZbwGRUzJtg0lYpO8dVX7h+Nbk5zxulJiE8jxmyQcqI1fO9XXnrzgz8HgB+fKPcZwyW67Q7GxGiggqw4zZ7HDdW+65KmLGc0AxISqbfa0AI4vaccVlu/tnRISURaYlwsppDd02mFVH2/UKFOKyl5vUZKVj9j+rDOX09Pp6dxbea/S7viLAVtMGMp5FakPqVMXwXXhyO/LYTqPtHQ0FkaoVPJLTXD46avx6NnfvfjoJufuYDNGkMOcUi1hQ3jvM7WCqtEeQZYQCiVTKl2Rf+85AXMxBRlgtYOpW+e4+6WQ0yLYwMbxQx18U8cmvCcywnn6CNJ78DIhuEKCx9LqQhi1GgTDJelawQF/Q+8rpCW+C5xcD2uw9CxfePaQ8Bv2K1A9F04gYXYnRpNO2mrGKKNwqT+JSz/IkQJef4g1R2iLohZ7xHmCN2BC6ip0q5MRRb3YTkMmXarQ3doBE+fYuqSuhhhddTAbhDSvdtBRe413nczNDzI0g+OEVgyV6WCPLDCFqGrNfsD/9gSy4yqFCt4smEZ7XIUBcIoybF/KkLGzaHcu2pWPEU7ibPhTCwnsLKmgiJcS6d3WDfCxKcBS6mNh/NQU7jZ8WrM5YaqMcjcI5iNrAQ6ozlih5DHGKDbxVnBTLU35qFCqtPRZdk8bBe2WFHlDofse7cNGqC/o+pqWGJDJfO3N8mbyx+XvsdQOZmuUGieh3BwWggZPDnEZyYMfOOwvwSbQ1LfkIeg8x53j9CzGSCRUGrNOriG80qH+Hakr8qAz4H7LluJkYnfN6y7oVWu41GjG4521Pg4RA+FPNBeB/hgz868z8Paw0nT0mc2haKxJ5x0e3baFRqJK0W3PZAlW2kxppTbjAKBNcsy6mpZ4s2CclpQrKq7nmSwRIokr+bfXSXX85+unBq6s6pmIsJHkUZ9Di55GB2U3V89xiQ3jtJ+pc9WhebHEY4hnyI0HoV+R+fA4lukpkMIo6bt4P+sI1x+P9EPTraJUmSb3NFtQh+YNnp43MrKMZIsWby7vjmk3ugzStEwbPq5c/jXRlc8Ysk07QdppLA5CfoJ/VpukMhiiwQuLDdEUGl1+/aWSTdoo+D3cPhAXevL339S2be1wfp2+u+rjB39CiMPVe5VPEzEmuB8MWEY4cxTcG3XEg01RG9dRs2D5sSvlKl7QfRndABpyJw/E5en4cjUQfSdDkPqYk/bgiOTFnxTEkNEfrbuheVseXVI7olqSHpY6/jZ3tz0rV91/dekAdZR3Bks3s9/uLy5gsvFfI+033rhaQzucL/M8aqBdHZ8fHIKKME5xUHv5NqKKGVPoCSox0pMKqzonzvk97jfVxWbVbOXXIMLyhxxYSMtXtBbJI3EUuwef6vtMSuGTTDkVQ+tENrPUfeDL3o6CTMGM+xmTBw5/l1LcU7hHI6IuyL6p9UBYUGcynq7/E3LdZZ27Vn3Yld5nG20e36BdtH40co/HrDeUqSOdSm8nXbUcbL2Rv0x6cODuzDrA5FZj4O/AbN901w=</source>
   </file>
   <file path="customs/src/UploadIterator.php" generated-path="customs.src.UploadIterator.html" hash="a573fcbd4a9b9e8e548d26c9d4ce5666" package="Haldayne">
     <docblock line="0">
