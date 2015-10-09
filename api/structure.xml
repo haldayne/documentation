@@ -1178,6 +1178,33 @@ native PHP array.</description>
     </parse_markers>
     <source>eJy9WFtX4zYQfs+vmAe6tmmyCdA8FJrdsil7oKctORv6FDg5iq0EdR3ZlWSWtIf/3pF8iS9xYkogHBLbmss3M5+kkX/6GN6HLU6WVIbEpXBJfI+sOL39hSgyViJyVSToWavl+kRKGAa+T13FAn5DpQL6qCj3JNyOLkd/cqamnwVa+haIr1M9PiSStv5tAX66h4fws4c2RyJ4YB4VEMYXcvpAfOZNmaJLCYddIx1GM5+5MI+48QUKjU3dgEsDCJ/ESvaB0XKMTuxHfzj9lgOaCp2Z8adWCicWr0XFeA5XJksfQ7RKvYtHl4YG2lUsdy4W0ZJylQ0kKk3jSdy9KKKXJpj4fmK6DUQIsoID81NGc+DCYCskI6Tumex8QNJQocbICjs21kZ1fIyunGIAdTlShHE5XVA1lfg/DwRe2k0gTcAiVhusmf5yLbirQ3cjIkSHqFJvds+pk/1MfFkS7heEBQLRwwnQ3vaUuJgO8Qxf9cCMPROrVtCujzbiknoEE/LJegGy2NmnWmeJnz76Gdb6qaa97+yd00xeLEO1ek1eZ0P604PBYABuEHGVEN5pFwR0wCkoJxtpMBU8Np83471FwtCnhvqE45++IhYMPkBuJL5PBPTUWNt8TKhiPE56OcXaKWQSMTnK26w6QbY8rqd+I3/tXGCnp79dX48vpsPr30fnX67G13+8AZpi4kp4xjdfroY3jQH1CiV4Frxd5GBcUSER19syZO32OTQp5qGS4e1lqXP5EqbsC9A+ybIVxS46UOLeN2KCIHxB9Tr9Y3n9NiYyq/YBLrgRRRRf6cqBSFKw3+nrqYyWbXgXD+sbJ+fR2EqE4PuBuT4rjmZ6ZtzcrSWetqboqNfOrG8VPMH4cgDzRaxNCW6RJ/8nJY/l+Nkc7COzKcRyxVH9ERRbbA5zvdsXs/MEFJ9tUDHkmxiLmiQxErg7q7PdK9ltmOEJmJlxBIZ+DXgXEqGYyWKZfN0uzFZgcO5q2uYiYqqTzcb4dr1OPdDFgtGOS2YzsqClti6dlGsg5XqVK+AzPMfYB18Z9zBIfRBy0Ab2+X7gYY/TsVLuOMUcJpk1ik0ZWzAwqRQrDtVM+x1pwIJUtePEJOrHZvGo5KqgVTKiFxgVnOuepdiZlIqIpGswgXrlCbS7NO2NUySlsJlDtqH8d3DswEew6APlFpyCFXieta8ixEZNEg37MRCTzOONSdeeY2Gzn+tlQ/+elIWb5trgT7rfrplUEvAoAWyJPNAHTDxsD3V3SWY+3VuXnPSrTXrkSj6LvS7YmxtoR7f5WrDc4tcEaVKz1xjTdL/RCTerbrN4f5UB33O42uRrRvsX2p9S7up1Mit/HLpx3TDyW5Onc9elUm7ZWoyDKTFir3D8Z1IfWA/cSe9ux9k/k+wXJCO+NtBMf4un/GF+clQwqO8xWDx8NzibV3T7RndYp1tMRX8XwGHspH/XsNJX2CkTFYjzxULQBVF024kmkZ2SVLhadWK6oLTM+f5nI6VJPhqWbEcLqlJYdl20V1wqwl16PbetmK6pik4Aq1O7+DvCiqNfLWQ8Gd1hEBaWhTRnnUFnAPq1K6SzXgI+6lTeWCbDEgjI9A0tqAAYx30Vl4d/KI6sA8fJzz1Q9xTcQAgqw4B7jC9Sa5wo9kBhdDmKF4n3yUBhbcH4Vb5Em5ajSn2Snbu4x06AR77fhsldeU+c4LPNz7OWvI8rTO6mKlkqubPZXl3H33ea2L8dK2+o34ZXzd/VvWTOSqZWof6+JwpcwnmgYEZhSTyK1cMS5uv2vEIU3lc3LQWyh1aDPP6h0uvgw/ebnlpIQORSpSGd4NwPKbet8D487XaXdBmIlZ6mwnI2Juyp9R+/jMFY</source>
   </file>
+  <file path="boost/src/functions/bytes.php" generated-path="boost.src.functions.bytes.html" hash="cd88e37dcbb860416d5a3cf0b72d5b0f" package="Haldayne">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Haldayne"/>
+    </docblock>
+    <function namespace="Haldayne\Boost" line="28" package="Haldayne">
+      <name>bytes</name>
+      <full_name>\Haldayne\Boost\bytes()</full_name>
+      <docblock line="28">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="28" description="Haldayne"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$string</name>
+        <default></default>
+        <type/>
+      </argument>
+    </function>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="28" code="PPC:ERR-50015">Argument $string is missing from the Docblock of bytes</error>
+      <error line="28" code="PPC:ERR-50011">No summary for function \Haldayne\Boost\bytes()</error>
+    </parse_markers>
+    <source>eJyVk01r3DAQhu/+FXMo3fV2Y0OhoWQLLaWHHEPppRBYyfLsWsQeLfpoupT8944ka52UQqkultE7z7wzI334eBpOFckJ3UkqhFs59vJMeP/ZGOd3VdVuNhVsQGjy0J09urXzVtOxFnAFX9EHS+AHBApThxbMIatAE0jI0oYBkXF3ewe9UWFC8o6DpE+RglUjkoBDIOW1IbAJ6/7GjZznaPg2aE7GWhtwC4FGdDlQTF3WCMCfHslF8iATwfxAa3XfIy3ZvZnz/pFWDdJK5dG6Usd3E0BJAtSstBw1noFL0mljcrxIbp/VxKbPJlhQpmefxsa/CIugSbqHFNUFPforlmZT8MgZFkRwCOvYxHfN9Zv6ZnYjhIiftmXMA5ZIdhzkyH6UCWVyW7Z6lLZPLeLKHgdMBZRGzZilW9zW2KnRyH4+jhZeXpH7PG7p5sy7xVPcfXKIMHh/umlbvmkNoW8nSeytRWpLaU2ObVgBXy43pIzm35xSQVPsZpJ2KjjH7i4tLOeMbCt9gPVbeM2j0fsj+vXqgon6fdGu6hp+VcDrgskP4dX8EubTuOYbNHX77L1otrB632m/qndJ+lQ9AY7cy//kvoQusOo3dMVFvg==</source>
+  </file>
   <file path="boost/src/Map.php" generated-path="boost.src.Map.html" hash="45924a737ff130f87a0dd2eb70320765" package="Haldayne">
     <docblock line="0">
       <description></description>
