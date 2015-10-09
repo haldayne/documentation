@@ -34,7 +34,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">31</span></a></li>
+                <span class="label label-info">23</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -79,7 +79,8 @@ into integer bytes.</span><pre>ini_size_to_bytes</pre></a></li>
 <li><a href="#UploadFile" title="Represents a file that has been successfully uploaded.">UploadFile</a></li>
 <li><a href="#UploadError" title="Represents a file that did not successfully upload.">UploadError</a></li>
 <li><a href="#UploadConfig" title="Return information about the upload configuration.">UploadConfig</a></li>
-<li><a href="#UploadIterator" title="Iterate over the $_FILES super-global, or an array in that same format.">UploadIterator</a></li>
+<li><a href="#UploadIterator" title="Implements an iterator over the $_FILES super-global or an array of
+similar structure.">UploadIterator</a></li>
 <li><a href="#Map" title="An improvement on PHP associative arrays.">Map</a></li>
 <li><a href="#MapOfMaps" title="Implements a map of maps.">MapOfMaps</a></li>
 </ul>
@@ -109,7 +110,7 @@ into integer bytes.</span><pre>ini_size_to_bytes</pre></a></li>
 <a xmlns:php="http://php.net/xsl" id="function_ini_size_to_bytes"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_ini_size_to_bytes " data-toggle="collapse" data-target=".function_ini_size_to_bytes .collapse" title="">
 <h2>`int ini_size_to_bytes(string)` - Convert a short-hand bytes specification
 into integer bytes.</h2>
-<pre>ini_size_to_bytes($string) </pre>
+<pre>ini_size_to_bytes(string $string) : integer</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>Some PHP ini values (like <code>upload_max_filesize</code>) allow you to specify the
@@ -134,7 +135,12 @@ characters in either lower or upper case: &quot;k&quot;, &quot;kB&quot;, &quot;G
 </tr>
 </table>
 <h3>Parameters</h3>
-<div class="subelement argument"><h4>$string</h4></div>
+<div class="subelement argument">
+<h4>$string</h4>
+<code>string</code><p>A value from an <code>ini_get</code> call to process</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>integer</code>Number of bytes the short-hand string represents</div>
 </div></div>
 </div>
 <h3>
@@ -205,7 +211,8 @@ characters in either lower or upper case: &quot;k&quot;, &quot;kB&quot;, &quot;G
 <div xmlns:php="http://php.net/xsl" id="UploadIterator" class="element ajax clickable class">
 <h1>UploadIterator<a href="../classes/Haldayne.Customs.UploadIterator.html">¶</a>
 </h1>
-<p class="short_description">Iterate over the $_FILES super-global, or an array in that same format.</p>
+<p class="short_description">Implements an iterator over the $_FILES super-global or an array of
+similar structure.</p>
 <div class="details collapse"></div>
 <a href="../classes/Haldayne.Customs.UploadIterator.html" class="more">« More »</a>
 </div>
@@ -215,7 +222,7 @@ characters in either lower or upper case: &quot;k&quot;, &quot;kB&quot;, &quot;G
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2015-10-09T15:41:47-04:00.<br></footer></div>
+            generated on 2015-10-09T16:26:11-04:00.<br></footer></div>
 </div>
 </body>
 </html>
