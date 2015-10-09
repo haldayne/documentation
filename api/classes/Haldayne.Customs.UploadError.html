@@ -1,134 +1,520 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-<meta charset="utf-8">
-<title>Haldayne PHP Componentry » \Haldayne\Customs\UploadError</title>
-<meta name="author" content="Mike van Riel">
-<meta name="description" content="">
-<link href="../css/template.css" rel="stylesheet" media="all">
-<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
-<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>Haldayne PHP Componentry</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
 </head>
 <body>
+
 <div class="navbar navbar-fixed-top">
-<div class="navbar-inner"><div class="container">
-<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">Haldayne PHP Componentry</a><div class="nav-collapse"><ul class="nav">
-<li class="dropdown">
-<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
-                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
-<li><a>Namespaces</a></li>
-<li><a href="../namespaces/Haldayne.html"><i class="icon-th"></i> Haldayne</a></li>
-<li><a>Packages</a></li>
-<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
-<li><a href="../packages/Haldayne.html"><i class="icon-folder-open"></i> Haldayne</a></li>
-</ul>
-</li>
-<li class="dropdown" id="charts-menu">
-<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
-                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
-</li>
-<li class="dropdown" id="reports-menu">
-<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
-                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
-<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">31</span></a></li>
-<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
-                <ul></ul></a></li>
-<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
-                <span class="label label-info">0</span></a></li>
-</ul>
-</li>
-</ul></div>
-</div></div>
-<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">Haldayne PHP Componentry</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/Haldayne.html">\Haldayne</a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">31</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
 </div>
-<div id="___" class="container">
-<noscript><div class="alert alert-warning">
-                            Javascript is disabled; several features are only available
-                            if Javascript is enabled.
-                        </div></noscript>
-<div class="row">
-<div class="span4">
-<div xmlns:php="http://php.net/xsl" class="btn-toolbar">
-<div class="btn-group visibility" data-toggle="buttons-checkbox">
-<button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button>
-</div>
-<div class="btn-group view pull-right" data-toggle="buttons-radio">
-<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
-</div>
-</div>
-<ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list">
-<li class="nav-header">
-<i title="Methods" class="icon-custom icon-method"></i> Methods
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-113297192"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-113297192" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1228327772"></a>
+                                <a href="../namespaces/Haldayne.html" style="margin-left: 30px; padding-left: 0">Haldayne</a>
+            </div>
+            <div id="namespace-1228327772" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-214960208"></a>
+                                <a href="../namespaces/Haldayne.Boost.html" style="margin-left: 30px; padding-left: 0">Boost</a>
+            </div>
+            <div id="namespace-214960208" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1726892564"></a>
+                                <a href="../namespaces/Haldayne.Boost.Contract.html" style="margin-left: 30px; padding-left: 0">Contract</a>
+            </div>
+            <div id="namespace-1726892564" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
                     <ul>
-<li class="method public "><a href="#method_changeErrorMessage" title="changeErrorMessage() :: Change the text associated with a PHP upload error code."><span class="description">Change the text associated with a PHP upload error code.</span><pre>changeErrorMessage()</pre></a></li>
-<li class="method public "><a href="#method_getErrorMessage" title="getErrorMessage() :: Return a description of why the error occurred."><span class="description">Return a description of why the error occurred.</span><pre>getErrorMessage()</pre></a></li>
-<li class="method public inherited"><a href="#method_getHtmlName" title="getHtmlName() :: Get the HTML variable name."><span class="description">Get the HTML variable name.</span><pre>getHtmlName()</pre></a></li>
-<li class="method public "><a href="#method_isPartial" title="isPartial() :: Is the error because the uploaded file was only partially received?"><span class="description">Is the error because the uploaded file was only partially received?</span><pre>isPartial()</pre></a></li>
-<li class="method public "><a href="#method_isTooBig" title="isTooBig() :: Is the error because the uploaded file was too big?"><span class="description">Is the error because the uploaded file was too big?</span><pre>isTooBig()</pre></a></li>
-<li class="method public "><a href="#method_notUploaded" title="notUploaded() :: Is the error because no file was uploaded?"><span class="description">Is the error because no file was uploaded?</span><pre>notUploaded()</pre></a></li>
-</ul>
-</li>
-<li class="nav-header">
-<i title="Properties" class="icon-custom icon-property"></i> Properties
-                    <ul></ul>
-</li>
-<li class="nav-header private">» Private
+                                                    <li class="interface"><a href="../classes/Haldayne.Boost.Contract.Arrayable.html">Arrayable</a></li>
+                                                    <li class="interface"><a href="../classes/Haldayne.Boost.Contract.Jsonable.html">Jsonable</a></li>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
                     <ul>
-<li class="property private "><a href="#property_code" title="$code() :: "><span class="description">The error code.</span><pre>$code</pre></a></li>
-<li class="property private "><a href="#property_htmlName" title="$htmlName() :: "><span class="description">The HTML name we were given.</span><pre>$htmlName</pre></a></li>
-<li class="property private "><a href="#property_messages" title="$messages() :: The possible failure codes and an English description."><span class="description"></span><pre>$messages</pre></a></li>
-<li class="property private "><a href="#property_size" title="$size() :: "><span class="description">The size of the file uploaded.</span><pre>$size</pre></a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="span8">
-<a xmlns:php="http://php.net/xsl" id="\Haldayne\Customs\UploadError"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
-<li>
-<a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
-</li>
-<li><a href="../namespaces/Haldayne.html">Haldayne</a></li>
-<li>
-<span class="divider">\</span><a href="../namespaces/Haldayne.Customs.html">Customs</a>
-</li>
-<li class="active">
-<span class="divider">\</span><a href="../classes/Haldayne.Customs.UploadError.html">UploadError</a>
-</li>
-</ul>
-<div xmlns:php="http://php.net/xsl" class="element class">
-<p class="short_description">Represents a file that did not successfully upload.</p>
-<div class="details">
-<div class="long_description"><p>Errors occur when the <em>client</em> did something wrong. The possible causes are:</p>
+                                                                                                    <li class="class"><a href="../classes/Haldayne.Boost.Map.html">Map</a></li>
+                                                    <li class="class"><a href="../classes/Haldayne.Boost.MapOfMaps.html">MapOfMaps</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1971351901"></a>
+                                <a href="../namespaces/Haldayne.Customs.html" style="margin-left: 30px; padding-left: 0">Customs</a>
+            </div>
+            <div id="namespace-1971351901" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                            <li class="trait"><a href="../classes/Haldayne.Customs.HtmlNameAccessorTrait.html">HtmlNameAccessorTrait</a></li>
+                                                                            <li class="class"><a href="../classes/Haldayne.Customs.SecurityConcernException.html">SecurityConcernException</a></li>
+                                                    <li class="class"><a href="../classes/Haldayne.Customs.ServerProblemException.html">ServerProblemException</a></li>
+                                                    <li class="class"><a href="../classes/Haldayne.Customs.UploadConfig.html">UploadConfig</a></li>
+                                                    <li class="class"><a href="../classes/Haldayne.Customs.UploadError.html">UploadError</a></li>
+                                                    <li class="class"><a href="../classes/Haldayne.Customs.UploadException.html">UploadException</a></li>
+                                                    <li class="class"><a href="../classes/Haldayne.Customs.UploadFile.html">UploadFile</a></li>
+                                                    <li class="class"><a href="../classes/Haldayne.Customs.UploadIterator.html">UploadIterator</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/Haldayne.Customs.html">\Haldayne\Customs</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+
+                    <h1><small>\Haldayne\Customs</small>UploadError</h1>
+                    <p><em>Represents a file that did not successfully upload.</em></p>
+                    <p>Errors occur when the <em>client</em> did something wrong. The possible causes are:</p>
 <ul>
 <li>The client did not upload a file.</li>
 <li>The client uploaded a partial, incomplete file.</li>
 <li>The client sent more bytes than either the form or the server allowed.</li>
-</ul></div>
-<table class="table table-bordered">
-<tr>
-<th>see</th>
-<td><a href="%5CHaldayne%5CCustoms%5CUploadException">which occurs when the server went wrong or the client
-appears to be circumventing PHP file upload safeguards.</a></td>
-</tr>
-<tr>
-<th>package</th>
-<td><a href="../packages/Haldayne.html">Haldayne</a></td>
-</tr>
-</table>
-<h3>
-<i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
-<a id="method_changeErrorMessage"></a><div class="element clickable method public method_changeErrorMessage " data-toggle="collapse" data-target=".method_changeErrorMessage .collapse" title="public">
-<h2>Change the text associated with a PHP upload error code.</h2>
-<pre>changeErrorMessage(integer $code, string $message) </pre>
-<div class="labels">
-<span class="label label-info">API</span><span class="label">Static</span>
-</div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"><p>You may want to localize or otherwise change the generic error
+</ul>
+                    
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/Haldayne.Customs.HtmlNameAccessorTrait.html#method_getHtmlName" class="">getHtmlName()</a><br />
+                                                                    <a href="../classes/Haldayne.Customs.UploadError.html#method_changeErrorMessage" class="">changeErrorMessage()</a><br />
+                                                                    <a href="../classes/Haldayne.Customs.UploadError.html#method_getErrorMessage" class="">getErrorMessage()</a><br />
+                                                                    <a href="../classes/Haldayne.Customs.UploadError.html#method_isTooBig" class="">isTooBig()</a><br />
+                                                                    <a href="../classes/Haldayne.Customs.UploadError.html#method_isPartial" class="">isPartial()</a><br />
+                                                                    <a href="../classes/Haldayne.Customs.UploadError.html#method_notUploaded" class="">notUploaded()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <em>No protected methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No protected properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/Haldayne.Customs.HtmlNameAccessorTrait.html#property_htmlName" class="">$htmlName</a><br />
+                                                                    <a href="../classes/Haldayne.Customs.UploadError.html#property_code" class="">$code</a><br />
+                                                                    <a href="../classes/Haldayne.Customs.UploadError.html#property_size" class="">$size</a><br />
+                                                                    <a href="../classes/Haldayne.Customs.UploadError.html#property_messages" class="">$messages</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/customs.src.UploadError.html"><div class="path-wrapper">customs/src/UploadError.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">Haldayne</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                    <div class="namespace-wrapper">\Haldayne\Customs\UploadError</div>
+                            </dd>
+
+                        
+                                                                                    <dt>Uses traits</dt>
+                                                        <dd>
+                                <a href="../classes/Haldayne.Customs.HtmlNameAccessorTrait.html">                                    <div class="namespace-wrapper">\Haldayne\Customs\HtmlNameAccessorTrait</div>
+                                </a>                            </dd>
+                        
+                        
+                                                                            <dt>See also</dt>
+                                                                                    <dd><a href=""><div class="namespace-wrapper">which occurs when the server went wrong or the client
+appears to be circumventing PHP file upload safeguards.</div></a></dd>
+                                                    
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr><td colspan="2"><em>None found</em></td></tr>
+                                        </table>
+                </aside>
+            </div>
+
+                        
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_htmlName" name="property_htmlName" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$htmlName</h3>
+                <pre class="signature">$htmlName : string</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                &mdash; The HTML name we were given.                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Haldayne.Customs.HtmlNameAccessorTrait.html"><div class="path-wrapper">\Haldayne\Customs\HtmlNameAccessorTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_code" name="property_code" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$code</h3>
+                <pre class="signature">$code : integer</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                integer
+                &mdash; The error code.                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_size" name="property_size" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$size</h3>
+                <pre class="signature">$size : integer</pre>
+                <p><em></em></p>
+                
+
+                                <h4>Type</h4>
+                integer
+                &mdash; The size of the file uploaded.                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_messages" name="property_messages" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$messages</h3>
+                <pre class="signature">$messages : </pre>
+                <p><em>The possible failure codes and an English description.</em></p>
+                
+
+                                <h4>Type</h4>
+                
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getHtmlName" name="method_getHtmlName" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getHtmlName()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getHtmlName() : string</pre>
+                <p><em>Get the HTML variable name.</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/Haldayne.Customs.HtmlNameAccessorTrait.html"><div class="path-wrapper">\Haldayne\Customs\HtmlNameAccessorTrait</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            api
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_changeErrorMessage" name="method_changeErrorMessage" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">changeErrorMessage()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">changeErrorMessage(integer  <span class="argument">$code</span>, string  <span class="argument">$message</span>) </pre>
+                <p><em>Change the text associated with a PHP upload error code.</em></p>
+                <p>You may want to localize or otherwise change the generic error
 associated with one of the upload error codes. You may only change
 messages for the following upload error codes:</p>
 <ul>
@@ -138,196 +524,305 @@ directive.</li>
 directive in the HTML form.</li>
 <li>UPLOAD_ERR_PARTIAL (3) : The upload was incomplete.</li>
 <li>UPLOAD_ERR_NO_FILE (4) : No file was uploaded.</li>
-</ul></div>
-<table class="table table-bordered">
-<tr>
-<th>api</th>
-<td></td>
-</tr>
-<tr>
-<th>since</th>
-<td>1.0.0</td>
-</tr>
-</table>
-<h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$code</h4>
-<code>integer</code><p>The code whose message you want to change.</p></div>
-<div class="subelement argument">
-<h4>$message</h4>
-<code>string</code><p>The new message for that code.</p></div>
-<h3>Exceptions</h3>
-<table class="table table-bordered"><tr>
-<th><code>\OutOfBoundsException</code></th>
-<td>If the given code does not have a message</td>
-</tr></table>
-</div></div>
-</div>
-<a id="method_getErrorMessage"></a><div class="element clickable method public method_getErrorMessage " data-toggle="collapse" data-target=".method_getErrorMessage .collapse" title="public">
-<h2>Return a description of why the error occurred.</h2>
-<pre>getErrorMessage() </pre>
-<div class="labels"><span class="label label-info">API</span></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<table class="table table-bordered">
-<tr>
-<th>see</th>
-<td><a href="%5CHaldayne%5CCustoms%5CUploadError::changeErrorMessage">To adjust the message globally.</a></td>
-</tr>
-<tr>
-<th>api</th>
-<td></td>
-</tr>
-<tr>
-<th>since</th>
-<td>1.0.0</td>
-</tr>
-</table>
-</div></div>
-</div>
-<a id="method_getHtmlName"></a><div class="element clickable method public method_getHtmlName inherited" data-toggle="collapse" data-target=".method_getHtmlName .collapse" title="public">
-<h2>Get the HTML variable name.</h2>
-<pre>getHtmlName() : string</pre>
-<div class="labels">
-<span class="label label-info">API</span><span class="label">Inherited</span>
-</div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<table class="table table-bordered">
-<tr>
-<th>api</th>
-<td></td>
-</tr>
-<tr>
-<th>since</th>
-<td>1.0.0</td>
-</tr>
-</table>
-<h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
-</div></div>
-</div>
-<a id="method_isPartial"></a><div class="element clickable method public method_isPartial " data-toggle="collapse" data-target=".method_isPartial .collapse" title="public">
-<h2>Is the error because the uploaded file was only partially received?</h2>
-<pre>isPartial(integer $received<code> = null</code>) : boolean</pre>
-<div class="labels"><span class="label label-info">API</span></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<table class="table table-bordered">
-<tr>
-<th>api</th>
-<td></td>
-</tr>
-<tr>
-<th>since</th>
-<td>1.0.0</td>
-</tr>
-</table>
-<h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$received</h4>
-<code>integer</code><p>The number of bytes received.</p></div>
-<h3>Returns</h3>
-<div class="subelement response"><code>boolean</code></div>
-</div></div>
-</div>
-<a id="method_isTooBig"></a><div class="element clickable method public method_isTooBig " data-toggle="collapse" data-target=".method_isTooBig .collapse" title="public">
-<h2>Is the error because the uploaded file was too big?</h2>
-<pre>isTooBig(integer $maximum<code> = null</code>) : boolean</pre>
-<div class="labels"><span class="label label-info">API</span></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"><p>An upload may exceed either the <code>upload_max_filesize</code> setting or the
+</ul>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$code </td>
+                                <td><p>The code whose message you want to change.</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$message </td>
+                                <td><p>The new message for that code.</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\OutOfBoundsException</dt>
+                            <dd><p>If the given code does not have a message</p></dd>
+                                                                    </dl>
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            api
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getErrorMessage" name="method_getErrorMessage" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getErrorMessage()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getErrorMessage() </pre>
+                <p><em>Return a description of why the error occurred.</em></p>
+                
+
+                
+                
+                				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                                            <dt>See also</dt>
+                                                                <dd><a href=""><span class="namespace-wrapper">To adjust the message globally.</span></a></dd>
+                                                                </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            api
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isTooBig" name="method_isTooBig" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">isTooBig()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isTooBig(integer  <span class="argument">$maximum = null</span>) : boolean</pre>
+                <p><em>Is the error because the uploaded file was too big?</em></p>
+                <p>An upload may exceed either the <code>upload_max_filesize</code> setting or the
 <code>MAX_FILE_SIZE</code> input. This method handles both cases and returns true
 if either of these limits was reached. In such a case, the optional
-pass-by-reference <code>$maximum</code> will indicate the maximum possible size.</p></div>
-<table class="table table-bordered">
-<tr>
-<th>api</th>
-<td></td>
-</tr>
-<tr>
-<th>since</th>
-<td>1.0.0</td>
-</tr>
-</table>
-<h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$maximum</h4>
-<code>integer</code><p>The server or form allowed maximum file size, in bytes.</p></div>
-<h3>Returns</h3>
-<div class="subelement response"><code>boolean</code></div>
-</div></div>
+pass-by-reference <code>$maximum</code> will indicate the maximum possible size.</p>
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$maximum </td>
+                                <td><p>The server or form allowed maximum file size, in bytes.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            api
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_isPartial" name="method_isPartial" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">isPartial()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">isPartial(integer  <span class="argument">$received = null</span>) : boolean</pre>
+                <p><em>Is the error because the uploaded file was only partially received?</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>integer</td>
+                                <td>$received </td>
+                                <td><p>The number of bytes received.</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            api
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_notUploaded" name="method_notUploaded" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">notUploaded()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">notUploaded() : boolean</pre>
+                <p><em>Is the error because no file was uploaded?</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    boolean
+                                    				
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            api
+                        </th>
+                        <td>
+                                                                                            
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            since
+                        </th>
+                        <td>
+                                                            1.0.0                                
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">UploadError.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/customs/src/UploadError.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/Haldayne.html">\Haldayne</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on October 9th, 2015 at 15:42.
+                </section>
+            </section>
+        </section>
+    </footer>
 </div>
-<a id="method_notUploaded"></a><div class="element clickable method public method_notUploaded " data-toggle="collapse" data-target=".method_notUploaded .collapse" title="public">
-<h2>Is the error because no file was uploaded?</h2>
-<pre>notUploaded() : boolean</pre>
-<div class="labels"><span class="label label-info">API</span></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<table class="table table-bordered">
-<tr>
-<th>api</th>
-<td></td>
-</tr>
-<tr>
-<th>since</th>
-<td>1.0.0</td>
-</tr>
-</table>
-<h3>Returns</h3>
-<div class="subelement response"><code>boolean</code></div>
-</div></div>
-</div>
-<h3>
-<i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
-<a id="property_code"> </a><div class="element clickable property private property_code" data-toggle="collapse" data-target=".property_code .collapse" title="private">
-<h2>The error code.</h2>
-<pre>$code : integer</pre>
-<div class="row collapse"><div class="detail-description">
-<h3>Default</h3>
-<div class="subelement argument"></div>
-</div></div>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="property_htmlName"> </a><div class="element clickable property private property_htmlName" data-toggle="collapse" data-target=".property_htmlName .collapse" title="private">
-<h2>The HTML name we were given.</h2>
-<pre>$htmlName : string</pre>
-<div class="row collapse"><div class="detail-description">
-<h3>Default</h3>
-<div class="subelement argument"></div>
-</div></div>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="property_messages"> </a><div class="element clickable property private property_messages" data-toggle="collapse" data-target=".property_messages .collapse" title="private">
-<h2>The possible failure codes and an English description.</h2>
-<pre>$messages </pre>
-<div class="row collapse"><div class="detail-description">
-<h3>Default</h3>
-<div class="subelement argument"><code>array(UPLOAD_ERR_INI_SIZE => 'The file size exceeds the server-allowed limit.', UPLOAD_ERR_FORM_SIZE => 'The file size exceeds the form-allowed upload limit.', UPLOAD_ERR_PARTIAL => 'The file was only partially uploaded.', UPLOAD_ERR_NO_FILE => 'No file was uploaded.')</code></div>
-</div></div>
-<div class="labels"><span class="label">Static</span></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="property_size"> </a><div class="element clickable property private property_size" data-toggle="collapse" data-target=".property_size .collapse" title="private">
-<h2>The size of the file uploaded.</h2>
-<pre>$size : integer</pre>
-<div class="row collapse"><div class="detail-description">
-<h3>Default</h3>
-<div class="subelement argument"></div>
-</div></div>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="row"><footer class="span12">
-            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2015-10-09T15:41:47-04:00.<br></footer></div>
-</div>
+
 </body>
 </html>
