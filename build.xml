@@ -4,7 +4,7 @@
          <exec command="git submodule foreach git pull origin master" dir="." />
          <phpdoc2
             title="Haldayne PHP Componentry"
-            defaultPackageName="haldayne"
+            defaultPackageName="Haldayne"
             template="responsive"
             destdir="./api">
              <fileset dir="./modules">

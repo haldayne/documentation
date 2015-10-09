@@ -103,24 +103,24 @@
     </parse_markers>
     <source>eJyFVE1v00AQvftXzCGHNgrNPaVAlQaoRKBqwwGpUjV2JvHCenfZj4CB/ndmd+vEDS3xxdJ45s2bN2/88rWpTaGwIWewIniPcomtottpcF437rQoguuF56Ihjo2HwwKGcE3GkiPlHSCshCTwNXqo0UFJpMCFqiLnVkHKFoKRGpe0POHKcVFJdA4+p9jbWEk/Pamlg/PSeYuVz59mygvfFr8L4Cd1jc8QppbQE3dV9AN0+ZUqD7ZjI9Savwz73Yfb9onnyQNOB/fGoMUGuHOsHdS+kR9ZE1jUPPti/gE2aAWWTDNKBZW23MlotYzpXvPYwj0C7hAVN//TwaoOUluxFgpl1iyGR8CarcWGRStbhuMeUvAo+3gdVCqMUJ4aoy3aFhzZDdkMadDXT/Iap7cJpRQVrIKqvNAK7u4qrRg6VP5oO/woEx7lZsepMO8hQaBlepPJk6XHp9u8QaTw4lUa/QwGeaq48Bj5Jy2RP0tLvb0xMuZdqpU+yhRy+n2xb4Z35JNkWzV7AsIaNwSBVdB2J8cIxApQtfs+uNCgdHQS+5V12eZn1AjBRRzlFZTBw1I4I7EdsdsrjHfS6tBBVagiFCvjfD4L4dk4yqNQDhyumGGN0elk3f/XsyY/faTb0f42LPlgVV/sQ1rtfJPmq7XMXo4T51M5gS86QBPpN3pDOzE6qJJYkKy1pe+BODFdMPvuG5FJHx6g9s/NEfVufzKJDRb6kAg3yeGx4oAAkeUhAeaX8xlvE2X7K15Ncgf153uWRvwHnj8UPkckOjjm3W4TH9EZw9X1p8VsuphdwPnVZY4aqz3/x/gXNdhtsBfMU90XfwF5mcMH</source>
   </file>
-  <file path="customs/tests/UploadIteratorTest.php" generated-path="customs.tests.UploadIteratorTest.html" hash="98d01fe1d56ec7c6c655c747c269ef99" package="haldayne">
+  <file path="customs/tests/UploadIteratorTest.php" generated-path="customs.tests.UploadIteratorTest.html" hash="98d01fe1d56ec7c6c655c747c269ef99" package="Haldayne">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
-      <tag name="package" line="0" description="haldayne"/>
+      <tag name="package" line="0" description="Haldayne"/>
     </docblock>
     <namespace-alias name="Faker">\Faker</namespace-alias>
     <namespace-alias name="vfs">\org\bovigo\vfs</namespace-alias>
-    <class final="false" abstract="false" namespace="Haldayne\Customs" line="7" package="haldayne">
+    <class final="false" abstract="false" namespace="Haldayne\Customs" line="7" package="Haldayne">
       <extends>\PHPUnit_Framework_TestCase</extends>
       <name>UploadIteratorTest</name>
       <full_name>\Haldayne\Customs\UploadIteratorTest</full_name>
       <docblock line="7">
         <description></description>
         <long-description></long-description>
-        <tag name="package" line="7" description="haldayne"/>
+        <tag name="package" line="7" description="Haldayne"/>
       </docblock>
-      <property static="true" visibility="public" namespace="Haldayne\Customs" line="54" package="haldayne">
+      <property static="true" visibility="public" namespace="Haldayne\Customs" line="54" package="Haldayne">
         <name>$faker</name>
         <full_name>\Haldayne\Customs\UploadIteratorTest::faker</full_name>
         <default></default>
@@ -129,7 +129,7 @@
           <long-description></long-description>
         </docblock>
       </property>
-      <property static="true" visibility="public" namespace="Haldayne\Customs" line="55" package="haldayne">
+      <property static="true" visibility="public" namespace="Haldayne\Customs" line="55" package="Haldayne">
         <name>$vfs</name>
         <full_name>\Haldayne\Customs\UploadIteratorTest::vfs</full_name>
         <default></default>
@@ -138,7 +138,7 @@
           <long-description></long-description>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="9" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="9" package="Haldayne">
         <name>test_construction</name>
         <full_name>\Haldayne\Customs\UploadIteratorTest::test_construction()</full_name>
         <docblock line="9">
@@ -146,7 +146,7 @@
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="17" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="17" package="Haldayne">
         <name>test_no_upload</name>
         <full_name>\Haldayne\Customs\UploadIteratorTest::test_no_upload()</full_name>
         <docblock line="17">
@@ -154,7 +154,7 @@
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="23" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="23" package="Haldayne">
         <name>test_single_upload</name>
         <full_name>\Haldayne\Customs\UploadIteratorTest::test_single_upload()</full_name>
         <docblock line="23">
@@ -162,7 +162,7 @@
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="37" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="37" package="Haldayne">
         <name>test_multiple_upload</name>
         <full_name>\Haldayne\Customs\UploadIteratorTest::test_multiple_upload()</full_name>
         <docblock line="37">
@@ -170,7 +170,7 @@
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="57" package="haldayne">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="57" package="Haldayne">
         <name>setupBeforeClass</name>
         <full_name>\Haldayne\Customs\UploadIteratorTest::setupBeforeClass()</full_name>
         <docblock line="57">
@@ -178,7 +178,7 @@
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="74" package="haldayne">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="74" package="Haldayne">
         <name>provides_single_upload_info</name>
         <full_name>\Haldayne\Customs\UploadIteratorTest::provides_single_upload_info()</full_name>
         <docblock line="74">
@@ -205,7 +205,7 @@
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="95" package="haldayne">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="95" package="Haldayne">
         <name>provides_multiple_upload_info</name>
         <full_name>\Haldayne\Customs\UploadIteratorTest::provides_multiple_upload_info()</full_name>
         <docblock line="95">
@@ -242,7 +242,7 @@
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="117" package="haldayne">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="117" package="Haldayne">
         <name>provides_info</name>
         <full_name>\Haldayne\Customs\UploadIteratorTest::provides_info()</full_name>
         <docblock line="117">
@@ -258,7 +258,7 @@
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="145" package="haldayne">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="145" package="Haldayne">
         <name>provides_file</name>
         <full_name>\Haldayne\Customs\UploadIteratorTest::provides_file()</full_name>
         <docblock line="145">
@@ -266,7 +266,7 @@
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="167" package="haldayne">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="167" package="Haldayne">
         <name>provides_name</name>
         <full_name>\Haldayne\Customs\UploadIteratorTest::provides_name()</full_name>
         <docblock line="167">
@@ -285,7 +285,7 @@ them specifically elsewhere.</long-description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="175" package="haldayne">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="175" package="Haldayne">
         <name>provides_mangled_name</name>
         <full_name>\Haldayne\Customs\UploadIteratorTest::provides_mangled_name()</full_name>
         <docblock line="175">
@@ -293,7 +293,7 @@ them specifically elsewhere.</long-description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="183" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="183" package="Haldayne">
         <name>mangle_names</name>
         <full_name>\Haldayne\Customs\UploadIteratorTest::mangle_names()</full_name>
         <docblock line="183">
@@ -323,22 +323,22 @@ them specifically elsewhere.</long-description>
     </parse_markers>
     <source>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</source>
   </file>
-  <file path="customs/src/AbstractUploadEntity.php" generated-path="customs.src.AbstractUploadEntity.html" hash="bda036dfba0f14cc6a94cab0eb41358d" package="haldayne">
+  <file path="customs/src/AbstractUploadEntity.php" generated-path="customs.src.AbstractUploadEntity.html" hash="bda036dfba0f14cc6a94cab0eb41358d" package="Haldayne">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
-      <tag name="package" line="0" description="haldayne"/>
+      <tag name="package" line="0" description="Haldayne"/>
     </docblock>
-    <class final="false" abstract="true" namespace="Haldayne\Customs" line="7" package="haldayne">
+    <class final="false" abstract="true" namespace="Haldayne\Customs" line="7" package="Haldayne">
       <extends/>
       <name>AbstractUploadEntity</name>
       <full_name>\Haldayne\Customs\AbstractUploadEntity</full_name>
       <docblock line="7">
         <description>Common methods shared amongst uploaded files.</description>
         <long-description></long-description>
-        <tag name="package" line="7" description="haldayne"/>
+        <tag name="package" line="7" description="Haldayne"/>
       </docblock>
-      <property static="false" visibility="protected" namespace="Haldayne\Customs" line="37" package="haldayne">
+      <property static="false" visibility="protected" namespace="Haldayne\Customs" line="37" package="Haldayne">
         <name>$htmlName</name>
         <full_name>\Haldayne\Customs\AbstractUploadEntity::htmlName</full_name>
         <default></default>
@@ -347,7 +347,7 @@ them specifically elsewhere.</long-description>
           <long-description></long-description>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="9" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="9" package="Haldayne">
         <name>__construct</name>
         <full_name>\Haldayne\Customs\AbstractUploadEntity::__construct()</full_name>
         <docblock line="9">
@@ -360,7 +360,7 @@ them specifically elsewhere.</long-description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="30" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="30" package="Haldayne">
         <name>getHtmlName</name>
         <full_name>\Haldayne\Customs\AbstractUploadEntity::getHtmlName()</full_name>
         <docblock line="30">
@@ -388,13 +388,13 @@ Second, if the auto-append syntax was given:
     </parse_markers>
     <source>eJyNUstu2zAQvOsrBkYApYZj99w8itR16wJ9GK17cg1jTdESUYoUxFVip8i/d0U/kKo5hBeJy9mdnd25elsVVeKo1KEipTElm9HO6V/jJrAvw2WSjPr9BH2MfVl6h1Jz4bOAUFCtM5DE8sBoKuspk8DGWB2GkjBKaB24JsVQlkLA7eH6M0Injg3vkj8J5FTN2hqFTeMUGyFZrZR3gm4Un58VXNqv0uCrCN0ntOeMCxMubo7PuMYJehlBj0n8xP7b08dHzeBCVM6/fMYd1YbWVqNVj42v0RY8KBkeUo6Z8/YpAqmqar81JbEOsZivTW4cWbtDbu60i7ABrPmt3xzTgSvjqkbYd5W+TtshpRG3/1/QMsXopsP5TvDGIXhhVRQOdHrbjjS2osg5z1hr1Jqb2ulsCHwwdeCBBBU1QR9rzaYzlORyWc5efVw5ZMxMxhmXIx2mIgUp0kHLEzTujbWSVD1R0Zc5+eGa6hMjKKAnwZUEex0gXgpcvRS4kJjQPyz/Q59eep0p/tAiMhvAbOL4qGF/ITvULkPYifot7qVE3FxX6OIZmtfL3gCa1dEgo2cNnGueHrx43vXtvmTXvv9adoTZ92/zyXg+eY/b2ad9VHzHWrE088Toj8lfiGwiow==</source>
   </file>
-  <file path="customs/src/UploadIterator.php" generated-path="customs.src.UploadIterator.html" hash="ab57e8946f14cf541b0a62988babb8ba" package="haldayne">
+  <file path="customs/src/UploadIterator.php" generated-path="customs.src.UploadIterator.html" hash="ab57e8946f14cf541b0a62988babb8ba" package="Haldayne">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
-      <tag name="package" line="0" description="haldayne"/>
+      <tag name="package" line="0" description="Haldayne"/>
     </docblock>
-    <class final="false" abstract="false" namespace="Haldayne\Customs" line="7" package="haldayne">
+    <class final="false" abstract="false" namespace="Haldayne\Customs" line="7" package="Haldayne">
       <extends/>
       <implements>\ArrayAccess</implements>
       <implements>\SeekableIterator</implements>
@@ -404,9 +404,9 @@ Second, if the auto-append syntax was given:
       <docblock line="7">
         <description>Iterate over the $_FILES super-global, or an array in that same format.</description>
         <long-description></long-description>
-        <tag name="package" line="7" description="haldayne"/>
+        <tag name="package" line="7" description="Haldayne"/>
       </docblock>
-      <property static="false" visibility="private" namespace="Haldayne\Customs" line="121" package="haldayne">
+      <property static="false" visibility="private" namespace="Haldayne\Customs" line="121" package="Haldayne">
         <name>$input</name>
         <full_name>\Haldayne\Customs\UploadIterator::input</full_name>
         <default></default>
@@ -415,7 +415,7 @@ Second, if the auto-append syntax was given:
           <long-description></long-description>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="Haldayne\Customs" line="122" package="haldayne">
+      <property static="false" visibility="private" namespace="Haldayne\Customs" line="122" package="Haldayne">
         <name>$files</name>
         <full_name>\Haldayne\Customs\UploadIterator::files</full_name>
         <default></default>
@@ -424,7 +424,7 @@ Second, if the auto-append syntax was given:
           <long-description></long-description>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="Haldayne\Customs" line="123" package="haldayne">
+      <property static="false" visibility="private" namespace="Haldayne\Customs" line="123" package="Haldayne">
         <name>$index</name>
         <full_name>\Haldayne\Customs\UploadIterator::index</full_name>
         <default></default>
@@ -433,7 +433,7 @@ Second, if the auto-append syntax was given:
           <long-description></long-description>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="21" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="21" package="Haldayne">
         <name>__construct</name>
         <full_name>\Haldayne\Customs\UploadIterator::__construct()</full_name>
         <docblock line="21">
@@ -455,7 +455,7 @@ that prevented their storage, then the constructor throws an exception.</long-de
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="40" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="40" package="Haldayne">
         <name>offsetExists</name>
         <full_name>\Haldayne\Customs\UploadIterator::offsetExists()</full_name>
         <docblock line="40">
@@ -477,7 +477,7 @@ if (isset($it[0])) { ... }
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="57" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="57" package="Haldayne">
         <name>offsetGet</name>
         <full_name>\Haldayne\Customs\UploadIterator::offsetGet()</full_name>
         <docblock line="57">
@@ -503,7 +503,7 @@ $it[0];
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="66" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="66" package="Haldayne">
         <name>offsetSet</name>
         <full_name>\Haldayne\Customs\UploadIterator::offsetSet()</full_name>
         <docblock line="66">
@@ -521,7 +521,7 @@ $it[0];
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="71" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="71" package="Haldayne">
         <name>offsetUnset</name>
         <full_name>\Haldayne\Customs\UploadIterator::offsetUnset()</full_name>
         <docblock line="71">
@@ -534,7 +534,7 @@ $it[0];
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="78" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="78" package="Haldayne">
         <name>current</name>
         <full_name>\Haldayne\Customs\UploadIterator::current()</full_name>
         <docblock line="78">
@@ -542,7 +542,7 @@ $it[0];
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="83" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="83" package="Haldayne">
         <name>key</name>
         <full_name>\Haldayne\Customs\UploadIterator::key()</full_name>
         <docblock line="83">
@@ -550,7 +550,7 @@ $it[0];
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="88" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="88" package="Haldayne">
         <name>next</name>
         <full_name>\Haldayne\Customs\UploadIterator::next()</full_name>
         <docblock line="88">
@@ -558,7 +558,7 @@ $it[0];
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="93" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="93" package="Haldayne">
         <name>rewind</name>
         <full_name>\Haldayne\Customs\UploadIterator::rewind()</full_name>
         <docblock line="93">
@@ -566,7 +566,7 @@ $it[0];
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="98" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="98" package="Haldayne">
         <name>valid</name>
         <full_name>\Haldayne\Customs\UploadIterator::valid()</full_name>
         <docblock line="98">
@@ -574,7 +574,7 @@ $it[0];
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="103" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="103" package="Haldayne">
         <name>seek</name>
         <full_name>\Haldayne\Customs\UploadIterator::seek()</full_name>
         <docblock line="103">
@@ -587,7 +587,7 @@ $it[0];
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="114" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="114" package="Haldayne">
         <name>count</name>
         <full_name>\Haldayne\Customs\UploadIterator::count()</full_name>
         <docblock line="114">
@@ -595,7 +595,7 @@ $it[0];
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="130" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="130" package="Haldayne">
         <name>import</name>
         <full_name>\Haldayne\Customs\UploadIterator::import()</full_name>
         <docblock line="130">
@@ -605,7 +605,7 @@ reconstitues the HTML form name.</description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="153" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="153" package="Haldayne">
         <name>names</name>
         <full_name>\Haldayne\Customs\UploadIterator::names()</full_name>
         <docblock line="153">
@@ -614,7 +614,7 @@ HTML names.</description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="185" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="185" package="Haldayne">
         <name>reducer</name>
         <full_name>\Haldayne\Customs\UploadIterator::reducer()</full_name>
         <docblock line="185">
@@ -638,7 +638,7 @@ appending new keys onto the base-so-far.</description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="202" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="202" package="Haldayne">
         <name>gather</name>
         <full_name>\Haldayne\Customs\UploadIterator::gather()</full_name>
         <docblock line="202">
@@ -652,7 +652,7 @@ info structure.</description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="233" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Customs" line="233" package="Haldayne">
         <name>wrap</name>
         <full_name>\Haldayne\Customs\UploadIterator::wrap()</full_name>
         <docblock line="233">
@@ -710,22 +710,22 @@ an exception if one would be warranted by the error.</description>
     </parse_markers>
     <source>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</source>
   </file>
-  <file path="customs/src/UploadFailure.php" generated-path="customs.src.UploadFailure.html" hash="819bf55d301d4382f4b3e8703260b17f" package="haldayne">
+  <file path="customs/src/UploadFailure.php" generated-path="customs.src.UploadFailure.html" hash="819bf55d301d4382f4b3e8703260b17f" package="Haldayne">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
-      <tag name="package" line="0" description="haldayne"/>
+      <tag name="package" line="0" description="Haldayne"/>
     </docblock>
-    <class final="false" abstract="false" namespace="Haldayne\Customs" line="7" package="haldayne">
+    <class final="false" abstract="false" namespace="Haldayne\Customs" line="7" package="Haldayne">
       <extends/>
       <name>UploadFailure</name>
       <full_name>\Haldayne\Customs\UploadFailure</full_name>
       <docblock line="7">
         <description>Represents a file that did not successfully upload.</description>
         <long-description></long-description>
-        <tag name="package" line="7" description="haldayne"/>
+        <tag name="package" line="7" description="Haldayne"/>
       </docblock>
-      <property static="true" visibility="public" namespace="Haldayne\Customs" line="12" package="haldayne">
+      <property static="true" visibility="public" namespace="Haldayne\Customs" line="12" package="Haldayne">
         <name>$failure_codes</name>
         <full_name>\Haldayne\Customs\UploadFailure::failure_codes</full_name>
         <default>array(UPLOAD_ERR_INI_SIZE =&gt; 'The file size exceeds the server-allowed limit.', UPLOAD_ERR_FORM_SIZE =&gt; 'The file size exceeds the form-allowed upload limit.', UPLOAD_ERR_PARTIAL =&gt; 'The file was only partially uploaded.', UPLOAD_ERR_NO_FILE =&gt; 'No file was uploaded.', UPLOAD_ERR_CANT_WRITE =&gt; 'The server failed to write the file.', UPLOAD_ERR_NO_TMP_DIR =&gt; 'A server misconfiguration .', UPLOAD_ERR_EXTENSION =&gt; 'A PHP server extension cancelled the upload.')</default>
@@ -734,7 +734,7 @@ an exception if one would be warranted by the error.</description>
           <long-description></long-description>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="25" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="25" package="Haldayne">
         <name>getFile</name>
         <full_name>\Haldayne\Customs\UploadFailure::getFile()</full_name>
         <docblock line="25">
@@ -742,7 +742,7 @@ an exception if one would be warranted by the error.</description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="29" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="29" package="Haldayne">
         <name>getFailureReason</name>
         <full_name>\Haldayne\Customs\UploadFailure::getFailureReason()</full_name>
         <docblock line="29">
@@ -757,22 +757,22 @@ an exception if one would be warranted by the error.</description>
     </parse_markers>
     <source>eJyNkmFr2zAQhr/7V9yHQbfQJT9g64ZpHWpIHeO6bLQbRpXPiUCWhE5emo3+98mS27DSbDswgvO9j+5O78fPZmsSxXokwzjCJZMt2yv8dj6Q0z19SJLFbJbADCo0FgmVI2DQCYngtsxBK1pQ2gENnCNRN0i5h8FIzdq5ly0SLhkR3ITMkgk5WEx+JeAjgMeYQb1FMJpI3HtuF6uA6xb9Zar1H2RqIwVtwae4FcYJreaTehFOM9xLwYEcc/54M0GaCDmDu1js46ZcrdOLJquqJi/y5jq/zeDsE5yMPYS5SPxEwAeO2JIf0ifQ/kD7nkmpd9iCFL1w85PT14jLdXX1P8hO2/4ZGNf1V26ZVnWerv6k7hiBVn7fhlkn2GHz2B7BFOtmma9ic4U+UP4hO0+LuvlS5fVhrLiT8FZ+AqdhZ4XDOJtPHb+/viqbi7wKoPQJ0wviWnViM1g2Pi0c0Wdf66y4ztfFJC8vyycEPjhUNGo5UxxlaMt3M3lx4n33hn7hvQrdYFWoHfcIunueAnYIG+1OQXTeg/tXDdcNioeWN+iWXvP2XfgbLf6YHC2N/qyQkVYvNI/Jb268FdM=</source>
   </file>
-  <file path="boost/tests/CollectionTest.php" generated-path="boost.tests.CollectionTest.html" hash="19ca109010f0d6d3f3a1faadcb880718" package="haldayne">
+  <file path="boost/tests/CollectionTest.php" generated-path="boost.tests.CollectionTest.html" hash="19ca109010f0d6d3f3a1faadcb880718" package="Haldayne">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
-      <tag name="package" line="0" description="haldayne"/>
+      <tag name="package" line="0" description="Haldayne"/>
     </docblock>
-    <class final="false" abstract="false" namespace="Haldayne\DataStructure" line="4" package="haldayne">
+    <class final="false" abstract="false" namespace="Haldayne\DataStructure" line="4" package="Haldayne">
       <extends>\PHPUnit_Framework_TestCase</extends>
       <name>CollectionTest</name>
       <full_name>\Haldayne\DataStructure\CollectionTest</full_name>
       <docblock line="4">
         <description></description>
         <long-description></long-description>
-        <tag name="package" line="4" description="haldayne"/>
+        <tag name="package" line="4" description="Haldayne"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="7" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="7" package="Haldayne">
         <name>test_construction_valid</name>
         <full_name>\Haldayne\DataStructure\CollectionTest::test_construction_valid()</full_name>
         <docblock line="7">
@@ -786,7 +786,7 @@ an exception if one would be warranted by the error.</description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="16" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="16" package="Haldayne">
         <name>test_construction_invalid</name>
         <full_name>\Haldayne\DataStructure\CollectionTest::test_construction_invalid()</full_name>
         <docblock line="16">
@@ -801,7 +801,7 @@ an exception if one would be warranted by the error.</description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="22" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="22" package="Haldayne">
         <name>test_all</name>
         <full_name>\Haldayne\DataStructure\CollectionTest::test_all()</full_name>
         <docblock line="22">
@@ -820,7 +820,7 @@ an exception if one would be warranted by the error.</description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="28" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="28" package="Haldayne">
         <name>test_contains_get_set_forget</name>
         <full_name>\Haldayne\DataStructure\CollectionTest::test_contains_get_set_forget()</full_name>
         <docblock line="28">
@@ -828,7 +828,7 @@ an exception if one would be warranted by the error.</description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="45" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="45" package="Haldayne">
         <name>test_isEmpty</name>
         <full_name>\Haldayne\DataStructure\CollectionTest::test_isEmpty()</full_name>
         <docblock line="45">
@@ -847,7 +847,7 @@ an exception if one would be warranted by the error.</description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="54" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="54" package="Haldayne">
         <name>test_diff</name>
         <full_name>\Haldayne\DataStructure\CollectionTest::test_diff()</full_name>
         <docblock line="54">
@@ -855,7 +855,7 @@ an exception if one would be warranted by the error.</description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="68" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="68" package="Haldayne">
         <name>test_intersect</name>
         <full_name>\Haldayne\DataStructure\CollectionTest::test_intersect()</full_name>
         <docblock line="68">
@@ -863,7 +863,7 @@ an exception if one would be warranted by the error.</description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="82" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="82" package="Haldayne">
         <name>test_each</name>
         <full_name>\Haldayne\DataStructure\CollectionTest::test_each()</full_name>
         <docblock line="82">
@@ -871,7 +871,7 @@ an exception if one would be warranted by the error.</description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="104" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="104" package="Haldayne">
         <name>test_partition</name>
         <full_name>\Haldayne\DataStructure\CollectionTest::test_partition()</full_name>
         <docblock line="104">
@@ -879,7 +879,7 @@ an exception if one would be warranted by the error.</description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="137" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="137" package="Haldayne">
         <name>test_count</name>
         <full_name>\Haldayne\DataStructure\CollectionTest::test_count()</full_name>
         <docblock line="137">
@@ -898,7 +898,7 @@ an exception if one would be warranted by the error.</description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="145" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="145" package="Haldayne">
         <name>test_toArray</name>
         <full_name>\Haldayne\DataStructure\CollectionTest::test_toArray()</full_name>
         <docblock line="145">
@@ -917,7 +917,7 @@ an exception if one would be warranted by the error.</description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="154" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="154" package="Haldayne">
         <name>test_toJson</name>
         <full_name>\Haldayne\DataStructure\CollectionTest::test_toJson()</full_name>
         <docblock line="154">
@@ -936,7 +936,7 @@ an exception if one would be warranted by the error.</description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="162" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="162" package="Haldayne">
         <name>test_array_access</name>
         <full_name>\Haldayne\DataStructure\CollectionTest::test_array_access()</full_name>
         <docblock line="162">
@@ -944,7 +944,7 @@ an exception if one would be warranted by the error.</description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="179" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\DataStructure" line="179" package="Haldayne">
         <name>test_iterator_aggregate</name>
         <full_name>\Haldayne\DataStructure\CollectionTest::test_iterator_aggregate()</full_name>
         <docblock line="179">
@@ -952,7 +952,7 @@ an exception if one would be warranted by the error.</description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\DataStructure" line="195" package="haldayne">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\DataStructure" line="195" package="Haldayne">
         <name>provides_valid_items</name>
         <full_name>\Haldayne\DataStructure\CollectionTest::provides_valid_items()</full_name>
         <docblock line="195">
@@ -961,7 +961,7 @@ native PHP array.</description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\DataStructure" line="210" package="haldayne">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\DataStructure" line="210" package="Haldayne">
         <name>provides_invalid_items</name>
         <full_name>\Haldayne\DataStructure\CollectionTest::provides_invalid_items()</full_name>
         <docblock line="210">
@@ -1002,15 +1002,15 @@ native PHP array.</description>
     </parse_markers>
     <source>eJy9WFtX4zYQfs+vmAe6tmmyCdA8FJrdsil7oKctORv6FDg5iq0EdR3ZlWSWtIf/3pF8iS9xYkogHBLbmss3M5+kkX/6GN6HLU6WVIbEpXBJfI+sOL39hSgyViJyVSToWavl+kRKGAa+T13FAn5DpQL6qCj3JNyOLkd/cqamnwVa+haIr1M9PiSStv5tAX66h4fws4c2RyJ4YB4VEMYXcvpAfOZNmaJLCYddIx1GM5+5MI+48QUKjU3dgEsDCJ/ESvaB0XKMTuxHfzj9lgOaCp2Z8adWCicWr0XFeA5XJksfQ7RKvYtHl4YG2lUsdy4W0ZJylQ0kKk3jSdy9KKKXJpj4fmK6DUQIsoID81NGc+DCYCskI6Tumex8QNJQocbICjs21kZ1fIyunGIAdTlShHE5XVA1lfg/DwRe2k0gTcAiVhusmf5yLbirQ3cjIkSHqFJvds+pk/1MfFkS7heEBQLRwwnQ3vaUuJgO8Qxf9cCMPROrVtCujzbiknoEE/LJegGy2NmnWmeJnz76Gdb6qaa97+yd00xeLEO1ek1eZ0P604PBYABuEHGVEN5pFwR0wCkoJxtpMBU8Np83471FwtCnhvqE45++IhYMPkBuJL5PBPTUWNt8TKhiPE56OcXaKWQSMTnK26w6QbY8rqd+I3/tXGCnp79dX48vpsPr30fnX67G13+8AZpi4kp4xjdfroY3jQH1CiV4Frxd5GBcUSER19syZO32OTQp5qGS4e1lqXP5EqbsC9A+ybIVxS46UOLeN2KCIHxB9Tr9Y3n9NiYyq/YBLrgRRRRf6cqBSFKw3+nrqYyWbXgXD+sbJ+fR2EqE4PuBuT4rjmZ6ZtzcrSWetqboqNfOrG8VPMH4cgDzRaxNCW6RJ/8nJY/l+Nkc7COzKcRyxVH9ERRbbA5zvdsXs/MEFJ9tUDHkmxiLmiQxErg7q7PdK9ltmOEJmJlxBIZ+DXgXEqGYyWKZfN0uzFZgcO5q2uYiYqqTzcb4dr1OPdDFgtGOS2YzsqClti6dlGsg5XqVK+AzPMfYB18Z9zBIfRBy0Ab2+X7gYY/TsVLuOMUcJpk1ik0ZWzAwqRQrDtVM+x1pwIJUtePEJOrHZvGo5KqgVTKiFxgVnOuepdiZlIqIpGswgXrlCbS7NO2NUySlsJlDtqH8d3DswEew6APlFpyCFXieta8ixEZNEg37MRCTzOONSdeeY2Gzn+tlQ/+elIWb5trgT7rfrplUEvAoAWyJPNAHTDxsD3V3SWY+3VuXnPSrTXrkSj6LvS7YmxtoR7f5WrDc4tcEaVKz1xjTdL/RCTerbrN4f5UB33O42uRrRvsX2p9S7up1Mit/HLpx3TDyW5Onc9elUm7ZWoyDKTFir3D8Z1IfWA/cSe9ux9k/k+wXJCO+NtBMf4un/GF+clQwqO8xWDx8NzibV3T7RndYp1tMRX8XwGHspH/XsNJX2CkTFYjzxULQBVF024kmkZ2SVLhadWK6oLTM+f5nI6VJPhqWbEcLqlJYdl20V1wqwl16PbetmK6pik4Aq1O7+DvCiqNfLWQ8Gd1hEBaWhTRnnUFnAPq1K6SzXgI+6lTeWCbDEgjI9A0tqAAYx30Vl4d/KI6sA8fJzz1Q9xTcQAgqw4B7jC9Sa5wo9kBhdDmKF4n3yUBhbcH4Vb5Em5ajSn2Snbu4x06AR77fhsldeU+c4LPNz7OWvI8rTO6mKlkqubPZXl3H33ea2L8dK2+o34ZXzd/VvWTOSqZWof6+JwpcwnmgYEZhSTyK1cMS5uv2vEIU3lc3LQWyh1aDPP6h0uvgw/ebnlpIQORSpSGd4NwPKbet8D487XaXdBmIlZ6mwnI2Juyp9R+/jMFY</source>
   </file>
-  <file path="boost/src/Map.php" generated-path="boost.src.Map.html" hash="45924a737ff130f87a0dd2eb70320765" package="haldayne">
+  <file path="boost/src/Map.php" generated-path="boost.src.Map.html" hash="45924a737ff130f87a0dd2eb70320765" package="Haldayne">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
-      <tag name="package" line="0" description="haldayne"/>
+      <tag name="package" line="0" description="Haldayne"/>
     </docblock>
     <namespace-alias name="Arrayable">\Haldayne\Boost\Contract\Arrayable</namespace-alias>
     <namespace-alias name="Jsonable">\Haldayne\Boost\Contract\Jsonable</namespace-alias>
-    <class final="false" abstract="false" namespace="Haldayne\Boost" line="35" package="haldayne">
+    <class final="false" abstract="false" namespace="Haldayne\Boost" line="35" package="Haldayne">
       <extends/>
       <implements>\Countable</implements>
       <implements>\Haldayne\Boost\Contract\Arrayable</implements>
@@ -1045,9 +1045,9 @@ In the API, a formal variable named `$key` may be of *any* type.
 As much as possible, method names were chosen to reflect synonymous usage in
 the PHP engine itself. When not possible or relevant, the names may reflect
 usage from Laravel.</long-description>
-        <tag name="package" line="35" description="haldayne"/>
+        <tag name="package" line="35" description="Haldayne"/>
       </docblock>
-      <constant namespace="Haldayne\Boost" line="42" package="haldayne">
+      <constant namespace="Haldayne\Boost" line="42" package="Haldayne">
         <name>LOOSE</name>
         <full_name>\Haldayne\Boost\Map::LOOSE</full_name>
         <value>true</value>
@@ -1058,7 +1058,7 @@ usage from Laravel.</long-description>
           <tag name="see" line="42" description="" link="\Haldayne\Boost\Map::intersect"/>
         </docblock>
       </constant>
-      <constant namespace="Haldayne\Boost" line="49" package="haldayne">
+      <constant namespace="Haldayne\Boost" line="49" package="Haldayne">
         <name>STRICT</name>
         <full_name>\Haldayne\Boost\Map::STRICT</full_name>
         <value>false</value>
@@ -1069,7 +1069,7 @@ usage from Laravel.</long-description>
           <tag name="see" line="49" description="" link="\Haldayne\Boost\Map::intersect"/>
         </docblock>
       </constant>
-      <property static="false" visibility="private" namespace="Haldayne\Boost" line="467" package="haldayne">
+      <property static="false" visibility="private" namespace="Haldayne\Boost" line="467" package="Haldayne">
         <name>$array</name>
         <full_name>\Haldayne\Boost\Map::array</full_name>
         <default>array()</default>
@@ -1081,7 +1081,7 @@ usage from Laravel.</long-description>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="Haldayne\Boost" line="473" package="haldayne">
+      <property static="false" visibility="private" namespace="Haldayne\Boost" line="473" package="Haldayne">
         <name>$guard</name>
         <full_name>\Haldayne\Boost\Map::guard</full_name>
         <default>null</default>
@@ -1095,7 +1095,7 @@ usage from Laravel.</long-description>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="Haldayne\Boost" line="479" package="haldayne">
+      <property static="false" visibility="private" namespace="Haldayne\Boost" line="479" package="Haldayne">
         <name>$map_code_to_callable</name>
         <full_name>\Haldayne\Boost\Map::map_code_to_callable</full_name>
         <default>array()</default>
@@ -1107,7 +1107,7 @@ usage from Laravel.</long-description>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="Haldayne\Boost" line="485" package="haldayne">
+      <property static="false" visibility="private" namespace="Haldayne\Boost" line="485" package="Haldayne">
         <name>$map_key_to_hash</name>
         <full_name>\Haldayne\Boost\Map::map_key_to_hash</full_name>
         <default>array()</default>
@@ -1119,7 +1119,7 @@ usage from Laravel.</long-description>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="63" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="63" package="Haldayne">
         <name>__construct</name>
         <full_name>\Haldayne\Boost\Map::__construct()</full_name>
         <docblock line="63">
@@ -1154,7 +1154,7 @@ guard code fails, the set will throw an exception.</long-description>
           <type>callable</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="91" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="91" package="Haldayne">
         <name>find</name>
         <full_name>\Haldayne\Boost\Map::find()</full_name>
         <docblock line="91">
@@ -1181,7 +1181,7 @@ $odds = $m-&gt;find('return 1 == ($v % 2);');
           <type>callable|string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="110" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="110" package="Haldayne">
         <name>first</name>
         <full_name>\Haldayne\Boost\Map::first()</full_name>
         <docblock line="110">
@@ -1214,7 +1214,7 @@ $odds = $m-&gt;all('return 1 == ($v % 2);');
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="132" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="132" package="Haldayne">
         <name>last</name>
         <full_name>\Haldayne\Boost\Map::last()</full_name>
         <docblock line="132">
@@ -1247,7 +1247,7 @@ $odds = $m-&gt;all('return 1 == ($v % 2);');
           <type>integer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="148" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="148" package="Haldayne">
         <name>contains</name>
         <full_name>\Haldayne\Boost\Map::contains()</full_name>
         <docblock line="148">
@@ -1266,7 +1266,7 @@ $odds = $m-&gt;all('return 1 == ($v % 2);');
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="164" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="164" package="Haldayne">
         <name>get</name>
         <full_name>\Haldayne\Boost\Map::get()</full_name>
         <docblock line="164">
@@ -1295,7 +1295,7 @@ This is the object method equivalent of the magic $map[$key].</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="181" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="181" package="Haldayne">
         <name>set</name>
         <full_name>\Haldayne\Boost\Map::set()</full_name>
         <docblock line="181">
@@ -1323,7 +1323,7 @@ This is the object method equivalent of the magic $map[$key].</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="195" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="195" package="Haldayne">
         <name>forget</name>
         <full_name>\Haldayne\Boost\Map::forget()</full_name>
         <docblock line="195">
@@ -1343,7 +1343,7 @@ This is the object method equivalent of the magic $map[$key].</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="206" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="206" package="Haldayne">
         <name>isEmpty</name>
         <full_name>\Haldayne\Boost\Map::isEmpty()</full_name>
         <docblock line="206">
@@ -1354,7 +1354,7 @@ This is the object method equivalent of the magic $map[$key].</long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="223" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="223" package="Haldayne">
         <name>diff</name>
         <full_name>\Haldayne\Boost\Map::diff()</full_name>
         <docblock line="223">
@@ -1389,7 +1389,7 @@ and values match will be removed.</long-description>
           <type>\Haldayne\Boost\enum</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="243" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="243" package="Haldayne">
         <name>intersect</name>
         <full_name>\Haldayne\Boost\Map::intersect()</full_name>
         <docblock line="243">
@@ -1424,7 +1424,7 @@ values match will be included.</long-description>
           <type>\Haldayne\Boost\enum</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="268" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="268" package="Haldayne">
         <name>walk</name>
         <full_name>\Haldayne\Boost\Map::walk()</full_name>
         <docblock line="268">
@@ -1454,7 +1454,7 @@ $map-&gt;each('$v++; return true;')-&gt;sum();
           <type>callable|string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="285" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="285" package="Haldayne">
         <name>walk_backward</name>
         <full_name>\Haldayne\Boost\Map::walk_backward()</full_name>
         <docblock line="285">
@@ -1475,7 +1475,7 @@ $map-&gt;each('$v++; return true;')-&gt;sum();
           <type>callable|string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="312" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="312" package="Haldayne">
         <name>partition</name>
         <full_name>\Haldayne\Boost\Map::partition()</full_name>
         <docblock line="312">
@@ -1503,7 +1503,7 @@ code returns a non-scalar, it explodes.</long-description>
           <type>callable|string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="338" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="338" package="Haldayne">
         <name>count</name>
         <full_name>\Haldayne\Boost\Map::count()</full_name>
         <docblock line="338">
@@ -1514,7 +1514,7 @@ code returns a non-scalar, it explodes.</long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="350" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="350" package="Haldayne">
         <name>toArray</name>
         <full_name>\Haldayne\Boost\Map::toArray()</full_name>
         <docblock line="350">
@@ -1524,7 +1524,7 @@ collections into arrays.</description>
           <tag name="inherited_from" description="\Haldayne\Boost\Contract\Arrayable::toArray()" refers="\Haldayne\Boost\Contract\Arrayable::toArray()" link="/classes/Haldayne.Boost.Contract.Arrayable.html#method_toArray"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="365" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="365" package="Haldayne">
         <name>toJson</name>
         <full_name>\Haldayne\Boost\Map::toJson()</full_name>
         <docblock line="365">
@@ -1538,7 +1538,7 @@ collections into arrays.</description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="379" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="379" package="Haldayne">
         <name>offsetExists</name>
         <full_name>\Haldayne\Boost\Map::offsetExists()</full_name>
         <docblock line="379">
@@ -1557,7 +1557,7 @@ collections into arrays.</description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="391" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="391" package="Haldayne">
         <name>offsetGet</name>
         <full_name>\Haldayne\Boost\Map::offsetGet()</full_name>
         <docblock line="391">
@@ -1576,7 +1576,7 @@ collections into arrays.</description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="409" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="409" package="Haldayne">
         <name>offsetSet</name>
         <full_name>\Haldayne\Boost\Map::offsetSet()</full_name>
         <docblock line="409">
@@ -1608,7 +1608,7 @@ guard. If the guard fails, the set throws an exception.</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="441" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="441" package="Haldayne">
         <name>offsetUnset</name>
         <full_name>\Haldayne\Boost\Map::offsetUnset()</full_name>
         <docblock line="441">
@@ -1627,7 +1627,7 @@ guard. If the guard fails, the set throws an exception.</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="454" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="454" package="Haldayne">
         <name>getIterator</name>
         <full_name>\Haldayne\Boost\Map::getIterator()</full_name>
         <docblock line="454">
@@ -1638,7 +1638,7 @@ guard. If the guard fails, the set throws an exception.</long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="495" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="495" package="Haldayne">
         <name>collection_to_array</name>
         <full_name>\Haldayne\Boost\Map::collection_to_array()</full_name>
         <docblock line="495">
@@ -1666,7 +1666,7 @@ structure is given.</description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="528" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="528" package="Haldayne">
         <name>call</name>
         <full_name>\Haldayne\Boost\Map::call()</full_name>
         <docblock line="528">
@@ -1702,7 +1702,7 @@ structure is given.</description>
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="548" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="548" package="Haldayne">
         <name>code_to_callable</name>
         <full_name>\Haldayne\Boost\Map::code_to_callable()</full_name>
         <docblock line="548">
@@ -1728,7 +1728,7 @@ behavior on iterations, so we don't allow that.</long-description>
           <type>callable|string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="573" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="573" package="Haldayne">
         <name>passes</name>
         <full_name>\Haldayne\Boost\Map::passes()</full_name>
         <docblock line="573">
@@ -1747,7 +1747,7 @@ behavior on iterations, so we don't allow that.</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="585" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="585" package="Haldayne">
         <name>key_to_hash</name>
         <full_name>\Haldayne\Boost\Map::key_to_hash()</full_name>
         <docblock line="585">
@@ -1767,7 +1767,7 @@ created.</description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="620" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="620" package="Haldayne">
         <name>hash_to_key</name>
         <full_name>\Haldayne\Boost\Map::hash_to_key()</full_name>
         <docblock line="620">
@@ -1786,7 +1786,7 @@ created.</description>
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="646" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="646" package="Haldayne">
         <name>grep</name>
         <full_name>\Haldayne\Boost\Map::grep()</full_name>
         <docblock line="646">
@@ -1825,13 +1825,13 @@ return that many from the end of the array.</long-description>
     </parse_markers>
     <source>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</source>
   </file>
-  <file path="boost/src/MapOfMaps.php" generated-path="boost.src.MapOfMaps.html" hash="608a8379434e4b3468b5a954e63de974" package="haldayne">
+  <file path="boost/src/MapOfMaps.php" generated-path="boost.src.MapOfMaps.html" hash="608a8379434e4b3468b5a954e63de974" package="Haldayne">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
-      <tag name="package" line="0" description="haldayne"/>
+      <tag name="package" line="0" description="Haldayne"/>
     </docblock>
-    <class final="false" abstract="false" namespace="Haldayne\Boost" line="7" package="haldayne">
+    <class final="false" abstract="false" namespace="Haldayne\Boost" line="7" package="Haldayne">
       <extends>\Haldayne\Boost\Map</extends>
       <name>MapOfMaps</name>
       <full_name>\Haldayne\Boost\MapOfMaps</full_name>
@@ -1861,10 +1861,10 @@ In the API, a formal variable named `$key` may be of *any* type.
 As much as possible, method names were chosen to reflect synonymous usage in
 the PHP engine itself. When not possible or relevant, the names may reflect
 usage from Laravel.</long-description>
-        <tag name="package" line="7" description="haldayne"/>
+        <tag name="package" line="7" description="Haldayne"/>
         <tag name="inherited_from" description="\Haldayne\Boost\Map" refers="\Haldayne\Boost\Map" link="/classes/Haldayne.Boost.Map.html"/>
       </docblock>
-      <constant namespace="Haldayne\Boost" line="42" package="haldayne">
+      <constant namespace="Haldayne\Boost" line="42" package="Haldayne">
         <name>LOOSE</name>
         <full_name>\Haldayne\Boost\Map::LOOSE</full_name>
         <value>true</value>
@@ -1875,7 +1875,7 @@ usage from Laravel.</long-description>
           <tag name="see" line="42" description="" link="\Haldayne\Boost\Map::intersect"/>
         </docblock>
       </constant>
-      <constant namespace="Haldayne\Boost" line="49" package="haldayne">
+      <constant namespace="Haldayne\Boost" line="49" package="Haldayne">
         <name>STRICT</name>
         <full_name>\Haldayne\Boost\Map::STRICT</full_name>
         <value>false</value>
@@ -1886,7 +1886,7 @@ usage from Laravel.</long-description>
           <tag name="see" line="49" description="" link="\Haldayne\Boost\Map::intersect"/>
         </docblock>
       </constant>
-      <property static="false" visibility="private" namespace="Haldayne\Boost" line="467" package="haldayne">
+      <property static="false" visibility="private" namespace="Haldayne\Boost" line="467" package="Haldayne">
         <name>$array</name>
         <full_name>\Haldayne\Boost\Map::array</full_name>
         <default>array()</default>
@@ -1898,7 +1898,7 @@ usage from Laravel.</long-description>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="Haldayne\Boost" line="473" package="haldayne">
+      <property static="false" visibility="private" namespace="Haldayne\Boost" line="473" package="Haldayne">
         <name>$guard</name>
         <full_name>\Haldayne\Boost\Map::guard</full_name>
         <default>null</default>
@@ -1912,7 +1912,7 @@ usage from Laravel.</long-description>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="Haldayne\Boost" line="479" package="haldayne">
+      <property static="false" visibility="private" namespace="Haldayne\Boost" line="479" package="Haldayne">
         <name>$map_code_to_callable</name>
         <full_name>\Haldayne\Boost\Map::map_code_to_callable</full_name>
         <default>array()</default>
@@ -1924,7 +1924,7 @@ usage from Laravel.</long-description>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="Haldayne\Boost" line="485" package="haldayne">
+      <property static="false" visibility="private" namespace="Haldayne\Boost" line="485" package="Haldayne">
         <name>$map_key_to_hash</name>
         <full_name>\Haldayne\Boost\Map::map_key_to_hash</full_name>
         <default>array()</default>
@@ -1936,7 +1936,7 @@ usage from Laravel.</long-description>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="12" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="12" package="Haldayne">
         <name>__construct</name>
         <full_name>\Haldayne\Boost\MapOfMaps::__construct()</full_name>
         <docblock line="12">
@@ -1953,7 +1953,7 @@ guard code fails, the set will throw an exception.</long-description>
           <type>\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="23" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="23" package="Haldayne">
         <name>guard</name>
         <full_name>\Haldayne\Boost\MapOfMaps::guard()</full_name>
         <docblock line="23">
@@ -1972,7 +1972,7 @@ guard code fails, the set will throw an exception.</long-description>
           <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="63" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="63" package="Haldayne">
         <name>__construct</name>
         <full_name>\Haldayne\Boost\Map::__construct()</full_name>
         <docblock line="63">
@@ -2008,7 +2008,7 @@ guard code fails, the set will throw an exception.</long-description>
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="91" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="91" package="Haldayne">
         <name>find</name>
         <full_name>\Haldayne\Boost\Map::find()</full_name>
         <docblock line="91">
@@ -2036,7 +2036,7 @@ $odds = $m-&gt;find('return 1 == ($v % 2);');
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="110" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="110" package="Haldayne">
         <name>first</name>
         <full_name>\Haldayne\Boost\Map::first()</full_name>
         <docblock line="110">
@@ -2070,7 +2070,7 @@ $odds = $m-&gt;all('return 1 == ($v % 2);');
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="132" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="132" package="Haldayne">
         <name>last</name>
         <full_name>\Haldayne\Boost\Map::last()</full_name>
         <docblock line="132">
@@ -2104,7 +2104,7 @@ $odds = $m-&gt;all('return 1 == ($v % 2);');
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="148" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="148" package="Haldayne">
         <name>contains</name>
         <full_name>\Haldayne\Boost\Map::contains()</full_name>
         <docblock line="148">
@@ -2124,7 +2124,7 @@ $odds = $m-&gt;all('return 1 == ($v % 2);');
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="164" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="164" package="Haldayne">
         <name>get</name>
         <full_name>\Haldayne\Boost\Map::get()</full_name>
         <docblock line="164">
@@ -2154,7 +2154,7 @@ This is the object method equivalent of the magic $map[$key].</long-description>
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="181" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="181" package="Haldayne">
         <name>set</name>
         <full_name>\Haldayne\Boost\Map::set()</full_name>
         <docblock line="181">
@@ -2183,7 +2183,7 @@ This is the object method equivalent of the magic $map[$key].</long-description>
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="195" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="195" package="Haldayne">
         <name>forget</name>
         <full_name>\Haldayne\Boost\Map::forget()</full_name>
         <docblock line="195">
@@ -2204,7 +2204,7 @@ This is the object method equivalent of the magic $map[$key].</long-description>
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="206" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="206" package="Haldayne">
         <name>isEmpty</name>
         <full_name>\Haldayne\Boost\Map::isEmpty()</full_name>
         <docblock line="206">
@@ -2216,7 +2216,7 @@ This is the object method equivalent of the magic $map[$key].</long-description>
         </docblock>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="223" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="223" package="Haldayne">
         <name>diff</name>
         <full_name>\Haldayne\Boost\Map::diff()</full_name>
         <docblock line="223">
@@ -2252,7 +2252,7 @@ and values match will be removed.</long-description>
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="243" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="243" package="Haldayne">
         <name>intersect</name>
         <full_name>\Haldayne\Boost\Map::intersect()</full_name>
         <docblock line="243">
@@ -2288,7 +2288,7 @@ values match will be included.</long-description>
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="268" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="268" package="Haldayne">
         <name>walk</name>
         <full_name>\Haldayne\Boost\Map::walk()</full_name>
         <docblock line="268">
@@ -2319,7 +2319,7 @@ $map-&gt;each('$v++; return true;')-&gt;sum();
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="285" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="285" package="Haldayne">
         <name>walk_backward</name>
         <full_name>\Haldayne\Boost\Map::walk_backward()</full_name>
         <docblock line="285">
@@ -2341,7 +2341,7 @@ $map-&gt;each('$v++; return true;')-&gt;sum();
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="312" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="312" package="Haldayne">
         <name>partition</name>
         <full_name>\Haldayne\Boost\Map::partition()</full_name>
         <docblock line="312">
@@ -2370,7 +2370,7 @@ code returns a non-scalar, it explodes.</long-description>
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="338" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="338" package="Haldayne">
         <name>count</name>
         <full_name>\Haldayne\Boost\Map::count()</full_name>
         <docblock line="338">
@@ -2382,7 +2382,7 @@ code returns a non-scalar, it explodes.</long-description>
         </docblock>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="350" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="350" package="Haldayne">
         <name>toArray</name>
         <full_name>\Haldayne\Boost\Map::toArray()</full_name>
         <docblock line="350">
@@ -2393,7 +2393,7 @@ collections into arrays.</description>
         </docblock>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="365" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="365" package="Haldayne">
         <name>toJson</name>
         <full_name>\Haldayne\Boost\Map::toJson()</full_name>
         <docblock line="365">
@@ -2408,7 +2408,7 @@ collections into arrays.</description>
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="379" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="379" package="Haldayne">
         <name>offsetExists</name>
         <full_name>\Haldayne\Boost\Map::offsetExists()</full_name>
         <docblock line="379">
@@ -2428,7 +2428,7 @@ collections into arrays.</description>
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="391" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="391" package="Haldayne">
         <name>offsetGet</name>
         <full_name>\Haldayne\Boost\Map::offsetGet()</full_name>
         <docblock line="391">
@@ -2448,7 +2448,7 @@ collections into arrays.</description>
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="409" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="409" package="Haldayne">
         <name>offsetSet</name>
         <full_name>\Haldayne\Boost\Map::offsetSet()</full_name>
         <docblock line="409">
@@ -2481,7 +2481,7 @@ guard. If the guard fails, the set throws an exception.</long-description>
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="441" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="441" package="Haldayne">
         <name>offsetUnset</name>
         <full_name>\Haldayne\Boost\Map::offsetUnset()</full_name>
         <docblock line="441">
@@ -2501,7 +2501,7 @@ guard. If the guard fails, the set throws an exception.</long-description>
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="454" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="454" package="Haldayne">
         <name>getIterator</name>
         <full_name>\Haldayne\Boost\Map::getIterator()</full_name>
         <docblock line="454">
@@ -2513,7 +2513,7 @@ guard. If the guard fails, the set throws an exception.</long-description>
         </docblock>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="495" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="495" package="Haldayne">
         <name>collection_to_array</name>
         <full_name>\Haldayne\Boost\Map::collection_to_array()</full_name>
         <docblock line="495">
@@ -2542,7 +2542,7 @@ structure is given.</description>
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="528" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="528" package="Haldayne">
         <name>call</name>
         <full_name>\Haldayne\Boost\Map::call()</full_name>
         <docblock line="528">
@@ -2579,7 +2579,7 @@ structure is given.</description>
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="548" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="548" package="Haldayne">
         <name>code_to_callable</name>
         <full_name>\Haldayne\Boost\Map::code_to_callable()</full_name>
         <docblock line="548">
@@ -2606,7 +2606,7 @@ behavior on iterations, so we don't allow that.</long-description>
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="573" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="573" package="Haldayne">
         <name>passes</name>
         <full_name>\Haldayne\Boost\Map::passes()</full_name>
         <docblock line="573">
@@ -2626,7 +2626,7 @@ behavior on iterations, so we don't allow that.</long-description>
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="585" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="585" package="Haldayne">
         <name>key_to_hash</name>
         <full_name>\Haldayne\Boost\Map::key_to_hash()</full_name>
         <docblock line="585">
@@ -2647,7 +2647,7 @@ created.</description>
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="620" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="620" package="Haldayne">
         <name>hash_to_key</name>
         <full_name>\Haldayne\Boost\Map::hash_to_key()</full_name>
         <docblock line="620">
@@ -2667,7 +2667,7 @@ created.</description>
         </argument>
         <inherited_from>\Haldayne\Boost\Map</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="646" package="haldayne">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="646" package="Haldayne">
         <name>grep</name>
         <full_name>\Haldayne\Boost\Map::grep()</full_name>
         <docblock line="646">
@@ -2708,8 +2708,8 @@ return that many from the end of the array.</long-description>
     <source>eJx9UE1PwzAMvedX+DBpWzXR+wYCgRBwQPwAQJOXum2kxInyMYbQ/jtpSjlUAh/iyPZ7fs+X1653gtFQcCgJHlE3+Mn0dmttiDsh6qoSUMGTcZoMcQyAYNCBbYcULnKzFlJjCPCM7qXNTwA6ReKmVMSXgByFZogK7jxhpEzD9DGjKgN1yS4dtJLQJpZRWYb9XloO0ScZVwtptaaxfgWctF4XzLiqoNFnrdvtH6gNvMIi9ipsYNkl9M0S3te7gj6Lud57DskTxJ6gU0fi/FPcgRoukQ1Osqfxm7wbDRh1ogYWR9SJflueYvIMB2s1If/rt8hajfi5ux+asQkqG0SWlM/4MIAmH2fxDQTsi9Y=</source>
   </file>
   <package name="Default" full_name="Default"/>
+  <package name="Haldayne" full_name="Haldayne"/>
   <package name="global" full_name="global"/>
-  <package name="haldayne" full_name="haldayne"/>
   <namespace name="Haldayne" full_name="Haldayne">
     <namespace name="Boost" full_name="Haldayne\Boost">
       <namespace name="Contract" full_name="Haldayne\Boost\Contract"/>
