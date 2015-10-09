@@ -34,7 +34,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">30</span></a></li>
+                <span class="label label-info">31</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -64,14 +64,13 @@
 <li class="nav-header">
 <i title="Methods" class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public inherited"><a href="#method___construct" title="__construct() :: "><span class="description">__construct()
-        </span><pre>__construct()</pre></a></li>
 <li class="method public "><a href="#method_getClientFilename" title="getClientFilename() :: Get the file name the client gave us for this file, if any."><span class="description">Get the file name the client gave us for this file, if any.</span><pre>getClientFilename()</pre></a></li>
-<li class="method public inherited"><a href="#method_getHtmlName" title="getHtmlName() :: Get the HTML variable name for this upload."><span class="description">Get the HTML variable name for this upload.</span><pre>getHtmlName()</pre></a></li>
+<li class="method public inherited"><a href="#method_getHtmlName" title="getHtmlName() :: Get the HTML variable name."><span class="description">Get the HTML variable name.</span><pre>getHtmlName()</pre></a></li>
 <li class="method public "><a href="#method_getMimeAnalyzer" title="getMimeAnalyzer() :: Get the MIME analyzer for the file"><span class="description">Get the MIME analyzer for the file</span><pre>getMimeAnalyzer()</pre></a></li>
 <li class="method public "><a href="#method_getServerFile" title="getServerFile() :: Get the temporary file holding this upload. You must move this file
 before the request ends to keep the upload."><span class="description">Get the temporary file holding this upload. You must move this file
 before the request ends to keep the upload.</span><pre>getServerFile()</pre></a></li>
+<li class="method public inherited"><a href="#method_setHtmlName" title="setHtmlName() :: Set the HTML variable name."><span class="description">Set the HTML variable name.</span><pre>setHtmlName()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header">
@@ -81,9 +80,11 @@ before the request ends to keep the upload.</span><pre>getServerFile()</pre></a>
 <li class="nav-header protected">» Protected
                     <ul>
 <li class="property protected "><a href="#property_file" title="$file() :: "><span class="description"></span><pre>$file</pre></a></li>
-<li class="property protected "><a href="#property_htmlName" title="$htmlName() :: "><span class="description"></span><pre>$htmlName</pre></a></li>
 <li class="property protected "><a href="#property_name" title="$name() :: "><span class="description"></span><pre>$name</pre></a></li>
 </ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="property private "><a href="#property_htmlName" title="$htmlName() :: "><span class="description">The HTML name we were given.</span><pre>$htmlName</pre></a></li></ul>
 </li>
 </ul>
 </div>
@@ -104,29 +105,12 @@ before the request ends to keep the upload.</span><pre>getServerFile()</pre></a>
 <p class="short_description">Represents a file that has been successfully uploaded.</p>
 <div class="details">
 <div class="long_description"></div>
-<table class="table table-bordered">
-<tr>
+<table class="table table-bordered"><tr>
 <th>package</th>
 <td><a href="../packages/Haldayne.html">Haldayne</a></td>
-</tr>
-<tr>
-<th>inherited_from</th>
-<td>\Haldayne\Customs\AbstractUploadEntity</td>
-</tr>
-</table>
+</tr></table>
 <h3>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
-<a id="method___construct"></a><div class="element clickable method public method___construct inherited" data-toggle="collapse" data-target=".method___construct .collapse" title="public">
-<h2>__construct()
-        </h2>
-<pre>__construct($htmlName) </pre>
-<div class="labels"><span class="label">Inherited</span></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<h3>Parameters</h3>
-<div class="subelement argument"><h4>$htmlName</h4></div>
-</div></div>
-</div>
 <a id="method_getClientFilename"></a><div class="element clickable method public method_getClientFilename " data-toggle="collapse" data-target=".method_getClientFilename .collapse" title="public">
 <h2>Get the file name the client gave us for this file, if any.</h2>
 <pre>getClientFilename() </pre>
@@ -135,23 +119,14 @@ before the request ends to keep the upload.</span><pre>getServerFile()</pre></a>
 cannot trust that it contains safe characters.</p></div></div></div>
 </div>
 <a id="method_getHtmlName"></a><div class="element clickable method public method_getHtmlName inherited" data-toggle="collapse" data-target=".method_getHtmlName .collapse" title="public">
-<h2>Get the HTML variable name for this upload.</h2>
-<pre>getHtmlName() </pre>
+<h2>Get the HTML variable name.</h2>
+<pre>getHtmlName() : string</pre>
 <div class="labels"><span class="label">Inherited</span></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"><p>This name approximates the originally given name, like:</p>
-<input type='file' name='file[a]' />
-<p>But in some cases the exact name cannot be returned.  First, because
-PHP mangles HTML names containing '.' or ' ', these will map:</p>
-<ul>
-<li>foo.bar returned as &quot;foo_bar&quot;</li>
-<li>foo bar returned as &quot;foo_bar&quot;</li>
-<li>foo_bar returned as &quot;foo_bar&quot;</li>
-<li>foo[bar.baz] returned as &quot;foo[bar.baz]&quot;</li>
-</ul>
-<p>Second, if the auto-append syntax was given:</p>
-<ul>
-<li>foo[] returned as &quot;foo[0]&quot;, etc.</li>
-</ul></div></div></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
 </div>
 <a id="method_getMimeAnalyzer"></a><div class="element clickable method public method_getMimeAnalyzer " data-toggle="collapse" data-target=".method_getMimeAnalyzer .collapse" title="public">
 <h2>Get the MIME analyzer for the file</h2>
@@ -172,21 +147,41 @@ before the request ends to keep the upload.</h2>
 </tr></table>
 </div></div>
 </div>
+<a id="method_setHtmlName"></a><div class="element clickable method public method_setHtmlName inherited" data-toggle="collapse" data-target=".method_setHtmlName .collapse" title="public">
+<h2>Set the HTML variable name.</h2>
+<pre>setHtmlName(string $htmlName) : \Haldayne\Customs\UploadFile</pre>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr>
+<tr>
+<th>fluent</th>
+<td>This method is part of a fluent interface and will return the same instance</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$htmlName</h4>
+<code>string</code><p>The HTML variable name.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Haldayne\Customs\UploadFile</code></div>
+</div></div>
+</div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
 <a id="property_file"> </a><div class="element clickable property protected property_file" data-toggle="collapse" data-target=".property_file .collapse" title="protected">
 <h2>$file</h2>
 <pre>$file </pre>
-<div class="row collapse"><div class="detail-description">
-<h3>Default</h3>
-<div class="subelement argument"></div>
-</div></div>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="property_htmlName"> </a><div class="element clickable property protected property_htmlName" data-toggle="collapse" data-target=".property_htmlName .collapse" title="protected">
-<h2>$htmlName</h2>
-<pre>$htmlName </pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -204,6 +199,16 @@ before the request ends to keep the upload.</h2>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
+<a id="property_htmlName"> </a><div class="element clickable property private property_htmlName" data-toggle="collapse" data-target=".property_htmlName .collapse" title="private">
+<h2>The HTML name we were given.</h2>
+<pre>$htmlName : string</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 </div>
 </div>
 </div>
@@ -211,7 +216,7 @@ before the request ends to keep the upload.</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2015-10-09T14:34:35-04:00.<br></footer></div>
+            generated on 2015-10-09T15:35:20-04:00.<br></footer></div>
 </div>
 </body>
 </html>
