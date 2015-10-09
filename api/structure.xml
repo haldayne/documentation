@@ -146,48 +146,6 @@ directory and installed extensions.</description>
     </parse_markers>
     <source>eJy1VE1vGjEQve+vmAMRH0pIeoUmLSJURUoIAqJUaquNs54FC2OvbG8IqvjvHe9nSEhv9YE145k3z88z8/lLskoCxTZoExYhfGeSs53CX8PUOr2x/SA473QC6MAAbIKRiEUEa6E46BjuE6kZH71EmDihVQ/cCsGieUYDK8aBQWL0k8RNlwA8xtg1LRiM9GaDiiOnAOZgp1Ng0mqQeplBONwk2jCzAy7I22naMUoZpcagcnLnsYSyjklJIPjiUFkiYCHWxiMIQ5FsqbR1RPeZyRS7sCBkLLkCXdiyJXokrtGC0o4gI5ly9AgWgaNjQuaYFim3cLvyIo+Pj/7jiNgfv/GrIRxcgsJtocvYoWHEve8d9hAxF62gNc/kmea6VNJBA1/aNRQao01IcrTIfna1RHddXec2J95qt/ulu1sZvfUQeaqc43kQSWYtfJAwE43bt28YEAda2Zv71YEZutSo7F0KzepCyOUW9pWukebYLWJLiK8mx7DOCLWsrCwR1d6S9gifuhfdi8J2nn2T9En6RKmKMniSohIgc8j5+mW3IlO44RmdXXki7VfHEaM3vZ/e3A2uw9FsFk7uwsXtNLwez3qVj18F1+atsERqSUVcl2OsJafaFgq2K0G5nIYVmTJx0kzIJjXMRxmHg8kifJiNF6PjGb9Rufme0LClWisR/f+agdRURyTEv/KMfixGk/n4bnI8zUDVHQNPBLjGj27AMWapdEdxCpmLmuhXLvsg/z1eR5b0zMuAKkVRgym/5YgJvu5Z68fLwSgoYQ4nwrEh8H+r70gjvqnDRq7jg177fFPmVjQWhlrFYtnrlWdmXZy12rV0JdGEAl3cOlC9eWJ7mRokwOXPE/v7FGKDvhdpbBeGWoPM0Dw9QAjD4c1gPg/DQ3PjHaXDcy7sOvSpwixV671/+zBAbMiBY6t52jz1ioXeHXlYs6PZVUUU198H++AvKiD6Ng==</source>
   </file>
-  <file path="boost/src/functions/ini_size_to_bytes.php" generated-path="boost.src.functions.ini_size_to_bytes.html" hash="539c1ec1633e433c12d1b02ee093a2c4" package="Haldayne">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Haldayne"/>
-    </docblock>
-    <function namespace="Haldayne\Boost" line="23" package="Haldayne">
-      <name>ini_size_to_bytes</name>
-      <full_name>\Haldayne\Boost\ini_size_to_bytes()</full_name>
-      <docblock line="23">
-        <description>`int ini_size_to_bytes(string)` - Convert a short-hand bytes specification
-into integer bytes.</description>
-        <long-description>Some PHP ini values (like `upload_max_filesize`) allow you to specify the
-number of bytes in a short-hand, like "10M" or "1G". But, when you call
-`ini_get` you'll get these actual short-hand values, instead of the byte
-equivalent (which usually you want).
-
-This function converts a super-set of documented short-hand into bytes:
-  * An optional leading +
-  * Number specification in hex, octal, or decimal
-  * Kilo-, Mega-, Giga-, and Tera-bytes expressed using single or double
-    characters in either lower or upper case: "k", "kB", "G", "Pb", etc.</long-description>
-        <tag name="package" line="23" description="Haldayne"/>
-        <tag name="param" line="23" description="&lt;p&gt;A value from an &lt;code&gt;ini_get&lt;/code&gt; call to process&lt;/p&gt;" type="string" variable="$string">
-          <type>string</type>
-        </tag>
-        <tag name="return" line="23" description="Number of bytes the short-hand string represents" type="integer">
-          <type>integer</type>
-        </tag>
-        <tag name="see" line="23" description="Documents the short-hand" link="http://php.net/manual/en/faq.using.php#faq.using.shorthandbytes"/>
-      </docblock>
-      <argument line="0" by_reference="false">
-        <name>$string</name>
-        <default></default>
-        <type>string</type>
-      </argument>
-    </function>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-    </parse_markers>
-    <source>eJyNVG2P2kYQ/u5fMaKVDBeDj/RyXKCozbXSRapSndR8jARrM+DVrXedfQmQKP+9M2vDAYnSInltdmeeZ+aZmf31t6ZqEi1qdI0oEd4KtRJ7jR/ujXF+liT51VUCV7CU2oPUcuHkZ1x4syj2Hl3feSv1ZrCEIfxh9Ce0HgS4ylg/rIReQbQC12Ap17IUXhrNaARmeMEN2tZmRNt88o+pER7fPjIXfBIqkHtfySeEZWiUEatFLXaLtVTIgSwHIJQyW9ibAATZEu3BV8hgOtQFEZh1F4fUZ9FlEIF74+t3PTCWPh56I7gPPoNthTqCloTf5S8XG/RL3k2VAvpmGocgSh+EOs26jTsjPudRrDgAMo1BMBZ+DJJMkBTtbytZVhAcIah9ZNwK7QcHOd5X0sE66JKVg7KV2HEWoUE7dBQEga9MGWqCw9VpFFHkmPiUoYCeNxpMw1AUr6LIqHbw4nD4d6vWWbFYsgp3GZjSC5WxSis6roU6eP0llRlm8A43gl4PMr6Y/j1aMWx1x11j0TkKLzim5EVhBDOhUNhiAZSVsKQm2lgqlCSaBSov19BCaChlKojDKfSeehkt97w+8PJY0Iq+PAj3e0NQNbT9CT937zdtaWBtTU1BnlSV68wd1FhTUqgRwqIPliXwB22OncTlPJG6g7fIeVIhWn+HCJX3zTTPachGGn1eC02VzlHna/FxFNUY0dlPz/8iKoO2RH92pb2kJII8OTbGt4PZZTxIviSsbJ4DKllLLTxSG9WNwp30+ylsDE9QK3K0PEg156S8iQdHNLoPOrQtUu106kk4SyNQmECTr/fHrkpfpFwz3vJWSBX3ijSDlTUN51JfsCn6qA9EGfsT27mJvTAp0pOAutmAgvoj7sk19K9hPo+JNMadOF7v0sEAWmUiRXdRzLnW1CHPpuPbLoqvpB/N+o9A/y/m3Tnkf7sc7I+51kF52dB9wcnS9aJBCeefxyfaua30dLX0XSgI5pl+OD6Lk+cJUp9Oj/RXcxhfv379ajy+fTmZTG5nUFgUT7MLl82ly+SXyc347uXNjG2+61JfutzcvWL89vddl6dLlw7/G5dOnW5mO5dZ8jX5F2EoJi0=</source>
-  </file>
   <file path="boost/src/Contract/Arrayable.php" generated-path="boost.src.Contract.Arrayable.html" hash="7f7c51100037144d3e52566dd96cb54e" package="Default">
     <docblock line="0">
       <description></description>
@@ -1121,6 +1079,48 @@ an exception if one would be warranted by the error.</description>
       <error line="28" code="PPC:ERR-50011">No summary for function \Haldayne\Boost\bytes()</error>
     </parse_markers>
     <source>eJyVk01r3DAQhu/+FXMo3fV2Y0OhoWQLLaWHHEPppRBYyfLsWsQeLfpoupT8944ka52UQqkultE7z7wzI334eBpOFckJ3UkqhFs59vJMeP/ZGOd3VdVuNhVsQGjy0J09urXzVtOxFnAFX9EHS+AHBApThxbMIatAE0jI0oYBkXF3ewe9UWFC8o6DpE+RglUjkoBDIOW1IbAJ6/7GjZznaPg2aE7GWhtwC4FGdDlQTF3WCMCfHslF8iATwfxAa3XfIy3ZvZnz/pFWDdJK5dG6Usd3E0BJAtSstBw1noFL0mljcrxIbp/VxKbPJlhQpmefxsa/CIugSbqHFNUFPforlmZT8MgZFkRwCOvYxHfN9Zv6ZnYjhIiftmXMA5ZIdhzkyH6UCWVyW7Z6lLZPLeLKHgdMBZRGzZilW9zW2KnRyH4+jhZeXpH7PG7p5sy7xVPcfXKIMHh/umlbvmkNoW8nSeytRWpLaU2ObVgBXy43pIzm35xSQVPsZpJ2KjjH7i4tLOeMbCt9gPVbeM2j0fsj+vXqgon6fdGu6hp+VcDrgskP4dX8EubTuOYbNHX77L1otrB632m/qndJ+lQ9AY7cy//kvoQusOo3dMVFvg==</source>
+  </file>
+  <file path="boost/src/functions/ini_size_to_bytes.php" generated-path="boost.src.functions.ini_size_to_bytes.html" hash="539c1ec1633e433c12d1b02ee093a2c4" package="Haldayne">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Haldayne"/>
+    </docblock>
+    <function namespace="Haldayne\Boost" line="23" package="Haldayne">
+      <name>ini_size_to_bytes</name>
+      <full_name>\Haldayne\Boost\ini_size_to_bytes()</full_name>
+      <docblock line="23">
+        <description>`int ini_size_to_bytes(string)` - Convert a short-hand bytes specification
+into integer bytes.</description>
+        <long-description>Some PHP ini values (like `upload_max_filesize`) allow you to specify the
+number of bytes in a short-hand, like "10M" or "1G". But, when you call
+`ini_get` you'll get these actual short-hand values, instead of the byte
+equivalent (which usually you want).
+
+This function converts a super-set of documented short-hand into bytes:
+  * An optional leading +
+  * Number specification in hex, octal, or decimal
+  * Kilo-, Mega-, Giga-, and Tera-bytes expressed using single or double
+    characters in either lower or upper case: "k", "kB", "G", "Pb", etc.</long-description>
+        <tag name="package" line="23" description="Haldayne"/>
+        <tag name="param" line="23" description="&lt;p&gt;A value from an &lt;code&gt;ini_get&lt;/code&gt; call to process&lt;/p&gt;" type="string" variable="$string">
+          <type>string</type>
+        </tag>
+        <tag name="return" line="23" description="Number of bytes the short-hand string represents" type="integer">
+          <type>integer</type>
+        </tag>
+        <tag name="see" line="23" description="Documents the short-hand" link="http://php.net/manual/en/faq.using.php#faq.using.shorthandbytes"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$string</name>
+        <default></default>
+        <type>string</type>
+      </argument>
+    </function>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJyNVG2P2kYQ/u5fMaKVDBeDj/RyXKCozbXSRapSndR8jARrM+DVrXedfQmQKP+9M2vDAYnSInltdmeeZ+aZmf31t6ZqEi1qdI0oEd4KtRJ7jR/ujXF+liT51VUCV7CU2oPUcuHkZ1x4syj2Hl3feSv1ZrCEIfxh9Ce0HgS4ylg/rIReQbQC12Ap17IUXhrNaARmeMEN2tZmRNt88o+pER7fPjIXfBIqkHtfySeEZWiUEatFLXaLtVTIgSwHIJQyW9ibAATZEu3BV8hgOtQFEZh1F4fUZ9FlEIF74+t3PTCWPh56I7gPPoNthTqCloTf5S8XG/RL3k2VAvpmGocgSh+EOs26jTsjPudRrDgAMo1BMBZ+DJJMkBTtbytZVhAcIah9ZNwK7QcHOd5X0sE66JKVg7KV2HEWoUE7dBQEga9MGWqCw9VpFFHkmPiUoYCeNxpMw1AUr6LIqHbw4nD4d6vWWbFYsgp3GZjSC5WxSis6roU6eP0llRlm8A43gl4PMr6Y/j1aMWx1x11j0TkKLzim5EVhBDOhUNhiAZSVsKQm2lgqlCSaBSov19BCaChlKojDKfSeehkt97w+8PJY0Iq+PAj3e0NQNbT9CT937zdtaWBtTU1BnlSV68wd1FhTUqgRwqIPliXwB22OncTlPJG6g7fIeVIhWn+HCJX3zTTPachGGn1eC02VzlHna/FxFNUY0dlPz/8iKoO2RH92pb2kJII8OTbGt4PZZTxIviSsbJ4DKllLLTxSG9WNwp30+ylsDE9QK3K0PEg156S8iQdHNLoPOrQtUu106kk4SyNQmECTr/fHrkpfpFwz3vJWSBX3ijSDlTUN51JfsCn6qA9EGfsT27mJvTAp0pOAutmAgvoj7sk19K9hPo+JNMadOF7v0sEAWmUiRXdRzLnW1CHPpuPbLoqvpB/N+o9A/y/m3Tnkf7sc7I+51kF52dB9wcnS9aJBCeefxyfaua30dLX0XSgI5pl+OD6Lk+cJUp9Oj/RXcxhfv379ajy+fTmZTG5nUFgUT7MLl82ly+SXyc347uXNjG2+61JfutzcvWL89vddl6dLlw7/G5dOnW5mO5dZ8jX5F2EoJi0=</source>
   </file>
   <file path="boost/src/Map.php" generated-path="boost.src.Map.html" hash="45924a737ff130f87a0dd2eb70320765" package="Haldayne">
     <docblock line="0">
