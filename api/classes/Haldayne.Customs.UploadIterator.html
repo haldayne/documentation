@@ -114,7 +114,7 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <a href="../reports/errors.html">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">31</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">22</span>
                                 </a>
                             </li>
                             <li>
@@ -144,37 +144,37 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1649760910"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1655817102"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1649760910" class="accordion-body collapse in">
+            <div id="namespace-1655817102" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1173408798"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-709037476"></a>
                                 <a href="../namespaces/Haldayne.html" style="margin-left: 30px; padding-left: 0">Haldayne</a>
             </div>
-            <div id="namespace-1173408798" class="accordion-body collapse ">
+            <div id="namespace-709037476" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-594234752"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-284047583"></a>
                                 <a href="../namespaces/Haldayne.Boost.html" style="margin-left: 30px; padding-left: 0">Boost</a>
             </div>
-            <div id="namespace-594234752" class="accordion-body collapse ">
+            <div id="namespace-284047583" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-2058100364"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-960791622"></a>
                                 <a href="../namespaces/Haldayne.Boost.Contract.html" style="margin-left: 30px; padding-left: 0">Contract</a>
             </div>
-            <div id="namespace-2058100364" class="accordion-body collapse ">
+            <div id="namespace-960791622" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -200,10 +200,10 @@
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-601028690"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1553991941"></a>
                                 <a href="../namespaces/Haldayne.Customs.html" style="margin-left: 30px; padding-left: 0">Customs</a>
             </div>
-            <div id="namespace-601028690" class="accordion-body collapse ">
+            <div id="namespace-1553991941" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -250,7 +250,8 @@
                     <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
 
                     <h1><small>\Haldayne\Customs</small>UploadIterator</h1>
-                    <p><em>Iterate over the $_FILES super-global, or an array in that same format.</em></p>
+                    <p><em>Implements an iterator over the $_FILES super-global or an array of
+similar structure.</em></p>
                     
                     
                                         
@@ -706,16 +707,16 @@ that prevented their storage, then the constructor throws an exception.</p>
             <article class="method">
                 <h3 class="public ">seek()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">seek(  <span class="argument">$position</span>) : void</pre>
+                <pre class="signature" style="margin-right: 54px;">seek(integer  <span class="argument">$position</span>) : void</pre>
                 <p><em>Arbitrarily move the current position within the iterator.</em></p>
                 
 
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td></td>
+                                <td>integer</td>
                                 <td>$position </td>
-                                <td></td>
+                                <td><p>The position to access.</p></td>
                             </tr>
                                             </table>
                 
@@ -858,9 +859,9 @@ HTML names given in the original input.</em></p>
             <article class="method">
                 <h3 class="private ">reducer()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">reducer(\RecursiveArrayIterator  <span class="argument">$it</span>,   <span class="argument">$base</span>,   <span class="argument">$names</span>) </pre>
-                <p><em>Helper to `names`, which recursively traverses the iterator,
-appending new keys onto the base-so-far.</em></p>
+                <pre class="signature" style="margin-right: 54px;">reducer(\RecursiveArrayIterator  <span class="argument">$it</span>, string  <span class="argument">$base</span>, array  <span class="argument">$names</span>) </pre>
+                <p><em>Helper to `names`, which recursively traverses the iterator appending
+new keys onto the base-so-far.</em></p>
                 
 
                                     <h4>Parameters</h4>
@@ -871,12 +872,12 @@ appending new keys onto the base-so-far.</em></p>
                                 <td></td>
                             </tr>
                                                     <tr>
-                                <td></td>
+                                <td>string</td>
                                 <td>$base </td>
                                 <td></td>
                             </tr>
                                                     <tr>
-                                <td></td>
+                                <td>array</td>
                                 <td>$names </td>
                                 <td></td>
                             </tr>
@@ -903,7 +904,7 @@ appending new keys onto the base-so-far.</em></p>
             <article class="method">
                 <h3 class="private ">gather()</h3>
                 <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
-                <pre class="signature" style="margin-right: 54px;">gather(  <span class="argument">$name</span>) </pre>
+                <pre class="signature" style="margin-right: 54px;">gather(string  <span class="argument">$name</span>) : array</pre>
                 <p><em>Given an HTML name, gather all its information into a standard
 info structure.</em></p>
                 
@@ -911,14 +912,16 @@ info structure.</em></p>
                                     <h4>Parameters</h4>
                     <table class="table table-condensed table-hover">
                                                     <tr>
-                                <td></td>
+                                <td>string</td>
                                 <td>$name </td>
                                 <td></td>
                             </tr>
                                             </table>
                 
                 
-                				
+                                    <h4>Returns</h4>
+                    array
+                                    				
                             </article>
         </div>
         <aside class="span4 detailsbar">
@@ -1029,7 +1032,7 @@ an exception if one would be warranted by the error.</em></p>
                 <section class="span10 offset1">
                     <hr />
                     Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
-                    on October 9th, 2015 at 15:42.
+                    on October 9th, 2015 at 15:57.
                 </section>
             </section>
         </section>
