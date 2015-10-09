@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+namespace Haldayne\Customs;
+
+/**
+ * Accessor methods for the HTML name of a file upload.
+ *
+ * Every uploaded file has a name, given to it in the HTML form. The HTML
+ * spec says the name qualifies as CDATA, so pretty much any character can
+ * comprise an HTML variable name. However, the HTML name we have access
+ * to is subject to PHP engine rules' name mangling.
+ *
+ * In many cases, the HTML name returned matches the HTML name given, but
+ * not in all cases:
+ *
+ * Given in Form     |Returned from getHtmlName()   |Match?
+ * ------------------|------------------------------|------
+ * foo               |foo                           |Yes
+ * foo[bar]          |foo[bar]                      |Yes
+ * foo[bar][baz_1]   |foo[bar][baz_1]               |Yes
+ * foo_bar           |foo_bar                       |Yes
+ * foo.bar           |foo_bar                       |No
+ * foo bar           |foo_bar                       |No
+ * foo[]             |foo[0]                        |No
+ *
+ * As a rule of thumb, avoid using &quot;.&quot; and &quot; &quot; in your HTML form names.
+ * When using array syntax, prefer explicit naming your keys.
+ */
+trait HtmlNameAccessorTrait
+{
+    /**
+     * Set the HTML variable name.
+     *
+     * Only UploadIterator should set the name on artifact objects using
+     * this trait.
+     *
+     * @param string $htmlName The HTML variable name.
+     * @return self
+     * @internal
+     */
+    public function setHtmlName($htmlName)
+    {
+        $this-&gt;htmlName = $htmlName;
+        return $this;
+    }
+
+    /**
+     * Get the HTML variable name.
+     *
+     * @return string
+     * @api
+     * @since 1.0.0
+     */
+    public function getHtmlName()
+    {
+        return $this-&gt;htmlName;
+    }
+
+    // PRIVATE API
+
+    /** @var string $htmlName The HTML name we were given. */
+    private $htmlName;
+}
+</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>
