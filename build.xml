@@ -12,7 +12,8 @@
                  <exclude name="**/Test.php" />
              </fileset>
          </phpdoc2>
-         <exec command="git commit -am 'Updates to latest'" dir="." />
+         <exec command="git add ." dir="." />
+         <exec command="git commit -am 'Updates docs to latest code'" dir="." />
          <exec command="git push origin gh-pages" dir="." />
      </target>
 </project>
