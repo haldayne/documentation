@@ -9,6 +9,7 @@
             destdir="./api">
              <fileset dir="./modules">
                  <include name="**/*.php" />
+                 <exclude name="**/Test.php" />
              </fileset>
          </phpdoc2>
          <exec command="git commit -am 'Updates to latest'" dir="." />
