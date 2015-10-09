@@ -92,16 +92,118 @@
     </parse_markers>
     <source>eJwtjTEOwjAMRXefwiNkoAcoEhIsqAOVYO3iBEcNKnaUuANC3B1a8Ze3vKe/P+Qxg9CTa6bAeKbpTi/h4ahabTipWKFgLUAS4xIXp6sq5CeGN+BvjXMr0eGVbS6ChN2tv2DhXLiyGFlSQY1oI6P6Bwfb/ZNmZZ79lALGWcKqmi4fm20LH/gC88czZw==</source>
   </file>
-  <file path="customs/src/UploadFile.php" generated-path="customs.src.UploadFile.html" hash="88f7c5fd316294359f5a3b17be00a41f" package="Haldayne">
+  <file path="customs/src/UploadFile.php" generated-path="customs.src.UploadFile.html" hash="dd0110d45cecbae5f843aa373c143974" package="Haldayne">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Haldayne"/>
     </docblock>
+    <namespace-alias name="Mime">\Haldayne\Mime</namespace-alias>
+    <class final="false" abstract="false" namespace="Haldayne\Customs" line="9" package="Haldayne">
+      <extends>\Haldayne\Customs\AbstractUploadEntity</extends>
+      <name>UploadFile</name>
+      <full_name>\Haldayne\Customs\UploadFile</full_name>
+      <docblock line="9">
+        <description>Represents a file that has been successfully uploaded.</description>
+        <long-description></long-description>
+        <tag name="package" line="9" description="Haldayne"/>
+        <tag name="inherited_from" description="\Haldayne\Customs\AbstractUploadEntity" refers="\Haldayne\Customs\AbstractUploadEntity" link="/classes/Haldayne.Customs.AbstractUploadEntity.html"/>
+      </docblock>
+      <property static="false" visibility="protected" namespace="Haldayne\Customs" line="58" package="Haldayne">
+        <name>$name</name>
+        <full_name>\Haldayne\Customs\UploadFile::name</full_name>
+        <default></default>
+        <docblock line="58">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Haldayne\Customs" line="59" package="Haldayne">
+        <name>$file</name>
+        <full_name>\Haldayne\Customs\UploadFile::file</full_name>
+        <default></default>
+        <docblock line="59">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" namespace="Haldayne\Customs" line="37" package="Haldayne">
+        <name>$htmlName</name>
+        <full_name>\Haldayne\Customs\AbstractUploadEntity::htmlName</full_name>
+        <default></default>
+        <docblock line="37">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="32" package="Haldayne">
+        <name>getClientFilename</name>
+        <full_name>\Haldayne\Customs\UploadFile::getClientFilename()</full_name>
+        <docblock line="32">
+          <description>Get the file name the client gave us for this file, if any.</description>
+          <long-description>Do not rely on this file name for anything but display, because you
+cannot trust that it contains safe characters.</long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="43" package="Haldayne">
+        <name>getServerFile</name>
+        <full_name>\Haldayne\Customs\UploadFile::getServerFile()</full_name>
+        <docblock line="43">
+          <description>Get the temporary file holding this upload. You must move this file
+before the request ends to keep the upload.</description>
+          <long-description></long-description>
+          <tag name="see" line="43" description="" link="\Haldayne\Customs\UploadFile::moveTo"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="51" package="Haldayne">
+        <name>getMimeAnalyzer</name>
+        <full_name>\Haldayne\Customs\UploadFile::getMimeAnalyzer()</full_name>
+        <docblock line="51">
+          <description>Get the MIME analyzer for the file</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="9" package="Haldayne">
+        <name>__construct</name>
+        <full_name>\Haldayne\Customs\AbstractUploadEntity::__construct()</full_name>
+        <docblock line="9">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$htmlName</name>
+          <default></default>
+          <type/>
+        </argument>
+        <inherited_from>\Haldayne\Customs\AbstractUploadEntity</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="30" package="Haldayne">
+        <name>getHtmlName</name>
+        <full_name>\Haldayne\Customs\AbstractUploadEntity::getHtmlName()</full_name>
+        <docblock line="30">
+          <description>Get the HTML variable name for this upload.</description>
+          <long-description>This name approximates the originally given name, like:
+  &lt;input type='file' name='file[a]' /&gt;
+
+But in some cases the exact name cannot be returned.  First, because
+PHP mangles HTML names containing '.' or ' ', these will map:
+  * foo.bar returned as "foo_bar"
+  * foo bar returned as "foo_bar"
+  * foo_bar returned as "foo_bar"
+  * foo[bar.baz] returned as "foo[bar.baz]"
+
+Second, if the auto-append syntax was given:
+  * foo[] returned as "foo[0]", etc.</long-description>
+        </docblock>
+        <inherited_from>\Haldayne\Customs\AbstractUploadEntity</inherited_from>
+      </method>
+    </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="58" code="PPC:ERR-50007">No summary for property $name</error>
+      <error line="59" code="PPC:ERR-50007">No summary for property $file</error>
     </parse_markers>
-    <source>eJyFVE1vEzEQve+vmEMPbRSSe0qBKg1QiUDVhgNSpWp2M8kavLbxR2Ap/e+M7Wy6DZTsZaXxzHszz2/88rWpTaGwIWewIniPcomtottpcF437rQoguuF56Ihjo0HgwIGcE3GkiPlHSCshCTwNXqo0UFJpMCFqiLnVkHKFoKRGpe0HHHluKgkOgefU+xtrKSfntTSwXnpvMXK56OZ8sK3xX0B/CXW+A1gagk9MauiH6DLr1R5sF03Qq35ZNBnH+zoU5+jLU4H98agxQaYOdYe1b6RH1kTWNQ8+2L+ATZoBZbcZpQKKm2ZyWi1jOle89jCPQHuEBWT/+5gVQeprVgLhTJrFsNDYM3WYsOilS3DMYcUPMo+XgeVCiOUp8Zoi7YFR3ZDNkMa9PUzfQnlyTL3NjBOfxNKKSpYBVV5oRXc3VVaMVeo/PFOjWGeYJjZT1JhvpgEgZb7nUz+WXpyuss7ij29eJW0OMuIfx2mGc7S3d7eGBn9calW+jgT5/SHYt8T78gn5Xai9nSENW4IAouh7aMqQxArQNXu2+FCg9LRUGxbVmOXn1EjBBdxlG+iDB6WwhmJ7ZBNX2Fcl1aHDqpCFaFYD+fzdgjP/lEehXLgcMUd1hgNT9aN/nspa/LTNEzUI3ZyvH8Hlnywqi/xIa0e7ZPmq7XMlo4T540ZwRcdoIntN3pDj2J0UCWxIFlrS98DcWJaZLbfNyKTDrZQ+1vniHpPwGQSCRb6kAg3yeix4oAAsctDAswv5zO+TZTtr7g8yR3Un+/ZNuJTeL4tfK6R6OCYd7tLfNLOGK6uPy1m08XsAs6vLnPUWO35OeOXqrccvWCe6qH4A7Kcw5k=</source>
+    <source>eJyFVE1vEzEQve+vmEMPbRSSe0qBKg1QiUBFwwGpUjW7mWQNXtv4I7BA/ztjO5tsAyV7WWk8897M8xs/f2lqUyhsyBmsCN6iXGKr6G4anNeNOy+K4HrhuWiIY+PBoIABfCRjyZHyDhBWQhL4Gj3U6KAkUuBCVZFzqyBlC8FIjUtajrhyXFQSnYNPKfY6VtIPT2rp4LJ03mLl89FMeeHb4lcB/CXW+A1gagk9Maui76DLL1R5sF03Qq35ZNBnH+zoU5+jLU4H98qgxQaYOdae1L6R71kTWNQ8+2L+DjZoBZbcZpQKKm2ZyWi1jOle89jCPQLuEBWT/+5gVQeprVgLhTJrFsNDYM3WYsOilS3DMYcUPMohXgeVCiOUp8Zoi7YFR3ZDNkMa9PUTfQnlyTL3NjBOfxNKKSpYBVV5oRXc31daMVeo/OlOjWGeYJjZz1JhvpgEgZb7nUz+WXp2vss7iT09e5G0uMiIfx2mGS7S3d7dGhn9ca1W+jQT5/SH4tATb8gn5Xai9nSENW4IAouh7V6VIYgVoGoP7XClQeloKLYtq7HLz6gRgos4yjdRBg9L4YzEdsimrzCuS6tDB1WhilCsh/N5O4Rn/yiPQjlwuOIOa4yGJ+tG/72UNflpGibqETs5PbwDSz5Y1Zf4mFZ7+6T5ai2zpePEeWNG8FkHaGL7jd7QXowOqiQWJGtt6VsgTkyLzPb7SmTSwRbqcOscUe8JmEwiwUIfE+E2GT1WHBEgdnlMgPn1fMa3ibL9GZcnuYP68z3ZRnwKL7eFTzUSHRzz7vaJjxsaw83HD4vZdDG7gsub6xw1Vnt+0Pit6q1HL5jneij+ADDjw/0=</source>
   </file>
   <file path="customs/tests/UploadIteratorTest.php" generated-path="customs.tests.UploadIteratorTest.html" hash="98d01fe1d56ec7c6c655c747c269ef99" package="Haldayne">
     <docblock line="0">
