@@ -92,16 +92,16 @@
     </parse_markers>
     <source>eJwtjTEOwjAMRXefwiNkoAcoEhIsqAOVYO3iBEcNKnaUuANC3B1a8Ze3vKe/P+Qxg9CTa6bAeKbpTi/h4ahabTipWKFgLUAS4xIXp6sq5CeGN+BvjXMr0eGVbS6ChN2tv2DhXLiyGFlSQY1oI6P6Bwfb/ZNmZZ79lALGWcKqmi4fm20LH/gC88czZw==</source>
   </file>
-  <file path="customs/src/UploadFile.php" generated-path="customs.src.UploadFile.html" hash="b36e7c5ea10781f35b3bdfbf8e4d19fd" package="Default">
+  <file path="customs/src/UploadFile.php" generated-path="customs.src.UploadFile.html" hash="88f7c5fd316294359f5a3b17be00a41f" package="Haldayne">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
+      <tag name="package" line="0" description="Haldayne"/>
     </docblock>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
     </parse_markers>
-    <source>eJyFVE1v00AQvftXzCGHNgrNPaVAlQaoRKBqwwGpUjV2JvHCenfZj4CB/ndmd+vEDS3xxdJ45s2bN2/88rWpTaGwIWewIniPcomtottpcF437rQoguuF56Ihjo2HwwKGcE3GkiPlHSCshCTwNXqo0UFJpMCFqiLnVkHKFoKRGpe0POHKcVFJdA4+p9jbWEk/Pamlg/PSeYuVz59mygvfFr8L4Cd1jc8QppbQE3dV9AN0+ZUqD7ZjI9Savwz73Yfb9onnyQNOB/fGoMUGuHOsHdS+kR9ZE1jUPPti/gE2aAWWTDNKBZW23MlotYzpXvPYwj0C7hAVN//TwaoOUluxFgpl1iyGR8CarcWGRStbhuMeUvAo+3gdVCqMUJ4aoy3aFhzZDdkMadDXT/Iap7cJpRQVrIKqvNAK7u4qrRg6VP5oO/woEx7lZsepMO8hQaBlepPJk6XHp9u8QaTw4lUa/QwGeaq48Bj5Jy2RP0tLvb0xMuZdqpU+yhRy+n2xb4Z35JNkWzV7AsIaNwSBVdB2J8cIxApQtfs+uNCgdHQS+5V12eZn1AjBRRzlFZTBw1I4I7EdsdsrjHfS6tBBVagiFCvjfD4L4dk4yqNQDhyumGGN0elk3f/XsyY/faTb0f42LPlgVV/sQ1rtfJPmq7XMXo4T51M5gS86QBPpN3pDOzE6qJJYkKy1pe+BODFdMPvuG5FJHx6g9s/NEfVufzKJDRb6kAg3yeGx4oAAkeUhAeaX8xlvE2X7K15Ncgf153uWRvwHnj8UPkckOjjm3W4TH9EZw9X1p8VsuphdwPnVZY4aqz3/x/gXNdhtsBfMU90XfwF5mcMH</source>
+    <source>eJyFVE1vEzEQve+vmEMPbRSSe0qBKg1QiUDVhgNSpWp2M8kavLbxR2Ap/e+M7Wy6DZTsZaXxzHszz2/88rWpTaGwIWewIniPcomtottpcF437rQoguuF56Ihjo0HgwIGcE3GkiPlHSCshCTwNXqo0UFJpMCFqiLnVkHKFoKRGpe0HHHluKgkOgefU+xtrKSfntTSwXnpvMXK56OZ8sK3xX0B/CXW+A1gagk9MauiH6DLr1R5sF03Qq35ZNBnH+zoU5+jLU4H98agxQaYOdYe1b6RH1kTWNQ8+2L+ATZoBZbcZpQKKm2ZyWi1jOle89jCPQHuEBWT/+5gVQeprVgLhTJrFsNDYM3WYsOilS3DMYcUPMo+XgeVCiOUp8Zoi7YFR3ZDNkMa9PUzfQnlyTL3NjBOfxNKKSpYBVV5oRXc3VVaMVeo/PFOjWGeYJjZT1JhvpgEgZb7nUz+WXpyuss7ij29eJW0OMuIfx2mGc7S3d7eGBn9calW+jgT5/SHYt8T78gn5Xai9nSENW4IAouh7aMqQxArQNXu2+FCg9LRUGxbVmOXn1EjBBdxlG+iDB6WwhmJ7ZBNX2Fcl1aHDqpCFaFYD+fzdgjP/lEehXLgcMUd1hgNT9aN/nspa/LTNEzUI3ZyvH8Hlnywqi/xIa0e7ZPmq7XMlo4T540ZwRcdoIntN3pDj2J0UCWxIFlrS98DcWJaZLbfNyKTDrZQ+1vniHpPwGQSCRb6kAg3yeix4oAAsctDAswv5zO+TZTtr7g8yR3Un+/ZNuJTeL4tfK6R6OCYd7tLfNLOGK6uPy1m08XsAs6vLnPUWO35OeOXqrccvWCe6qH4A7Kcw5k=</source>
   </file>
   <file path="customs/tests/UploadIteratorTest.php" generated-path="customs.tests.UploadIteratorTest.html" hash="98d01fe1d56ec7c6c655c747c269ef99" package="Haldayne">
     <docblock line="0">
@@ -323,6 +323,171 @@ them specifically elsewhere.</long-description>
     </parse_markers>
     <source>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</source>
   </file>
+  <file path="customs/src/UploadError.php" generated-path="customs.src.UploadError.html" hash="ba85560108e188117aa57f1238caf14e" package="Haldayne">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Haldayne"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Haldayne\Customs" line="14" package="Haldayne">
+      <extends>\Haldayne\Customs\AbstractdUploadEntity</extends>
+      <name>UploadError</name>
+      <full_name>\Haldayne\Customs\UploadError</full_name>
+      <docblock line="14">
+        <description>Represents a file that did not successfully upload.</description>
+        <long-description>Errors occur when the client did something wrong. The possible causes are:
+- The client did not upload a file.
+- The client uploaded a partial, incomplete file.
+- The client sent more bytes than either the form or the server allowed.</long-description>
+        <tag name="see" line="14" description="which occurs when the server went wrong or a the client is breaking in" link="\Haldayne\Customs\UploadException"/>
+        <tag name="package" line="14" description="Haldayne"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="Haldayne\Customs" line="132" package="Haldayne">
+        <name>$code</name>
+        <full_name>\Haldayne\Customs\UploadError::code</full_name>
+        <default></default>
+        <docblock line="132">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="132" description="&lt;p&gt;The error code.&lt;/p&gt;" type="integer" variable="$code">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="Haldayne\Customs" line="135" package="Haldayne">
+        <name>$size</name>
+        <full_name>\Haldayne\Customs\UploadError::size</full_name>
+        <default></default>
+        <docblock line="135">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="135" description="&lt;p&gt;The size of the file uploaded.&lt;/p&gt;" type="integer" variable="$size">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="true" visibility="private" namespace="Haldayne\Customs" line="140" package="Haldayne">
+        <name>$messages</name>
+        <full_name>\Haldayne\Customs\UploadError::messages</full_name>
+        <default>array(UPLOAD_ERR_INI_SIZE =&gt; 'The file size exceeds the server-allowed limit.', UPLOAD_ERR_FORM_SIZE =&gt; 'The file size exceeds the form-allowed upload limit.', UPLOAD_ERR_PARTIAL =&gt; 'The file was only partially uploaded.', UPLOAD_ERR_NO_FILE =&gt; 'No file was uploaded.')</default>
+        <docblock line="140">
+          <description>The possible failure codes and an English description.</description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Customs" line="52" package="Haldayne">
+        <name>changeErrorMessage</name>
+        <full_name>\Haldayne\Customs\UploadError::changeErrorMessage()</full_name>
+        <docblock line="52">
+          <description>Change the text associated with a PHP upload error code.</description>
+          <long-description>You may want to localize or otherwise change the generic error
+associated with one of the upload error codes. You may only change
+messages for the following upload error codes:
+
+- UPLOAD_ERR_INI_SIZE (1) : The upload exceeds the `upload_max_filesize`
+  directive.
+- UPLOAD_ERR_FORM_SIZE (2) : The upload exceeds the `MAX_FILE_SIZE`
+  directive in the HTML form.
+- UPLOAD_ERR_PARTIAL (3) : The upload was incomplete.
+- UPLOAD_ERR_NO_FILE (4) : No file was uploaded.</long-description>
+          <tag name="param" line="52" description="&lt;p&gt;The code whose message you want to change.&lt;/p&gt;" type="integer" variable="$code">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="52" description="&lt;p&gt;The new message for that code.&lt;/p&gt;" type="string" variable="$message">
+            <type>string</type>
+          </tag>
+          <tag name="throws" line="52" description="If the given code does not have a message" type="\OutOfBoundsException">
+            <type>\OutOfBoundsException</type>
+          </tag>
+          <tag name="api" line="52" description=""/>
+          <tag name="since" line="52" description="1.0.0"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$code</name>
+          <default></default>
+          <type>integer</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$message</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="68" package="Haldayne">
+        <name>getErrorMessage</name>
+        <full_name>\Haldayne\Customs\UploadError::getErrorMessage()</full_name>
+        <docblock line="68">
+          <description>Return a description of why the error occurred.</description>
+          <long-description></long-description>
+          <tag name="see" line="68" description="To adjust the message globally." link="\Haldayne\Customs\UploadError::changeErrorMessage"/>
+          <tag name="api" line="68" description=""/>
+          <tag name="since" line="68" description="1.0.0"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="86" package="Haldayne">
+        <name>isTooBig</name>
+        <full_name>\Haldayne\Customs\UploadError::isTooBig()</full_name>
+        <docblock line="86">
+          <description>Is the error because the uploaded file was too big?</description>
+          <long-description>An upload may exceed either the `upload_max_filesize` setting or the
+`MAX_FILE_SIZE` input. This method handles both cases and returns true
+if either of these limits was reached. In such a case, the optional
+pass-by-reference `$maximum` will indicate the maximum possible size.</long-description>
+          <tag name="param" line="86" description="&lt;p&gt;The server or form allowed maximum file size, in bytes.&lt;/p&gt;" type="integer" variable="$maximum">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="86" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+          <tag name="api" line="86" description=""/>
+          <tag name="since" line="86" description="1.0.0"/>
+        </docblock>
+        <argument line="0" by_reference="true">
+          <name>$maximum</name>
+          <default>null</default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="107" package="Haldayne">
+        <name>isPartial</name>
+        <full_name>\Haldayne\Customs\UploadError::isPartial()</full_name>
+        <docblock line="107">
+          <description>Is the error because the uploaded file was only partially received?</description>
+          <long-description></long-description>
+          <tag name="param" line="107" description="&lt;p&gt;The number of bytes received.&lt;/p&gt;" type="integer" variable="$received">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="107" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+          <tag name="api" line="107" description=""/>
+          <tag name="since" line="107" description="1.0.0"/>
+        </docblock>
+        <argument line="0" by_reference="true">
+          <name>$received</name>
+          <default>null</default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="124" package="Haldayne">
+        <name>notUploaded</name>
+        <full_name>\Haldayne\Customs\UploadError::notUploaded()</full_name>
+        <docblock line="124">
+          <description>Is the error because no file was uploaded?</description>
+          <long-description></long-description>
+          <tag name="return" line="124" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+          <tag name="api" line="124" description=""/>
+          <tag name="since" line="124" description="1.0.0"/>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJzFV21v2zYQ/u5fcR+C2QkSp932yV3auJmLGMiL4TrDtjRwKIm22VKkQFJ2vCL/fUdSlGVZSVNsw/wljnX33Ptzp1/eZYusJUhKdUZiCueEJ2Qt6KezXBuZ6jet1vHBQQsOYEwzRTUVRgOBGeMUzIIYSFgCQhrQeRxTrWc552vIMy5J0kU1qzlQSioNMo5zBasFFahJIeYMwZy+lik1CybmsFJSzLswweeZ1JpFaCYmuaZoVNGeRTtyTyva1ro3WDjW3RHzj6kVyIgyjPBDYCKWacapoU8o2VghlYpCtDboAIYrgDL0XbkAZlKlIP13TdUSfyacyxUtAz/VlMKNsz14iGlmmBSYABYvfDL0JhsFwMradEmwyKSaKKYhUpR8sWliAuGPWzEnWgcDNslAHwwViYZ+pI0isUmKh8Iws259bQF+XD3t5wDOEBDjJyDoKuSQOiAZfaax6RaCQf4Us0dSQGzrxd7CpPwKW8dl7XxyeQG2kWxi0HH0lzqz3Zo2w2D2Ypl4tdH5qDBpf2qU1ewvL+u+yJnLSlnSoniFGipQJQiHodCGoH2ML8ECFlka4lNipAoKx+5vlkecxTDLRexKNJ3GEtVVHptOGeShd/rQ+7PvFH1CHQS2pzC9XqPqPk5RENyzmTl66+I/sfEtCe84ZJSqCbl4N0LOrhd6bO2UErtzTl1qDHYBYGfI2Ee/wp7FGttMb9W4mvAA84fMISVrWGHuwEjgMibcpR17wrb+imlsyY2xORVUYfIcZECpG5eiVreKB7pbGpUCucNjByTkJU3mOH0zGabOzphtv12kXi2YI7gZXVz3f50OxuPp8Go4/Tj8cwCd1/vQc/0UEHA2aaId/L3/bZqSh6ntLJvz+4AHyDcKx4ItNx23ZePD9fiyMPLjc0Yu+79PPwwvBk62CR5r7iTdUFmiabY36o8nw/4FdH6qWVsRXSG4ZuWra+cDdH62ylfSk7rVDLP1xPhvD7D7slpIbIuiWLDGeoYG8uWsz3VgkKBhgSwHhf99tXG9bJOCWSi50vDpOjfXs/cyR6rbEOvQN9gc0ye8V4nExrHrYUGWluUK9BKOZKz8rjFdFF53X3VfNXEDkompUoQPy5HupUftBHoorNQZgs2gQ5Qi6+kXup7SB6aNDjoevdcLunp/v6JpPzsSt071Dukh/LShj0egHMuxjeBy55LcmL5O++yZlLUr5PT4BAONqcmVQB2cxFgxXxSc+tVi7QpTLBa7+FRDb1V2pRXs9XZTDBMJJPmMl4kDDM0y5zLCzVtZNN9R2LKic2q2ylmvn/LhNRRiw+h3T7HzUFdSEFF30uyuMTd8RkqI2PxdLT99EWbbMqVnk+o10khceFYYw/wxgUIBq8Y/ONBZbuzVhTvbXmIywfKLBEEgQtLHC8wdYCIpkoBOqrxEw8Yu/PAUj5FxljK8E204eGHECyw3LmR7I9pFZOEOndPSNQnhASrDxXEUrY8UnVHcp1i3+z0MiKV5eo+bhHN0NWGxvVlcA/hHm1PRBv0caQWFyebiwsy4Q6443UpMVw+LZy9FfwFu+qvohUhK/o96jumJlO/ZvPND6doJCDyhm8ijaZednJxUL4o6a1RQmWBTbPFOu6FPqtNdaXVb5B1SqXmy2Xgvd2VvOrr+OLltb3Vh++7lPnxtkpwRfPRtlvqOSXTnSPG+gN9wNVPcLUl9MqsNFmT8QsvTyE+Ff4EID/+LPhp5N7GRShde1EnhgvhW9SqoleP0fyyZaLhXdirzb+UXF+JNYeOpvdBpuKzqSd3eDscwGg9/608G0B8Ny6DhdElU7cSqnOulh4otLQ06oTdN2o1vTS5l5Xm3A+ZrWs//1tv4jDCeK3/2+Z2Ab8UDMedML6qbv/aGVVgozqhyeWI73ZaZbCI4OHkL7Unw3IVSvaQ9iR8F8nZ7p9s+bIKsMNWzkHYblIDFyn0ON0xQzdUGAinz3gwUusYDNd7jhSJS5WPrb+NMUvc=</source>
+  </file>
   <file path="customs/src/AbstractUploadEntity.php" generated-path="customs.src.AbstractUploadEntity.html" hash="bda036dfba0f14cc6a94cab0eb41358d" package="Haldayne">
     <docblock line="0">
       <description></description>
@@ -388,7 +553,7 @@ Second, if the auto-append syntax was given:
     </parse_markers>
     <source>eJyNUstu2zAQvOsrBkYApYZj99w8itR16wJ9GK17cg1jTdESUYoUxFVip8i/d0U/kKo5hBeJy9mdnd25elsVVeKo1KEipTElm9HO6V/jJrAvw2WSjPr9BH2MfVl6h1Jz4bOAUFCtM5DE8sBoKuspk8DGWB2GkjBKaB24JsVQlkLA7eH6M0Injg3vkj8J5FTN2hqFTeMUGyFZrZR3gm4Un58VXNqv0uCrCN0ntOeMCxMubo7PuMYJehlBj0n8xP7b08dHzeBCVM6/fMYd1YbWVqNVj42v0RY8KBkeUo6Z8/YpAqmqar81JbEOsZivTW4cWbtDbu60i7ABrPmt3xzTgSvjqkbYd5W+TtshpRG3/1/QMsXopsP5TvDGIXhhVRQOdHrbjjS2osg5z1hr1Jqb2ulsCHwwdeCBBBU1QR9rzaYzlORyWc5efVw5ZMxMxhmXIx2mIgUp0kHLEzTujbWSVD1R0Zc5+eGa6hMjKKAnwZUEex0gXgpcvRS4kJjQPyz/Q59eep0p/tAiMhvAbOL4qGF/ITvULkPYifot7qVE3FxX6OIZmtfL3gCa1dEgo2cNnGueHrx43vXtvmTXvv9adoTZ92/zyXg+eY/b2ad9VHzHWrE088Toj8lfiGwiow==</source>
   </file>
-  <file path="customs/src/UploadIterator.php" generated-path="customs.src.UploadIterator.html" hash="d8a07a3331a30e81cd2a795efaff20b8" package="Haldayne">
+  <file path="customs/src/UploadIterator.php" generated-path="customs.src.UploadIterator.html" hash="afff277e960b33af743ad6916ee7a304" package="Haldayne">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -664,54 +829,7 @@ an exception if one would be warranted by the error.</description>
       <error line="253" code="PPC:ERR-50015">Argument $names is missing from the Docblock of reducer</error>
       <error line="270" code="PPC:ERR-50015">Argument $name is missing from the Docblock of gather</error>
     </parse_markers>
-    <source>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</source>
-  </file>
-  <file path="customs/src/UploadFailure.php" generated-path="customs.src.UploadFailure.html" hash="819bf55d301d4382f4b3e8703260b17f" package="Haldayne">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Haldayne"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="Haldayne\Customs" line="7" package="Haldayne">
-      <extends/>
-      <name>UploadFailure</name>
-      <full_name>\Haldayne\Customs\UploadFailure</full_name>
-      <docblock line="7">
-        <description>Represents a file that did not successfully upload.</description>
-        <long-description></long-description>
-        <tag name="package" line="7" description="Haldayne"/>
-      </docblock>
-      <property static="true" visibility="public" namespace="Haldayne\Customs" line="12" package="Haldayne">
-        <name>$failure_codes</name>
-        <full_name>\Haldayne\Customs\UploadFailure::failure_codes</full_name>
-        <default>array(UPLOAD_ERR_INI_SIZE =&gt; 'The file size exceeds the server-allowed limit.', UPLOAD_ERR_FORM_SIZE =&gt; 'The file size exceeds the form-allowed upload limit.', UPLOAD_ERR_PARTIAL =&gt; 'The file was only partially uploaded.', UPLOAD_ERR_NO_FILE =&gt; 'No file was uploaded.', UPLOAD_ERR_CANT_WRITE =&gt; 'The server failed to write the file.', UPLOAD_ERR_NO_TMP_DIR =&gt; 'A server misconfiguration .', UPLOAD_ERR_EXTENSION =&gt; 'A PHP server extension cancelled the upload.')</default>
-        <docblock line="12">
-          <description>The possible failure codes and an English description.</description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="25" package="Haldayne">
-        <name>getFile</name>
-        <full_name>\Haldayne\Customs\UploadFailure::getFile()</full_name>
-        <docblock line="25">
-          <description>Return the part of the file we got, if any.</description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="29" package="Haldayne">
-        <name>getFailureReason</name>
-        <full_name>\Haldayne\Customs\UploadFailure::getFailureReason()</full_name>
-        <docblock line="29">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="29" code="PPC:ERR-50008">No summary for method getFailureReason()</error>
-    </parse_markers>
-    <source>eJyNkmFr2zAQhr/7V9yHQbfQJT9g64ZpHWpIHeO6bLQbRpXPiUCWhE5emo3+98mS27DSbDswgvO9j+5O78fPZmsSxXokwzjCJZMt2yv8dj6Q0z19SJLFbJbADCo0FgmVI2DQCYngtsxBK1pQ2gENnCNRN0i5h8FIzdq5ly0SLhkR3ITMkgk5WEx+JeAjgMeYQb1FMJpI3HtuF6uA6xb9Zar1H2RqIwVtwae4FcYJreaTehFOM9xLwYEcc/54M0GaCDmDu1js46ZcrdOLJquqJi/y5jq/zeDsE5yMPYS5SPxEwAeO2JIf0ifQ/kD7nkmpd9iCFL1w85PT14jLdXX1P8hO2/4ZGNf1V26ZVnWerv6k7hiBVn7fhlkn2GHz2B7BFOtmma9ic4U+UP4hO0+LuvlS5fVhrLiT8FZ+AqdhZ4XDOJtPHb+/viqbi7wKoPQJ0wviWnViM1g2Pi0c0Wdf66y4ztfFJC8vyycEPjhUNGo5UxxlaMt3M3lx4n33hn7hvQrdYFWoHfcIunueAnYIG+1OQXTeg/tXDdcNioeWN+iWXvP2XfgbLf6YHC2N/qyQkVYvNI/Jb268FdM=</source>
+    <source>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</source>
   </file>
   <file path="boost/tests/CollectionTest.php" generated-path="boost.tests.CollectionTest.html" hash="19ca109010f0d6d3f3a1faadcb880718" package="Haldayne">
     <docblock line="0">
