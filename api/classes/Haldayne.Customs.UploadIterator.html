@@ -34,7 +34,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">79</span></a></li>
+                <span class="label label-info">64</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -65,26 +65,13 @@
 <i title="Methods" class="icon-custom icon-method"></i> Methods
                     <ul>
 <li class="method public "><a href="#method___construct" title="__construct() :: Create a new UploadIterator."><span class="description">Create a new UploadIterator.</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#method_count" title="count() :: "><span class="description">count()
-        </span><pre>count()</pre></a></li>
-<li class="method public "><a href="#method_current" title="current() :: "><span class="description">current()
-        </span><pre>current()</pre></a></li>
-<li class="method public "><a href="#method_key" title="key() :: "><span class="description">key()
-        </span><pre>key()</pre></a></li>
-<li class="method public "><a href="#method_next" title="next() :: "><span class="description">next()
-        </span><pre>next()</pre></a></li>
-<li class="method public "><a href="#method_offsetExists" title="offsetExists() :: Implements isset() checks on the iterator."><span class="description">Implements isset() checks on the iterator.</span><pre>offsetExists()</pre></a></li>
-<li class="method public "><a href="#method_offsetGet" title="offsetGet() :: Implements bracket get access to the iterator."><span class="description">Implements bracket get access to the iterator.</span><pre>offsetGet()</pre></a></li>
-<li class="method public "><a href="#method_offsetSet" title="offsetSet() :: "><span class="description">offsetSet()
-        </span><pre>offsetSet()</pre></a></li>
-<li class="method public "><a href="#method_offsetUnset" title="offsetUnset() :: "><span class="description">offsetUnset()
-        </span><pre>offsetUnset()</pre></a></li>
-<li class="method public "><a href="#method_rewind" title="rewind() :: "><span class="description">rewind()
-        </span><pre>rewind()</pre></a></li>
-<li class="method public "><a href="#method_seek" title="seek() :: "><span class="description">seek()
-        </span><pre>seek()</pre></a></li>
-<li class="method public "><a href="#method_valid" title="valid() :: "><span class="description">valid()
-        </span><pre>valid()</pre></a></li>
+<li class="method public "><a href="#method_count" title="count() :: Return a count of upload entities within the iterator."><span class="description">Return a count of upload entities within the iterator.</span><pre>count()</pre></a></li>
+<li class="method public "><a href="#method_current" title="current() :: Returns the current upload entity within the iterator."><span class="description">Returns the current upload entity within the iterator.</span><pre>current()</pre></a></li>
+<li class="method public "><a href="#method_key" title="key() :: Returns the key of the current upload entity within the iterator."><span class="description">Returns the key of the current upload entity within the iterator.</span><pre>key()</pre></a></li>
+<li class="method public "><a href="#method_next" title="next() :: Advance the iterator to the next upload entity."><span class="description">Advance the iterator to the next upload entity.</span><pre>next()</pre></a></li>
+<li class="method public "><a href="#method_rewind" title="rewind() :: Rewind to the first element of the iterator."><span class="description">Rewind to the first element of the iterator.</span><pre>rewind()</pre></a></li>
+<li class="method public "><a href="#method_seek" title="seek() :: Arbitrarily move the current position within the iterator."><span class="description">Arbitrarily move the current position within the iterator.</span><pre>seek()</pre></a></li>
+<li class="method public "><a href="#method_valid" title="valid() :: Check if the current position within the iterator is valid."><span class="description">Check if the current position within the iterator is valid.</span><pre>valid()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header private">» Private
@@ -94,14 +81,14 @@ info structure."><span class="description">Given an HTML name, gather all its in
 info structure.</span><pre>gather()</pre></a></li>
 <li class="method private "><a href="#method_import" title="import() :: Import a structure purporting to be a valid $_FILES format into a flat
 array of UploadFile or UploadError. Resolve all recursive structure and
-reconstitues the HTML form name."><span class="description">Import a structure purporting to be a valid $_FILES format into a flat
+reconstitue the HTML form name."><span class="description">Import a structure purporting to be a valid $_FILES format into a flat
 array of UploadFile or UploadError. Resolve all recursive structure and
-reconstitues the HTML form name.</span><pre>import()</pre></a></li>
+reconstitue the HTML form name.</span><pre>import()</pre></a></li>
 <li class="method private "><a href="#method_names" title='names() :: Using the "name" key in the input as a model, figure out all the
-HTML names.'><span class="description">Using the "name" key in the input as a model, figure out all the
-HTML names.</span><pre>names()</pre></a></li>
-<li class="method private "><a href="#method_reducer" title="reducer() :: Companion to `names`, which recursively traverses the iterator,
-appending new keys onto the base-so-far."><span class="description">Companion to `names`, which recursively traverses the iterator,
+HTML names given in the original input.'><span class="description">Using the "name" key in the input as a model, figure out all the
+HTML names given in the original input.</span><pre>names()</pre></a></li>
+<li class="method private "><a href="#method_reducer" title="reducer() :: Helper to `names`, which recursively traverses the iterator,
+appending new keys onto the base-so-far."><span class="description">Helper to `names`, which recursively traverses the iterator,
 appending new keys onto the base-so-far.</span><pre>reducer()</pre></a></li>
 <li class="method private "><a href="#method_wrap" title="wrap() :: Wrap the file upload information in an appropriate object class, raising
 an exception if one would be warranted by the error."><span class="description">Wrap the file upload information in an appropriate object class, raising
@@ -114,9 +101,9 @@ an exception if one would be warranted by the error.</span><pre>wrap()</pre></a>
 </li>
 <li class="nav-header private">» Private
                     <ul>
-<li class="property private "><a href="#property_files" title="$files() :: "><span class="description"></span><pre>$files</pre></a></li>
-<li class="property private "><a href="#property_index" title="$index() :: "><span class="description"></span><pre>$index</pre></a></li>
-<li class="property private "><a href="#property_input" title="$input() :: "><span class="description"></span><pre>$input</pre></a></li>
+<li class="property private "><a href="#property_files" title="$files() :: "><span class="description">The internal array holding processed upload entities</span><pre>$files</pre></a></li>
+<li class="property private "><a href="#property_index" title="$index() :: "><span class="description">The pointer to the current index in the internal array</span><pre>$index</pre></a></li>
+<li class="property private "><a href="#property_input" title="$input() :: "><span class="description">The $_FILES or similar array provided in ctor</span><pre>$input</pre></a></li>
 </ul>
 </li>
 </ul>
@@ -147,12 +134,22 @@ an exception if one would be warranted by the error.</span><pre>wrap()</pre></a>
 <a id="method___construct"></a><div class="element clickable method public method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="public">
 <h2>Create a new UploadIterator.</h2>
 <pre>__construct(array $input<code> = null</code>) </pre>
-<div class="labels"></div>
+<div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>With no arguments, creates an iterator over the $_FILES super-global.
 You may instead pass your own array having the same format as $_FILES.
 If any of the files indicate a security concern or a server problem
 that prevented their storage, then the constructor throws an exception.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr>
+</table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$input</h4>
@@ -165,117 +162,147 @@ that prevented their storage, then the constructor throws an exception.</p></div
 </div></div>
 </div>
 <a id="method_count"></a><div class="element clickable method public method_count " data-toggle="collapse" data-target=".method_count .collapse" title="public">
-<h2>count()
-        </h2>
-<pre>count() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="method_current"></a><div class="element clickable method public method_current " data-toggle="collapse" data-target=".method_current .collapse" title="public">
-<h2>current()
-        </h2>
-<pre>current() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="method_key"></a><div class="element clickable method public method_key " data-toggle="collapse" data-target=".method_key .collapse" title="public">
-<h2>key()
-        </h2>
-<pre>key() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="method_next"></a><div class="element clickable method public method_next " data-toggle="collapse" data-target=".method_next .collapse" title="public">
-<h2>next()
-        </h2>
-<pre>next() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="method_offsetExists"></a><div class="element clickable method public method_offsetExists " data-toggle="collapse" data-target=".method_offsetExists .collapse" title="public">
-<h2>Implements isset() checks on the iterator.</h2>
-<pre>offsetExists(integer $offset) : boolean</pre>
-<div class="labels"></div>
+<h2>Return a count of upload entities within the iterator.</h2>
+<pre>count() : integer</pre>
+<div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
-<div class="long_description"><pre><code>$it = new Haldayne\Customs\UploadIterator;
-if (isset($it[0])) { ... }</code></pre></div>
-<h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$offset</h4>
-<code>integer</code><p>The offset to check.</p></div>
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr>
+</table>
 <h3>Returns</h3>
-<div class="subelement response"><code>boolean</code></div>
+<div class="subelement response"><code>integer</code></div>
 </div></div>
 </div>
-<a id="method_offsetGet"></a><div class="element clickable method public method_offsetGet " data-toggle="collapse" data-target=".method_offsetGet .collapse" title="public">
-<h2>Implements bracket get access to the iterator.</h2>
-<pre>offsetGet(integer $offset) : \Haldayne\Customs\UploadFile | \Haldayne\Customs\UploadError</pre>
-<div class="labels"></div>
+<a id="method_current"></a><div class="element clickable method public method_current " data-toggle="collapse" data-target=".method_current .collapse" title="public">
+<h2>Returns the current upload entity within the iterator.</h2>
+<pre>current() : \Haldayne\Customs\UploadFile | \Haldayne\Customs\UploadError</pre>
+<div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
-<div class="long_description"><pre><code>$it = new Haldayne\Customs\UploadIterator;
-$it[0];</code></pre></div>
-<h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$offset</h4>
-<code>integer</code><p>The offset to check.</p></div>
-<h3>Exceptions</h3>
-<table class="table table-bordered"><tr>
-<th><code>\OutOfBoundsException</code></th>
-<td>When the offset does not exist.</td>
-</tr></table>
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr>
+</table>
 <h3>Returns</h3>
 <div class="subelement response">
 <code>\Haldayne\Customs\UploadFile</code><code>\Haldayne\Customs\UploadError</code>
 </div>
 </div></div>
 </div>
-<a id="method_offsetSet"></a><div class="element clickable method public method_offsetSet " data-toggle="collapse" data-target=".method_offsetSet .collapse" title="public">
-<h2>offsetSet()
-        </h2>
-<pre>offsetSet($offset, $value) </pre>
-<div class="labels"></div>
+<a id="method_key"></a><div class="element clickable method public method_key " data-toggle="collapse" data-target=".method_key .collapse" title="public">
+<h2>Returns the key of the current upload entity within the iterator.</h2>
+<pre>key() : integer</pre>
+<div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
-<h3>Parameters</h3>
-<div class="subelement argument"><h4>$offset</h4></div>
-<div class="subelement argument"><h4>$value</h4></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>integer</code></div>
 </div></div>
 </div>
-<a id="method_offsetUnset"></a><div class="element clickable method public method_offsetUnset " data-toggle="collapse" data-target=".method_offsetUnset .collapse" title="public">
-<h2>offsetUnset()
-        </h2>
-<pre>offsetUnset($offset) </pre>
-<div class="labels"></div>
+<a id="method_next"></a><div class="element clickable method public method_next " data-toggle="collapse" data-target=".method_next .collapse" title="public">
+<h2>Advance the iterator to the next upload entity.</h2>
+<pre>next() : void</pre>
+<div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
-<h3>Parameters</h3>
-<div class="subelement argument"><h4>$offset</h4></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr>
+</table>
 </div></div>
 </div>
 <a id="method_rewind"></a><div class="element clickable method public method_rewind " data-toggle="collapse" data-target=".method_rewind .collapse" title="public">
-<h2>rewind()
-        </h2>
-<pre>rewind() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="method_seek"></a><div class="element clickable method public method_seek " data-toggle="collapse" data-target=".method_seek .collapse" title="public">
-<h2>seek()
-        </h2>
-<pre>seek($position) </pre>
-<div class="labels"></div>
+<h2>Rewind to the first element of the iterator.</h2>
+<pre>rewind() : void</pre>
+<div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_seek"></a><div class="element clickable method public method_seek " data-toggle="collapse" data-target=".method_seek .collapse" title="public">
+<h2>Arbitrarily move the current position within the iterator.</h2>
+<pre>seek($position) : void</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr>
+</table>
 <h3>Parameters</h3>
 <div class="subelement argument"><h4>$position</h4></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\OutOfBoundsException</code></th>
+<td></td>
+</tr></table>
 </div></div>
 </div>
 <a id="method_valid"></a><div class="element clickable method public method_valid " data-toggle="collapse" data-target=".method_valid .collapse" title="public">
-<h2>valid()
-        </h2>
-<pre>valid() </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<h2>Check if the current position within the iterator is valid.</h2>
+<pre>valid() : boolean</pre>
+<div class="labels"><span class="label label-info">API</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
 </div>
 <a id="method_gather"></a><div class="element clickable method private method_gather " data-toggle="collapse" data-target=".method_gather .collapse" title="private">
 <h2>Given an HTML name, gather all its information into a standard
@@ -291,20 +318,20 @@ info structure.</h2>
 <a id="method_import"></a><div class="element clickable method private method_import " data-toggle="collapse" data-target=".method_import .collapse" title="private">
 <h2>Import a structure purporting to be a valid $_FILES format into a flat
 array of UploadFile or UploadError. Resolve all recursive structure and
-reconstitues the HTML form name.</h2>
+reconstitue the HTML form name.</h2>
 <pre>import() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <a id="method_names"></a><div class="element clickable method private method_names " data-toggle="collapse" data-target=".method_names .collapse" title="private">
 <h2>Using the "name" key in the input as a model, figure out all the
-HTML names.</h2>
+HTML names given in the original input.</h2>
 <pre>names() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <a id="method_reducer"></a><div class="element clickable method private method_reducer " data-toggle="collapse" data-target=".method_reducer .collapse" title="private">
-<h2>Companion to `names`, which recursively traverses the iterator,
+<h2>Helper to `names`, which recursively traverses the iterator,
 appending new keys onto the base-so-far.</h2>
 <pre>reducer(\RecursiveArrayIterator $it, $base, $names) </pre>
 <div class="labels"></div>
@@ -344,8 +371,8 @@ an exception if one would be warranted by the error.</h2>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
 <a id="property_files"> </a><div class="element clickable property private property_files" data-toggle="collapse" data-target=".property_files .collapse" title="private">
-<h2>$files</h2>
-<pre>$files </pre>
+<h2>The internal array holding processed upload entities</h2>
+<pre>$files : array</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -354,8 +381,8 @@ an exception if one would be warranted by the error.</h2>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <a id="property_index"> </a><div class="element clickable property private property_index" data-toggle="collapse" data-target=".property_index .collapse" title="private">
-<h2>$index</h2>
-<pre>$index </pre>
+<h2>The pointer to the current index in the internal array</h2>
+<pre>$index : integer</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -364,8 +391,8 @@ an exception if one would be warranted by the error.</h2>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <a id="property_input"> </a><div class="element clickable property private property_input" data-toggle="collapse" data-target=".property_input .collapse" title="private">
-<h2>$input</h2>
-<pre>$input </pre>
+<h2>The $_FILES or similar array provided in ctor</h2>
+<pre>$input : array</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -380,7 +407,7 @@ an exception if one would be warranted by the error.</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2015-10-09T09:57:59-04:00.<br></footer></div>
+            generated on 2015-10-09T10:14:55-04:00.<br></footer></div>
 </div>
 </body>
 </html>
