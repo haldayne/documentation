@@ -2,7 +2,11 @@
 <project name="Haldayne PHP Componentry" default="apidoc">
     <target name="apidoc">
          <exec command="git submodule foreach git pull origin master" dir="." />
-         <phpdoc2 destdir="./api" template="responsive">
+         <phpdoc2
+            title="Haldayne PHP Componentry"
+            defaultPackageName="haldayne"
+            template="responsive"
+            destdir="./api">
              <fileset dir="./modules">
                  <include name="**/*.php" />
              </fileset>
