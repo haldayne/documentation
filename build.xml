@@ -5,7 +5,7 @@
          <phpdoc2
             title="Haldayne PHP Componentry"
             defaultPackageName="Haldayne"
-            template="new-black"
+            template="zend"
             destdir="./api">
              <fileset dir="./modules">
                  <include name="**/*.php" />
