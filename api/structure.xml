@@ -18,50 +18,29 @@ attempting to bypass the normal PHP file upload safeguards.</long-description>
         <tag name="see" line="13" description="which occurs when the client uploads anything other than a&#10;complete file." link="\Haldayne\Customs\UploadError"/>
         <tag name="package" line="13" description="Haldayne"/>
       </docblock>
-      <property static="false" visibility="private" namespace="Haldayne\Customs" line="56" package="Haldayne">
+      <property static="false" visibility="private" namespace="Haldayne\Customs" line="61" package="Haldayne">
         <name>$htmlName</name>
         <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::htmlName</full_name>
         <default></default>
-        <docblock line="56">
+        <docblock line="61">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="56" description="&lt;p&gt;The HTML name we were given.&lt;/p&gt;" type="string" variable="$htmlName">
+          <tag name="var" line="61" description="&lt;p&gt;The HTML name we were given.&lt;/p&gt;" type="string" variable="$htmlName">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="38" package="Haldayne">
-        <name>setHtmlName</name>
-        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::setHtmlName()</full_name>
-        <docblock line="38">
-          <description>Set the HTML variable name.</description>
-          <long-description></long-description>
-          <tag name="param" line="38" description="&lt;p&gt;The HTML variable name.&lt;/p&gt;" type="string" variable="$htmlName">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="38" description="" type="\Haldayne\Customs\UploadException">
-            <type>\Haldayne\Customs\UploadException</type>
-          </tag>
-          <tag name="api" line="38" description=""/>
-          <tag name="since" line="38" description="1.0.0"/>
-          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$htmlName</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <inherited_from>\Haldayne\Customs\HtmlNameAccessorTrait</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="48" package="Haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="53" package="Haldayne">
         <name>getHtmlName</name>
         <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::getHtmlName()</full_name>
-        <docblock line="48">
+        <docblock line="53">
           <description>Get the HTML variable name.</description>
           <long-description></long-description>
-          <tag name="return" line="48" description="" type="string">
+          <tag name="return" line="53" description="" type="string">
             <type>string</type>
           </tag>
+          <tag name="api" line="53" description=""/>
+          <tag name="since" line="53" description="1.0.0"/>
         </docblock>
         <inherited_from>\Haldayne\Customs\HtmlNameAccessorTrait</inherited_from>
       </method>
@@ -108,14 +87,14 @@ try {
         <tag name="package" line="20" description="Haldayne"/>
         <tag name="inherited_from" description="\Haldayne\Customs\UploadException" refers="\Haldayne\Customs\UploadException" link="/classes/Haldayne.Customs.UploadException.html"/>
       </docblock>
-      <property static="false" visibility="private" namespace="Haldayne\Customs" line="56" package="Haldayne">
+      <property static="false" visibility="private" namespace="Haldayne\Customs" line="61" package="Haldayne">
         <name>$htmlName</name>
         <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::htmlName</full_name>
         <default></default>
-        <docblock line="56">
+        <docblock line="61">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="56" description="&lt;p&gt;The HTML name we were given.&lt;/p&gt;" type="string" variable="$htmlName">
+          <tag name="var" line="61" description="&lt;p&gt;The HTML name we were given.&lt;/p&gt;" type="string" variable="$htmlName">
             <type>string</type>
           </tag>
         </docblock>
@@ -147,38 +126,17 @@ directory and installed extensions.</description>
           <tag name="since" line="54" description="1.0.0"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="38" package="Haldayne">
-        <name>setHtmlName</name>
-        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::setHtmlName()</full_name>
-        <docblock line="38">
-          <description>Set the HTML variable name.</description>
-          <long-description></long-description>
-          <tag name="param" line="38" description="&lt;p&gt;The HTML variable name.&lt;/p&gt;" type="string" variable="$htmlName">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="38" description="" type="\Haldayne\Customs\ServerProblemException">
-            <type>\Haldayne\Customs\ServerProblemException</type>
-          </tag>
-          <tag name="api" line="38" description=""/>
-          <tag name="since" line="38" description="1.0.0"/>
-          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$htmlName</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <inherited_from>\Haldayne\Customs\HtmlNameAccessorTrait</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="48" package="Haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="53" package="Haldayne">
         <name>getHtmlName</name>
         <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::getHtmlName()</full_name>
-        <docblock line="48">
+        <docblock line="53">
           <description>Get the HTML variable name.</description>
           <long-description></long-description>
-          <tag name="return" line="48" description="" type="string">
+          <tag name="return" line="53" description="" type="string">
             <type>string</type>
           </tag>
+          <tag name="api" line="53" description=""/>
+          <tag name="since" line="53" description="1.0.0"/>
         </docblock>
         <inherited_from>\Haldayne\Customs\HtmlNameAccessorTrait</inherited_from>
       </method>
@@ -289,14 +247,14 @@ attempting to bypass the normal PHP file upload safeguards.</long-description>
           <long-description></long-description>
         </docblock>
       </constant>
-      <property static="false" visibility="private" namespace="Haldayne\Customs" line="56" package="Haldayne">
+      <property static="false" visibility="private" namespace="Haldayne\Customs" line="61" package="Haldayne">
         <name>$htmlName</name>
         <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::htmlName</full_name>
         <default></default>
-        <docblock line="56">
+        <docblock line="61">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="56" description="&lt;p&gt;The HTML name we were given.&lt;/p&gt;" type="string" variable="$htmlName">
+          <tag name="var" line="61" description="&lt;p&gt;The HTML name we were given.&lt;/p&gt;" type="string" variable="$htmlName">
             <type>string</type>
           </tag>
         </docblock>
@@ -311,38 +269,17 @@ attempting to bypass the normal PHP file upload safeguards.</long-description>
           <tag name="since" line="17" description="1.0.0"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="38" package="Haldayne">
-        <name>setHtmlName</name>
-        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::setHtmlName()</full_name>
-        <docblock line="38">
-          <description>Set the HTML variable name.</description>
-          <long-description></long-description>
-          <tag name="param" line="38" description="&lt;p&gt;The HTML variable name.&lt;/p&gt;" type="string" variable="$htmlName">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="38" description="" type="\Haldayne\Customs\SecurityConcernException">
-            <type>\Haldayne\Customs\SecurityConcernException</type>
-          </tag>
-          <tag name="api" line="38" description=""/>
-          <tag name="since" line="38" description="1.0.0"/>
-          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$htmlName</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <inherited_from>\Haldayne\Customs\HtmlNameAccessorTrait</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="48" package="Haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="53" package="Haldayne">
         <name>getHtmlName</name>
         <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::getHtmlName()</full_name>
-        <docblock line="48">
+        <docblock line="53">
           <description>Get the HTML variable name.</description>
           <long-description></long-description>
-          <tag name="return" line="48" description="" type="string">
+          <tag name="return" line="53" description="" type="string">
             <type>string</type>
           </tag>
+          <tag name="api" line="53" description=""/>
+          <tag name="since" line="53" description="1.0.0"/>
         </docblock>
         <inherited_from>\Haldayne\Customs\HtmlNameAccessorTrait</inherited_from>
       </method>
@@ -415,14 +352,14 @@ attempting to bypass the normal PHP file upload safeguards.</long-description>
           <long-description></long-description>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="Haldayne\Customs" line="56" package="Haldayne">
+      <property static="false" visibility="private" namespace="Haldayne\Customs" line="61" package="Haldayne">
         <name>$htmlName</name>
         <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::htmlName</full_name>
         <default></default>
-        <docblock line="56">
+        <docblock line="61">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="56" description="&lt;p&gt;The HTML name we were given.&lt;/p&gt;" type="string" variable="$htmlName">
+          <tag name="var" line="61" description="&lt;p&gt;The HTML name we were given.&lt;/p&gt;" type="string" variable="$htmlName">
             <type>string</type>
           </tag>
         </docblock>
@@ -454,38 +391,17 @@ before the request ends to keep the upload.</description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="38" package="Haldayne">
-        <name>setHtmlName</name>
-        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::setHtmlName()</full_name>
-        <docblock line="38">
-          <description>Set the HTML variable name.</description>
-          <long-description></long-description>
-          <tag name="param" line="38" description="&lt;p&gt;The HTML variable name.&lt;/p&gt;" type="string" variable="$htmlName">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="38" description="" type="\Haldayne\Customs\UploadFile">
-            <type>\Haldayne\Customs\UploadFile</type>
-          </tag>
-          <tag name="api" line="38" description=""/>
-          <tag name="since" line="38" description="1.0.0"/>
-          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$htmlName</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <inherited_from>\Haldayne\Customs\HtmlNameAccessorTrait</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="48" package="Haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="53" package="Haldayne">
         <name>getHtmlName</name>
         <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::getHtmlName()</full_name>
-        <docblock line="48">
+        <docblock line="53">
           <description>Get the HTML variable name.</description>
           <long-description></long-description>
-          <tag name="return" line="48" description="" type="string">
+          <tag name="return" line="53" description="" type="string">
             <type>string</type>
           </tag>
+          <tag name="api" line="53" description=""/>
+          <tag name="since" line="53" description="1.0.0"/>
         </docblock>
         <inherited_from>\Haldayne\Customs\HtmlNameAccessorTrait</inherited_from>
       </method>
@@ -497,7 +413,7 @@ before the request ends to keep the upload.</description>
     </parse_markers>
     <source>eJyFVE1vEzEQve+vmEMPbRSSe0uBKi1QiUDVhgNSpWp2M5s1eG3jj6AF+t8Z29lkm6pkLyuNZ968efPs129NYwqFLTmDFcFHlEvsFN3PgvO6dWdFEdwgPBctcWw6GhUwglsylhwp7wChFpLAN+ihQQclkQIXqoqcq4OUHQQjNS5pOeHKaVFJdA6+pth7riz+FMBfauZb+ZkZXaRibRcWheem8Tw1jt8IZpbQEzdW9At0+Z0qD7YnJNSKT0ZDAqMtg0R1ssHp4d4ZtNiC8zbWHjUbErBomNFi/gnWaAWWPGNUCyptuZPRahnTvebJhXsC3CMqbv63h1U9pLZiJRTKLFsMj4FlW4k161Z2DMc9pOBR9vF6qFQYoTy1Rlu0HTiya7IZ0qBvXuAllCfLvTeBafqbUEpRQR1U5YVW8PBQacW9QuWPt2qM8wTj3P0kFebFxe8o9nr1xpHvV7irPDnbT0tSnGfAZ4dphPO02vs7I6NDrlWtj3PfnP74zBIfyCfhtpoOZIQVron9BbW2O1HGIGpA1e274VKD0tFPbFwWY5ufUSMEF3GUF1EGD0vhjMRuzLavMHq406GHqlBFKFbS+Xw/hGf7KI9COXBYM8OGN1vxUtzkvztZkZ+lYaIekcnx/gos+WDVUOJDWu3ck+ZrtMyOjhPnCzOBbzpAG+m3ek07MXqokliQrLWln4E4kdTSRff9IDLpYAO1f+kc0eAROD2NDRb6kAh3yeex4oAAkeUhAebX8yveJsrud7w7yR00nO9FGvExvNgUvkQkOjjm3e8SnxKaws3tl8XVbHF1CRc31zlqrPb8nvFTNbgeg2Ce67H4B6nQwj0=</source>
   </file>
-  <file path="customs/src/HtmlNameAccessorTrait.php" generated-path="customs.src.HtmlNameAccessorTrait.html" hash="3703e735846514e1bf0944dd9004e65a" package="Haldayne">
+  <file path="customs/src/HtmlNameAccessorTrait.php" generated-path="customs.src.HtmlNameAccessorTrait.html" hash="99c846f2e4ec58a9cafad146fe4c0465" package="Haldayne">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -530,56 +446,36 @@ As a rule of thumb, avoid using "." and " " in your HTML form names.
 When using array syntax, prefer explicit naming your keys.</long-description>
         <tag name="package" line="28" description="Haldayne"/>
       </docblock>
-      <property static="false" visibility="private" namespace="Haldayne\Customs" line="56" package="Haldayne">
+      <property static="false" visibility="private" namespace="Haldayne\Customs" line="61" package="Haldayne">
         <name>$htmlName</name>
         <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::htmlName</full_name>
         <default></default>
-        <docblock line="56">
+        <docblock line="61">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="56" description="&lt;p&gt;The HTML name we were given.&lt;/p&gt;" type="string" variable="$htmlName">
+          <tag name="var" line="61" description="&lt;p&gt;The HTML name we were given.&lt;/p&gt;" type="string" variable="$htmlName">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="38" package="Haldayne">
-        <name>setHtmlName</name>
-        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::setHtmlName()</full_name>
-        <docblock line="38">
-          <description>Set the HTML variable name.</description>
-          <long-description></long-description>
-          <tag name="param" line="38" description="&lt;p&gt;The HTML variable name.&lt;/p&gt;" type="string" variable="$htmlName">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="38" description="" type="\Haldayne\Customs\HtmlNameAccessorTrait">
-            <type>\Haldayne\Customs\HtmlNameAccessorTrait</type>
-          </tag>
-          <tag name="api" line="38" description=""/>
-          <tag name="since" line="38" description="1.0.0"/>
-          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$htmlName</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="48" package="Haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="53" package="Haldayne">
         <name>getHtmlName</name>
         <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::getHtmlName()</full_name>
-        <docblock line="48">
+        <docblock line="53">
           <description>Get the HTML variable name.</description>
           <long-description></long-description>
-          <tag name="return" line="48" description="" type="string">
+          <tag name="return" line="53" description="" type="string">
             <type>string</type>
           </tag>
+          <tag name="api" line="53" description=""/>
+          <tag name="since" line="53" description="1.0.0"/>
         </docblock>
       </method>
     </trait>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
     </parse_markers>
-    <source>eJydVG1P20AM/p5fYSGkjaqk8HVsg4oxijRQxapNE0PomjrNbclddncphMF/n315o+Fl2q5Sm9h+Hj927Xu7nyd5oESGNhcRwkSkC1Eq/H5YWKczuxcEo8EggAGMowit1QYydIleWIjp2SUEmZ1+AmYAHYOAWKYIRZ5qsQgJx9CjFZqytuGiikiEpWCGDWEpV6jAaZAOpOpIKUMWwqx+ZSabYwRWlNYH+aS/CpHKWCLRWTj8MJ6Nh2A15AadKyErogSEKiFKhBGRQwORUEwV6Sw30iJ5q2wrYaSYpxVtCBN9jaR72KvxmqWvCOXbwUSs24It5j8wcvw2nUwB1VIqBFOkaF9VyEyoZSrVsunKiWITKRMWbT8NqS+MomZlwkUJ2p7bd2wI88Ixk9K+byJNK7I3dYZj31fyfKRGAp+784Y3NjqDJbqJy9Izony9xe5TzrbP2O1H5+6x6Qk3Y2OtYf3cPTatub+hrYEXc2Eu14E900tA+rq92r18COxMzwCvKKontWd6Bhj+G/BMN735T9zFehG+wp1nGtPg/ObypvEk8oK6pMjmQxArLRdQWJpH2Ag3aAkWsEEfGpZSF6bbPz9vlmcWviY0TRVEGCNKsKVy4mbIuxbTYuFNnsqIdpggHOSJfmLp0aPAGUG+Zt6a62TG1uB3wJL9TcNnAJ/RdSO/vpl1SBN5kNNiZ2Cd4ZybSc3fXhtPo+Gg2jCwmMatTeSyfaY66T7cDXfCndo28r95MacqIS5U5KRmgm6H2uxbPrSqis+mS6Tdft+Ke9cJ3WuDakU+trLeB/2+HP+1L11lviMval/b/57kh2o65eu6RjA9P/kynh3BeHrSaoUDEvbCH9Lco9do6pssbAUauRIOH3bnPvgDCKDdlQ==</source>
+    <source>eJydVW1P2zAQ/p5fcUJIG1VJ4evYBhVjtNKAinWbJoaQmziNN8fObKeQDf777pw3Gl60zZXa9HzP3XNP766v9/M0DxTLuM1ZxGHCZMxKxb8dFtbpzO4FwWgwCGAA4yji1moDGXepji0k+OxShMxPPgBFAJ0Ag0RIDkUuNYtDxBH0aMVNWdt4XHmkzKIzwYawFCuuwGkQDoTqgmKGLIR5/ZUi2ZxHYFlpvZNP+rNgUiSCYzgLh+/G8/EQrIbccOdKyIooBaZKiFJmWOS4gYgpChXpLDfCcrytsq2YEWwhq7AhTPQ1R97DXo3XRH2FKC8HBSLeFmyx+M4jR99mkxlwtRSKgykkty8qZMbUUgq1bFSZKjIhM2a57adB9oVRKFbGXJRy27v2ig1hUTiKpLTXjUlZBXtVZzj2uuLNexQS6NyeN3ETozNYcjdxmTzFkC+36PqEsu0TdvvBuX1oeuSasInWsH5uH5rWrr9yWwMvFsxcrgN7pueA+PbravfyPrAzPQG8Qq8e1Z7pCWD4b8BT3Wjzn7iL9SJ8hTtPCNPg/OTSpFEn0oC6tMgWQ2ArLWIoLPYjbIQbOAQxbOALm6XUhenmz/ebpZ6FLyl2UwVhxrASbKkcuxnSrCU4WPwmlyLCGUYIOflAP3jp0aPAGYZ3Tb8162RO1uB3QJT9pqEzgI/cdS2/Ppm1S+N5pmQJn/xumeJ4M4dryaa6kDHYOki1nHBAjBMJLgHQflZtVUwTyKU4xp5kP8VBjrsjA+sMlbWZ1iW0m+lxgnBQDTHSkElrEwpJKiZrw8h/5sUClYOkUJETmhDdXLbptrxrpRSdTSK8/bZl86Zjttc61RS8b2W9C/paH/+11m1FXonWynLRPqOi+DeyG+6EO8+WuLZ6epXdJ90VuE5/BLPz6efx/AjGs2lbEhwg/2d+qGaFX3NTL9GwJWjEijl+X8S74A9zEAJY</source>
   </file>
   <file path="customs/src/UploadError.php" generated-path="customs.src.UploadError.html" hash="7fd6641b8283289762470103dc2e5573" package="Haldayne">
     <docblock line="0">
@@ -633,14 +529,14 @@ When using array syntax, prefer explicit naming your keys.</long-description>
           <long-description></long-description>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="Haldayne\Customs" line="56" package="Haldayne">
+      <property static="false" visibility="private" namespace="Haldayne\Customs" line="61" package="Haldayne">
         <name>$htmlName</name>
         <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::htmlName</full_name>
         <default></default>
-        <docblock line="56">
+        <docblock line="61">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="56" description="&lt;p&gt;The HTML name we were given.&lt;/p&gt;" type="string" variable="$htmlName">
+          <tag name="var" line="61" description="&lt;p&gt;The HTML name we were given.&lt;/p&gt;" type="string" variable="$htmlName">
             <type>string</type>
           </tag>
         </docblock>
@@ -752,38 +648,17 @@ pass-by-reference `$maximum` will indicate the maximum possible size.</long-desc
           <tag name="since" line="126" description="1.0.0"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="38" package="Haldayne">
-        <name>setHtmlName</name>
-        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::setHtmlName()</full_name>
-        <docblock line="38">
-          <description>Set the HTML variable name.</description>
-          <long-description></long-description>
-          <tag name="param" line="38" description="&lt;p&gt;The HTML variable name.&lt;/p&gt;" type="string" variable="$htmlName">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="38" description="" type="\Haldayne\Customs\UploadError">
-            <type>\Haldayne\Customs\UploadError</type>
-          </tag>
-          <tag name="api" line="38" description=""/>
-          <tag name="since" line="38" description="1.0.0"/>
-          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$htmlName</name>
-          <default></default>
-          <type>string</type>
-        </argument>
-        <inherited_from>\Haldayne\Customs\HtmlNameAccessorTrait</inherited_from>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="48" package="Haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="53" package="Haldayne">
         <name>getHtmlName</name>
         <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::getHtmlName()</full_name>
-        <docblock line="48">
+        <docblock line="53">
           <description>Get the HTML variable name.</description>
           <long-description></long-description>
-          <tag name="return" line="48" description="" type="string">
+          <tag name="return" line="53" description="" type="string">
             <type>string</type>
           </tag>
+          <tag name="api" line="53" description=""/>
+          <tag name="since" line="53" description="1.0.0"/>
         </docblock>
         <inherited_from>\Haldayne\Customs\HtmlNameAccessorTrait</inherited_from>
       </method>

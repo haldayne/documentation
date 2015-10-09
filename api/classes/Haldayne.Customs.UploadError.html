@@ -70,7 +70,6 @@
 <li class="method public "><a href="#method_isPartial" title="isPartial() :: Is the error because the uploaded file was only partially received?"><span class="description">Is the error because the uploaded file was only partially received?</span><pre>isPartial()</pre></a></li>
 <li class="method public "><a href="#method_isTooBig" title="isTooBig() :: Is the error because the uploaded file was too big?"><span class="description">Is the error because the uploaded file was too big?</span><pre>isTooBig()</pre></a></li>
 <li class="method public "><a href="#method_notUploaded" title="notUploaded() :: Is the error because no file was uploaded?"><span class="description">Is the error because no file was uploaded?</span><pre>notUploaded()</pre></a></li>
-<li class="method public inherited"><a href="#method_setHtmlName" title="setHtmlName() :: Set the HTML variable name."><span class="description">Set the HTML variable name.</span><pre>setHtmlName()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header">
@@ -189,9 +188,21 @@ directive in the HTML form.</li>
 <a id="method_getHtmlName"></a><div class="element clickable method public method_getHtmlName inherited" data-toggle="collapse" data-target=".method_getHtmlName .collapse" title="public">
 <h2>Get the HTML variable name.</h2>
 <pre>getHtmlName() : string</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td></td>
+</tr>
+<tr>
+<th>since</th>
+<td>1.0.0</td>
+</tr>
+</table>
 <h3>Returns</h3>
 <div class="subelement response"><code>string</code></div>
 </div></div>
@@ -267,36 +278,6 @@ pass-by-reference <code>$maximum</code> will indicate the maximum possible size.
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a id="method_setHtmlName"></a><div class="element clickable method public method_setHtmlName inherited" data-toggle="collapse" data-target=".method_setHtmlName .collapse" title="public">
-<h2>Set the HTML variable name.</h2>
-<pre>setHtmlName(string $htmlName) : \Haldayne\Customs\UploadError</pre>
-<div class="labels">
-<span class="label label-info">API</span><span class="label">Inherited</span>
-</div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<table class="table table-bordered">
-<tr>
-<th>api</th>
-<td></td>
-</tr>
-<tr>
-<th>since</th>
-<td>1.0.0</td>
-</tr>
-<tr>
-<th>fluent</th>
-<td>This method is part of a fluent interface and will return the same instance</td>
-</tr>
-</table>
-<h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$htmlName</h4>
-<code>string</code><p>The HTML variable name.</p></div>
-<h3>Returns</h3>
-<div class="subelement response"><code>\Haldayne\Customs\UploadError</code></div>
-</div></div>
-</div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
 <a id="property_code"> </a><div class="element clickable property private property_code" data-toggle="collapse" data-target=".property_code .collapse" title="private">
@@ -346,7 +327,7 @@ pass-by-reference <code>$maximum</code> will indicate the maximum possible size.
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2015-10-09T15:39:58-04:00.<br></footer></div>
+            generated on 2015-10-09T15:41:47-04:00.<br></footer></div>
 </div>
 </body>
 </html>
