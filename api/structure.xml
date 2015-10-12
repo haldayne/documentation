@@ -153,6 +153,64 @@ session id into a string for foresnic diagnostics.</long-description>
     </parse_markers>
     <source>eJy1VU1v4zYQvftXzMEL24HjbK9Od1sjVlEDmw/I3m6B7UKhxbFNhCIFkrJjLPLfO6Qoy06c3sqDPijyzZvHN6Nffys3ZUexAm3JcoQ/meRsr/Cfm8o6XdjrTufq4qIDFzABW2IuViKHJ6E46BV8LaVmPHnOsXRCqzG4DYJFs0UDG8aBQWn0UmIxIgCPMXM9CwZzXRSoOHLawBzsdQVMWg1SrwOEw6LUhpk9cEGrnaYnRiHzyhhUTu49llDWMSkJBJ8dKksELKy08QjC0E62Vto6ortlssIRLAgZG65ACVu2Ro/ENVpQ2hFkLiuOHsEicHRMyBrTIsUWbj+EZeUCxxaJctwKjtZDMcJ1G83DJuJlWO6EClkVI0ieWVFKHEc1Hh8f/c1Rdj/9gx9d4eATKNxFcWcODSMBrv2CF8iZyzfQnweNH2pxD/pDF58HLRQao01GmvZp/vLzGt30oMltnX1/MLhulruN0TsPUYeqOV51csmshXcCBuW5fW2EDnGgEYzjxwWk6CqjgnBR+NZN9ZkJeyRprjmO4t4G4ndTY1hnSNHDLCvF4dnSASL8Mvo4+hjnrsK9rJbSB6pUHuBJioMAYUHN1w+7E0Hhrmd0+dkTGRx9zhkZ4+vDl/vJNEvSNLu7zxa3D9l0lo4Pa/yIXHu3wlp//uzI0ystORWIULDbCIrlNGxoKohTBSF7VHXvRbyZ3C2yb+lskZyP+Ad51heWhh0ZtkH07y0DqclHJMR/xUn+XiR389n93fkwE9WWHSwJ8Anfy4DjilXSncWJMkdPXB+WvHTq63kfWdKztgE5RVGVKv/IEUs8Lnzre1RoSXtLydMW5rBBYnUZO1HgcduKDQt0HpoNf+3C+ckyCwXbh9ZBVUIXTTT6jO7Oh7aioLyZQl3ZqIttcJrDEHIPyBxlJOWRfhC68QCoNHyEpedXiEvKryA85SiKaqDac6AaKg1u6XvwHCHGqINR3XopgEGqNwThwxM3UkE3QE+KGgCjnCpyJd1LTealNIEtdex6Uclj8aLGbac/0WvhCzv2xJyVdHoYaMDKINZZAtuSZxntHoJne9LRh77xN2CWbBLy5FQ95OiDC3wL8WlZRWV+ZID/t4ecaaevukm31v+bNvTLXD8wt6HmfqPVSqzH4zff+oO2ABqiJRF1q/5J7fQ+2DHs6n0Z/SE/ff9gfwyDovRqn+J7K2KciPJlgscJg4V2mDHOa4ze8CROlt18mcznWXY6/Tap0++eQhbIhOPtv10/ON1AXpTUZ/u9YW/odc1qF2RtAvSfOt3SptJ/9aWbzZP0ryT93kuT2/tFkk2m07T347AmavzSeen8C5O/xuo=</source>
   </file>
+  <file path="boost/src/functions/header_ip.php" generated-path="boost.src.functions.header_ip.html" hash="b11e4494593915684a54913ac1d4bff5" package="Haldayne">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Haldayne"/>
+    </docblock>
+    <function namespace="Haldayne\Boost" line="33" package="Haldayne">
+      <name>header_ip</name>
+      <full_name>\Haldayne\Boost\header_ip()</full_name>
+      <docblock line="33">
+        <description>Return the client IP addresses provided by proxy-supplied headers,
+including the proxy IP address itself.</description>
+        <long-description>Do not rely on these values, because they come from the headers which are
+user-supplied and can be spoofed. (Unless you know certain headers are
+reliable because you own the proxy infrastructure.)
+
+By default, we validate that the values in the headers are IP addresses.
+You can disable this. By default, we check well-known headers, but you can
+change which headers to check.
+
+To determine if the client originated from a known proxy, bearing in mind
+that this test is tainted because it relies upon headers, you can use:
+
+```
+if (header_ip() === [ remote_ip() ]) {
+    // client NOT using a known proxy
+} else {
+    // client IS using a known proxy
+}
+```</long-description>
+        <tag name="package" line="33" description="Haldayne"/>
+        <tag name="param" line="33" description="&lt;p&gt;Check that header-supplied values are IP addresses.&lt;/p&gt;" type="boolean" variable="$validate">
+          <type>boolean</type>
+        </tag>
+        <tag name="param" line="33" description="&lt;p&gt;The headers to check for originating IP addresses.&lt;/p&gt;" type="array" variable="$headers">
+          <type>array</type>
+        </tag>
+        <tag name="return" line="33" description="All IP addresses reported by proxy headers, with the last-&#10;most element being the proxy IP address itself." type="array">
+          <type>array</type>
+        </tag>
+        <tag name="see" line="33" description="" link="http://blog.ircmaxell.com/2012/11/anatomy-of-attack-how-i-hacked.html"/>
+      </docblock>
+      <argument line="0" by_reference="false">
+        <name>$validate</name>
+        <default>true</default>
+        <type>boolean</type>
+      </argument>
+      <argument line="0" by_reference="false">
+        <name>$headers</name>
+        <default>array()</default>
+        <type>array</type>
+      </argument>
+    </function>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJyNVE1v1DAQvedXzIFDt2o2tMfCilI40AsgKAcEFZ21Jxurjh3ZTrdR1f/OjJP9giIRKYoTzbx5895MXr/pmq5w2FLsUBF8QKtxcPTz0vuYXhVFdXxcwDF8odQHB6khUNaQS3D1GVDrQDFShC74e6NJw3KQ88NQxr7rOFBDQ6gpxBNBMU7ZXhu3ykA5cA8HTIpk67lEyv3eg/MJAtkBfK4dCe7R9hRPYEkKe37nrwMo3xLUwbcZd6oI68aoBjCQgHFs2JFCp0GhYxSInfc16TkcfXNWWAy+hzvn16AoJDRuizchMR+DS0tbCpLg126vJ+PqgDGFXrFqNJ9xmmReDqCpxt6mE1jnVozGJD1gytljc5x+0AfXPVA7C/Sdi0oH2sRMJjUmzv+soBpSd3ywtpSOtq2wfH3KvBlC0FSDbkWTYpu6yY8A84n+tWfwRKE1jsDU+8Pgg1kZx73o0QaEsV6WQ8zCIK5zY5ysBWzq2XAZignkyVoLwEZWk603rEff+T3qE21x9Hxidnt7m8erhqMx7JfpjmawWCzgB4O0PtH45WYGjxIpV1Vt2H/8dM1oQvCAtwQ+AVnm8kzS1dd/5uwoyemiw4AtLL238GLr+btsTVZhpLwbzmkKnrV9AsMQcIAXG6eu96Zl4xrUPmx9EZ5/Y4VxqUewt9Ye7nSgzoe0t9M7C9YmNdl+y1NeClbLfwuWilqRZkn/s+IXkZh1St15VS2tX81NUC0+8LDOeZ+rs5enZ9XpaYVM37dD6esSU0J1VzZ+XZqy4SOvbZNay2hVUfdOJbMdFPF7p/YCeBnpZKeYDMbNrHgsnorfm+uvEw==</source>
+  </file>
   <file path="boost/src/Contract/Arrayable.php" generated-path="boost.src.Contract.Arrayable.html" hash="7f7c51100037144d3e52566dd96cb54e" package="Default">
     <docblock line="0">
       <description></description>
@@ -182,16 +240,111 @@ session id into a string for foresnic diagnostics.</long-description>
     </parse_markers>
     <source>eJwtjbEOgkAQRPv9ii2VQj4AE6M2lISaZjmXgMHdy95iQoz/Llyc5hXzJnO+xDGC0ItTpMBY0/ygVbi7qSbv7ipuFLwCmMTZht25mtFK/czwAdxSFkUmFtiyLyZIKOTTm7GpG6RdR+NonFh8K1RQB/SRUfsnBz/952VmXPp5CjgsErLqmg8Pxwq+8AMxFDjF</source>
   </file>
-  <file path="customs/src/SecurityConcernException.php" generated-path="customs.src.SecurityConcernException.html" hash="d777c9f5a63878c3cfa71bd269ecf50b" package="Haldayne">
+  <file path="customs/src/SecurityConcernException.php" generated-path="customs.src.SecurityConcernException.html" hash="8e6dfd2c423d4ba1686a2698a7998baf" package="Haldayne">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Haldayne"/>
     </docblock>
+    <class final="false" abstract="false" namespace="Haldayne\Customs" line="21" package="Haldayne">
+      <extends>\Haldayne\Customs\UploadException</extends>
+      <name>SecurityConcernException</name>
+      <full_name>\Haldayne\Customs\SecurityConcernException</full_name>
+      <docblock line="21">
+        <description>A specific kind of UploadException: the upload is suspicious.</description>
+        <long-description>It's recommended that you also log the session ID, IP address, and other
+environment for their diagnostic value. The exception message does not
+include these details for security, but the exception provides a method for
+extracting them. Example:
+
+```
+try {
+    $it = new UploadIterator;
+} catch (SecurityConcernException $ex) {
+    error_log($ex-&gt;getDiagnosticMessage());
+    throw $ex;
+}</long-description>
+        <tag name="package" line="21" description="Haldayne"/>
+        <tag name="inherited_from" description="\Haldayne\Customs\UploadException" refers="\Haldayne\Customs\UploadException" link="/classes/Haldayne.Customs.UploadException.html"/>
+      </docblock>
+      <constant namespace="Haldayne\Customs" line="23" package="Haldayne">
+        <name>NOT_UPLOADED</name>
+        <full_name>\Haldayne\Customs\SecurityConcernException::NOT_UPLOADED</full_name>
+        <value>1</value>
+        <docblock line="23">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Haldayne\Customs" line="24" package="Haldayne">
+        <name>UNKNOWN_CODE</name>
+        <full_name>\Haldayne\Customs\SecurityConcernException::UNKNOWN_CODE</full_name>
+        <value>2</value>
+        <docblock line="24">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <property static="false" visibility="private" namespace="Haldayne\Customs" line="61" package="Haldayne">
+        <name>$htmlName</name>
+        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::htmlName</full_name>
+        <default></default>
+        <docblock line="61">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="61" description="&lt;p&gt;The HTML name we were given.&lt;/p&gt;" type="string" variable="$htmlName">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="31" package="Haldayne">
+        <name>getMessage</name>
+        <full_name>\Haldayne\Customs\SecurityConcernException::getMessage()</full_name>
+        <docblock line="31">
+          <description>Return the message specific for this exception code.</description>
+          <long-description></long-description>
+          <tag name="api" line="31" description=""/>
+          <tag name="since" line="31" description="1.0.0"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="60" package="Haldayne">
+        <name>getDiagnosticMessage</name>
+        <full_name>\Haldayne\Customs\SecurityConcernException::getDiagnosticMessage()</full_name>
+        <docblock line="60">
+          <description>Returns a string containing details of the remote connection at the
+time the security concern was raised.</description>
+          <long-description>Knowing the remote connection and environment helps frame the context
+of the problem: patterns of attack, duration, payload sizes. From this
+data, you can better adapt your environment.
+
+This method captures the session ID, IP address, and other environment
+details into a string for foresnic diagnostics.</long-description>
+          <tag name="return" line="60" description="" type="string">
+            <type>string</type>
+          </tag>
+          <tag name="api" line="60" description=""/>
+          <tag name="since" line="60" description="1.0.0"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Customs" line="53" package="Haldayne">
+        <name>getHtmlName</name>
+        <full_name>\Haldayne\Customs\HtmlNameAccessorTrait::getHtmlName()</full_name>
+        <docblock line="53">
+          <description>Get the HTML variable name.</description>
+          <long-description></long-description>
+          <tag name="return" line="53" description="" type="string">
+            <type>string</type>
+          </tag>
+          <tag name="api" line="53" description=""/>
+          <tag name="since" line="53" description="1.0.0"/>
+        </docblock>
+        <inherited_from>\Haldayne\Customs\HtmlNameAccessorTrait</inherited_from>
+      </method>
+    </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
     </parse_markers>
-    <source>eJylVG1vGjkQ/r6/Yj6kAiJK2vsIfUsDp0ZtAwLS+9BUG8cewMquvfJLCD3lv9/Y611ILtWdVEuwlj1+ZuaZeebN+2pTZYqVaCvGET6xQrCdwqszb50u7SjLvD04/qi1dVcrr7iTWtmrLDs5Ps7gGE7BVsjlSnK4lUqAXsFlVWgmJvccq2A8BLdB8PEQpAXrbSW51N4OCCBgnLuOBYNclyUqgYIeMAc77YEVVkOh1xHCorWEB+fjPpzPgAlh6KQPLLglAxOwUN1JoxUBOVhpEx5KA0KytaIMKMo7VngcwJIAsQkRiAbL1ghCowWlXUCSihdeYEAgJgQ6JgsbMS1yb6Tb9eHGuxjaHqky+k4KQmEE6jZahBcxsHtnGLGnYjLlACb3rKwKHCYSrq+vw8eZHfwdNmEdSQdvQeE2cXru0DCnzSgYPABnjm+gu0jhnGnF0aiWeDjC+94eDI3RJicyu3T+8t0a3bhl5Wudf7fXGzXmbmP0NkDUzuooTzJeMGvhly4pSyqhfdoDGUVBi1PrOLiYLvPL2Zfp6XgypvRejw7uLi8+X0z/usjPpuMJ3f1BfRguY7OFdQxzdN6oyHpTtbYD64JTj+3rwbXAQfP2A6tku7dUYITXg1eDV+nsJH4rf1MErNTrQES19ESDOpew7FbGChwFpy/fBV+9g2vOqHGsY0TwcHiY9bA1CcvUGXVCS65kgbBlsQmTZqIejPbrDcymi2UnUfIvB4fU/YeDDSmRKfDqVumtgtmnWaPP2CSRtEM/AlfMF+5Z1JR7qsWoNXnI6v/n6xf0YZ0JaqDCk7RU2DYioyES6muw1A6DgcK6FizKrYFyssQ0Gep2DKahHyODhkmLoql98+YzZZw0+Bw+jZLDCbLBoiLNG5YchVipxRuwFCdp/qbAcggVc6RQFROgLeO3fRCeJEvYfbrdRY6t/Il2AH8aXcZubdAEc6wfxx6n4txgwKIpx6o4C81hYE+zWoamT/OG0wNPk/H/zcxD1DaQVAapnN7XKYiLfmgVqWM/UO3TWD6kxqif/a70nplRT0TYuKvInVt1H/Vo54UdNhzkUrz9/sL+6Ke654GMeNLpP3qU52dfTheLPH98vIfp9h7fHOWLyfzbZP69M598nS4n+el4PO/8aG16o6SFh+wfa8RKFw==</source>
+    <source>eJylVN9vGjkQfuevmIdUQERJe4/Q9hoFTo3aBgSk99CrNo49gJVde+XxhtBT/vcbe70LyeV0J50lWMsef/Pr++bdr+W27BhRIJVCInwSuRJ7g39cVORtQeNO5+z0tAOncA5UotRrLeFOGwV2DddlboWaPkgsvbZmBH6LUMVD0ARUUamlthUNGSBgXPougUNpiwKNQsUPhIe9rUDkZCG3mwhBSMR4cDkZwOUchFKOTwYggls2cAELzb121jCQh7V14aF2oLTYGEueo7wXeYVDWDEgNiEC50lig6AsEhjrA5I2Mq8UBgTiG/RC5xQxCWXltN8P4LbyMbQDUunsvVaMIhjUb60KL2JgD94J6bWJyRRDmD6IosxxlIpwc3MTPt7t4c+wCetEe3gPBnepppcenfDWjYPBI0jh5RZ6yxTOhTUSnWkLDyf40D+AoXPWZVzMHp+//rBBP2mr8rXOv9fvjxtzv3V2FyBqZ3WUZx2ZCyL4R5ecJbeQnnOgw1HwktaQh6vZKruef5mdT6YTTu/t+Oju+urz1ez3q+xiNpny3S9MtHAZyRbWKSzQV87EqjddaxlYN5w5duiHtAqHzduPotTtnrjBCG+Hb4Zv0tlZ/JbVbR6wKiMjAheqLU80qHMJi3Y6duAkOH39IfjqH11LwcQhL7jAo9Fx1qPWJCxXZ9QNlFzrHGEnIgmTZqIenK02W5jPlqtuKsnfHByX7l8cbFmJwkBl7ozdGZh/mjf6jCSJRTv2o3Atqty/iJpyT70YtyaPnfr/5f4FfZB3QQ3ceJaWCdtGZDxEQn8dFtZjMDBY90JEuTVQXheYJkNNx2Aa+Bgr6IQmVE3vmzefOeOkwZfweZQcT5At5iVr3onkKMTKFG/AUpys+dscixGUwrNCTUyAt0LeDUBVLFnGHvDtPtaY9E+kIfzmbBHZ2qAp4cUgjj3JzbnFgMVTTpRxFrrjwJ5ntQqkT/NG8oOKJ+N/m5nHqG0gqQ3aeHvoUxAX/5AMq+MwUOl5LB8TMepn/1d6L8yoZyJs3JXszq97TzjafUWjpgaZVu+/v6Ifg9T3LBQjnnQHTx5l2cWX8+Uyy54eH2B6/ac3J9lyuvg2XXzvLqZfZ6tpdj6ZLLo/Wpv+OGnhsfMXeMw+fA==</source>
   </file>
   <file path="boost/src/Contract/Jsonable.php" generated-path="boost.src.Contract.Jsonable.html" hash="9d44ae119de918bed5ae503ebcfaa745" package="Default">
     <docblock line="0">
@@ -1094,64 +1247,6 @@ function.</long-description>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
     </parse_markers>
     <source>eJxtku1r2zAQxr/7r7gPg24mjUOSvbWDNW0DM2wsOGVftpGq8jkSlXWaXpKZdv/7JMfZ2KjBBnO65/ndc3r33giTadaiM4wjfGCqZp3Gb5dEzp9nWZHnGeRQoQ9WgxcI5Wo3B7KwewWsri06B9T0FU5aI/dSb4EridqPY2vqvnmqCK3cCg93CAyMpZ/dGMoGOgrAmUXwBPea9oPlYJHEhu7gklSq9s2jvrMNzoNF1UEwpA+V0/jdyRprEMhqtO4M8nwvJBe9GtMJwRmiBus8PyIPKHsWrViSlOxO9SResMjOOtAUKbT8EZKfRROjSGAJiXEfmOr1/x97FMnjdEI6aIKOFdJjuAwe5D+OKuV6tB0lJS8obEUMwqOGlmxy4cEyPyRwOgQTEYe9HK0Qbg+jb6S5TVJ/jNNPei/sYb86KPXovE24Ty+tXEVVk7YzfwmL9VVZAhfMxoFjsklKUTwcr0eSSjP93dPVxxLWi1XZu144RBDem7OicJ7xe9qhbRTtx5zaghWzyWQ2nc2K6dvJm9fTeWwpsiN2zKUlj3Ga5y+yhwziM/A/26yX1Zdl9fWkWn76fLPcLK6vq5Pv59mv7DcHu/dE</source>
-  </file>
-  <file path="boost/src/functions/header_ip.php" generated-path="boost.src.functions.header_ip.html" hash="b11e4494593915684a54913ac1d4bff5" package="Haldayne">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Haldayne"/>
-    </docblock>
-    <function namespace="Haldayne\Boost" line="33" package="Haldayne">
-      <name>header_ip</name>
-      <full_name>\Haldayne\Boost\header_ip()</full_name>
-      <docblock line="33">
-        <description>Return the client IP addresses provided by proxy-supplied headers,
-including the proxy IP address itself.</description>
-        <long-description>Do not rely on these values, because they come from the headers which are
-user-supplied and can be spoofed. (Unless you know certain headers are
-reliable because you own the proxy infrastructure.)
-
-By default, we validate that the values in the headers are IP addresses.
-You can disable this. By default, we check well-known headers, but you can
-change which headers to check.
-
-To determine if the client originated from a known proxy, bearing in mind
-that this test is tainted because it relies upon headers, you can use:
-
-```
-if (header_ip() === [ remote_ip() ]) {
-    // client NOT using a known proxy
-} else {
-    // client IS using a known proxy
-}
-```</long-description>
-        <tag name="package" line="33" description="Haldayne"/>
-        <tag name="param" line="33" description="&lt;p&gt;Check that header-supplied values are IP addresses.&lt;/p&gt;" type="boolean" variable="$validate">
-          <type>boolean</type>
-        </tag>
-        <tag name="param" line="33" description="&lt;p&gt;The headers to check for originating IP addresses.&lt;/p&gt;" type="array" variable="$headers">
-          <type>array</type>
-        </tag>
-        <tag name="return" line="33" description="All IP addresses reported by proxy headers, with the last-&#10;most element being the proxy IP address itself." type="array">
-          <type>array</type>
-        </tag>
-        <tag name="see" line="33" description="" link="http://blog.ircmaxell.com/2012/11/anatomy-of-attack-how-i-hacked.html"/>
-      </docblock>
-      <argument line="0" by_reference="false">
-        <name>$validate</name>
-        <default>true</default>
-        <type>boolean</type>
-      </argument>
-      <argument line="0" by_reference="false">
-        <name>$headers</name>
-        <default>array()</default>
-        <type>array</type>
-      </argument>
-    </function>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-    </parse_markers>
-    <source>eJyNVE1v1DAQvedXzIFDt2o2tMfCilI40AsgKAcEFZ21Jxurjh3ZTrdR1f/OjJP9giIRKYoTzbx5895MXr/pmq5w2FLsUBF8QKtxcPTz0vuYXhVFdXxcwDF8odQHB6khUNaQS3D1GVDrQDFShC74e6NJw3KQ88NQxr7rOFBDQ6gpxBNBMU7ZXhu3ykA5cA8HTIpk67lEyv3eg/MJAtkBfK4dCe7R9hRPYEkKe37nrwMo3xLUwbcZd6oI68aoBjCQgHFs2JFCp0GhYxSInfc16TkcfXNWWAy+hzvn16AoJDRuizchMR+DS0tbCpLg126vJ+PqgDGFXrFqNJ9xmmReDqCpxt6mE1jnVozGJD1gytljc5x+0AfXPVA7C/Sdi0oH2sRMJjUmzv+soBpSd3ywtpSOtq2wfH3KvBlC0FSDbkWTYpu6yY8A84n+tWfwRKE1jsDU+8Pgg1kZx73o0QaEsV6WQ8zCIK5zY5ysBWzq2XAZignkyVoLwEZWk603rEff+T3qE21x9Hxidnt7m8erhqMx7JfpjmawWCzgB4O0PtH45WYGjxIpV1Vt2H/8dM1oQvCAtwQ+AVnm8kzS1dd/5uwoyemiw4AtLL238GLr+btsTVZhpLwbzmkKnrV9AsMQcIAXG6eu96Zl4xrUPmx9EZ5/Y4VxqUewt9Ye7nSgzoe0t9M7C9YmNdl+y1NeClbLfwuWilqRZkn/s+IXkZh1St15VS2tX81NUC0+8LDOeZ+rs5enZ9XpaYVM37dD6esSU0J1VzZ+XZqy4SOvbZNay2hVUfdOJbMdFPF7p/YCeBnpZKeYDMbNrHgsnorfm+uvEw==</source>
   </file>
   <file path="boost/src/Map.php" generated-path="boost.src.Map.html" hash="45924a737ff130f87a0dd2eb70320765" package="Haldayne">
     <docblock line="0">
