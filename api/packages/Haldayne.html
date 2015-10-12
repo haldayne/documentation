@@ -34,7 +34,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">23</span></a></li>
+                <span class="label label-info">25</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -65,9 +65,13 @@
 <i title="Functions" class="icon-custom icon-function"></i> Functions</li>
 <li class="function  "><a href="#function_bytes" title="bytes() :: "><span class="description">bytes()
         </span><pre>bytes</pre></a></li>
+<li class="function  "><a href="#function_header_ip" title="header_ip() :: Return the client IP addresses provided by proxy-supplied headers,
+including the proxy IP address itself."><span class="description">Return the client IP addresses provided by proxy-supplied headers,
+including the proxy IP address itself.</span><pre>header_ip</pre></a></li>
 <li class="function  "><a href="#function_ini_size_to_bytes" title="ini_size_to_bytes() :: `int ini_size_to_bytes(string)` - Convert a short-hand bytes specification
 into integer bytes."><span class="description">`int ini_size_to_bytes(string)` - Convert a short-hand bytes specification
 into integer bytes.</span><pre>ini_size_to_bytes</pre></a></li>
+<li class="function  "><a href="#function_remote_ip" title="remote_ip() :: Return the IPv4 or v6 address of the connecting client."><span class="description">Return the IPv4 or v6 address of the connecting client.</span><pre>remote_ip</pre></a></li>
 <li class="nav-header">
 <i title="Traits" class="icon-custom icon-trait"></i> Traits</li>
 <li><a href="#HtmlNameAccessorTrait" title="Accessor methods for the HTML name of a file upload.">HtmlNameAccessorTrait</a></li>
@@ -75,7 +79,6 @@ into integer bytes.</span><pre>ini_size_to_bytes</pre></a></li>
 <i title="Classes" class="icon-custom icon-class"></i> Classes</li>
 <li><a href="#UploadException" title="Represents an exception during upload.">UploadException</a></li>
 <li><a href="#ServerProblemException" title="A specific kind of UploadException: the server had a problem.">ServerProblemException</a></li>
-<li><a href="#SecurityConcernException" title="A specific kind of UploadException: the upload is suspicious.">SecurityConcernException</a></li>
 <li><a href="#UploadFile" title="Represents a file that has been successfully uploaded.">UploadFile</a></li>
 <li><a href="#UploadError" title="Represents a file that did not successfully upload.">UploadError</a></li>
 <li><a href="#UploadConfig" title="Return information about the upload configuration.">UploadConfig</a></li>
@@ -105,6 +108,48 @@ similar structure.">UploadIterator</a></li>
 </tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument"><h4>$string</h4></div>
+</div></div>
+</div>
+<a xmlns:php="http://php.net/xsl" id="function_header_ip"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_header_ip " data-toggle="collapse" data-target=".function_header_ip .collapse" title="">
+<h2>Return the client IP addresses provided by proxy-supplied headers,
+including the proxy IP address itself.</h2>
+<pre>header_ip(boolean $validate<code> = true</code>, array $headers<code> = array()</code>) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Do not rely on these values, because they come from the headers which are
+user-supplied and can be spoofed. (Unless you know certain headers are
+reliable because you own the proxy infrastructure.)</p>
+<p>By default, we validate that the values in the headers are IP addresses.
+You can disable this. By default, we check well-known headers, but you can
+change which headers to check.</p>
+<p>To determine if the client originated from a known proxy, bearing in mind
+that this test is tainted because it relies upon headers, you can use:</p>
+<pre><code>if (header_ip() === [ remote_ip() ]) {
+    // client NOT using a known proxy
+} else {
+    // client IS using a known proxy
+}</code></pre></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/Haldayne.html">Haldayne</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://blog.ircmaxell.com/2012/11/anatomy-of-attack-how-i-hacked.html"></a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$validate</h4>
+<code>boolean</code><p>Check that header-supplied values are IP addresses.</p></div>
+<div class="subelement argument">
+<h4>$headers</h4>
+<code>array</code><p>The headers to check for originating IP addresses.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>All IP addresses reported by proxy headers, with the last-
+most element being the proxy IP address itself.</div>
 </div></div>
 </div>
 <a xmlns:php="http://php.net/xsl" id="function_ini_size_to_bytes"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_ini_size_to_bytes " data-toggle="collapse" data-target=".function_ini_size_to_bytes .collapse" title="">
@@ -143,6 +188,34 @@ characters in either lower or upper case: &quot;k&quot;, &quot;kB&quot;, &quot;G
 <code>integer</code>Number of bytes the short-hand string represents</div>
 </div></div>
 </div>
+<a xmlns:php="http://php.net/xsl" id="function_remote_ip"></a><div xmlns:php="http://php.net/xsl" class="element clickable function  function_remote_ip " data-toggle="collapse" data-target=".function_remote_ip .collapse" title="">
+<h2>Return the IPv4 or v6 address of the connecting client.</h2>
+<pre>remote_ip() : null | string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The connecting client might be a proxy. If you care to know the IP of the
+client using the proxy, you must rely upon proxy-provided headers: <strong>which
+can be spoofed</strong>.</p>
+<p>If you want a reliable IP that may not uniquely represent the actual
+connecting client, use this function. But if you want a less reliable,
+though often more accurate proxy-client IP address, use the <code>header_ip</code>
+function.</p></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/Haldayne.html">Haldayne</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://stackoverflow.com/a/3003233/2908724"></a></td>
+</tr>
+</table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>null</code><code>string</code>The connecting client IP, up to 45 ASCII characters
+long or null if using the CLI SAPI.</div>
+</div></div>
+</div>
 <h3>
 <i title="Classes" class="icon-custom icon-class"></i> Classes, interfaces, and traits</h3>
 <div xmlns:php="http://php.net/xsl" id="HtmlNameAccessorTrait" class="element ajax clickable trait">
@@ -165,13 +238,6 @@ characters in either lower or upper case: &quot;k&quot;, &quot;kB&quot;, &quot;G
 <p class="short_description">Implements a map of maps.</p>
 <div class="details collapse"></div>
 <a href="../classes/Haldayne.Boost.MapOfMaps.html" class="more">« More »</a>
-</div>
-<div xmlns:php="http://php.net/xsl" id="SecurityConcernException" class="element ajax clickable class">
-<h1>SecurityConcernException<a href="../classes/Haldayne.Customs.SecurityConcernException.html">¶</a>
-</h1>
-<p class="short_description">A specific kind of UploadException: the upload is suspicious.</p>
-<div class="details collapse"></div>
-<a href="../classes/Haldayne.Customs.SecurityConcernException.html" class="more">« More »</a>
 </div>
 <div xmlns:php="http://php.net/xsl" id="ServerProblemException" class="element ajax clickable class">
 <h1>ServerProblemException<a href="../classes/Haldayne.Customs.ServerProblemException.html">¶</a>
@@ -222,7 +288,7 @@ similar structure.</p>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2015-10-09T16:26:11-04:00.<br></footer></div>
+            generated on 2015-10-12T13:54:24-04:00.<br></footer></div>
 </div>
 </body>
 </html>

@@ -34,7 +34,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">23</span></a></li>
+                <span class="label label-info">25</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -64,9 +64,9 @@
 <li class="nav-header">
 <i title="Methods" class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public "><a href="#method_getDiagnosticMessage" title="getDiagnosticMessage() :: Returns a string containing deeper diagnostics of the temporary
-directory and installed extensions."><span class="description">Returns a string containing deeper diagnostics of the temporary
-directory and installed extensions.</span><pre>getDiagnosticMessage()</pre></a></li>
+<li class="method public "><a href="#method_getDiagnosticMessage" title="getDiagnosticMessage() :: Returns a string containing deeper diagnostics of the system state
+at the time the server problem occurred."><span class="description">Returns a string containing deeper diagnostics of the system state
+at the time the server problem occurred.</span><pre>getDiagnosticMessage()</pre></a></li>
 <li class="method public inherited"><a href="#method_getHtmlName" title="getHtmlName() :: Get the HTML variable name."><span class="description">Get the HTML variable name.</span><pre>getHtmlName()</pre></a></li>
 <li class="method public "><a href="#method_getMessage" title="getMessage() :: Return the message specific for this exception code."><span class="description">Return the message specific for this exception code.</span><pre>getMessage()</pre></a></li>
 </ul>
@@ -98,7 +98,8 @@ directory and installed extensions.</span><pre>getDiagnosticMessage()</pre></a><
 <div class="details">
 <div class="long_description"><p>It's recommended that you also log the temporary directory and currently
 installed extensions for their diagnostic value. The exception message
-does not include these details for security.</p>
+does not include these details for security, but the exception provides
+a method for extracting them. Example:</p>
 <pre><code>
 try {
     $it = new UploadIterator;
@@ -119,12 +120,17 @@ try {
 <h3>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
 <a id="method_getDiagnosticMessage"></a><div class="element clickable method public method_getDiagnosticMessage " data-toggle="collapse" data-target=".method_getDiagnosticMessage .collapse" title="public">
-<h2>Returns a string containing deeper diagnostics of the temporary
-directory and installed extensions.</h2>
+<h2>Returns a string containing deeper diagnostics of the system state
+at the time the server problem occurred.</h2>
 <pre>getDiagnosticMessage() : string</pre>
 <div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
+<div class="long_description"><p>Server problems may not last long (a lot of simultaneous uploads
+temporarily eats all the upload space) or may be semi-permanent (an
+extension is preventing all uploads). It's therefore important to
+know as much as possible about the system at the time of the problem.</p>
+<p>This method captures the free space available, loaded extensions, and
+session id into a string for foresnic diagnostics.</p></div>
 <table class="table table-bordered">
 <tr>
 <th>api</th>
@@ -200,7 +206,7 @@ directory and installed extensions.</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2015-10-09T16:26:11-04:00.<br></footer></div>
+            generated on 2015-10-12T13:54:24-04:00.<br></footer></div>
 </div>
 </body>
 </html>
