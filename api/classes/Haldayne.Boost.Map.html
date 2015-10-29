@@ -34,7 +34,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">25</span></a></li>
+                <span class="label label-info">30</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -70,6 +70,7 @@
 <li class="method public "><a href="#method_diff" title="diff() :: Return a new map containing those keys and values that are not present in
 the given collection."><span class="description">Return a new map containing those keys and values that are not present in
 the given collection.</span><pre>diff()</pre></a></li>
+<li class="method public "><a href="#method_every" title="every() :: Test if every element satisfies the callable."><span class="description">Test if every element satisfies the callable.</span><pre>every()</pre></a></li>
 <li class="method public "><a href="#method_find" title="find() :: Return a new map containing only members of this map that pass the callable."><span class="description">Return a new map containing only members of this map that pass the callable.</span><pre>find()</pre></a></li>
 <li class="method public "><a href="#method_first" title="first() :: Return a new map containing the first N elements matching the callable."><span class="description">Return a new map containing the first N elements matching the callable.</span><pre>first()</pre></a></li>
 <li class="method public "><a href="#method_forget" title="forget() :: Remove a key and its corresponding value from the map."><span class="description">Remove a key and its corresponding value from the map.</span><pre>forget()</pre></a></li>
@@ -80,6 +81,7 @@ the given collection."><span class="description">Return a new map containing tho
 the given collection.</span><pre>intersect()</pre></a></li>
 <li class="method public "><a href="#method_isEmpty" title="isEmpty() :: Determine if any key and their values have been set into the map."><span class="description">Determine if any key and their values have been set into the map.</span><pre>isEmpty()</pre></a></li>
 <li class="method public "><a href="#method_last" title="last() :: Return a new map containing the last N elements matching the callable."><span class="description">Return a new map containing the last N elements matching the callable.</span><pre>last()</pre></a></li>
+<li class="method public "><a href="#method_none" title="none() :: Test if no element satisifes the callable."><span class="description">Test if no element satisifes the callable.</span><pre>none()</pre></a></li>
 <li class="method public "><a href="#method_offsetExists" title="offsetExists() :: Determine if a value exists at a given key."><span class="description">Determine if a value exists at a given key.</span><pre>offsetExists()</pre></a></li>
 <li class="method public "><a href="#method_offsetGet" title="offsetGet() :: Get a value at a given key."><span class="description">Get a value at a given key.</span><pre>offsetGet()</pre></a></li>
 <li class="method public "><a href="#method_offsetSet" title="offsetSet() :: Set the value at a given key."><span class="description">Set the value at a given key.</span><pre>offsetSet()</pre></a></li>
@@ -90,6 +92,7 @@ each new bucket."><span class="description">Returns a new map, where elements fr
 new map elements. The return value of the code determines the key for
 each new bucket.</span><pre>partition()</pre></a></li>
 <li class="method public "><a href="#method_set" title="set() :: Set a key and its corresponding value into the map."><span class="description">Set a key and its corresponding value into the map.</span><pre>set()</pre></a></li>
+<li class="method public "><a href="#method_some" title="some() :: Test if at least one element satisfies the callable."><span class="description">Test if at least one element satisfies the callable.</span><pre>some()</pre></a></li>
 <li class="method public "><a href="#method_toArray" title="toArray() :: Copy this map into an array, recursing as necessary to convert contained
 collections into arrays."><span class="description">Copy this map into an array, recursing as necessary to convert contained
 collections into arrays.</span><pre>toArray()</pre></a></li>
@@ -254,6 +257,20 @@ and values match will be removed.</p></div>
 <div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
 </div></div>
 </div>
+<a id="method_every"></a><div class="element clickable method public method_every " data-toggle="collapse" data-target=".method_every .collapse" title="public">
+<h2>Test if every element satisfies the callable.</h2>
+<pre>every($code) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>bool</th>
+<td></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$code</h4></div>
+</div></div>
+</div>
 <a id="method_find"></a><div class="element clickable method public method_find " data-toggle="collapse" data-target=".method_find .collapse" title="public">
 <h2>Return a new map containing only members of this map that pass the callable.</h2>
 <pre>find(callable|string $code) : \Haldayne\Boost\Map</pre>
@@ -396,6 +413,20 @@ $odds = $m-&gt;all('return 1 == ($v % 2);');</code></pre></div>
 <div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
 </div></div>
 </div>
+<a id="method_none"></a><div class="element clickable method public method_none " data-toggle="collapse" data-target=".method_none .collapse" title="public">
+<h2>Test if no element satisifes the callable.</h2>
+<pre>none($code) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>bool</th>
+<td></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$code</h4></div>
+</div></div>
+</div>
 <a id="method_offsetExists"></a><div class="element clickable method public method_offsetExists " data-toggle="collapse" data-target=".method_offsetExists .collapse" title="public">
 <h2>Determine if a value exists at a given key.</h2>
 <pre>offsetExists(mixed $key) : boolean</pre>
@@ -509,6 +540,20 @@ code returns a non-scalar, it explodes.</p></div>
 </div>
 <h3>Returns</h3>
 <div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
+</div></div>
+</div>
+<a id="method_some"></a><div class="element clickable method public method_some " data-toggle="collapse" data-target=".method_some .collapse" title="public">
+<h2>Test if at least one element satisfies the callable.</h2>
+<pre>some($code) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>bool</th>
+<td></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$code</h4></div>
 </div></div>
 </div>
 <a id="method_toArray"></a><div class="element clickable method public method_toArray " data-toggle="collapse" data-target=".method_toArray .collapse" title="public">
@@ -804,7 +849,7 @@ created.</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2015-10-12T13:55:09-04:00.<br></footer></div>
+            generated on 2015-10-29T15:16:29-04:00.<br></footer></div>
 </div>
 </body>
 </html>

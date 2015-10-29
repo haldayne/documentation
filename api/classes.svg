@@ -22,12 +22,16 @@
 <text text-anchor="middle" x="432.851" y="-775.2" font-family="Times,serif" font-size="11.00" fill="gray">Customs</text>
 </g>
 <g id="clust4" class="cluster"><title>cluster_\Haldayne\Boost</title>
-<path fill="none" stroke="gray" d="M36.793,-222C36.793,-222 568.273,-222 568.273,-222 574.273,-222 580.273,-228 580.273,-234 580.273,-234 580.273,-372 580.273,-372 580.273,-378 574.273,-384 568.273,-384 568.273,-384 36.793,-384 36.793,-384 30.793,-384 24.793,-378 24.793,-372 24.793,-372 24.793,-234 24.793,-234 24.793,-228 30.793,-222 36.793,-222"/>
-<text text-anchor="middle" x="302.533" y="-371.2" font-family="Times,serif" font-size="11.00" fill="gray">Boost</text>
+<path fill="none" stroke="gray" d="M36.793,-222C36.793,-222 569.773,-222 569.773,-222 575.773,-222 581.773,-228 581.773,-234 581.773,-234 581.773,-372 581.773,-372 581.773,-378 575.773,-384 569.773,-384 569.773,-384 36.793,-384 36.793,-384 30.793,-384 24.793,-378 24.793,-372 24.793,-372 24.793,-234 24.793,-234 24.793,-228 30.793,-222 36.793,-222"/>
+<text text-anchor="middle" x="303.283" y="-371.2" font-family="Times,serif" font-size="11.00" fill="gray">Boost</text>
 </g>
 <g id="clust5" class="cluster"><title>cluster_\Haldayne\Boost\Contract</title>
 <path fill="none" stroke="gray" d="M44.793,-230C44.793,-230 113.793,-230 113.793,-230 119.793,-230 125.793,-236 125.793,-242 125.793,-242 125.793,-344 125.793,-344 125.793,-350 119.793,-356 113.793,-356 113.793,-356 44.793,-356 44.793,-356 38.793,-356 32.793,-350 32.793,-344 32.793,-344 32.793,-242 32.793,-242 32.793,-236 38.793,-230 44.793,-230"/>
 <text text-anchor="middle" x="79.293" y="-343.2" font-family="Times,serif" font-size="11.00" fill="gray">Contract</text>
+</g>
+<g id="clust6" class="cluster"><title>cluster_\Haldayne\Boost\Lambda</title>
+<path fill="none" stroke="gray" d="M505.773,-280C505.773,-280 561.773,-280 561.773,-280 567.773,-280 573.773,-286 573.773,-292 573.773,-292 573.773,-340 573.773,-340 573.773,-346 567.773,-352 561.773,-352 561.773,-352 505.773,-352 505.773,-352 499.773,-352 493.773,-346 493.773,-340 493.773,-340 493.773,-292 493.773,-292 493.773,-286 499.773,-280 505.773,-280"/>
+<text text-anchor="middle" x="533.773" y="-339.2" font-family="Times,serif" font-size="11.00" fill="gray">Lambda</text>
 </g>
 <!-- \\Haldayne\\Customs\\UploadException -->
 <g id="node1" class="node"><title>\\Haldayne\\Customs\\UploadException</title>
@@ -35,7 +39,7 @@
 <text text-anchor="middle" x="301.43" y="-685.2" font-family="Courier,monospace" font-size="11.00">UploadException</text>
 </g>
 <!-- \\RuntimeException -->
-<g id="node13" class="node"><title>\\RuntimeException</title>
+<g id="node14" class="node"><title>\\RuntimeException</title>
 <ellipse fill="none" stroke="black" cx="79.293" cy="-180" rx="79.0865" ry="18"/>
 <text text-anchor="middle" x="79.293" y="-176.3" font-family="Times,serif" font-size="14.00" fill="gray">\RuntimeException</text>
 </g>
@@ -85,7 +89,7 @@
 <text text-anchor="middle" x="533.773" y="-469.2" font-family="Courier,monospace" font-size="11.00">UploadIterator</text>
 </g>
 <!-- \\ArrayAccess -->
-<g id="node14" class="node"><title>\\ArrayAccess</title>
+<g id="node15" class="node"><title>\\ArrayAccess</title>
 <ellipse fill="none" stroke="black" cx="79.293" cy="-18" rx="58.4896" ry="18"/>
 <text text-anchor="middle" x="79.293" y="-14.3" font-family="Times,serif" font-size="14.00" fill="gray">\ArrayAccess</text>
 </g>
@@ -96,7 +100,7 @@
 <polygon fill="none" stroke="black" points="136.804,-27.7767 126.265,-28.8706 135.186,-34.5872 136.804,-27.7767"/>
 </g>
 <!-- \\SeekableIterator -->
-<g id="node15" class="node"><title>\\SeekableIterator</title>
+<g id="node16" class="node"><title>\\SeekableIterator</title>
 <ellipse fill="none" stroke="black" cx="301.43" cy="-26" rx="70.6878" ry="18"/>
 <text text-anchor="middle" x="301.43" y="-22.3" font-family="Times,serif" font-size="14.00" fill="gray">\SeekableIterator</text>
 </g>
@@ -106,7 +110,7 @@
 <polygon fill="none" stroke="black" points="358.982,-41.5217 348.574,-39.5419 355.475,-47.5802 358.982,-41.5217"/>
 </g>
 <!-- \\Countable -->
-<g id="node16" class="node"><title>\\Countable</title>
+<g id="node17" class="node"><title>\\Countable</title>
 <ellipse fill="none" stroke="black" cx="79.293" cy="-72" rx="49.2915" ry="18"/>
 <text text-anchor="middle" x="79.293" y="-68.3" font-family="Times,serif" font-size="14.00" fill="gray">\Countable</text>
 </g>
@@ -130,8 +134,13 @@
 <polygon fill="none" stroke="black" points="114.793,-274 43.793,-274 43.793,-238 114.793,-238 114.793,-274"/>
 <text text-anchor="middle" x="79.293" y="-253.2" font-family="Courier,monospace" font-size="11.00">Jsonable</text>
 </g>
+<!-- \\Haldayne\\Boost\\Lambda\\Factory -->
+<g id="node11" class="node"><title>\\Haldayne\\Boost\\Lambda\\Factory</title>
+<polygon fill="none" stroke="black" points="565.773,-324 501.773,-324 501.773,-288 565.773,-288 565.773,-324"/>
+<text text-anchor="middle" x="533.773" y="-303.2" font-family="Courier,monospace" font-size="11.00">Factory</text>
+</g>
 <!-- \\Haldayne\\Boost\\Map -->
-<g id="node11" class="node"><title>\\Haldayne\\Boost\\Map</title>
+<g id="node12" class="node"><title>\\Haldayne\\Boost\\Map</title>
 <polygon fill="none" stroke="black" points="328.43,-266 274.43,-266 274.43,-230 328.43,-230 328.43,-266"/>
 <text text-anchor="middle" x="301.43" y="-245.2" font-family="Courier,monospace" font-size="11.00">Map</text>
 </g>
@@ -156,7 +165,7 @@
 <polygon fill="none" stroke="black" points="131.604,-81.9942 121.009,-81.9763 129.281,-88.5973 131.604,-81.9942"/>
 </g>
 <!-- \\IteratorAggregate -->
-<g id="node17" class="node"><title>\\IteratorAggregate</title>
+<g id="node18" class="node"><title>\\IteratorAggregate</title>
 <ellipse fill="none" stroke="black" cx="79.293" cy="-126" rx="75.2868" ry="18"/>
 <text text-anchor="middle" x="79.293" y="-122.3" font-family="Times,serif" font-size="14.00" fill="gray">\IteratorAggregate</text>
 </g>
@@ -166,7 +175,7 @@
 <polygon fill="none" stroke="black" points="138.061,-140.256 127.468,-140.063 135.628,-146.82 138.061,-140.256"/>
 </g>
 <!-- \\Haldayne\\Boost\\MapOfMaps -->
-<g id="node12" class="node"><title>\\Haldayne\\Boost\\MapOfMaps</title>
+<g id="node13" class="node"><title>\\Haldayne\\Boost\\MapOfMaps</title>
 <polygon fill="none" stroke="black" points="572.273,-266 495.273,-266 495.273,-230 572.273,-230 572.273,-266"/>
 <text text-anchor="middle" x="533.773" y="-245.2" font-family="Courier,monospace" font-size="11.00">MapOfMaps</text>
 </g>
