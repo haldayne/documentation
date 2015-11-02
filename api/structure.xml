@@ -211,6 +211,102 @@ if (header_ip() === [ remote_ip() ]) {
     </parse_markers>
     <source>eJyNVE1v1DAQvedXzIFDt2o2tMfCilI40AsgKAcEFZ21Jxurjh3ZTrdR1f/OjJP9giIRKYoTzbx5895MXr/pmq5w2FLsUBF8QKtxcPTz0vuYXhVFdXxcwDF8odQHB6khUNaQS3D1GVDrQDFShC74e6NJw3KQ88NQxr7rOFBDQ6gpxBNBMU7ZXhu3ykA5cA8HTIpk67lEyv3eg/MJAtkBfK4dCe7R9hRPYEkKe37nrwMo3xLUwbcZd6oI68aoBjCQgHFs2JFCp0GhYxSInfc16TkcfXNWWAy+hzvn16AoJDRuizchMR+DS0tbCpLg126vJ+PqgDGFXrFqNJ9xmmReDqCpxt6mE1jnVozGJD1gytljc5x+0AfXPVA7C/Sdi0oH2sRMJjUmzv+soBpSd3ywtpSOtq2wfH3KvBlC0FSDbkWTYpu6yY8A84n+tWfwRKE1jsDU+8Pgg1kZx73o0QaEsV6WQ8zCIK5zY5ysBWzq2XAZignkyVoLwEZWk603rEff+T3qE21x9Hxidnt7m8erhqMx7JfpjmawWCzgB4O0PtH45WYGjxIpV1Vt2H/8dM1oQvCAtwQ+AVnm8kzS1dd/5uwoyemiw4AtLL238GLr+btsTVZhpLwbzmkKnrV9AsMQcIAXG6eu96Zl4xrUPmx9EZ5/Y4VxqUewt9Ye7nSgzoe0t9M7C9YmNdl+y1NeClbLfwuWilqRZkn/s+IXkZh1St15VS2tX81NUC0+8LDOeZ+rs5enZ9XpaYVM37dD6esSU0J1VzZ+XZqy4SOvbZNay2hVUfdOJbMdFPF7p/YCeBnpZKeYDMbNrHgsnorfm+uvEw==</source>
   </file>
+  <file path="boost/src/Lambda/Y.php" generated-path="boost.src.Lambda.Y.html" hash="7233a52f2343dbbcac0b0ed5437f0562" package="Haldayne">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Haldayne"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Haldayne\Boost\Lambda" line="38" package="Haldayne">
+      <extends/>
+      <name>Y</name>
+      <full_name>\Haldayne\Boost\Lambda\Y</full_name>
+      <docblock line="38">
+        <description>Implements the Y-combinator.</description>
+        <long-description>It's possible to express a "recursive" function -- like Fibonacci and
+factorials -- without recursion or iteration. Using a surprising and
+admittedly dark magic approach discovered by Haskell Curry called the Y-
+combinator, you can use lambda functions to calculate fixed-points and
+to solve around them:
+
+```
+// calculates n-th Fibonacci using two fixed points
+// this version runs in exponential time
+$fibonacci = new Y(function ($fibonacci) {
+    return function ($n) use ($fibonacci) {
+        switch ($n) {
+        case 0:  return 0;
+        case 1:  return 1;
+        default: return $fibonacci($n-1) + $fibonacci($n-2);
+        }
+    }
+});
+var_dump($fibonacci(6));
+```</long-description>
+        <tag name="TODO" line="38" description="The recursive callable which we pass to the Y-combinator has exponential&#10;run-time. But, we can change that to linear time just by adding caching&#10;to the internal combinator. That's where this class comes in: it internally&#10;caches intermediary results, so that simple recursive definitions have&#10;optimal performance without having to implement their own caching."/>
+        <tag name="see" line="38" description="" link="https://php100.wordpress.com/2009/04/13/php-y-combinator/"/>
+        <tag name="see" line="38" description="" link="http://matt.might.net/articles/implementation-of-recursive-fixed-point-y-combinator-in-javascript-for-memoization/"/>
+        <tag name="package" line="38" description="Haldayne"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="Haldayne\Boost\Lambda" line="55" package="Haldayne">
+        <name>$code</name>
+        <full_name>\Haldayne\Boost\Lambda\Y::code</full_name>
+        <default>null</default>
+        <docblock line="55">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="Haldayne\Boost\Lambda" line="56" package="Haldayne">
+        <name>$cache</name>
+        <full_name>\Haldayne\Boost\Lambda\Y::cache</full_name>
+        <default>array()</default>
+        <docblock line="56">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Lambda" line="40" package="Haldayne">
+        <name>__construct</name>
+        <full_name>\Haldayne\Boost\Lambda\Y::__construct()</full_name>
+        <docblock line="40">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$code</name>
+          <default></default>
+          <type>callable</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Lambda" line="45" package="Haldayne">
+        <name>__invoke</name>
+        <full_name>\Haldayne\Boost\Lambda\Y::__invoke()</full_name>
+        <docblock line="45">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost\Lambda" line="58" package="Haldayne">
+        <name>combinator</name>
+        <full_name>\Haldayne\Boost\Lambda\Y::combinator()</full_name>
+        <docblock line="58">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="40" code="PPC:ERR-50015">Argument $code is missing from the Docblock of __construct</error>
+      <error line="40" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="45" code="PPC:ERR-50008">No summary for method __invoke()</error>
+      <error line="58" code="PPC:ERR-50008">No summary for method combinator()</error>
+      <error line="55" code="PPC:ERR-50007">No summary for property $code</error>
+      <error line="56" code="PPC:ERR-50007">No summary for property $cache</error>
+    </parse_markers>
+    <source>eJx9VG2P2zYM/p5fQRQHLLnFca4bBizZS9u9YAcMaDHcBhzWIcfITKyeLBmSnDQb8t9Hyoljp9j0xS8kH/EhH/Kb7+uyHlmsKNSoCH5BU+DB0vs3zoX4/les1gUuR6P89nYEt3Bf1YYqsjFALAkeM+WqtbYYnZ+xPbnEzwLULgS9NgTRAX2sPYUACC88qcYHvaMXsGmsitpZyDIw+pngZ712FpXSgLYQoA0qhtVogvjsdSxdE+EEwYHOg47kUVBm8HvQdst3hMbXXrcfLQ4WlY6RCnOAAv0zVLjVCrCuvUNVQqGDcjvyVMD6wPzDMxkDPzTeH0ChMfy/pSpYF7pTOLiGHSw0gcCkOnWkgvDmYNUYjAQb/ZGKrHZa6nbKih2CMzsC9K6x6Y5qcSrh09OTPPL8ghHAZrHsFalJFOPetejQop/CYqkDMKdUJ99wPtpKH5zl1nFFIeqKxPdm0wF+C5b28DjuGjO+GCfwD4i7HE+x8RZ6bnaSajD0P7vLCdw8rnTyHBgUctx80YHOl59Y7y7Wu4G1oA02Ji7O1svtfE92N4HPr369nAzij+eP9HJsjTv0q6Kp6h6X8VeT1tZ2Rd5ePbz98a28PLAwOk0ntaCIfl9qprsnqDEkKVzPCpQY+v0QLG5TJm2ZwZsmTiVaxKVKtFseoxKjABltCX1qH3xoQhTJYlGIFBSLmZ8nbcmNLAjylrvdG1JOGWVA9yUrvtWJMpIl+5DIZMFD1UWaQxI9Iycb/6yo0MiTwRPNxQ9TFnGbXNCyGnrV4P5oq9tpKHGX5OZqzpwTqslvnK/Q8sY5Dzb7JEU70OclIyy0B7e3Z3ayZJISXwUiKGOswyLPeYXdzeezvfNFWjUzJpO/nM+/zudf5ndfiD079MqfDxAYoMIYZ5XelnFmKeboo1aGQt5lkpZM5jZZxy/rDfUAPNM2+4A7DMrrOmbMM6uocvrvhCFX56O25I8jHgY+dbM2vJG6iVqtFBct+kbFcaepG+UKmiT/NkrOjTQw+05MPL/JZTlqNf0fyNru3DONr4FOMyS3rXiW/UpCVug9HsadUxplKYVaLC58x5PpwCNFbily9DacLpIzGWTGS+rdb/d/vH74CV6/uz9l6/VO1uXNiY9tjFleWUSKbPrzr+UwpqPYT6xfKXHgwP52k63WLQ/5XsJxeV2SFDi+ChsQPqfba8Zy4HBGEksPqdua14BtvhuBbNP6xPp/7eLI6XUTriCOve9j15fj6F8onYDg</source>
+  </file>
   <file path="boost/src/Contract/Arrayable.php" generated-path="boost.src.Contract.Arrayable.html" hash="7f7c51100037144d3e52566dd96cb54e" package="Default">
     <docblock line="0">
       <description></description>
@@ -1248,16 +1344,889 @@ function.</long-description>
     </parse_markers>
     <source>eJxtku1r2zAQxr/7r7gPg24mjUOSvbWDNW0DM2wsOGVftpGq8jkSlXWaXpKZdv/7JMfZ2KjBBnO65/ndc3r33giTadaiM4wjfGCqZp3Gb5dEzp9nWZHnGeRQoQ9WgxcI5Wo3B7KwewWsri06B9T0FU5aI/dSb4EridqPY2vqvnmqCK3cCg93CAyMpZ/dGMoGOgrAmUXwBPea9oPlYJHEhu7gklSq9s2jvrMNzoNF1UEwpA+V0/jdyRprEMhqtO4M8nwvJBe9GtMJwRmiBus8PyIPKHsWrViSlOxO9SResMjOOtAUKbT8EZKfRROjSGAJiXEfmOr1/x97FMnjdEI6aIKOFdJjuAwe5D+OKuV6tB0lJS8obEUMwqOGlmxy4cEyPyRwOgQTEYe9HK0Qbg+jb6S5TVJ/jNNPei/sYb86KPXovE24Ty+tXEVVk7YzfwmL9VVZAhfMxoFjsklKUTwcr0eSSjP93dPVxxLWi1XZu144RBDem7OicJ7xe9qhbRTtx5zaghWzyWQ2nc2K6dvJm9fTeWwpsiN2zKUlj3Ga5y+yhwziM/A/26yX1Zdl9fWkWn76fLPcLK6vq5Pv59mv7DcHu/dE</source>
   </file>
-  <file path="boost/src/Map.php" generated-path="boost.src.Map.html" hash="984648b2e881c53cf4fd5016914b02d0" package="Haldayne">
+  <file path="boost/src/Map.php" generated-path="boost.src.Map.html" hash="e5143131618a028384c1a337b41e8e05" package="Haldayne">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Haldayne"/>
     </docblock>
+    <namespace-alias name="Arrayable">\Haldayne\Boost\Contract\Arrayable</namespace-alias>
+    <namespace-alias name="Jsonable">\Haldayne\Boost\Contract\Jsonable</namespace-alias>
+    <namespace-alias name="Expression">\Haldayne\Boost\Lambda\Expression</namespace-alias>
+    <class final="false" abstract="false" namespace="Haldayne\Boost" line="42" package="Haldayne">
+      <extends/>
+      <implements>\Countable</implements>
+      <implements>\Haldayne\Boost\Contract\Arrayable</implements>
+      <implements>\Haldayne\Boost\Contract\Jsonable</implements>
+      <implements>\ArrayAccess</implements>
+      <implements>\IteratorAggregate</implements>
+      <name>Map</name>
+      <full_name>\Haldayne\Boost\Map</full_name>
+      <docblock line="42">
+        <description>An improvement on PHP associative arrays.</description>
+        <long-description>Sports a fluent interface accepting callables to drive array operations,
+similar in spirit to jQuery. Supports keys of any type: scalars, even
+arrays and objects!  Used in place of `array ()` and `[]`, your code will
+be easier to write *and* read.
+
+In the API, a formal variable named `$collection` must be one of:
+  - Haldayne\Boost\Map
+  - Haldayne\Boost\Contract\Arrayable
+  - Haldayne\Boost\Contract\Jsonable
+  - \Traversable
+  - object
+  - array
+
+Many of these methods allow you to apply code to all elements of the map:
+look for formal parameters named `$code` or `$expression`. Some will allow
+`callable`, which are the usual PHP callable types. Some will allow for
+both `callable` *and* `string`.
+
+When given as string, an anonymous function is built for you, using the
+string as the meat of the function. This lets you write extremely compact
+expressions for filtering, at the one-time cost of converting the string
+to the body of an anonymous function.  Inside these anonymous functions
+the variable `$_0` holds the current value, while $_1 holds the current
+key.
+
+In the API, a formal variable named `$key` may be of *any* type.
+
+As much as possible, method names were chosen to reflect synonymous usage in
+the PHP engine itself. When not possible or relevant, the names may reflect
+usage from Laravel.</long-description>
+        <tag name="package" line="42" description="Haldayne"/>
+      </docblock>
+      <constant namespace="Haldayne\Boost" line="49" package="Haldayne">
+        <name>LOOSE</name>
+        <full_name>\Haldayne\Boost\Map::LOOSE</full_name>
+        <value>true</value>
+        <docblock line="49">
+          <description>Should the comparison be made loosely?</description>
+          <long-description></long-description>
+          <tag name="see" line="49" description="" link="\Haldayne\Boost\Map::diff"/>
+          <tag name="see" line="49" description="" link="\Haldayne\Boost\Map::intersect"/>
+        </docblock>
+      </constant>
+      <constant namespace="Haldayne\Boost" line="56" package="Haldayne">
+        <name>STRICT</name>
+        <full_name>\Haldayne\Boost\Map::STRICT</full_name>
+        <value>false</value>
+        <docblock line="56">
+          <description>Should the comparison be made strictly?</description>
+          <long-description></long-description>
+          <tag name="see" line="56" description="" link="\Haldayne\Boost\Map::diff"/>
+          <tag name="see" line="56" description="" link="\Haldayne\Boost\Map::intersect"/>
+        </docblock>
+      </constant>
+      <property static="false" visibility="private" namespace="Haldayne\Boost" line="558" package="Haldayne">
+        <name>$array</name>
+        <full_name>\Haldayne\Boost\Map::array</full_name>
+        <default>array()</default>
+        <docblock line="558">
+          <description>The internal array representation of the map.</description>
+          <long-description></long-description>
+          <tag name="var" line="558" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="Haldayne\Boost" line="564" package="Haldayne">
+        <name>$guard</name>
+        <full_name>\Haldayne\Boost\Map::guard</full_name>
+        <default>null</default>
+        <docblock line="564">
+          <description>The guard code protecting sets.</description>
+          <long-description></long-description>
+          <tag name="var" line="564" description="" type="callable|string|null" variable="">
+            <type>callable</type>
+            <type>string</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="Haldayne\Boost" line="570" package="Haldayne">
+        <name>$map_key_to_hash</name>
+        <full_name>\Haldayne\Boost\Map::map_key_to_hash</full_name>
+        <default>array()</default>
+        <docblock line="570">
+          <description>Track hashes we've created for non-string keys.</description>
+          <long-description></long-description>
+          <tag name="var" line="570" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="70" package="Haldayne">
+        <name>__construct</name>
+        <full_name>\Haldayne\Boost\Map::__construct()</full_name>
+        <docblock line="70">
+          <description>Create a new map.</description>
+          <long-description>Initialize the map with the given collection, if any. Accepts any kind
+of collection: array, object, Traversable, another Map, etc. Optionally,
+wrap every key,value sets into the map with the given guard code: if the
+guard code fails, the set will throw an exception.</long-description>
+          <tag name="param" line="70" description="" type="\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array" variable="$collection">
+            <type>\Haldayne\Boost\Map</type>
+            <type>\Haldayne\Boost\Contract\Arrayable</type>
+            <type>\Haldayne\Boost\Contract\Jsonable</type>
+            <type>\Haldayne\Boost\Traversable</type>
+            <type>object</type>
+            <type>array</type>
+          </tag>
+          <tag name="param" line="70" description="" type="callable" variable="$guard">
+            <type>callable</type>
+          </tag>
+          <tag name="throws" line="70" description="" type="\InvalidArgumentException">
+            <type>\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$collection</name>
+          <default>null</default>
+          <type>\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$guard</name>
+          <default>null</default>
+          <type>callable</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="108" package="Haldayne">
+        <name>find</name>
+        <full_name>\Haldayne\Boost\Map::find()</full_name>
+        <docblock line="108">
+          <description>Return a new map containing only members of this map that pass the
+expression.</description>
+          <long-description>You give an expression deciding whether an element is in or out, and
+this returns a new map of those that are in. Ex, find both the odd and
+even numbers:
+
+```
+$nums = new Map(range(0, 9));
+$even = $nums-&gt;find(function ($val, $key) { return 0 == $val % 2; });
+$odds = $nums-&gt;find('1 == ($_0 % 2)');
+```</long-description>
+          <tag name="param" line="108" description="" type="callable|string" variable="$expression">
+            <type>callable</type>
+            <type>string</type>
+          </tag>
+          <tag name="return" line="108" description="" type="\Haldayne\Boost\Map">
+            <type>\Haldayne\Boost\Map</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$expression</name>
+          <default></default>
+          <type>callable|string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="129" package="Haldayne">
+        <name>first</name>
+        <full_name>\Haldayne\Boost\Map::first()</full_name>
+        <docblock line="129">
+          <description>Return a new map containing the first N elements passing the
+expression.</description>
+          <long-description>Like `find`, but stop after finding N elements from the front. Defaults
+to N = 1.
+
+```
+$nums = new Map(range(0, 9));
+$odd3 = $nums-&gt;first('1 == ($_0 % 2)', 3); // first three odds
+```</long-description>
+          <tag name="param" line="129" description="" type="callable|string" variable="$expression">
+            <type>callable</type>
+            <type>string</type>
+          </tag>
+          <tag name="param" line="129" description="" type="integer" variable="$n">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="129" description="" type="\Haldayne\Boost\Map">
+            <type>\Haldayne\Boost\Map</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$expression</name>
+          <default></default>
+          <type>callable|string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$n</name>
+          <default>1</default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="152" package="Haldayne">
+        <name>last</name>
+        <full_name>\Haldayne\Boost\Map::last()</full_name>
+        <docblock line="152">
+          <description>Return a new map containing the last N elements passing the expression.</description>
+          <long-description>Like `first`, but stop after finding N elements from the *end*.
+Defaults to N = 1.
+
+```
+$nums = new Map(range(0, 9));
+$odds = $nums-&gt;last('1 == ($_0 % 2)', 2); // last two odd numbers
+```</long-description>
+          <tag name="param" line="152" description="" type="callable|string" variable="$expression">
+            <type>callable</type>
+            <type>string</type>
+          </tag>
+          <tag name="param" line="152" description="" type="integer" variable="$n">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="152" description="" type="\Haldayne\Boost\Map">
+            <type>\Haldayne\Boost\Map</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$expression</name>
+          <default></default>
+          <type>callable|string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$n</name>
+          <default>1</default>
+          <type>integer</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="166" package="Haldayne">
+        <name>every</name>
+        <full_name>\Haldayne\Boost\Map::every()</full_name>
+        <docblock line="166">
+          <description>Test if every element passes the expression.</description>
+          <long-description></long-description>
+          <tag name="param" line="166" description="" type="callable|string" variable="$expression">
+            <type>callable</type>
+            <type>string</type>
+          </tag>
+          <tag name="bool" line="166" description=""/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$expression</name>
+          <default></default>
+          <type>callable|string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="177" package="Haldayne">
+        <name>some</name>
+        <full_name>\Haldayne\Boost\Map::some()</full_name>
+        <docblock line="177">
+          <description>Test if at least one element passes the expression.</description>
+          <long-description></long-description>
+          <tag name="param" line="177" description="" type="callable|string" variable="$expression">
+            <type>callable</type>
+            <type>string</type>
+          </tag>
+          <tag name="bool" line="177" description=""/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$expression</name>
+          <default></default>
+          <type>callable|string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="188" package="Haldayne">
+        <name>none</name>
+        <full_name>\Haldayne\Boost\Map::none()</full_name>
+        <docblock line="188">
+          <description>Test that no elements pass the expression.</description>
+          <long-description></long-description>
+          <tag name="param" line="188" description="" type="callable|string" variable="$expression">
+            <type>callable</type>
+            <type>string</type>
+          </tag>
+          <tag name="bool" line="188" description=""/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$expression</name>
+          <default></default>
+          <type>callable|string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="201" package="Haldayne">
+        <name>has</name>
+        <full_name>\Haldayne\Boost\Map::has()</full_name>
+        <docblock line="201">
+          <description>Determine if a key exists the map.</description>
+          <long-description>This is the object method equivalent of the magic isset($map[$key]);</long-description>
+          <tag name="param" line="201" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="201" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="217" package="Haldayne">
+        <name>get</name>
+        <full_name>\Haldayne\Boost\Map::get()</full_name>
+        <docblock line="217">
+          <description>Get the value corresponding to the given key.</description>
+          <long-description>If the key does not exist in the map, return the default.
+
+This is the object method equivalent of the magic $map[$key].</long-description>
+          <tag name="param" line="217" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="217" description="" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="217" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="234" package="Haldayne">
+        <name>set</name>
+        <full_name>\Haldayne\Boost\Map::set()</full_name>
+        <docblock line="234">
+          <description>Set a key and its corresponding value into the map.</description>
+          <long-description>This is the object method equivalent of the magic $map[$key] = 'foo'.</long-description>
+          <tag name="param" line="234" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="234" description="" type="mixed" variable="$value">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="234" description="" type="\Haldayne\Boost\Map">
+            <type>\Haldayne\Boost\Map</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$value</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="248" package="Haldayne">
+        <name>forget</name>
+        <full_name>\Haldayne\Boost\Map::forget()</full_name>
+        <docblock line="248">
+          <description>Remove a key and its corresponding value from the map.</description>
+          <long-description>This is the object method equivalent of the magic unset($map[$key]);</long-description>
+          <tag name="param" line="248" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="248" description="" type="\Haldayne\Boost\Map">
+            <type>\Haldayne\Boost\Map</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="259" package="Haldayne">
+        <name>isEmpty</name>
+        <full_name>\Haldayne\Boost\Map::isEmpty()</full_name>
+        <docblock line="259">
+          <description>Determine if any key and their values have been set into the map.</description>
+          <long-description></long-description>
+          <tag name="return" line="259" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="276" package="Haldayne">
+        <name>diff</name>
+        <full_name>\Haldayne\Boost\Map::diff()</full_name>
+        <docblock line="276">
+          <description>Return a new map containing those keys and values that are not present in
+the given collection.</description>
+          <long-description>If comparison is loose, then only those elements whose values match will
+be removed.  Otherwise, comparison is strict, and elements whose keys
+and values match will be removed.</long-description>
+          <tag name="param" line="276" description="" type="\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array" variable="$collection">
+            <type>\Haldayne\Boost\Map</type>
+            <type>\Haldayne\Boost\Contract\Arrayable</type>
+            <type>\Haldayne\Boost\Contract\Jsonable</type>
+            <type>\Haldayne\Boost\Traversable</type>
+            <type>object</type>
+            <type>array</type>
+          </tag>
+          <tag name="param" line="276" description="" type="\Haldayne\Boost\enum" variable="$comparison">
+            <type>\Haldayne\Boost\enum</type>
+          </tag>
+          <tag name="return" line="276" description="" type="\Haldayne\Boost\Map">
+            <type>\Haldayne\Boost\Map</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$collection</name>
+          <default></default>
+          <type>\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$comparison</name>
+          <default>\Haldayne\Boost\Map::LOOSE</default>
+          <type>\Haldayne\Boost\enum</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="296" package="Haldayne">
+        <name>intersect</name>
+        <full_name>\Haldayne\Boost\Map::intersect()</full_name>
+        <docblock line="296">
+          <description>Return a new map containing those keys and values that are present in
+the given collection.</description>
+          <long-description>If comparison is loose, then only those elements whose value match will
+be included.  Otherise, comparison is strict, and elements whose keys &amp;
+values match will be included.</long-description>
+          <tag name="param" line="296" description="" type="\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array" variable="$collection">
+            <type>\Haldayne\Boost\Map</type>
+            <type>\Haldayne\Boost\Contract\Arrayable</type>
+            <type>\Haldayne\Boost\Contract\Jsonable</type>
+            <type>\Haldayne\Boost\Traversable</type>
+            <type>object</type>
+            <type>array</type>
+          </tag>
+          <tag name="param" line="296" description="" type="\Haldayne\Boost\enum" variable="$comparison">
+            <type>\Haldayne\Boost\enum</type>
+          </tag>
+          <tag name="return" line="296" description="" type="\Haldayne\Boost\Map">
+            <type>\Haldayne\Boost\Map</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$collection</name>
+          <default></default>
+          <type>\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$comparison</name>
+          <default>\Haldayne\Boost\Map::LOOSE</default>
+          <type>\Haldayne\Boost\enum</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="320" package="Haldayne">
+        <name>walk</name>
+        <full_name>\Haldayne\Boost\Map::walk()</full_name>
+        <docblock line="320">
+          <description>Execute the given code over each element of the map. The code receives
+the value and then the key as formal parameters.</description>
+          <long-description>The items are walked in the order they exist in the map. If the code
+returns boolean false, then the iteration halts. Values can be modified
+from within the callback, but not keys.
+
+Example:
+```
+$map-&gt;each(function (&amp;$value, $key) { $value++; return true; })-&gt;sum();
+```</long-description>
+          <tag name="param" line="320" description="" type="callable" variable="$code">
+            <type>callable</type>
+          </tag>
+          <tag name="return" line="320" description="" type="\Haldayne\Boost\Map">
+            <type>\Haldayne\Boost\Map</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$code</name>
+          <default></default>
+          <type>callable</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="337" package="Haldayne">
+        <name>walk_backward</name>
+        <full_name>\Haldayne\Boost\Map::walk_backward()</full_name>
+        <docblock line="337">
+          <description>Like `walk`, except walk from the end toward the front.</description>
+          <long-description></long-description>
+          <tag name="param" line="337" description="" type="callable" variable="$code">
+            <type>callable</type>
+          </tag>
+          <tag name="return" line="337" description="" type="\Haldayne\Boost\Map">
+            <type>\Haldayne\Boost\Map</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$code</name>
+          <default></default>
+          <type>callable</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="372" package="Haldayne">
+        <name>partition</name>
+        <full_name>\Haldayne\Boost\Map::partition()</full_name>
+        <docblock line="372">
+          <description>Groups elements of this map based on the result of an expression.</description>
+          <long-description>Calls the expression for each element in this map. The expression
+receives the value and key, respectively.  The expression may return
+any value: this value is the grouping key and the element is put into
+that group.
+
+```
+$nums = new Map(range(0, 9));
+$part = $nums-&gt;partition(function ($value, $key) {
+   return 0 == $value % 2 ? 'even' : 'odd';
+});
+var_dump(
+    $part['odd']-&gt;count(), // 5
+    $part['even']-&gt;sum() // 20
+);
+```</long-description>
+          <tag name="param" line="372" description="" type="callable|string" variable="$expression">
+            <type>callable</type>
+            <type>string</type>
+          </tag>
+          <tag name="return" line="372" description="" type="\Haldayne\Boost\MapOfMaps">
+            <type>\Haldayne\Boost\MapOfMaps</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$expression</name>
+          <default></default>
+          <type>callable|string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="394" package="Haldayne">
+        <name>push</name>
+        <full_name>\Haldayne\Boost\Map::push()</full_name>
+        <docblock line="394">
+          <description>Treat the map as a stack and push an element onto its end.</description>
+          <long-description></long-description>
+          <tag name="return" line="394" description="" type="\Haldayne\Boost\Map">
+            <type>\Haldayne\Boost\Map</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$element</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="405" package="Haldayne">
+        <name>pop</name>
+        <full_name>\Haldayne\Boost\Map::pop()</full_name>
+        <docblock line="405">
+          <description>Treat the map as a stack and pop an element off its end.</description>
+          <long-description></long-description>
+          <tag name="return" line="405" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="427" package="Haldayne">
+        <name>count</name>
+        <full_name>\Haldayne\Boost\Map::count()</full_name>
+        <docblock line="427">
+          <description>Count the number of items in the map.</description>
+          <long-description></long-description>
+          <tag name="return" line="427" description="" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="439" package="Haldayne">
+        <name>toArray</name>
+        <full_name>\Haldayne\Boost\Map::toArray()</full_name>
+        <docblock line="439">
+          <description>Copy this map into an array, recursing as necessary to convert contained
+collections into arrays.</description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\Haldayne\Boost\Contract\Arrayable::toArray()" refers="\Haldayne\Boost\Contract\Arrayable::toArray()" link="/classes/Haldayne.Boost.Contract.Arrayable.html#method_toArray"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="456" package="Haldayne">
+        <name>toJson</name>
+        <full_name>\Haldayne\Boost\Map::toJson()</full_name>
+        <docblock line="456">
+          <description>Return a JSON representation of the object.</description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\Haldayne\Boost\Contract\Jsonable::toJson()" refers="\Haldayne\Boost\Contract\Jsonable::toJson()" link="/classes/Haldayne.Boost.Contract.Jsonable.html#method_toJson"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$options</name>
+          <default>0</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="470" package="Haldayne">
+        <name>offsetExists</name>
+        <full_name>\Haldayne\Boost\Map::offsetExists()</full_name>
+        <docblock line="470">
+          <description>Determine if a value exists at a given key.</description>
+          <long-description></long-description>
+          <tag name="param" line="470" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="470" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="482" package="Haldayne">
+        <name>offsetGet</name>
+        <full_name>\Haldayne\Boost\Map::offsetGet()</full_name>
+        <docblock line="482">
+          <description>Get a value at a given key.</description>
+          <long-description></long-description>
+          <tag name="param" line="482" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="482" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="500" package="Haldayne">
+        <name>offsetSet</name>
+        <full_name>\Haldayne\Boost\Map::offsetSet()</full_name>
+        <docblock line="500">
+          <description>Set the value at a given key.</description>
+          <long-description>If key is null, the value is appended to the array using numeric indexes.
+If the map was constructed with a set guard, then pass the value to the
+guard. If the guard fails, the set throws an exception.</long-description>
+          <tag name="param" line="500" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="500" description="" type="mixed" variable="$value">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="500" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="throws" line="500" description="" type="\UnexpectedValueException">
+            <type>\UnexpectedValueException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$value</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="532" package="Haldayne">
+        <name>offsetUnset</name>
+        <full_name>\Haldayne\Boost\Map::offsetUnset()</full_name>
+        <docblock line="532">
+          <description>Unset the value at a given key.</description>
+          <long-description></long-description>
+          <tag name="param" line="532" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="532" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="545" package="Haldayne">
+        <name>getIterator</name>
+        <full_name>\Haldayne\Boost\Map::getIterator()</full_name>
+        <docblock line="545">
+          <description>Get an iterator for a copy of the map.</description>
+          <long-description></long-description>
+          <tag name="return" line="545" description="" type="\ArrayIterator">
+            <type>\ArrayIterator</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="579" package="Haldayne">
+        <name>collection_to_array</name>
+        <full_name>\Haldayne\Boost\Map::collection_to_array()</full_name>
+        <docblock line="579">
+          <description>Give me a native PHP array, regardless of what kind of collection-like
+structure is given.</description>
+          <long-description></long-description>
+          <tag name="param" line="579" description="" type="\Haldayne\Boost\Map|\Haldayne\Boost\Traversable|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|object|array" variable="$items">
+            <type>\Haldayne\Boost\Map</type>
+            <type>\Haldayne\Boost\Traversable</type>
+            <type>\Haldayne\Boost\Contract\Arrayable</type>
+            <type>\Haldayne\Boost\Contract\Jsonable</type>
+            <type>object</type>
+            <type>array</type>
+          </tag>
+          <tag name="return" line="579" description="" type="array|boolean">
+            <type>array</type>
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$collection</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="609" package="Haldayne">
+        <name>call</name>
+        <full_name>\Haldayne\Boost\Map::call()</full_name>
+        <docblock line="609">
+          <description>Calls the given code with the given value and key as first &amp; second argument.</description>
+          <long-description></long-description>
+          <tag name="param" line="609" description="" type="callable|string" variable="$expression">
+            <type>callable</type>
+            <type>string</type>
+          </tag>
+          <tag name="param" line="609" description="" type="mixed" variable="$value">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="609" description="" type="string" variable="$key">
+            <type>string</type>
+          </tag>
+          <tag name="throws" line="609" description="" type="\InvalidArgumentException">
+            <type>\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$expression</name>
+          <default></default>
+          <type>callable|string</type>
+        </argument>
+        <argument line="0" by_reference="true">
+          <name>$value</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="621" package="Haldayne">
+        <name>passes</name>
+        <full_name>\Haldayne\Boost\Map::passes()</full_name>
+        <docblock line="621">
+          <description>Decide if the given value is considered "passing" or "failing".</description>
+          <long-description></long-description>
+          <tag name="param" line="621" description="" type="mixed" variable="$value">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="621" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$value</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="634" package="Haldayne">
+        <name>key_to_hash</name>
+        <full_name>\Haldayne\Boost\Map::key_to_hash()</full_name>
+        <docblock line="634">
+          <description>Lookup the hash for the given key. If a hash does not yet exist, one is
+created.</description>
+          <long-description></long-description>
+          <tag name="param" line="634" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="634" description="" type="string">
+            <type>string</type>
+          </tag>
+          <tag name="throws" line="634" description="" type="\InvalidArgumentException">
+            <type>\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="672" package="Haldayne">
+        <name>hash_to_key</name>
+        <full_name>\Haldayne\Boost\Map::hash_to_key()</full_name>
+        <docblock line="672">
+          <description>Lookup the key for the given hash.</description>
+          <long-description></long-description>
+          <tag name="param" line="672" description="" type="string" variable="$hash">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="672" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$hash</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="698" package="Haldayne">
+        <name>grep</name>
+        <full_name>\Haldayne\Boost\Map::grep()</full_name>
+        <docblock line="698">
+          <description>Finds elements for which the given code passes, optionally limited to a
+maximum count.</description>
+          <long-description>If limit is null, no limit on number of matches. If limit is positive,
+return that many from the front of the array. If limit is negative,
+return that many from the end of the array.</long-description>
+          <tag name="param" line="698" description="" type="callable|string" variable="$expression">
+            <type>callable</type>
+            <type>string</type>
+          </tag>
+          <tag name="param" line="698" description="" type="integer|null" variable="$limit">
+            <type>integer</type>
+            <type>null</type>
+          </tag>
+          <tag name="return" line="698" description="" type="\Haldayne\Boost\Map">
+            <type>\Haldayne\Boost\Map</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$expression</name>
+          <default></default>
+          <type>callable|string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$limit</name>
+          <default>null</default>
+          <type>integer|null</type>
+        </argument>
+      </method>
+    </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="394" code="PPC:ERR-50015">Argument $element is missing from the Docblock of push</error>
+      <error line="456" code="PPC:ERR-50015">Argument $options is missing from the Docblock of toJson</error>
     </parse_markers>
-    <source>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</source>
+    <source>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</source>
   </file>
   <file path="boost/src/MapOfMaps.php" generated-path="boost.src.MapOfMaps.html" hash="c0c03832600acd76a691f3d0860b91d9" package="Haldayne">
     <docblock line="0">
@@ -1271,20 +2240,114 @@ function.</long-description>
       <full_name>\Haldayne\Boost\MapOfMaps</full_name>
       <docblock line="7">
         <description>Implements a map of maps.</description>
-        <long-description></long-description>
+        <long-description>Sports a fluent interface accepting callables to drive array operations,
+similar in spirit to jQuery. Supports keys of any type: scalars, even
+arrays and objects!  Used in place of `array ()` and `[]`, your code will
+be easier to write *and* read.
+
+In the API, a formal variable named `$collection` must be one of:
+  - Haldayne\Boost\Map
+  - Haldayne\Boost\Contract\Arrayable
+  - Haldayne\Boost\Contract\Jsonable
+  - \Traversable
+  - object
+  - array
+
+Many of these methods allow you to apply code to all elements of the map:
+look for formal parameters named `$code` or `$expression`. Some will allow
+`callable`, which are the usual PHP callable types. Some will allow for
+both `callable` *and* `string`.
+
+When given as string, an anonymous function is built for you, using the
+string as the meat of the function. This lets you write extremely compact
+expressions for filtering, at the one-time cost of converting the string
+to the body of an anonymous function.  Inside these anonymous functions
+the variable `$_0` holds the current value, while $_1 holds the current
+key.
+
+In the API, a formal variable named `$key` may be of *any* type.
+
+As much as possible, method names were chosen to reflect synonymous usage in
+the PHP engine itself. When not possible or relevant, the names may reflect
+usage from Laravel.</long-description>
         <tag name="package" line="7" description="Haldayne"/>
+        <tag name="inherited_from" description="\Haldayne\Boost\Map" refers="\Haldayne\Boost\Map" link="/classes/Haldayne.Boost.Map.html"/>
       </docblock>
+      <constant namespace="Haldayne\Boost" line="49" package="Haldayne">
+        <name>LOOSE</name>
+        <full_name>\Haldayne\Boost\Map::LOOSE</full_name>
+        <value>true</value>
+        <docblock line="49">
+          <description>Should the comparison be made loosely?</description>
+          <long-description></long-description>
+          <tag name="see" line="49" description="" link="\Haldayne\Boost\Map::diff"/>
+          <tag name="see" line="49" description="" link="\Haldayne\Boost\Map::intersect"/>
+        </docblock>
+      </constant>
+      <constant namespace="Haldayne\Boost" line="56" package="Haldayne">
+        <name>STRICT</name>
+        <full_name>\Haldayne\Boost\Map::STRICT</full_name>
+        <value>false</value>
+        <docblock line="56">
+          <description>Should the comparison be made strictly?</description>
+          <long-description></long-description>
+          <tag name="see" line="56" description="" link="\Haldayne\Boost\Map::diff"/>
+          <tag name="see" line="56" description="" link="\Haldayne\Boost\Map::intersect"/>
+        </docblock>
+      </constant>
+      <property static="false" visibility="private" namespace="Haldayne\Boost" line="558" package="Haldayne">
+        <name>$array</name>
+        <full_name>\Haldayne\Boost\Map::array</full_name>
+        <default>array()</default>
+        <docblock line="558">
+          <description>The internal array representation of the map.</description>
+          <long-description></long-description>
+          <tag name="var" line="558" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="Haldayne\Boost" line="564" package="Haldayne">
+        <name>$guard</name>
+        <full_name>\Haldayne\Boost\Map::guard</full_name>
+        <default>null</default>
+        <docblock line="564">
+          <description>The guard code protecting sets.</description>
+          <long-description></long-description>
+          <tag name="var" line="564" description="" type="callable|string|null" variable="">
+            <type>callable</type>
+            <type>string</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="Haldayne\Boost" line="570" package="Haldayne">
+        <name>$map_key_to_hash</name>
+        <full_name>\Haldayne\Boost\Map::map_key_to_hash</full_name>
+        <default>array()</default>
+        <docblock line="570">
+          <description>Track hashes we've created for non-string keys.</description>
+          <long-description></long-description>
+          <tag name="var" line="570" description="" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
+      </property>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="12" package="Haldayne">
         <name>__construct</name>
         <full_name>\Haldayne\Boost\MapOfMaps::__construct()</full_name>
         <docblock line="12">
           <description>Create a new map of maps.</description>
-          <long-description></long-description>
+          <long-description>Initialize the map with the given collection, if any. Accepts any kind
+of collection: array, object, Traversable, another Map, etc. Optionally,
+wrap every key,value sets into the map with the given guard code: if the
+guard code fails, the set will throw an exception.</long-description>
+          <tag name="inherited_from" description="\Haldayne\Boost\Map::__construct()" refers="\Haldayne\Boost\Map::__construct()" link="/classes/Haldayne.Boost.Map.html#method___construct"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$collection</name>
           <default>null</default>
-          <type/>
+          <type>\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array</type>
         </argument>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="23" package="Haldayne">
@@ -1306,6 +2369,803 @@ function.</long-description>
           <type>mixed</type>
         </argument>
       </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="70" package="Haldayne">
+        <name>__construct</name>
+        <full_name>\Haldayne\Boost\Map::__construct()</full_name>
+        <docblock line="70">
+          <description>Create a new map.</description>
+          <long-description>Initialize the map with the given collection, if any. Accepts any kind
+of collection: array, object, Traversable, another Map, etc. Optionally,
+wrap every key,value sets into the map with the given guard code: if the
+guard code fails, the set will throw an exception.</long-description>
+          <tag name="param" line="70" description="" type="\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array" variable="$collection">
+            <type>\Haldayne\Boost\Map</type>
+            <type>\Haldayne\Boost\Contract\Arrayable</type>
+            <type>\Haldayne\Boost\Contract\Jsonable</type>
+            <type>\Haldayne\Boost\Traversable</type>
+            <type>object</type>
+            <type>array</type>
+          </tag>
+          <tag name="param" line="70" description="" type="callable" variable="$guard">
+            <type>callable</type>
+          </tag>
+          <tag name="throws" line="70" description="" type="\InvalidArgumentException">
+            <type>\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$collection</name>
+          <default>null</default>
+          <type>\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$guard</name>
+          <default>null</default>
+          <type>callable</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="108" package="Haldayne">
+        <name>find</name>
+        <full_name>\Haldayne\Boost\Map::find()</full_name>
+        <docblock line="108">
+          <description>Return a new map containing only members of this map that pass the
+expression.</description>
+          <long-description>You give an expression deciding whether an element is in or out, and
+this returns a new map of those that are in. Ex, find both the odd and
+even numbers:
+
+```
+$nums = new Map(range(0, 9));
+$even = $nums-&gt;find(function ($val, $key) { return 0 == $val % 2; });
+$odds = $nums-&gt;find('1 == ($_0 % 2)');
+```</long-description>
+          <tag name="param" line="108" description="" type="callable|string" variable="$expression">
+            <type>callable</type>
+            <type>string</type>
+          </tag>
+          <tag name="return" line="108" description="" type="\Haldayne\Boost\Map">
+            <type>\Haldayne\Boost\Map</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$expression</name>
+          <default></default>
+          <type>callable|string</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="129" package="Haldayne">
+        <name>first</name>
+        <full_name>\Haldayne\Boost\Map::first()</full_name>
+        <docblock line="129">
+          <description>Return a new map containing the first N elements passing the
+expression.</description>
+          <long-description>Like `find`, but stop after finding N elements from the front. Defaults
+to N = 1.
+
+```
+$nums = new Map(range(0, 9));
+$odd3 = $nums-&gt;first('1 == ($_0 % 2)', 3); // first three odds
+```</long-description>
+          <tag name="param" line="129" description="" type="callable|string" variable="$expression">
+            <type>callable</type>
+            <type>string</type>
+          </tag>
+          <tag name="param" line="129" description="" type="integer" variable="$n">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="129" description="" type="\Haldayne\Boost\Map">
+            <type>\Haldayne\Boost\Map</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$expression</name>
+          <default></default>
+          <type>callable|string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$n</name>
+          <default>1</default>
+          <type>integer</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="152" package="Haldayne">
+        <name>last</name>
+        <full_name>\Haldayne\Boost\Map::last()</full_name>
+        <docblock line="152">
+          <description>Return a new map containing the last N elements passing the expression.</description>
+          <long-description>Like `first`, but stop after finding N elements from the *end*.
+Defaults to N = 1.
+
+```
+$nums = new Map(range(0, 9));
+$odds = $nums-&gt;last('1 == ($_0 % 2)', 2); // last two odd numbers
+```</long-description>
+          <tag name="param" line="152" description="" type="callable|string" variable="$expression">
+            <type>callable</type>
+            <type>string</type>
+          </tag>
+          <tag name="param" line="152" description="" type="integer" variable="$n">
+            <type>integer</type>
+          </tag>
+          <tag name="return" line="152" description="" type="\Haldayne\Boost\Map">
+            <type>\Haldayne\Boost\Map</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$expression</name>
+          <default></default>
+          <type>callable|string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$n</name>
+          <default>1</default>
+          <type>integer</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="166" package="Haldayne">
+        <name>every</name>
+        <full_name>\Haldayne\Boost\Map::every()</full_name>
+        <docblock line="166">
+          <description>Test if every element passes the expression.</description>
+          <long-description></long-description>
+          <tag name="param" line="166" description="" type="callable|string" variable="$expression">
+            <type>callable</type>
+            <type>string</type>
+          </tag>
+          <tag name="bool" line="166" description=""/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$expression</name>
+          <default></default>
+          <type>callable|string</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="177" package="Haldayne">
+        <name>some</name>
+        <full_name>\Haldayne\Boost\Map::some()</full_name>
+        <docblock line="177">
+          <description>Test if at least one element passes the expression.</description>
+          <long-description></long-description>
+          <tag name="param" line="177" description="" type="callable|string" variable="$expression">
+            <type>callable</type>
+            <type>string</type>
+          </tag>
+          <tag name="bool" line="177" description=""/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$expression</name>
+          <default></default>
+          <type>callable|string</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="188" package="Haldayne">
+        <name>none</name>
+        <full_name>\Haldayne\Boost\Map::none()</full_name>
+        <docblock line="188">
+          <description>Test that no elements pass the expression.</description>
+          <long-description></long-description>
+          <tag name="param" line="188" description="" type="callable|string" variable="$expression">
+            <type>callable</type>
+            <type>string</type>
+          </tag>
+          <tag name="bool" line="188" description=""/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$expression</name>
+          <default></default>
+          <type>callable|string</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="201" package="Haldayne">
+        <name>has</name>
+        <full_name>\Haldayne\Boost\Map::has()</full_name>
+        <docblock line="201">
+          <description>Determine if a key exists the map.</description>
+          <long-description>This is the object method equivalent of the magic isset($map[$key]);</long-description>
+          <tag name="param" line="201" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="201" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="217" package="Haldayne">
+        <name>get</name>
+        <full_name>\Haldayne\Boost\Map::get()</full_name>
+        <docblock line="217">
+          <description>Get the value corresponding to the given key.</description>
+          <long-description>If the key does not exist in the map, return the default.
+
+This is the object method equivalent of the magic $map[$key].</long-description>
+          <tag name="param" line="217" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="217" description="" type="mixed" variable="$default">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="217" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$default</name>
+          <default>null</default>
+          <type>mixed</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="234" package="Haldayne">
+        <name>set</name>
+        <full_name>\Haldayne\Boost\Map::set()</full_name>
+        <docblock line="234">
+          <description>Set a key and its corresponding value into the map.</description>
+          <long-description>This is the object method equivalent of the magic $map[$key] = 'foo'.</long-description>
+          <tag name="param" line="234" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="234" description="" type="mixed" variable="$value">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="234" description="" type="\Haldayne\Boost\MapOfMaps">
+            <type>\Haldayne\Boost\MapOfMaps</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$value</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="248" package="Haldayne">
+        <name>forget</name>
+        <full_name>\Haldayne\Boost\Map::forget()</full_name>
+        <docblock line="248">
+          <description>Remove a key and its corresponding value from the map.</description>
+          <long-description>This is the object method equivalent of the magic unset($map[$key]);</long-description>
+          <tag name="param" line="248" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="248" description="" type="\Haldayne\Boost\MapOfMaps">
+            <type>\Haldayne\Boost\MapOfMaps</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="259" package="Haldayne">
+        <name>isEmpty</name>
+        <full_name>\Haldayne\Boost\Map::isEmpty()</full_name>
+        <docblock line="259">
+          <description>Determine if any key and their values have been set into the map.</description>
+          <long-description></long-description>
+          <tag name="return" line="259" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="276" package="Haldayne">
+        <name>diff</name>
+        <full_name>\Haldayne\Boost\Map::diff()</full_name>
+        <docblock line="276">
+          <description>Return a new map containing those keys and values that are not present in
+the given collection.</description>
+          <long-description>If comparison is loose, then only those elements whose values match will
+be removed.  Otherwise, comparison is strict, and elements whose keys
+and values match will be removed.</long-description>
+          <tag name="param" line="276" description="" type="\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array" variable="$collection">
+            <type>\Haldayne\Boost\Map</type>
+            <type>\Haldayne\Boost\Contract\Arrayable</type>
+            <type>\Haldayne\Boost\Contract\Jsonable</type>
+            <type>\Haldayne\Boost\Traversable</type>
+            <type>object</type>
+            <type>array</type>
+          </tag>
+          <tag name="param" line="276" description="" type="\Haldayne\Boost\enum" variable="$comparison">
+            <type>\Haldayne\Boost\enum</type>
+          </tag>
+          <tag name="return" line="276" description="" type="\Haldayne\Boost\Map">
+            <type>\Haldayne\Boost\Map</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$collection</name>
+          <default></default>
+          <type>\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$comparison</name>
+          <default>\Haldayne\Boost\Map::LOOSE</default>
+          <type>\Haldayne\Boost\enum</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="296" package="Haldayne">
+        <name>intersect</name>
+        <full_name>\Haldayne\Boost\Map::intersect()</full_name>
+        <docblock line="296">
+          <description>Return a new map containing those keys and values that are present in
+the given collection.</description>
+          <long-description>If comparison is loose, then only those elements whose value match will
+be included.  Otherise, comparison is strict, and elements whose keys &amp;
+values match will be included.</long-description>
+          <tag name="param" line="296" description="" type="\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array" variable="$collection">
+            <type>\Haldayne\Boost\Map</type>
+            <type>\Haldayne\Boost\Contract\Arrayable</type>
+            <type>\Haldayne\Boost\Contract\Jsonable</type>
+            <type>\Haldayne\Boost\Traversable</type>
+            <type>object</type>
+            <type>array</type>
+          </tag>
+          <tag name="param" line="296" description="" type="\Haldayne\Boost\enum" variable="$comparison">
+            <type>\Haldayne\Boost\enum</type>
+          </tag>
+          <tag name="return" line="296" description="" type="\Haldayne\Boost\Map">
+            <type>\Haldayne\Boost\Map</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$collection</name>
+          <default></default>
+          <type>\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$comparison</name>
+          <default>\Haldayne\Boost\Map::LOOSE</default>
+          <type>\Haldayne\Boost\enum</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="320" package="Haldayne">
+        <name>walk</name>
+        <full_name>\Haldayne\Boost\Map::walk()</full_name>
+        <docblock line="320">
+          <description>Execute the given code over each element of the map. The code receives
+the value and then the key as formal parameters.</description>
+          <long-description>The items are walked in the order they exist in the map. If the code
+returns boolean false, then the iteration halts. Values can be modified
+from within the callback, but not keys.
+
+Example:
+```
+$map-&gt;each(function (&amp;$value, $key) { $value++; return true; })-&gt;sum();
+```</long-description>
+          <tag name="param" line="320" description="" type="callable" variable="$code">
+            <type>callable</type>
+          </tag>
+          <tag name="return" line="320" description="" type="\Haldayne\Boost\MapOfMaps">
+            <type>\Haldayne\Boost\MapOfMaps</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$code</name>
+          <default></default>
+          <type>callable</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="337" package="Haldayne">
+        <name>walk_backward</name>
+        <full_name>\Haldayne\Boost\Map::walk_backward()</full_name>
+        <docblock line="337">
+          <description>Like `walk`, except walk from the end toward the front.</description>
+          <long-description></long-description>
+          <tag name="param" line="337" description="" type="callable" variable="$code">
+            <type>callable</type>
+          </tag>
+          <tag name="return" line="337" description="" type="\Haldayne\Boost\MapOfMaps">
+            <type>\Haldayne\Boost\MapOfMaps</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$code</name>
+          <default></default>
+          <type>callable</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="372" package="Haldayne">
+        <name>partition</name>
+        <full_name>\Haldayne\Boost\Map::partition()</full_name>
+        <docblock line="372">
+          <description>Groups elements of this map based on the result of an expression.</description>
+          <long-description>Calls the expression for each element in this map. The expression
+receives the value and key, respectively.  The expression may return
+any value: this value is the grouping key and the element is put into
+that group.
+
+```
+$nums = new Map(range(0, 9));
+$part = $nums-&gt;partition(function ($value, $key) {
+   return 0 == $value % 2 ? 'even' : 'odd';
+});
+var_dump(
+    $part['odd']-&gt;count(), // 5
+    $part['even']-&gt;sum() // 20
+);
+```</long-description>
+          <tag name="param" line="372" description="" type="callable|string" variable="$expression">
+            <type>callable</type>
+            <type>string</type>
+          </tag>
+          <tag name="return" line="372" description="" type="\Haldayne\Boost\MapOfMaps">
+            <type>\Haldayne\Boost\MapOfMaps</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$expression</name>
+          <default></default>
+          <type>callable|string</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="394" package="Haldayne">
+        <name>push</name>
+        <full_name>\Haldayne\Boost\Map::push()</full_name>
+        <docblock line="394">
+          <description>Treat the map as a stack and push an element onto its end.</description>
+          <long-description></long-description>
+          <tag name="return" line="394" description="" type="\Haldayne\Boost\MapOfMaps">
+            <type>\Haldayne\Boost\MapOfMaps</type>
+          </tag>
+          <tag name="fluent" description="This method is part of a fluent interface and will return the same instance"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$element</name>
+          <default></default>
+          <type/>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="405" package="Haldayne">
+        <name>pop</name>
+        <full_name>\Haldayne\Boost\Map::pop()</full_name>
+        <docblock line="405">
+          <description>Treat the map as a stack and pop an element off its end.</description>
+          <long-description></long-description>
+          <tag name="return" line="405" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="427" package="Haldayne">
+        <name>count</name>
+        <full_name>\Haldayne\Boost\Map::count()</full_name>
+        <docblock line="427">
+          <description>Count the number of items in the map.</description>
+          <long-description></long-description>
+          <tag name="return" line="427" description="" type="integer">
+            <type>integer</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="439" package="Haldayne">
+        <name>toArray</name>
+        <full_name>\Haldayne\Boost\Map::toArray()</full_name>
+        <docblock line="439">
+          <description>Copy this map into an array, recursing as necessary to convert contained
+collections into arrays.</description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\Haldayne\Boost\Contract\Arrayable::toArray()" refers="\Haldayne\Boost\Contract\Arrayable::toArray()" link="/classes/Haldayne.Boost.Contract.Arrayable.html#method_toArray"/>
+        </docblock>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="456" package="Haldayne">
+        <name>toJson</name>
+        <full_name>\Haldayne\Boost\Map::toJson()</full_name>
+        <docblock line="456">
+          <description>Return a JSON representation of the object.</description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\Haldayne\Boost\Contract\Jsonable::toJson()" refers="\Haldayne\Boost\Contract\Jsonable::toJson()" link="/classes/Haldayne.Boost.Contract.Jsonable.html#method_toJson"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$options</name>
+          <default>0</default>
+          <type/>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="470" package="Haldayne">
+        <name>offsetExists</name>
+        <full_name>\Haldayne\Boost\Map::offsetExists()</full_name>
+        <docblock line="470">
+          <description>Determine if a value exists at a given key.</description>
+          <long-description></long-description>
+          <tag name="param" line="470" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="470" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="482" package="Haldayne">
+        <name>offsetGet</name>
+        <full_name>\Haldayne\Boost\Map::offsetGet()</full_name>
+        <docblock line="482">
+          <description>Get a value at a given key.</description>
+          <long-description></long-description>
+          <tag name="param" line="482" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="482" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="500" package="Haldayne">
+        <name>offsetSet</name>
+        <full_name>\Haldayne\Boost\Map::offsetSet()</full_name>
+        <docblock line="500">
+          <description>Set the value at a given key.</description>
+          <long-description>If key is null, the value is appended to the array using numeric indexes.
+If the map was constructed with a set guard, then pass the value to the
+guard. If the guard fails, the set throws an exception.</long-description>
+          <tag name="param" line="500" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="500" description="" type="mixed" variable="$value">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="500" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="throws" line="500" description="" type="\UnexpectedValueException">
+            <type>\UnexpectedValueException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$value</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="532" package="Haldayne">
+        <name>offsetUnset</name>
+        <full_name>\Haldayne\Boost\Map::offsetUnset()</full_name>
+        <docblock line="532">
+          <description>Unset the value at a given key.</description>
+          <long-description></long-description>
+          <tag name="param" line="532" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="532" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost" line="545" package="Haldayne">
+        <name>getIterator</name>
+        <full_name>\Haldayne\Boost\Map::getIterator()</full_name>
+        <docblock line="545">
+          <description>Get an iterator for a copy of the map.</description>
+          <long-description></long-description>
+          <tag name="return" line="545" description="" type="\ArrayIterator">
+            <type>\ArrayIterator</type>
+          </tag>
+        </docblock>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="579" package="Haldayne">
+        <name>collection_to_array</name>
+        <full_name>\Haldayne\Boost\Map::collection_to_array()</full_name>
+        <docblock line="579">
+          <description>Give me a native PHP array, regardless of what kind of collection-like
+structure is given.</description>
+          <long-description></long-description>
+          <tag name="param" line="579" description="" type="\Haldayne\Boost\Map|\Haldayne\Boost\Traversable|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|object|array" variable="$items">
+            <type>\Haldayne\Boost\Map</type>
+            <type>\Haldayne\Boost\Traversable</type>
+            <type>\Haldayne\Boost\Contract\Arrayable</type>
+            <type>\Haldayne\Boost\Contract\Jsonable</type>
+            <type>object</type>
+            <type>array</type>
+          </tag>
+          <tag name="return" line="579" description="" type="array|boolean">
+            <type>array</type>
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$collection</name>
+          <default></default>
+          <type/>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="609" package="Haldayne">
+        <name>call</name>
+        <full_name>\Haldayne\Boost\Map::call()</full_name>
+        <docblock line="609">
+          <description>Calls the given code with the given value and key as first &amp; second argument.</description>
+          <long-description></long-description>
+          <tag name="param" line="609" description="" type="callable|string" variable="$expression">
+            <type>callable</type>
+            <type>string</type>
+          </tag>
+          <tag name="param" line="609" description="" type="mixed" variable="$value">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="609" description="" type="string" variable="$key">
+            <type>string</type>
+          </tag>
+          <tag name="throws" line="609" description="" type="\InvalidArgumentException">
+            <type>\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$expression</name>
+          <default></default>
+          <type>callable|string</type>
+        </argument>
+        <argument line="0" by_reference="true">
+          <name>$value</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="621" package="Haldayne">
+        <name>passes</name>
+        <full_name>\Haldayne\Boost\Map::passes()</full_name>
+        <docblock line="621">
+          <description>Decide if the given value is considered "passing" or "failing".</description>
+          <long-description></long-description>
+          <tag name="param" line="621" description="" type="mixed" variable="$value">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="621" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$value</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="634" package="Haldayne">
+        <name>key_to_hash</name>
+        <full_name>\Haldayne\Boost\Map::key_to_hash()</full_name>
+        <docblock line="634">
+          <description>Lookup the hash for the given key. If a hash does not yet exist, one is
+created.</description>
+          <long-description></long-description>
+          <tag name="param" line="634" description="" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" line="634" description="" type="string">
+            <type>string</type>
+          </tag>
+          <tag name="throws" line="634" description="" type="\InvalidArgumentException">
+            <type>\InvalidArgumentException</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="672" package="Haldayne">
+        <name>hash_to_key</name>
+        <full_name>\Haldayne\Boost\Map::hash_to_key()</full_name>
+        <docblock line="672">
+          <description>Lookup the key for the given hash.</description>
+          <long-description></long-description>
+          <tag name="param" line="672" description="" type="string" variable="$hash">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="672" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$hash</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost" line="698" package="Haldayne">
+        <name>grep</name>
+        <full_name>\Haldayne\Boost\Map::grep()</full_name>
+        <docblock line="698">
+          <description>Finds elements for which the given code passes, optionally limited to a
+maximum count.</description>
+          <long-description>If limit is null, no limit on number of matches. If limit is positive,
+return that many from the front of the array. If limit is negative,
+return that many from the end of the array.</long-description>
+          <tag name="param" line="698" description="" type="callable|string" variable="$expression">
+            <type>callable</type>
+            <type>string</type>
+          </tag>
+          <tag name="param" line="698" description="" type="integer|null" variable="$limit">
+            <type>integer</type>
+            <type>null</type>
+          </tag>
+          <tag name="return" line="698" description="" type="\Haldayne\Boost\Map">
+            <type>\Haldayne\Boost\Map</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$expression</name>
+          <default></default>
+          <type>callable|string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$limit</name>
+          <default>null</default>
+          <type>integer|null</type>
+        </argument>
+        <inherited_from>\Haldayne\Boost\Map</inherited_from>
+      </method>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
@@ -1313,65 +3173,73 @@ function.</long-description>
     </parse_markers>
     <source>eJx9UE1PwzAMvedX+DBpWzXR+wZiAiHBAfEDAE1e6raREifKxxhC+++kKeVQCXyII9vv+T1f37reCUZDwaEkeETd4CfT2521Ie6EqKtKQAVPxmkyxDEAgkEHth1SuMrNWkiNIcAzupc2PwHoHImbUhFfAnIUmiEquPeEkTIN08eMqgzUJbt01EpCm1hGZRkOB2k5RJ9kXC2k1ZrG+g1w0npdMOOqgkaftW63f6A28AqL2KuwgWWX0DdLeF/vCvoi5nofOCRPEHuCTp2I809xB2q4RDY4yZ7G93k3GjDqTA0sTqgT/bY8xeQZjtZqQv7Xb5G1GvFzdz80YxNUNogsKZ8xy5lcXMQ36NOLAQ==</source>
   </file>
-  <file path="boost/src/Lambda/Y.php" generated-path="boost.src.Lambda.Y.html" hash="7233a52f2343dbbcac0b0ed5437f0562" package="Haldayne">
+  <file path="boost/src/Lambda/Retry.php" generated-path="boost.src.Lambda.Retry.html" hash="ab35a4ff4190803100c4116b1ca8db46" package="Haldayne">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Haldayne"/>
     </docblock>
-    <class final="false" abstract="false" namespace="Haldayne\Boost\Lambda" line="38" package="Haldayne">
+    <class final="false" abstract="false" namespace="Haldayne\Boost\Lambda" line="30" package="Haldayne">
       <extends/>
-      <name>Y</name>
-      <full_name>\Haldayne\Boost\Lambda\Y</full_name>
-      <docblock line="38">
-        <description>Implements the Y-combinator.</description>
-        <long-description>It's possible to express a "recursive" function -- like Fibonacci and
-factorials -- without recursion or iteration. Using a surprising and
-admittedly dark magic approach discovered by Haskell Curry called the Y-
-combinator, you can use lambda functions to calculate fixed-points and
-to solve around them:
-
+      <name>Retry</name>
+      <full_name>\Haldayne\Boost\Lambda\Retry</full_name>
+      <docblock line="30">
+        <description>Runs a callable, retrying using exponential back-off if the callable fails.</description>
+        <long-description>```
+use Haldayne\Boost\Lambda\Backoff;
+$lambda = new Retry(function ($src, $dst) { return copy($src, $dst); });
+$lambda-&gt;setAttempts(3);
+if (false === $lambda('foo', 'bar')) {
+    throw new \RuntimeException(sprintf(
+         'Failed to copy file after %d tries',
+         $lambda-&gt;getAttempts()
+    ));
+}
 ```
-// calculates n-th Fibonacci using two fixed points
-// this version runs in exponential time
-$fibonacci = new Y(function ($fibonacci) {
-    return function ($n) use ($fibonacci) {
-        switch ($n) {
-        case 0:  return 0;
-        case 1:  return 1;
-        default: return $fibonacci($n-1) + $fibonacci($n-2);
-        }
-    }
-});
-var_dump($fibonacci(6));
-```</long-description>
-        <tag name="TODO" line="38" description="The recursive callable which we pass to the Y-combinator has exponential&#10;run-time. But, we can change that to linear time just by adding caching&#10;to the internal combinator. That's where this class comes in: it internally&#10;caches intermediary results, so that simple recursive definitions have&#10;optimal performance without having to implement their own caching."/>
-        <tag name="see" line="38" description="" link="https://php100.wordpress.com/2009/04/13/php-y-combinator/"/>
-        <tag name="see" line="38" description="" link="http://matt.might.net/articles/implementation-of-recursive-fixed-point-y-combinator-in-javascript-for-memoization/"/>
-        <tag name="package" line="38" description="Haldayne"/>
+Network resources may not respond immediately, owing to *temporary* issues
+in resource availability. The usual technique for dealing with these error
+responses is to implement retry logic in the client. This technique
+increases reliability of the client and reduces operational costs for the
+developer.
+
+If the given callback returns exactly boolean false, Retry will attempt
+the callback again after waiting exponentially longer times: 1 second,
+2 seconds, 4 seconds, 8 seconds, etc. up to the maximum attempts limit.
+The default attempt limit is 5.  Also, you can change the back-off
+strategy if you'd like.</long-description>
+        <tag name="package" line="30" description="Haldayne"/>
       </docblock>
-      <property static="false" visibility="private" namespace="Haldayne\Boost\Lambda" line="55" package="Haldayne">
+      <property static="false" visibility="private" namespace="Haldayne\Boost\Lambda" line="81" package="Haldayne">
         <name>$code</name>
-        <full_name>\Haldayne\Boost\Lambda\Y::code</full_name>
+        <full_name>\Haldayne\Boost\Lambda\Retry::code</full_name>
         <default>null</default>
-        <docblock line="55">
+        <docblock line="81">
           <description></description>
           <long-description></long-description>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="Haldayne\Boost\Lambda" line="56" package="Haldayne">
-        <name>$cache</name>
-        <full_name>\Haldayne\Boost\Lambda\Y::cache</full_name>
-        <default>array()</default>
-        <docblock line="56">
+      <property static="false" visibility="private" namespace="Haldayne\Boost\Lambda" line="82" package="Haldayne">
+        <name>$attempts</name>
+        <full_name>\Haldayne\Boost\Lambda\Retry::attempts</full_name>
+        <default>null</default>
+        <docblock line="82">
           <description></description>
           <long-description></long-description>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Lambda" line="40" package="Haldayne">
+      <property static="false" visibility="private" namespace="Haldayne\Boost\Lambda" line="83" package="Haldayne">
+        <name>$strategy</name>
+        <full_name>\Haldayne\Boost\Lambda\Retry::strategy</full_name>
+        <default>null</default>
+        <docblock line="83">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Lambda" line="32" package="Haldayne">
         <name>__construct</name>
-        <full_name>\Haldayne\Boost\Lambda\Y::__construct()</full_name>
-        <docblock line="40">
+        <full_name>\Haldayne\Boost\Lambda\Retry::__construct()</full_name>
+        <docblock line="32">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -1381,18 +3249,52 @@ var_dump($fibonacci(6));
           <type>callable</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Lambda" line="45" package="Haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Lambda" line="39" package="Haldayne">
         <name>__invoke</name>
-        <full_name>\Haldayne\Boost\Lambda\Y::__invoke()</full_name>
-        <docblock line="45">
+        <full_name>\Haldayne\Boost\Lambda\Retry::__invoke()</full_name>
+        <docblock line="39">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="Haldayne\Boost\Lambda" line="58" package="Haldayne">
-        <name>combinator</name>
-        <full_name>\Haldayne\Boost\Lambda\Y::combinator()</full_name>
-        <docblock line="58">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Lambda" line="53" package="Haldayne">
+        <name>setAttempts</name>
+        <full_name>\Haldayne\Boost\Lambda\Retry::setAttempts()</full_name>
+        <docblock line="53">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$attempts</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Lambda" line="63" package="Haldayne">
+        <name>getAttempts</name>
+        <full_name>\Haldayne\Boost\Lambda\Retry::getAttempts()</full_name>
+        <docblock line="63">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Lambda" line="68" package="Haldayne">
+        <name>setStrategy</name>
+        <full_name>\Haldayne\Boost\Lambda\Retry::setStrategy()</full_name>
+        <docblock line="68">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$callable</name>
+          <default></default>
+          <type>callable</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Lambda" line="74" package="Haldayne">
+        <name>getStrategy</name>
+        <full_name>\Haldayne\Boost\Lambda\Retry::getStrategy()</full_name>
+        <docblock line="74">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -1400,26 +3302,125 @@ var_dump($fibonacci(6));
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="40" code="PPC:ERR-50015">Argument $code is missing from the Docblock of __construct</error>
-      <error line="40" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="45" code="PPC:ERR-50008">No summary for method __invoke()</error>
-      <error line="58" code="PPC:ERR-50008">No summary for method combinator()</error>
-      <error line="55" code="PPC:ERR-50007">No summary for property $code</error>
-      <error line="56" code="PPC:ERR-50007">No summary for property $cache</error>
+      <error line="32" code="PPC:ERR-50015">Argument $code is missing from the Docblock of __construct</error>
+      <error line="32" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="39" code="PPC:ERR-50008">No summary for method __invoke()</error>
+      <error line="53" code="PPC:ERR-50015">Argument $attempts is missing from the Docblock of setAttempts</error>
+      <error line="53" code="PPC:ERR-50008">No summary for method setAttempts()</error>
+      <error line="63" code="PPC:ERR-50008">No summary for method getAttempts()</error>
+      <error line="68" code="PPC:ERR-50015">Argument $callable is missing from the Docblock of setStrategy</error>
+      <error line="68" code="PPC:ERR-50008">No summary for method setStrategy()</error>
+      <error line="74" code="PPC:ERR-50008">No summary for method getStrategy()</error>
+      <error line="81" code="PPC:ERR-50007">No summary for property $code</error>
+      <error line="82" code="PPC:ERR-50007">No summary for property $attempts</error>
+      <error line="83" code="PPC:ERR-50007">No summary for property $strategy</error>
     </parse_markers>
-    <source>eJx9VG2P2zYM/p5fQRQHLLnFca4bBizZS9u9YAcMaDHcBhzWIcfITKyeLBmSnDQb8t9Hyoljp9j0xS8kH/EhH/Kb7+uyHlmsKNSoCH5BU+DB0vs3zoX4/les1gUuR6P89nYEt3Bf1YYqsjFALAkeM+WqtbYYnZ+xPbnEzwLULgS9NgTRAX2sPYUACC88qcYHvaMXsGmsitpZyDIw+pngZ712FpXSgLYQoA0qhtVogvjsdSxdE+EEwYHOg47kUVBm8HvQdst3hMbXXrcfLQ4WlY6RCnOAAv0zVLjVCrCuvUNVQqGDcjvyVMD6wPzDMxkDPzTeH0ChMfy/pSpYF7pTOLiGHSw0gcCkOnWkgvDmYNUYjAQb/ZGKrHZa6nbKih2CMzsC9K6x6Y5qcSrh09OTPPL8ghHAZrHsFalJFOPetejQop/CYqkDMKdUJ99wPtpKH5zl1nFFIeqKxPdm0wF+C5b28DjuGjO+GCfwD4i7HE+x8RZ6bnaSajD0P7vLCdw8rnTyHBgUctx80YHOl59Y7y7Wu4G1oA02Ji7O1svtfE92N4HPr369nAzij+eP9HJsjTv0q6Kp6h6X8VeT1tZ2Rd5ePbz98a28PLAwOk0ntaCIfl9qprsnqDEkKVzPCpQY+v0QLG5TJm2ZwZsmTiVaxKVKtFseoxKjABltCX1qH3xoQhTJYlGIFBSLmZ8nbcmNLAjylrvdG1JOGWVA9yUrvtWJMpIl+5DIZMFD1UWaQxI9Iycb/6yo0MiTwRPNxQ9TFnGbXNCyGnrV4P5oq9tpKHGX5OZqzpwTqslvnK/Q8sY5Dzb7JEU70OclIyy0B7e3Z3ayZJISXwUiKGOswyLPeYXdzeezvfNFWjUzJpO/nM+/zudf5ndfiD079MqfDxAYoMIYZ5XelnFmKeboo1aGQt5lkpZM5jZZxy/rDfUAPNM2+4A7DMrrOmbMM6uocvrvhCFX56O25I8jHgY+dbM2vJG6iVqtFBct+kbFcaepG+UKmiT/NkrOjTQw+05MPL/JZTlqNf0fyNru3DONr4FOMyS3rXiW/UpCVug9HsadUxplKYVaLC58x5PpwCNFbily9DacLpIzGWTGS+rdb/d/vH74CV6/uz9l6/VO1uXNiY9tjFleWUSKbPrzr+UwpqPYT6xfKXHgwP52k63WLQ/5XsJxeV2SFDi+ChsQPqfba8Zy4HBGEksPqdua14BtvhuBbNP6xPp/7eLI6XUTriCOve9j15fj6F8onYDg</source>
+    <source>eJyFVt9v20YMftdfwQe3llInabsWGOq4gwt0aIBhKLJiTwGcs0TJh5zutPthRxj8v4+ULFmWm0wPiSTyPn4kP1K++a3aVJEWJbpKpAjfhMpErfH+izHO3/8hynUm5lF0fXERwQXcBe1AQCqUEmuFM7DobS11AcHxX3yqjEbtpVCwFunjpclzkDn4DfaHIBdSuSuCY8SHhwf+F9wzse+/EAyhzNlropp3sACNO7jj2HEedOql0RBPnE1nMMmcT+BfZhashtRU9dAyh30yxLr87NAvvcey8i7+pbUR4zgXijgtFovOM57mxkxnMF0LO00oBHvy5TfW7BpG91QfL0v8+pRixaRiV1mpfR53vs01/Z0qgBl409CDnJ5A5B4tvKK3VqKbzk5O9GSLAdmkc0la1vtBPf9EvzP2kargTLApOihFDdp4fkM9ykCWJWZSeFT1DMyOu0d8LhjbWGFrqoJzAV1TD90DgdgSebGWSvr6Cn5QY4ML1G6P6UbLfwL111jIUCiG3Em/4e5TKdFaYxmtZeCIk3QcU5aVwpJU06oJlClkyjEb1ShJFg7Ezl2MllRqUTCMRSUPjMDkg2MgKFGLWeACmAqt4KYQ2ZQE5hqi5MxgGW5RsUeny9sWp5Bb1I10Wc4HUTnSuUi9qmFtjEKhoRHLrFUk5awUiLZLDNWJv0EQhaDM2mbvhPSjqVGcvi7IyDpyn+AdOEypX40e3h8e3Aw+HG9/Pd6iT68gVFxVjlqKJ1mGsiPjQMlSek6xaVyGuQjKd+bWyk35eAWwVM7MoDaBuFMFNoJYNaDdXDOK81RSLGqeGHKdZoTxiBzgOkqVcK4tSUSzQlcV1oo620/sakW0CSKkPu63wyQ1GSaNf3uq0b+n9l9+ZlPzvGjd5mOHPtEFfDwz9mQXMFgampeFU4hVXJld/J72hL58l/CiaBH20TPkpd6aR4zPuGoK8HYeKWOqT8e3pHqu9aKRwor2nV0x1kpYK2hDHROcNTFWNOlkK2jMk2Mmo8XUYiaD4J3TmzdE42ZclrEnX6d04lGtDtWYnx0rDGmMUzw17aPzu8MmPrB9sajDXTzpWY8KzPlJt9KhRCvTgR+8fg1v4WZBq8FvhRpYxomfy+XsyGleXQ587mjZA3IvTrEHn4NbTZgyW9oi8H47fham3SvoA0IZnIc1wm5DOwUouzXSd2Y+KugzhRt9F07qNeR+zPn/+vDXQQHDyTzcPTOdg/nqXec/ZfFi7GIQ++VUuoAncNfX8P3u9u/lj6+w/H57CGHlljzbpcG/HoJS81PLQAo/sQ5Sa6376D/KmNgx</source>
   </file>
-  <file path="boost/src/Lambda/Factory.php" generated-path="boost.src.Lambda.Factory.html" hash="3ebaf349e05913491be3686df1d548c3" package="Haldayne">
+  <file path="boost/src/Lambda/Capture.php" generated-path="boost.src.Lambda.Capture.html" hash="4264f09b8393ccbfecab99ae157bfa78" package="Haldayne">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Haldayne"/>
     </docblock>
-    <class final="false" abstract="false" namespace="Haldayne\Boost\Lambda" line="49" package="Haldayne">
+    <namespace-alias name="Map">\Haldayne\Boost\Map</namespace-alias>
+    <class final="false" abstract="false" namespace="Haldayne\Boost\Lambda" line="29" package="Haldayne">
       <extends/>
-      <name>Factory</name>
-      <full_name>\Haldayne\Boost\Lambda\Factory</full_name>
-      <docblock line="49">
+      <name>Capture</name>
+      <full_name>\Haldayne\Boost\Lambda\Capture</full_name>
+      <docblock line="29">
+        <description>Runs a callable, capturing all error messages, then provides a method to
+extract any errors raised during execution.</description>
+        <long-description>```
+use Haldayne\Boost\Lambda\Capture;
+$lambda = new Capture(function ($src, $dst) { return copy($src, $dst); });
+if (false === $lambda('foo', 'bar')) {
+    throw new \RuntimeException($lambda-&gt;getCapturedErrors()-&gt;pop()-&gt;get('message'));
+}
+```
+
+PHP itself as well as many libraries rely upon triggered errors to notify
+developers of problems. Many frameworks provide methods to capure these
+errors globally and convert them to exceptions, but you do not always have
+access to those frameworks.  Worse, you may be using code that deliberately
+silences errors.
+
+Every raised error inside the Capture lambda is pushed into a Map stack,
+with each element also a Map of the error details: error code, error
+string, file and line where raised, and an array context of variables
+set at time of error.</long-description>
+        <tag name="package" line="29" description="Haldayne"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="Haldayne\Boost\Lambda" line="57" package="Haldayne">
+        <name>$code</name>
+        <full_name>\Haldayne\Boost\Lambda\Capture::code</full_name>
+        <default>null</default>
+        <docblock line="57">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="Haldayne\Boost\Lambda" line="58" package="Haldayne">
+        <name>$map</name>
+        <full_name>\Haldayne\Boost\Lambda\Capture::map</full_name>
+        <default>null</default>
+        <docblock line="58">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Lambda" line="31" package="Haldayne">
+        <name>__construct</name>
+        <full_name>\Haldayne\Boost\Lambda\Capture::__construct()</full_name>
+        <docblock line="31">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$code</name>
+          <default></default>
+          <type>callable</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Lambda" line="37" package="Haldayne">
+        <name>__invoke</name>
+        <full_name>\Haldayne\Boost\Lambda\Capture::__invoke()</full_name>
+        <docblock line="37">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Lambda" line="50" package="Haldayne">
+        <name>getCapturedErrors</name>
+        <full_name>\Haldayne\Boost\Lambda\Capture::getCapturedErrors()</full_name>
+        <docblock line="50">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="31" code="PPC:ERR-50015">Argument $code is missing from the Docblock of __construct</error>
+      <error line="31" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="37" code="PPC:ERR-50008">No summary for method __invoke()</error>
+      <error line="50" code="PPC:ERR-50008">No summary for method getCapturedErrors()</error>
+      <error line="57" code="PPC:ERR-50007">No summary for property $code</error>
+      <error line="58" code="PPC:ERR-50007">No summary for property $map</error>
+    </parse_markers>
+    <source>eJx9VMFu2zgQvesr5mDAcqAk9/U6RXcRoAW2QFAUu5cADi2NLCIUKZCUHaHwv+8bSmqcOq0OJs0ZvnnzZoZ/fuiaLrOq5dCpkumTMpUaLD/+5VyIj/+odlepdZb14cL2RXUw3F5dZXRFX3sbSFGpjFE7wwV2Xey9tnvCEbH3zhOCBLXnUFBs2FLn3UFXLPdajo2rKDrB4pfoVRlJ2WG8GMgrHbiiakTkFy77qJ29gbvceHp6kuUdkmMCj38nNrwWr4VJZ7Qhy0eaLHnd21IgKV8EXxa0qEJc0XfyDLOl0nXDuWVNp1VC0zXltTKIvNlsZux8WTu3LGi5U365Aox4yhcb744p7iMUi7rl+5eSOwmcT3ev7/YcJ1bVfUo/X13fda6TBbZ8OekI5ETh9CqB7B4+PZCOgU1NKtCRIT/WVtQ0eueV15Dcsxmo75Bv9Hq/Z8SatY6OrIu6HgSs4gMb1zHOXS0VQ3HbcENfBK726Juj889hruVUyASCDkAKUurAqawj/N64HVpiQHkryGoP7KM4tXKHZzXQI7s+0uB6qhIftNFRDYEadUhoqiyhgtxBQKj/yuWG6D8EQg/K7VYNtGO0hjRO6SohpCLyghbsVYQOAhe0YQvEieXcWPdgN8zdNzaxtkEnFJ57h6aG0pChDw08tQUvBZE6ClGVz4VgHXVsiFWJH2jIVlIKsxvEFcQxRMVRaRP+mP4K62LcJ6pRhqCgGpSTiEZbpmODGk5Mi3SsLCnvkT5EjpgpiXFA9WU+QwJiUID26EKxpQCS+G1WGgVtp/QydC++rt8ZXdKPOdlugQsufRnzeexpIVxXyX+8Jd8iNjpc3yXxN6PL+mdjCw3GgYQa+Wq0n7JfRNb24J45vwjkTLVtkLthDzTkt01JzWf5D0/5ziZ+VHgxzRV2oi0WUbYQxknA1VmoS/oYURQ/v/CQb86rdC1eWUywBJT3YZ5kbCWkrBJT1ikohvwCcrV+c3TK3jFISbZ4EP1W8tymTsjPKlGk/Ld4T2Db44k5u3sp3Lmyvy/OO4/XT1WaXtRX5d7g3d7Sw9fP/378dk8fHz5PMbw+YFLH1pE26Y1Zv7VM/ZMMp+x/c48nYA==</source>
+  </file>
+  <file path="boost/src/Lambda/Expression.php" generated-path="boost.src.Lambda.Expression.html" hash="6147b1c7ff664424b5660f8e56eb456d" package="Haldayne">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Haldayne"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="Haldayne\Boost\Lambda" line="52" package="Haldayne">
+      <extends/>
+      <name>Expression</name>
+      <full_name>\Haldayne\Boost\Lambda\Expression</full_name>
+      <docblock line="52">
         <description>Manufactures a lambda from a string.</description>
         <long-description>In PHP, a callable can be a function name (as a string), a class or object
 method specification (as an array [object|string, string], an anonymous
@@ -1428,23 +3429,26 @@ the syntax for these callable methods may dwarf the meat of the code to
 run:
 
 ```
-uasort($array, '$_0 &lt;=&gt; $_1');
-// vs.
 uasort($array, function ($a, $b) { return $a &lt;=&gt; $b; });
+// vs. an ideal expression
+uasort($array, '$_0 &lt;=&gt; $_1');
 ```
 
-This class makes possible wrapping expressions in anonymous functions in a
+This class wraps string-based code expressions in anonymous functions in a
 reasonably performant manner. Libraries wanting to support concise
 expressions as arguments to their functions can then use this class to
 produce that effect:
 
 ```
-use Haldayne\Boost\Lambda\Factory;
+use Haldayne\Boost\Lambda\Expression;
 class Collection {
-    // callable|string $expression
+    public function __construct(array $items) {
+        $this-&gt;items = $items;
+    }
+    // @param callable|string $expression
     public function filter($expression) {
-        $fn = Factory::fromExpression($expression);
-        return $this-&gt;filterByCallable($fn);
+        $fn = new Expression($expression);
+        return array_filter($this-&gt;items, $fn);
     }
 }
 
@@ -1455,45 +3459,45 @@ var_dump(
    // same results, just different compactness
 );
 ```</long-description>
-        <tag name="see" line="49" description="" link="http://php.net/manual/en/language.types.callable.php"/>
-        <tag name="see" line="49" description="" link="https://linepogl.wordpress.com/2011/07/09/on-the-syntax-of-closures-in-php/"/>
-        <tag name="see" line="49" description="" link="http://justafewlines.com/2009/10/whats-wrong-with-php-closures/"/>
-        <tag name="see" line="49" description="" link="https://wiki.php.net/rfc/short_closures"/>
-        <tag name="see" line="49" description="" link="http://docs.hhvm.com/manual/en/hack.lambda.php"/>
-        <tag name="see" line="49" description="" link="https://linepogl.wordpress.com/2011/08/04/short-closures-for-php-an-implementation/"/>
-        <tag name="package" line="49" description="Haldayne"/>
+        <tag name="see" line="52" description="" link="http://php.net/manual/en/language.types.callable.php"/>
+        <tag name="see" line="52" description="" link="https://linepogl.wordpress.com/2011/07/09/on-the-syntax-of-closures-in-php/"/>
+        <tag name="see" line="52" description="" link="http://justafewlines.com/2009/10/whats-wrong-with-php-closures/"/>
+        <tag name="see" line="52" description="" link="https://wiki.php.net/rfc/short_closures"/>
+        <tag name="see" line="52" description="" link="http://docs.hhvm.com/manual/en/hack.lambda.php"/>
+        <tag name="see" line="52" description="" link="https://linepogl.wordpress.com/2011/08/04/short-closures-for-php-an-implementation/"/>
+        <tag name="package" line="52" description="Haldayne"/>
       </docblock>
-      <property static="true" visibility="private" namespace="Haldayne\Boost\Lambda" line="95" package="Haldayne">
+      <property static="true" visibility="private" namespace="Haldayne\Boost\Lambda" line="106" package="Haldayne">
         <name>$map</name>
-        <full_name>\Haldayne\Boost\Lambda\Factory::map</full_name>
+        <full_name>\Haldayne\Boost\Lambda\Expression::map</full_name>
         <default>array()</default>
-        <docblock line="95">
+        <docblock line="106">
           <description></description>
           <long-description></long-description>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Haldayne\Boost\Lambda" line="70" package="Haldayne">
-        <name>fromExpression</name>
-        <full_name>\Haldayne\Boost\Lambda\Factory::fromExpression()</full_name>
-        <docblock line="70">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Lambda" line="73" package="Haldayne">
+        <name>__construct</name>
+        <full_name>\Haldayne\Boost\Lambda\Expression::__construct()</full_name>
+        <docblock line="73">
           <description>Creates a callable returning the given expression.</description>
           <long-description>If the expression is already callable, returns it untouched. If the
 expression is a string, a closure will be wrapped around the string
 returning it as a single line. In this case, the first nine positional
-arguments are available as $_0, $_1, ... $_9.
+arguments are available as $_0, $_1, ..., $_9.
 
 ```
-$lt = Factory::fromExpression('$_0 &lt; $_1');
+$lt = new Expression('$_0 &lt; $_1');
 var_dump($lt(0, 1)); // true
 var_dump($lt(1, 0)); // false
 var_dump($lt());     // false (null not less than null)
 var_dump($lt(-1));   // true (-1 is less than null)
 ```</long-description>
-          <tag name="param" line="70" description="" type="callable|string" variable="$expression">
+          <tag name="param" line="73" description="" type="callable|string" variable="$expression">
             <type>callable</type>
             <type>string</type>
           </tag>
-          <tag name="throws" line="70" description="When $expression not of expected type" type="\InvalidArgumentException">
+          <tag name="throws" line="73" description="When $expression not of expected type" type="\InvalidArgumentException">
             <type>\InvalidArgumentException</type>
           </tag>
         </docblock>
@@ -1503,12 +3507,57 @@ var_dump($lt(-1));   // true (-1 is less than null)
           <type>callable|string</type>
         </argument>
       </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Lambda" line="89" package="Haldayne">
+        <name>__invoke</name>
+        <full_name>\Haldayne\Boost\Lambda\Expression::__invoke()</full_name>
+        <docblock line="89">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Boost\Lambda" line="99" package="Haldayne">
+        <name>getCallable</name>
+        <full_name>\Haldayne\Boost\Lambda\Expression::getCallable()</full_name>
+        <docblock line="99">
+          <description>Get the callable manufactured for this expression.</description>
+          <long-description></long-description>
+          <tag name="return" line="99" description="" type="callable">
+            <type>callable</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="private" namespace="Haldayne\Boost\Lambda" line="107" package="Haldayne">
+        <name>makeCallable</name>
+        <full_name>\Haldayne\Boost\Lambda\Expression::makeCallable()</full_name>
+        <docblock line="107">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$expression</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="95" code="PPC:ERR-50007">No summary for property $map</error>
+      <error line="89" code="PPC:ERR-50008">No summary for method __invoke()</error>
+      <error line="107" code="PPC:ERR-50015">Argument $expression is missing from the Docblock of makeCallable</error>
+      <error line="107" code="PPC:ERR-50008">No summary for method makeCallable()</error>
+      <error line="106" code="PPC:ERR-50007">No summary for property $map</error>
     </parse_markers>
-    <source>eJyVVm1v2zYQ/u5fcQM0WA5kyem6tU3abm3RoQE6INiK7UNSuLRE2WwoUiApO0aX/747Um+xkwLTF1P03XN3z73p5a/1pp4oVnFbs5zDByYLtlf8+q3W1l1/ZNWqYOeTSXZyMoET+IOppmS5awy3wED6v6E0usI364xQ6xTlSPRCweWHywTvcyYlW0mOBwUrjjdlo3IntAIyDDGzvfbMK0hmLWgDevWV547QKu42ugBb81yUImde2ysqYMawPVwF4X8DTtLifU68hNJqX+nGElRvPN4KtGU4c3zZXaJ9tEsuaItBQjxIz+AbpGkKd7MU/mKF3CeE5jYc7F45dgslauKr5UPEwW0LFTpY7JgpvXyFJkGHc64LDk4TlGnUWUvely9f6KdhVhsXRz7CBKbRcgEvX72GaHk6nZ2TRJbB1qYPyA5+RyyBaEXeG46JUxCxALI6x1jOB3N0+rQRtuW/YjeY5FpbKyiUnWF1jYwCv60x+xaxLYgRt73JcO0j4uiUQib2UHOD/FRMOQRWipsUPoqVYUagkR1eE7TTYJu6xjiQF5ULywllbJAybtZNxZWzJI4UCjOyTCWGdwoaTIMbggkM10YXTU5/YAJ4WWK9HDJuH+mB69+x7LXZe74C5jstJQ8kf6NbejAfXfLbSoRo8L+TqpuVFPmQo1JIx008kpwNkPREpYJX0LpwdkYN976Xvad3PlbrEk5EzF8HK2/371oHY0Qd5O/ocNeyEeVoTvHdKMb4arrifIpVuOLM0O8a6eHTzwFiy8yyaKo6bvGivDMYT5EIydHN5WIGL+HpdJYcC43q9XZUq53qrdekgm1VkWhLwwPjbqSzCXxtrINCYFINFgfWT4UDzSmkhTQO6/w3yzlsnKvPsgwnYKq4y7AuGyYzrjLJ1Lpha566fc1t2mU0pVk5VraoLYXitV7LdKdN4dOQou3syeL0NFs8yxYvMq3mWJLzMCXmupy3w8XOhZojZHboEIXCSr4j6A4NcU4X2Q4L1853Rqv1fCfchtR7uOzIt524EWkXninzzG6wt5adwqHdQuc23Wy2lbc50LFh+U0aZv3/p+B5tnga7A5x4yTwnjM1F1UtObWzH+kUQjYJ7dVW+wQbgfJNC4ieE3jnR7Ydb5ZQLX6E4Exdiy1OgKEp0lazA7gIo3cQAJwTTCJsse8xkxYUp5mDRjnd5BtepK1yB3WAAd32GTbITkhJW8/PT17g+NKNKsLe8MId1BADGgwrEV8wOKI3pX0a5hmz6Bupl8JgyaMGpyktiD8mO7RhSjJ0gm2ZCEwhMPZhQisk8essWr445Me3SThG0n1n8ISF1K+joNJPAtSN0dLpbHZO7epMwx+UQUcWrUzJpH1YiATavvdCEKsGiVXageQ04Dc4+elq9qD6/DQAtH4AXlDCHlEdEdD9/lYzw6rvD/dW0m2M3lm4vlBbJkXxps3E+9uc137E/UMLaqTpo8DvAbzBWYs1QmOnhcsmo4VhqUvGe+PxPeDVQuvQI0qIhV3m/egfic5GcuOtMYjgB2D35x1wYr/FCyx8F40kfwjfaMsbvl/yW2GdHaskbVxnZ1HF6iMAesYCVyPVz1icB19w8ZEyPVSpryjHvvL705P+9FN/ehpOU0gfQ/q5l/2lPz3rT8/70wt/gikkDyO1RMdo6l45pIDtND3S6Vqsy8RDSXuUqOMU3mfZF61f+Y/WbWxrzLYrjxmedrL3wojpExcrGX60M6hoPffzGr+UQ+lMj6lZc0dax9Xc8zAiIpBwF4LD5r788+LvN5/ew5vLi3CHLm+xPLrWIV6wZq6Qj7vJfyyr/EE=</source>
+    <source>eJyVV21v2zYQ/u5fcQM8WA5kyem6tY2brl1QrAE6INiK7UMSuLRE2WwkSiApO0aX/747knrx27bqg32m7p57v6Nf/1ytqoFkBdcVSzh8YHnKtpLf/VKW2tx9ZMUiZbPBID47G8AZ/MZknbHE1IprYJDb15CpssBf2ighlxHyEeu1hJsPNyGeJyzP2SLnSEhYcDzJapkYUUogxRAw3UqPrUDOtIZSQbn4whNDaAU3qzIFXfFEZCJhVtoKSmBKsS3cOua/HU7o8e5DyyFLuS3KWhNUqzxYC9SlODN83hyiftRLJpQanYSg4x7DV4iiCJ7GEfzB0nwbEppZcdBbadgjZCiJPzXvPHZmayjQwHTDVGb5C1QJpaOTMuVgSoJStbzwwfv8+TN91UyXygRD62HYs3zIQhguyCLFMRkShgxeX77BsxnaNyPZOIa1jsh7kXKWA3+sMGkaxY8gj4bzqQOYn4+cvDOBqE8roX1ONopV2od2smCap86BDlyD6MW7NdkdWy85qpYYnS1UXGHMCiYNBkhKriL4KBaKKYHVtcFj1IKxAV1XFVqLqmQiNCeUvkKqArWsCy6NJnYMq1A9zVR2eCahxtSYzhkX9UqVaZ3QC0wKzzKsof0s6BN9cfe+tcKGzMFelXnOXZ6+0ik9Vb3IRdIlcD5HXzCMdWICV75DYXihx50IPUOydvLGvoJLzzNrOJ4aAlP9tmKKFW3h+S6A4W7Wj5mSidxwFfQ4943IJOqWfAOduzvssz63r0fr1LzB7rkREt5414cnH+9h4hV1IQxuRwvOR1ihC84UfS8xAXx07yDWTM3TuqgCjzdMJm+80hGGIOdo6Xw6htfwfDQOD5l6HfXY66ZG9NFKUkt5UYy0ppGFrte5QWe+1NpAKrBsFJYfVmiBY9RIjAxJ7HfSW805rIypLuIY524kuYmx8muWx1zGOZPLmi15ZLYV11GTy4gmdF9Yo3QuJK/KZR5tSpXaTESoO342PT+Ppy/i6au4lBMs+ombTZMym/iRpidCThAy3jeIXGEZ3xB0g4Y459N4g62hJxtVYtNvhFmReAsXH9i2EQ8iatxTWRLrFXbvvBHY15uWiY5Wq3VhdXbhWLHkIXIb5ttD8DKePnd6O79x1ljLmZyIoso5DQy7SMiFeOC6t6vxAXYBpZw2Hz1ncGV3he6vNFcwdk7hMF+KNY6ZrjUiL9kAXLuZ3zEADiOWI2y6bTFDD4oj00AtTVknK55GXriB2sOAZu11q2sj8pzWLc3sCgc1U2UtU7ewLHMD1fmACt0uxh/oHEU4okXuhiaO+9CKZ0Jh1aMEh6rUgkLI8gatG8UMjWBrJlykEBhbMaQNE9IeJerVfoBsqzhymJvDseP2VLulHGc7BFAkQA3n4/GMOhXHKz/KgwZMPU/Gcn2ciRh8y1smCGSNAZWlgZzT9ljhWqGj8VHxybkD8HYAHlCiToj2/G6+/89E95xmpcqNhrtruWa5SN/5DLx/THhlp9tftP16ktYLvIDgCY5ZrA2aOB4uHvzXwurPfsvsGoUekUEg9Lwxeod13OPrLbe2lS77Fs5a1pZ4Ak5p8CpcOL5RgaZ+Ty4uCvbAr47ZiDfdPXW7kDbStihPBjvQFVpmsmBHkJ5Rw7uTioAughh++B63f0HrpDUY75POzVF4ALbkhqQOk9E843EXw6eB+zyRWiHX5QMP9pPplyGZM8c7kLKX5Lnd7MFebN3ddI5G4fulDhrlXmVvhv7Kjbv3tlfk7i9F6q/Q2CenZ+jbnlkE8K9liwa1eT7h3p4nu3bHcPP79Z/vPr2HdzfXPnxKrHEL+FqCYcEqrKzb+9mxt60hJyvuSAN9529PD3w7549CG92XCNsqJtUHRd9/edsTu0cj9/7rHKlQHK+XNJjsmG6pZy31Q0s9d9QIomMoP7Z8P7XUi5Z62VKvLAUjOCzwkc9PgCp2GiYCnP2j3VrfL/Vefk8GpMn00+AfUCOdDg==</source>
+  </file>
+  <file path="boost/src/Lambda/Result.php" generated-path="boost.src.Lambda.Result.html" hash="d41d8cd98f00b204e9800998ecf8427e" package="Haldayne">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Haldayne"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
   </file>
   <package name="Default" full_name="Default"/>
   <package name="Haldayne" full_name="Haldayne"/>

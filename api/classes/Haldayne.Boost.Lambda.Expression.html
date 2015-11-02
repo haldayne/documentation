@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta charset="utf-8">
-<title>Haldayne PHP Componentry » \Haldayne\Boost\Lambda\Y</title>
+<title>Haldayne PHP Componentry » \Haldayne\Boost\Lambda\Expression</title>
 <meta name="author" content="Mike van Riel">
 <meta name="description" content="">
 <link href="../css/template.css" rel="stylesheet" media="all">
@@ -64,30 +64,27 @@
 <li class="nav-header">
 <i title="Methods" class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public "><a href="#method___construct" title="__construct() :: "><span class="description">__construct()
-        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method___construct" title="__construct() :: Creates a callable returning the given expression."><span class="description">Creates a callable returning the given expression.</span><pre>__construct()</pre></a></li>
 <li class="method public "><a href="#method___invoke" title="__invoke() :: "><span class="description">__invoke()
         </span><pre>__invoke()</pre></a></li>
+<li class="method public "><a href="#method_getCallable" title="getCallable() :: Get the callable manufactured for this expression."><span class="description">Get the callable manufactured for this expression.</span><pre>getCallable()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header private">» Private
-                    <ul><li class="method private "><a href="#method_combinator" title="combinator() :: "><span class="description">combinator()
-        </span><pre>combinator()</pre></a></li></ul>
+                    <ul><li class="method private "><a href="#method_makeCallable" title="makeCallable() :: "><span class="description">makeCallable()
+        </span><pre>makeCallable()</pre></a></li></ul>
 </li>
 <li class="nav-header">
 <i title="Properties" class="icon-custom icon-property"></i> Properties
                     <ul></ul>
 </li>
 <li class="nav-header private">» Private
-                    <ul>
-<li class="property private "><a href="#property_cache" title="$cache() :: "><span class="description"></span><pre>$cache</pre></a></li>
-<li class="property private "><a href="#property_code" title="$code() :: "><span class="description"></span><pre>$code</pre></a></li>
-</ul>
+                    <ul><li class="property private "><a href="#property_map" title="$map() :: "><span class="description"></span><pre>$map</pre></a></li></ul>
 </li>
 </ul>
 </div>
 <div class="span8">
-<a xmlns:php="http://php.net/xsl" id="\Haldayne\Boost\Lambda\Y"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
+<a xmlns:php="http://php.net/xsl" id="\Haldayne\Boost\Lambda\Expression"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
 <li>
 <a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
@@ -99,45 +96,66 @@
 <span class="divider">\</span><a href="../namespaces/Haldayne.Boost.Lambda.html">Lambda</a>
 </li>
 <li class="active">
-<span class="divider">\</span><a href="../classes/Haldayne.Boost.Lambda.Y.html">Y</a>
+<span class="divider">\</span><a href="../classes/Haldayne.Boost.Lambda.Expression.html">Expression</a>
 </li>
 </ul>
 <div xmlns:php="http://php.net/xsl" class="element class">
-<p class="short_description">Implements the Y-combinator.</p>
+<p class="short_description">Manufactures a lambda from a string.</p>
 <div class="details">
-<div class="long_description"><p>It's possible to express a &quot;recursive&quot; function -- like Fibonacci and
-factorials -- without recursion or iteration. Using a surprising and
-admittedly dark magic approach discovered by Haskell Curry called the Y-
-combinator, you can use lambda functions to calculate fixed-points and
-to solve around them:</p>
-<pre><code>// calculates n-th Fibonacci using two fixed points
-// this version runs in exponential time
-$fibonacci = new Y(function ($fibonacci) {
-    return function ($n) use ($fibonacci) {
-        switch ($n) {
-        case 0:  return 0;
-        case 1:  return 1;
-        default: return $fibonacci($n-1) + $fibonacci($n-2);
-        }
+<div class="long_description"><p>In PHP, a callable can be a function name (as a string), a class or object
+method specification (as an array [object|string, string], an anonymous
+function (via create_function), or a closure (function () { ... }). Sadly,
+the syntax for these callable methods may dwarf the meat of the code to
+run:</p>
+<pre><code>uasort($array, function ($a, $b) { return $a &lt;=&gt; $b; });
+// vs. an ideal expression
+uasort($array, '$_0 &lt;=&gt; $_1');</code></pre>
+<p>This class wraps string-based code expressions in anonymous functions in a
+reasonably performant manner. Libraries wanting to support concise
+expressions as arguments to their functions can then use this class to
+produce that effect:</p>
+<pre><code>use Haldayne\Boost\Lambda\Expression;
+class Collection {
+    public function __construct(array $items) {
+        $this-&gt;items = $items;
     }
-});
-var_dump($fibonacci(6));</code></pre></div>
+    // @param callable|string $expression
+    public function filter($expression) {
+        $fn = new Expression($expression);
+        return array_filter($this-&gt;items, $fn);
+    }
+}
+
+$c = new Collection(['bee', 'bear', 'goose']);
+var_dump(
+   $c-&gt;filter('strlen($_0) &lt; 4'),
+   $c-&gt;filter(function ($x) { return strlen($x) &lt; 4; })
+   // same results, just different compactness
+);</code></pre></div>
 <table class="table table-bordered">
 <tr>
-<th>TODO</th>
-<td>The recursive callable which we pass to the Y-combinator has exponential
-run-time. But, we can change that to linear time just by adding caching
-to the internal combinator. That's where this class comes in: it internally
-caches intermediary results, so that simple recursive definitions have
-optimal performance without having to implement their own caching.</td>
+<th>see</th>
+<td><a href="http://php.net/manual/en/language.types.callable.php"></a></td>
 </tr>
 <tr>
 <th>see</th>
-<td><a href="https://php100.wordpress.com/2009/04/13/php-y-combinator/"></a></td>
+<td><a href="https://linepogl.wordpress.com/2011/07/09/on-the-syntax-of-closures-in-php/"></a></td>
 </tr>
 <tr>
 <th>see</th>
-<td><a href="http://matt.might.net/articles/implementation-of-recursive-fixed-point-y-combinator-in-javascript-for-memoization/"></a></td>
+<td><a href="http://justafewlines.com/2009/10/whats-wrong-with-php-closures/"></a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="https://wiki.php.net/rfc/short_closures"></a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://docs.hhvm.com/manual/en/hack.lambda.php"></a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="https://linepogl.wordpress.com/2011/08/04/short-closures-for-php-an-implementation/"></a></td>
 </tr>
 <tr>
 <th>package</th>
@@ -147,14 +165,29 @@ optimal performance without having to implement their own caching.</td>
 <h3>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
 <a id="method___construct"></a><div class="element clickable method public method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="public">
-<h2>__construct()
-        </h2>
-<pre>__construct(callable $code) </pre>
+<h2>Creates a callable returning the given expression.</h2>
+<pre>__construct(callable|string $expression) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
+<div class="long_description"><p>If the expression is already callable, returns it untouched. If the
+expression is a string, a closure will be wrapped around the string
+returning it as a single line. In this case, the first nine positional
+arguments are available as $_0, $_1, ..., $_9.</p>
+<pre><code>$lt = new Expression('$_0 &lt; $_1');
+var_dump($lt(0, 1)); // true
+var_dump($lt(1, 0)); // false
+var_dump($lt());     // false (null not less than null)
+var_dump($lt(-1));   // true (-1 is less than null)</code></pre></div>
 <h3>Parameters</h3>
-<div class="subelement argument"><h4>$code</h4></div>
+<div class="subelement argument">
+<h4>$expression</h4>
+<code>callable</code><code>string</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\InvalidArgumentException</code></th>
+<td>When $expression not of expected type</td>
+</tr></table>
 </div></div>
 </div>
 <a id="method___invoke"></a><div class="element clickable method public method___invoke " data-toggle="collapse" data-target=".method___invoke .collapse" title="public">
@@ -164,33 +197,37 @@ optimal performance without having to implement their own caching.</td>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a id="method_combinator"></a><div class="element clickable method private method_combinator " data-toggle="collapse" data-target=".method_combinator .collapse" title="private">
-<h2>combinator()
-        </h2>
-<pre>combinator() </pre>
+<a id="method_getCallable"></a><div class="element clickable method public method_getCallable " data-toggle="collapse" data-target=".method_getCallable .collapse" title="public">
+<h2>Get the callable manufactured for this expression.</h2>
+<pre>getCallable() : callable</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>callable</code></div>
+</div></div>
+</div>
+<a id="method_makeCallable"></a><div class="element clickable method private method_makeCallable " data-toggle="collapse" data-target=".method_makeCallable .collapse" title="private">
+<h2>makeCallable()
+        </h2>
+<pre>makeCallable($expression) </pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$expression</h4></div>
+</div></div>
 </div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
-<a id="property_cache"> </a><div class="element clickable property private property_cache" data-toggle="collapse" data-target=".property_cache .collapse" title="private">
-<h2>$cache</h2>
-<pre>$cache </pre>
+<a id="property_map"> </a><div class="element clickable property private property_map" data-toggle="collapse" data-target=".property_map .collapse" title="private">
+<h2>$map</h2>
+<pre>$map </pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"><code>array()</code></div>
 </div></div>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="property_code"> </a><div class="element clickable property private property_code" data-toggle="collapse" data-target=".property_code .collapse" title="private">
-<h2>$code</h2>
-<pre>$code </pre>
-<div class="row collapse"><div class="detail-description">
-<h3>Default</h3>
-<div class="subelement argument"><code>null</code></div>
-</div></div>
-<div class="labels"></div>
+<div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
