@@ -34,7 +34,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">67</span></a></li>
+                <span class="label label-info">66</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -103,8 +103,8 @@ defined guard.</span><pre>offsetSet()</pre></a></li>
 <li class="method public inherited"><a href="#method_partition" title="partition() :: Groups elements of this map based on the result of an expression."><span class="description">Groups elements of this map based on the result of an expression.</span><pre>partition()</pre></a></li>
 <li class="method public inherited"><a href="#method_pop" title="pop() :: Treat the map as a stack and pop an element off its end."><span class="description">Treat the map as a stack and pop an element off its end.</span><pre>pop()</pre></a></li>
 <li class="method public inherited"><a href="#method_push" title="push() :: Treat the map as a stack and push an element onto its end."><span class="description">Treat the map as a stack and push an element onto its end.</span><pre>push()</pre></a></li>
-<li class="method public inherited"><a href="#method_reduce" title="reduce() :: Walk the map, applying the reducer callable to every element, so as to
-reduce the map to a single value."><span class="description">Walk the map, applying the reducer callable to every element, so as to
+<li class="method public inherited"><a href="#method_reduce" title="reduce() :: Walk the map, applying a reducing expression to every element, so as to
+reduce the map to a single value."><span class="description">Walk the map, applying a reducing expression to every element, so as to
 reduce the map to a single value.</span><pre>reduce()</pre></a></li>
 <li class="method public inherited"><a href="#method_rekey" title="rekey() :: Apply the expression to each element of the map, and creating a new
 map with keys corresponding to the expression's return value."><span class="description">Apply the expression to each element of the map, and creating a new
@@ -115,6 +115,7 @@ map with keys corresponding to the expression's return value.</span><pre>rekey()
 contained collections into arrays."><span class="description">Copy this map into an array, recursing as necessary to convert
 contained collections into arrays.</span><pre>toArray()</pre></a></li>
 <li class="method public inherited"><a href="#method_toJson" title="toJson() :: Return a JSON representation of the object."><span class="description">Return a JSON representation of the object.</span><pre>toJson()</pre></a></li>
+<li class="method public inherited"><a href="#method_transform" title="transform() :: Flexibly and thoroughly change this map into another map."><span class="description">Flexibly and thoroughly change this map into another map.</span><pre>transform()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header protected">» Protected
@@ -137,7 +138,7 @@ the value by reference and then the key as formal parameters.</span><pre>walk()<
 </li>
 <li class="nav-header private">» Private
                     <ul>
-<li class="method private inherited"><a href="#method_call" title="call() :: Calls the given code with the given value and key as first &amp; second argument."><span class="description">Calls the given code with the given value and key as first &amp; second argument.</span><pre>call()</pre></a></li>
+<li class="method private inherited"><a href="#method_call" title="call() :: Call the expression with the arguments."><span class="description">Call the expression with the arguments.</span><pre>call()</pre></a></li>
 <li class="method private inherited"><a href="#method_hash_to_key" title="hash_to_key() :: Lookup the key for the given hash."><span class="description">Lookup the key for the given hash.</span><pre>hash_to_key()</pre></a></li>
 <li class="method private inherited"><a href="#method_key_to_hash" title="key_to_hash() :: Lookup the hash for the given key. If a hash does not yet exist, one is
 created."><span class="description">Lookup the hash for the given key. If a hash does not yet exist, one is
@@ -478,14 +479,17 @@ them into a new map.</h2>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><pre><code>$nums = new Map(range(0, 9));
-$doubles = $nums-&gt;map('$_0 * 2');</code></pre>
+$doubled = $nums-&gt;map('$_0 * 2');</code></pre>
 <p>The expression receives two arguments:</p>
 <ul>
-<li>The current value</li>
-<li>The current key</li>
+<li>The current value in <code>$_0</code></li>
+<li>The current key in <code>$_1</code></li>
 </ul>
 <p>The keys in the resulting map will be the same as the keys in the
-original map: only the values have (potentially) changed.</p></div>
+original map: only the values have (potentially) changed.</p>
+<p>Recommended to use this method when you are mapping from one type to
+the same type: int to int, string to string, etc. If you are changing
+types, use the more powerful <code>transform</code> method.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$expression</h4>
@@ -685,25 +689,26 @@ var_dump(
 </div></div>
 </div>
 <a id="method_reduce"></a><div class="element clickable method public method_reduce inherited" data-toggle="collapse" data-target=".method_reduce .collapse" title="public">
-<h2>Walk the map, applying the reducer callable to every element, so as to
+<h2>Walk the map, applying a reducing expression to every element, so as to
 reduce the map to a single value.</h2>
-<pre>reduce(callable $reducer, mixed $initial<code> = null</code>, callable|null $final<code> = null</code>) : mixed</pre>
+<pre>reduce(callable|string $reducer, mixed $initial<code> = null</code>, callable|string|null $finisher<code> = null</code>) : mixed</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
-<div class="long_description"><p>The reducer callable receives three arguments:</p>
+<div class="long_description"><p>The <code>$reducer</code> expression receives three arguments:</p>
 <ul>
-<li>The current reduction</li>
-<li>The current value</li>
-<li>The current key</li>
+<li>The current reduction (<code>$_0</code>)</li>
+<li>The current value (<code>$_1</code>)</li>
+<li>The current key (<code>$_2</code>)</li>
 </ul>
-<p>The given initial value is passed as the current reduction on the first
-invocation of the reducer callable.</p>
+<p>The initial value, if given or null if not, is passed as the current
+reduction on the first invocation of <code>$reducer</code>. The return value from
+<code>$reducer</code> then becomes the new, current reduced value.</p>
 <pre><code>$nums = new Map(range(0, 3));
-$sum = $nums-&gt;reduce(function ($sum, $int) { return $sum + $int; });
+$sum = $nums-&gt;reduce('$_0 + $_1');
 // $sum == 6</code></pre>
-<p>If <code>$final</code> is given and a callable, it will be called after with the
-final reduced value. The <code>$final</code> callable must return the new final
-value.</p></div>
+<p>If <code>$finisher</code> is a callable or string expression, then it will be
+called last, after iterating over all elements. It will be passed
+reduced value. The <code>$finisher</code> must return the new final value.</p></div>
 <table class="table table-bordered"><tr>
 <th>see</th>
 <td><a href="http://php.net/manual/en/function.array-reduce.php"></a></td>
@@ -711,15 +716,15 @@ value.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$reducer</h4>
-<code>callable</code>
+<code>callable</code><code>string</code>
 </div>
 <div class="subelement argument">
 <h4>$initial</h4>
 <code>mixed</code>
 </div>
 <div class="subelement argument">
-<h4>$final</h4>
-<code>callable</code><code>null</code>
+<h4>$finisher</h4>
+<code>callable</code><code>string</code><code>null</code>
 </div>
 <h3>Returns</h3>
 <div class="subelement response"><code>mixed</code></div>
@@ -807,6 +812,79 @@ contained collections into arrays.</h2>
 </tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument"><h4>$options</h4></div>
+</div></div>
+</div>
+<a id="method_transform"></a><div class="element clickable method public method_transform inherited" data-toggle="collapse" data-target=".method_transform .collapse" title="public">
+<h2>Flexibly and thoroughly change this map into another map.</h2>
+<pre>transform(callable $transformer, callable|null $creator<code> = null</code>, callable|null $finisher<code> = null</code>) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><pre><code>// transform a word list into a map of word to frequency in the list
+use Haldayne\Boost\Map;
+$words   = new Map([ 'bear', 'bee', 'goose', 'bee' ]);
+$lengths = $words-&gt;transform(
+    function (Map $new, $word) {
+        if ($new-&gt;has($word)) {
+            $new-&gt;set($word, $new-&gt;get($word)+1);
+        } else {
+            $new-&gt;set($word, 1);
+        }
+    }
+);</code></pre>
+<p>Sometimes you need to create one map from another using a strategy
+that isn't one-to-one. You may need to change keys. You may need to
+add multiple elements. You may need to delete elements. You may need
+to change from a map to a number.</p>
+<p>Whatever the case, the other simpler methods in Map don't quite fit the
+problem. What you need, and what this method provides, is a complete
+machine to transform this map into something else:</p>
+<pre><code>// convert a word list into a count of unique letters in those words
+use Haldayne\Boost\Map;
+$words   = new Map([ 'bear', 'bee', 'goose', 'bee' ]);
+$letters = $words-&gt;transform(
+    function ($frequencies, $word) {
+        foreach (count_chars($word, 1) as $byte =&gt; $frequency) {
+            $letter = chr($byte);
+            if ($frequencies-&gt;has($letter)) {
+                $new-&gt;set($letter, $frequencies-&gt;get($letter)+1);
+            } else {
+                $new-&gt;set($letter, 1);
+            }
+        }
+    },
+    function (Map $original) { return new MapOfIntegers(); },
+    function (MapOfIntegers $new) { return $new-&gt;sum(); }
+);</code></pre>
+<p>This method accepts three callables</p>
+<ol>
+<li>
+<p><code>$creator</code>, which is called first with the current map, performs any
+initialization needed.  The result of this callable will be passed to
+all the other callables.  If no creator is given, then use a default
+one that returns an empty Map.</p>
+</li>
+<li>
+<p><code>$transformer</code>, which is called for every element in this map and
+receives the initialized value, the current value, and the current key
+in that order. The transformer should modify the initialized value
+appropriately. Often this means adding to a new map zero or more
+tranformed values.</p>
+</li>
+<li><code>$finisher</code>, which is called last, receives the initialized value
+that was modified by the transformer calls. The finisher may transform
+that value once more as needed. If no finisher given, then no finishing
+step is made.</li>
+</ol></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$transformer</h4></div>
+<div class="subelement argument">
+<h4>$creator</h4>
+<code>callable</code><code>null</code>
+</div>
+<div class="subelement argument">
+<h4>$finisher</h4>
+<code>callable</code><code>null</code>
+</div>
 </div></div>
 </div>
 <a id="method_allowed"></a><div class="element clickable method protected method_allowed " data-toggle="collapse" data-target=".method_allowed .collapse" title="protected">
@@ -960,8 +1038,8 @@ from within the callback, but not keys.</p>
 </div></div>
 </div>
 <a id="method_call"></a><div class="element clickable method private method_call inherited" data-toggle="collapse" data-target=".method_call .collapse" title="private">
-<h2>Calls the given code with the given value and key as first &amp; second argument.</h2>
-<pre>call(callable|string $expression, mixed $value, string $key) </pre>
+<h2>Call the expression with the arguments.</h2>
+<pre>call(callable|string $expression) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -969,14 +1047,6 @@ from within the callback, but not keys.</p>
 <div class="subelement argument">
 <h4>$expression</h4>
 <code>callable</code><code>string</code>
-</div>
-<div class="subelement argument">
-<h4>$value</h4>
-<code>mixed</code>
-</div>
-<div class="subelement argument">
-<h4>$key</h4>
-<code>string</code>
 </div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
@@ -1088,7 +1158,7 @@ created.</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2015-11-03T16:30:33-05:00.<br></footer></div>
+            generated on 2015-11-09T17:04:59-05:00.<br></footer></div>
 </div>
 </body>
 </html>
