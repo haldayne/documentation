@@ -28,5 +28,5 @@ Learn more:
 * [List of generic functions][3]
 
 [1]: https://github.com/haldayne/fox
-[2]: http://haldayne-docs.readthedocs.org/en/latest/fox-design-and-advantage/
-[3]: http://haldayne-docs.readthedocs.org/en/latest/fox-list-of-generic-functions/
+[2]: http://haldayne-docs.readthedocs.org/en/latest/Fox/design-and-advantage/
+[3]: http://haldayne-docs.readthedocs.org/en/latest/Fox/list-of-generic-functions/
