@@ -1,5 +1,5 @@
 [`Haldayne\Fox`][1] provides implementation of generic, higher-order functions.
-What does this mean?
+Huh? In English, please!
 
 Many algorithms are generic. That is, the way the algorithm functions is
 independent of what the algorithm does to the underlying data. Let's take a
