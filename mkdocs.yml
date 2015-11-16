@@ -1,5 +1,6 @@
 site_name: 'Haldayne PHP Componentry'
 pages:
+- 'About': 'index.md'
 -  Haldayne\Fox:
    - 'Introduction': 'fox/index.md'
    - 'Class design and advantages of higher order functions': 'fox/design-and-advantage.md'
