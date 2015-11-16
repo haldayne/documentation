@@ -66,4 +66,4 @@ Next: [List of all generic functions][3]
 
 [1]: http://cerebriform.blogspot.com/2015/11/wielding-php-magic-with-callable-object.html
 [2]: http://php.net/manual/en/function.set-error-handler.php
-[3]: http://haldayne-docs.readthedocs.org/en/latest/Fox/list-of-generic-functions/
+[3]: list-of-generic-functions.md
