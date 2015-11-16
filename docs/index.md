@@ -7,7 +7,8 @@ framework, it does not by itself provide framework.
 * [Browse the complete PHP API](http://haldayne.github.io/documentation/api)
 * [Haldayne\Boost](fox/index.md) improves the readability of your array-heavy
 and string-manipulation code.
-* [Haldayne\Fox](fox/index.md) generic functors.
+* [Haldayne\Fox](fox/index.md) common programming strategies implemented
+using composable function objects.
 
 # You might also like...
 
