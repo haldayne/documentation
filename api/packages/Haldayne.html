@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">66</span></a></li>
+                <span class="label label-info">35</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -76,30 +76,27 @@ into integer bytes.</span><pre>ini_size_to_bytes</pre></a></li>
 <li><a href="#Jsonable" title="">Jsonable</a></li>
 <li class="nav-header">
 <i title="Classes" class="icon-custom icon-class"></i> Classes</li>
-<li><a href="#UploadError" title="Represents a file that did not successfully upload.">UploadError</a></li>
+<li><a href="#MapOfStrings" title="Implements a map of strings, that is a Map whose values must all pass the
+`is_string` test.">MapOfStrings</a></li>
 <li><a href="#UploadException" title="Represents an exception during upload.">UploadException</a></li>
 <li><a href="#ServerProblemException" title="A specific kind of UploadException: the server had a problem.">ServerProblemException</a></li>
-<li><a href="#UploadFile" title="Represents a file that has been successfully uploaded.">UploadFile</a></li>
+<li><a href="#MapOfFloats" title="Implements a map of floats, that is a Map whose values must all pass the
+`is_float` test.">MapOfFloats</a></li>
+<li><a href="#MapOfInts" title="Implements a map of integers, that is a Map whose values must all pass the
+`is_int` test.">MapOfInts</a></li>
+<li><a href="#GuardedMapAbstract" title="Restricts what can be set into a Map, optionally normalizing those values
+that can be set.">GuardedMapAbstract</a></li>
 <li><a href="#SecurityConcernException" title="A specific kind of UploadException: the upload is suspicious.">SecurityConcernException</a></li>
+<li><a href="#UploadFile" title="Represents a file that has been successfully uploaded.">UploadFile</a></li>
+<li><a href="#UploadError" title="Represents a file that did not successfully upload.">UploadError</a></li>
 <li><a href="#UploadConfig" title="Return information about the upload configuration.">UploadConfig</a></li>
 <li><a href="#UploadIterator" title="Implements an iterator over the $_FILES super-global or an array of
 similar structure.">UploadIterator</a></li>
 <li><a href="#MapOfNumerics" title="Implements a map of numbers, that is a Map whose values must all pass the
 `is_numeric` test.">MapOfNumerics</a></li>
-<li><a href="#GuardedMapAbstract" title="Restricts what can be set into a Map, optionally normalizing those values
-that can be set.">GuardedMapAbstract</a></li>
 <li><a href="#MapOfCollections" title="Implements a map that may only contain collection-like values.">MapOfCollections</a></li>
-<li><a href="#MapOfInts" title="Implements a map of integers, that is a Map whose values must all pass the
-`is_int` test.">MapOfInts</a></li>
 <li><a href="#Map" title="API improvements for PHP associative arrays. Features a consistent fluent
 interface, keys of any type, a short-hand syntax for filtering expressions.">Map</a></li>
-<li><a href="#MapOfFloats" title="Implements a map of floats, that is a Map whose values must all pass the
-`is_float` test.">MapOfFloats</a></li>
-<li><a href="#Retry" title="Runs a callable, retrying using exponential back-off if the callable fails.">Retry</a></li>
-<li><a href="#Capture" title="Runs a callable, capturing all error messages, then provides a method to
-extract any errors raised during execution.">Capture</a></li>
-<li><a href="#Y" title="Implements the Y-combinator.">Y</a></li>
-<li><a href="#Expression" title="Manufactures a lambda from a string.">Expression</a></li>
 </ul>
 </div>
 <div class="span8 package-contents">
@@ -191,35 +188,6 @@ that can be set.</p>
 <div class="details collapse"></div>
 <a href="../classes/Haldayne.Boost.GuardedMapAbstract.html" class="more">« More »</a>
 </div>
-<div xmlns:php="http://php.net/xsl" id="Capture" class="element ajax clickable class">
-<h1>Capture<a href="../classes/Haldayne.Boost.Lambda.Capture.html">¶</a>
-</h1>
-<p class="short_description">Runs a callable, capturing all error messages, then provides a method to
-extract any errors raised during execution.</p>
-<div class="details collapse"></div>
-<a href="../classes/Haldayne.Boost.Lambda.Capture.html" class="more">« More »</a>
-</div>
-<div xmlns:php="http://php.net/xsl" id="Expression" class="element ajax clickable class">
-<h1>Expression<a href="../classes/Haldayne.Boost.Lambda.Expression.html">¶</a>
-</h1>
-<p class="short_description">Manufactures a lambda from a string.</p>
-<div class="details collapse"></div>
-<a href="../classes/Haldayne.Boost.Lambda.Expression.html" class="more">« More »</a>
-</div>
-<div xmlns:php="http://php.net/xsl" id="Retry" class="element ajax clickable class">
-<h1>Retry<a href="../classes/Haldayne.Boost.Lambda.Retry.html">¶</a>
-</h1>
-<p class="short_description">Runs a callable, retrying using exponential back-off if the callable fails.</p>
-<div class="details collapse"></div>
-<a href="../classes/Haldayne.Boost.Lambda.Retry.html" class="more">« More »</a>
-</div>
-<div xmlns:php="http://php.net/xsl" id="Y" class="element ajax clickable class">
-<h1>Y<a href="../classes/Haldayne.Boost.Lambda.Y.html">¶</a>
-</h1>
-<p class="short_description">Implements the Y-combinator.</p>
-<div class="details collapse"></div>
-<a href="../classes/Haldayne.Boost.Lambda.Y.html" class="more">« More »</a>
-</div>
 <div xmlns:php="http://php.net/xsl" id="Map" class="element ajax clickable class">
 <h1>Map<a href="../classes/Haldayne.Boost.Map.html">¶</a>
 </h1>
@@ -258,6 +226,14 @@ interface, keys of any type, a short-hand syntax for filtering expressions.</p>
 `is_numeric` test.</p>
 <div class="details collapse"></div>
 <a href="../classes/Haldayne.Boost.MapOfNumerics.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="MapOfStrings" class="element ajax clickable class">
+<h1>MapOfStrings<a href="../classes/Haldayne.Boost.MapOfStrings.html">¶</a>
+</h1>
+<p class="short_description">Implements a map of strings, that is a Map whose values must all pass the
+`is_string` test.</p>
+<div class="details collapse"></div>
+<a href="../classes/Haldayne.Boost.MapOfStrings.html" class="more">« More »</a>
 </div>
 <div xmlns:php="http://php.net/xsl" id="SecurityConcernException" class="element ajax clickable class">
 <h1>SecurityConcernException<a href="../classes/Haldayne.Customs.SecurityConcernException.html">¶</a>
@@ -315,7 +291,7 @@ similar structure.</p>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2015-11-16T10:51:54-05:00.<br></footer></div>
+            generated on 2015-11-16T10:56:56-05:00.<br></footer></div>
 </div>
 </body>
 </html>
