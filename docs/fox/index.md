@@ -1,4 +1,5 @@
-[`Haldayne\Fox`][1] provides algorithm strategies built using function objects.
+[`Haldayne\Fox`][1] provides algorithm strategies built using function
+objects. What's this mean?
 
 Many algorithms are generic. That is, the way the algorithm functions is
 independent of what the algorithm does to the underlying data. Let's take a
@@ -21,14 +22,8 @@ This package implements generic strategies in a concise way. Here are some
 examples of strategies provided:
 
 * Retry a piece of code until it works, failing after a certain number of
-attempts and exponentially waiting between calls. You might use this to:
-  * Copy a file over the network.
-  * Push a message into a queue.
-  * Connect to a remote service.
-* Capture PHP errors triggered when running a piece of code. You might use
-this to:
-  * Run legacy code with errors turned off.
-  * Capture run-time errors PHP emits.
+attempts and exponentially waiting between calls.
+* Capture PHP errors triggered when running a piece of code.
 
 
 [1]: https://github.com/haldayne/fox
