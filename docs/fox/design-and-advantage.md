@@ -62,8 +62,6 @@ The PHP magic method __invoke() is the syntactic sugar that makes it possible
 for these two functions to be completely indepedent. They know nothing of
 one another, but rely on the defined interface: each is callable.
 
-Next: [List of all generic functions][3]
-
 [1]: http://cerebriform.blogspot.com/2015/11/wielding-php-magic-with-callable-object.html
 [2]: http://php.net/manual/en/function.set-error-handler.php
 [3]: list-of-generic-functions.md
