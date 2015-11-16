@@ -22,11 +22,6 @@ As program designers, we want our language powerful enough to express the
 that powerful, but we need the generic functions to take advantage of this
 generic *programming.
 
-Learn more:
-
-* [Design and advantages of the `Haldayne\Fox` generic function][2]
-* [List of generic functions][3]
-
 [1]: https://github.com/haldayne/fox
 [2]: design-and-advantage.md
 [3]: list-of-generic-functions.md
