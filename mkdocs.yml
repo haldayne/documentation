@@ -1,4 +1,5 @@
 site_name: 'Haldayne PHP Componentry'
+theme: readable
 pages:
 - 'About': 'index.md'
 -  Haldayne\Fox:
