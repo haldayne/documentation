@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta charset="utf-8">
-<title>Haldayne PHP Componentry » \Haldayne\Customs\UploadFile</title>
+<title>Haldayne PHP Componentry » \Haldayne\Fox\CaptureErrors</title>
 <meta name="author" content="Mike van Riel">
 <meta name="description" content="">
 <link href="../css/template.css" rel="stylesheet" media="all">
@@ -63,128 +63,148 @@
 <li class="nav-header">
 <i title="Methods" class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public "><a href="#method_getClientFilename" title="getClientFilename() :: Get the file name the client gave us for this file, if any."><span class="description">Get the file name the client gave us for this file, if any.</span><pre>getClientFilename()</pre></a></li>
-<li class="method public inherited"><a href="#method_getHtmlName" title="getHtmlName() :: Get the HTML variable name."><span class="description">Get the HTML variable name.</span><pre>getHtmlName()</pre></a></li>
-<li class="method public "><a href="#method_getMimeAnalyzer" title="getMimeAnalyzer() :: Get the MIME analyzer for the file"><span class="description">Get the MIME analyzer for the file</span><pre>getMimeAnalyzer()</pre></a></li>
-<li class="method public "><a href="#method_getServerFile" title="getServerFile() :: Get the temporary file holding this upload. You must move this file
-before the request ends to keep the upload."><span class="description">Get the temporary file holding this upload. You must move this file
-before the request ends to keep the upload.</span><pre>getServerFile()</pre></a></li>
+<li class="method public "><a href="#method___construct" title="__construct() :: Create a new callable object that captures errors when the given code
+is invoked. By default, all errors (E_ALL) are captured. You can set
+which errors will be captured using the `setCapturedErrorTypes` method."><span class="description">Create a new callable object that captures errors when the given code
+is invoked. By default, all errors (E_ALL) are captured. You can set
+which errors will be captured using the `setCapturedErrorTypes` method.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method___invoke" title="__invoke() :: Invoke the helper. Passes any arguments into the callable given during
+helper construction. Returns any result from the callable."><span class="description">Invoke the helper. Passes any arguments into the callable given during
+helper construction. Returns any result from the callable.</span><pre>__invoke()</pre></a></li>
+<li class="method public "><a href="#method_getCapturedErrors" title="getCapturedErrors() :: Get the captured errors."><span class="description">Get the captured errors.</span><pre>getCapturedErrors()</pre></a></li>
+<li class="method public "><a href="#method_setCapturedErrorTypes" title="setCapturedErrorTypes() :: Set the error types to capture. Acts as a filter: only those errors
+matching this value will be captured."><span class="description">Set the error types to capture. Acts as a filter: only those errors
+matching this value will be captured.</span><pre>setCapturedErrorTypes()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header">
 <i title="Properties" class="icon-custom icon-property"></i> Properties
                     <ul></ul>
 </li>
-<li class="nav-header protected">» Protected
-                    <ul>
-<li class="property protected "><a href="#property_file" title="$file() :: "><span class="description"></span><pre>$file</pre></a></li>
-<li class="property protected "><a href="#property_name" title="$name() :: "><span class="description"></span><pre>$name</pre></a></li>
-</ul>
-</li>
 <li class="nav-header private">» Private
-                    <ul><li class="property private "><a href="#property_htmlName" title="$htmlName() :: "><span class="description">The HTML name we were given.</span><pre>$htmlName</pre></a></li></ul>
+                    <ul>
+<li class="property private "><a href="#property_capturedErrorTypes" title="$capturedErrorTypes() :: "><span class="description"></span><pre>$capturedErrorTypes</pre></a></li>
+<li class="property private "><a href="#property_code" title="$code() :: "><span class="description"></span><pre>$code</pre></a></li>
+<li class="property private "><a href="#property_map" title="$map() :: "><span class="description"></span><pre>$map</pre></a></li>
+</ul>
 </li>
 </ul>
 </div>
 <div class="span8">
-<a xmlns:php="http://php.net/xsl" id="\Haldayne\Customs\UploadFile"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
+<a xmlns:php="http://php.net/xsl" id="\Haldayne\Fox\CaptureErrors"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
 <li>
 <a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/Haldayne.html">Haldayne</a></li>
 <li>
-<span class="divider">\</span><a href="../namespaces/Haldayne.Customs.html">Customs</a>
+<span class="divider">\</span><a href="../namespaces/Haldayne.Fox.html">Fox</a>
 </li>
 <li class="active">
-<span class="divider">\</span><a href="../classes/Haldayne.Customs.UploadFile.html">UploadFile</a>
+<span class="divider">\</span><a href="../classes/Haldayne.Fox.CaptureErrors.html">CaptureErrors</a>
 </li>
 </ul>
 <div xmlns:php="http://php.net/xsl" class="element class">
-<p class="short_description">Represents a file that has been successfully uploaded.</p>
+<p class="short_description">Runs a callable, capturing all error messages, then provides a method to
+extract any errors raised during execution.</p>
 <div class="details">
-<div class="long_description"></div>
+<div class="long_description"><pre><code>use Haldayne\Fox\CaptureErrors;
+$helper = new CaptureErrors(function ($src, $dst) { return copy($src, $dst); });
+if (false === $helper('foo', 'bar')) {
+    throw new \RuntimeException($helper-&gt;getCapturedErrors()-&gt;pop()-&gt;get('message'));
+}</code></pre>
+<p>PHP itself, as well as many libraries, rely upon triggered errors to notify
+developers of problems. Many frameworks provide methods to capure these
+errors globally and convert them to exceptions, but you do not always have
+access to those frameworks.  Worse, you may be using code that deliberately
+silences errors.</p>
+<p>Errors raised inside the CaptureErrors helper is pushed into a Map stack,
+with each element also a Map of the error details: error code, error
+string, file and line where raised, and an array context of variables
+set at time of error.</p></div>
 <table class="table table-bordered"><tr>
 <th>package</th>
 <td><a href="../packages/Haldayne.html">Haldayne</a></td>
 </tr></table>
 <h3>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
-<a id="method_getClientFilename"></a><div class="element clickable method public method_getClientFilename " data-toggle="collapse" data-target=".method_getClientFilename .collapse" title="public">
-<h2>Get the file name the client gave us for this file, if any.</h2>
-<pre>getClientFilename() </pre>
+<a id="method___construct"></a><div class="element clickable method public method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="public">
+<h2>Create a new callable object that captures errors when the given code
+is invoked. By default, all errors (E_ALL) are captured. You can set
+which errors will be captured using the `setCapturedErrorTypes` method.</h2>
+<pre>__construct(callable $code) </pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Do not rely on this file name for anything but display, because you
-cannot trust that it contains safe characters.</p></div></div></div>
-</div>
-<a id="method_getHtmlName"></a><div class="element clickable method public method_getHtmlName inherited" data-toggle="collapse" data-target=".method_getHtmlName .collapse" title="public">
-<h2>Get the HTML variable name.</h2>
-<pre>getHtmlName() : string</pre>
-<div class="labels">
-<span class="label label-info">API</span><span class="label">Inherited</span>
-</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
-<table class="table table-bordered">
-<tr>
-<th>api</th>
-<td></td>
-</tr>
-<tr>
-<th>since</th>
-<td>1.0.0</td>
-</tr>
-</table>
-<h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$code</h4>
+<code>callable</code>
+</div>
 </div></div>
 </div>
-<a id="method_getMimeAnalyzer"></a><div class="element clickable method public method_getMimeAnalyzer " data-toggle="collapse" data-target=".method_getMimeAnalyzer .collapse" title="public">
-<h2>Get the MIME analyzer for the file</h2>
-<pre>getMimeAnalyzer() </pre>
+<a id="method___invoke"></a><div class="element clickable method public method___invoke " data-toggle="collapse" data-target=".method___invoke .collapse" title="public">
+<h2>Invoke the helper. Passes any arguments into the callable given during
+helper construction. Returns any result from the callable.</h2>
+<pre>__invoke() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a id="method_getServerFile"></a><div class="element clickable method public method_getServerFile " data-toggle="collapse" data-target=".method_getServerFile .collapse" title="public">
-<h2>Get the temporary file holding this upload. You must move this file
-before the request ends to keep the upload.</h2>
-<pre>getServerFile() </pre>
+<a id="method_getCapturedErrors"></a><div class="element clickable method public method_getCapturedErrors " data-toggle="collapse" data-target=".method_getCapturedErrors .collapse" title="public">
+<h2>Get the captured errors.</h2>
+<pre>getCapturedErrors() : \Haldayne\Boost\MapOfCollections</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\Haldayne\Boost\MapOfCollections</code></div>
+</div></div>
+</div>
+<a id="method_setCapturedErrorTypes"></a><div class="element clickable method public method_setCapturedErrorTypes " data-toggle="collapse" data-target=".method_setCapturedErrorTypes .collapse" title="public">
+<h2>Set the error types to capture. Acts as a filter: only those errors
+matching this value will be captured.</h2>
+<pre>setCapturedErrorTypes(integer $capturedErrorTypes) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$capturedErrorTypes</h4>
+<code>integer</code><p>One or more of the E_* error constants</p></div>
+<h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
-<th>see</th>
-<td><a href="%5CHaldayne%5CCustoms%5CUploadFile::moveTo"></a></td>
+<th><code>\InvalidArgumentException</code></th>
+<td>If $capturedErrorTypes isn't an int</td>
 </tr></table>
 </div></div>
 </div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
-<a id="property_file"> </a><div class="element clickable property protected property_file" data-toggle="collapse" data-target=".property_file .collapse" title="protected">
-<h2>$file</h2>
-<pre>$file </pre>
+<a id="property_capturedErrorTypes"> </a><div class="element clickable property private property_capturedErrorTypes" data-toggle="collapse" data-target=".property_capturedErrorTypes .collapse" title="private">
+<h2>$capturedErrorTypes</h2>
+<pre>$capturedErrorTypes </pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
-<div class="subelement argument"></div>
+<div class="subelement argument"><code>null</code></div>
 </div></div>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a id="property_name"> </a><div class="element clickable property protected property_name" data-toggle="collapse" data-target=".property_name .collapse" title="protected">
-<h2>$name</h2>
-<pre>$name </pre>
+<a id="property_code"> </a><div class="element clickable property private property_code" data-toggle="collapse" data-target=".property_code .collapse" title="private">
+<h2>$code</h2>
+<pre>$code </pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
-<div class="subelement argument"></div>
+<div class="subelement argument"><code>null</code></div>
 </div></div>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a id="property_htmlName"> </a><div class="element clickable property private property_htmlName" data-toggle="collapse" data-target=".property_htmlName .collapse" title="private">
-<h2>The HTML name we were given.</h2>
-<pre>$htmlName : string</pre>
+<a id="property_map"> </a><div class="element clickable property private property_map" data-toggle="collapse" data-target=".property_map .collapse" title="private">
+<h2>$map</h2>
+<pre>$map </pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
-<div class="subelement argument"></div>
+<div class="subelement argument"><code>null</code></div>
 </div></div>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>

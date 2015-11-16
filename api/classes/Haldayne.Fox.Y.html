@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta charset="utf-8">
-<title>Haldayne PHP Componentry » \Haldayne\Customs\SecurityConcernException</title>
+<title>Haldayne PHP Componentry » \Haldayne\Fox\Y</title>
 <meta name="author" content="Mike van Riel">
 <meta name="description" content="">
 <link href="../css/template.css" rel="stylesheet" media="all">
@@ -63,156 +63,129 @@
 <li class="nav-header">
 <i title="Methods" class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public "><a href="#method_getDiagnosticMessage" title="getDiagnosticMessage() :: Returns a string containing details of the remote connection at the
-time the security concern was raised."><span class="description">Returns a string containing details of the remote connection at the
-time the security concern was raised.</span><pre>getDiagnosticMessage()</pre></a></li>
-<li class="method public inherited"><a href="#method_getHtmlName" title="getHtmlName() :: Get the HTML variable name."><span class="description">Get the HTML variable name.</span><pre>getHtmlName()</pre></a></li>
-<li class="method public "><a href="#method_getMessage" title="getMessage() :: Return the message specific for this exception code."><span class="description">Return the message specific for this exception code.</span><pre>getMessage()</pre></a></li>
+<li class="method public "><a href="#method___construct" title="__construct() :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method___invoke" title="__invoke() :: "><span class="description">__invoke()
+        </span><pre>__invoke()</pre></a></li>
 </ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="method private "><a href="#method_combinator" title="combinator() :: "><span class="description">combinator()
+        </span><pre>combinator()</pre></a></li></ul>
 </li>
 <li class="nav-header">
 <i title="Properties" class="icon-custom icon-property"></i> Properties
                     <ul></ul>
 </li>
 <li class="nav-header private">» Private
-                    <ul><li class="property private "><a href="#property_htmlName" title="$htmlName() :: "><span class="description">The HTML name we were given.</span><pre>$htmlName</pre></a></li></ul>
-</li>
-<li class="nav-header">
-<i title="Constants" class="icon-custom icon-constant"></i> Constants
                     <ul>
-<li class="constant  "><a href="#constant_NOT_UPLOADED" title="NOT_UPLOADED() :: "><span class="description">NOT_UPLOADED</span><pre>NOT_UPLOADED</pre></a></li>
-<li class="constant  "><a href="#constant_UNKNOWN_CODE" title="UNKNOWN_CODE() :: "><span class="description">UNKNOWN_CODE</span><pre>UNKNOWN_CODE</pre></a></li>
+<li class="property private "><a href="#property_cache" title="$cache() :: "><span class="description"></span><pre>$cache</pre></a></li>
+<li class="property private "><a href="#property_code" title="$code() :: "><span class="description"></span><pre>$code</pre></a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="span8">
-<a xmlns:php="http://php.net/xsl" id="\Haldayne\Customs\SecurityConcernException"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
+<a xmlns:php="http://php.net/xsl" id="\Haldayne\Fox\Y"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
 <li>
 <a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/Haldayne.html">Haldayne</a></li>
 <li>
-<span class="divider">\</span><a href="../namespaces/Haldayne.Customs.html">Customs</a>
+<span class="divider">\</span><a href="../namespaces/Haldayne.Fox.html">Fox</a>
 </li>
 <li class="active">
-<span class="divider">\</span><a href="../classes/Haldayne.Customs.SecurityConcernException.html">SecurityConcernException</a>
+<span class="divider">\</span><a href="../classes/Haldayne.Fox.Y.html">Y</a>
 </li>
 </ul>
 <div xmlns:php="http://php.net/xsl" class="element class">
-<p class="short_description">A specific kind of UploadException: the upload is suspicious.</p>
+<p class="short_description">Implements the Y-combinator.</p>
 <div class="details">
-<div class="long_description"><p>It's recommended that you also log the session ID, IP address, and other
-environment for their diagnostic value. The exception message does not
-include these details for security, but the exception provides a method for
-extracting them. Example:</p>
-<pre><code>
-try {
-    $it = new UploadIterator;
-} catch (SecurityConcernException $ex) {
-    error_log($ex-&gt;getDiagnosticMessage());
-    throw $ex;
-}</code></pre></div>
+<div class="long_description"><p>It's possible to express a &quot;recursive&quot; function -- like Fibonacci and
+factorials -- without recursion or iteration. Using a surprising and
+admittedly dark magic approach discovered by Haskell Curry called the Y-
+combinator, you can use lambda functions to calculate fixed-points and
+to solve around them:</p>
+<pre><code>// calculates n-th Fibonacci using two fixed points
+// this version runs in exponential time
+$fibonacci = new Y(function ($fibonacci) {
+    return function ($n) use ($fibonacci) {
+        switch ($n) {
+        case 0:  return 0;
+        case 1:  return 1;
+        default: return $fibonacci($n-1) + $fibonacci($n-2);
+        }
+    }
+});
+var_dump($fibonacci(6));</code></pre></div>
 <table class="table table-bordered">
+<tr>
+<th>TODO</th>
+<td>The recursive callable which we pass to the Y-combinator has exponential
+run-time. But, we can change that to linear time just by adding caching
+to the internal combinator. That's where this class comes in: it internally
+caches intermediary results, so that simple recursive definitions have
+optimal performance without having to implement their own caching.</td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="https://php100.wordpress.com/2009/04/13/php-y-combinator/"></a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="http://matt.might.net/articles/implementation-of-recursive-fixed-point-y-combinator-in-javascript-for-memoization/"></a></td>
+</tr>
 <tr>
 <th>package</th>
 <td><a href="../packages/Haldayne.html">Haldayne</a></td>
 </tr>
-<tr>
-<th>inherited_from</th>
-<td>\Haldayne\Customs\UploadException</td>
-</tr>
 </table>
 <h3>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
-<a id="method_getDiagnosticMessage"></a><div class="element clickable method public method_getDiagnosticMessage " data-toggle="collapse" data-target=".method_getDiagnosticMessage .collapse" title="public">
-<h2>Returns a string containing details of the remote connection at the
-time the security concern was raised.</h2>
-<pre>getDiagnosticMessage() : string</pre>
-<div class="labels"><span class="label label-info">API</span></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"><p>Knowing the remote connection and environment helps frame the context
-of the problem: patterns of attack, duration, payload sizes. From this
-data, you can better adapt your environment.</p>
-<p>This method captures the session ID, IP address, and other environment
-details into a string for foresnic diagnostics.</p></div>
-<table class="table table-bordered">
-<tr>
-<th>api</th>
-<td></td>
-</tr>
-<tr>
-<th>since</th>
-<td>1.0.0</td>
-</tr>
-</table>
-<h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
-</div></div>
-</div>
-<a id="method_getHtmlName"></a><div class="element clickable method public method_getHtmlName inherited" data-toggle="collapse" data-target=".method_getHtmlName .collapse" title="public">
-<h2>Get the HTML variable name.</h2>
-<pre>getHtmlName() : string</pre>
-<div class="labels">
-<span class="label label-info">API</span><span class="label">Inherited</span>
-</div>
+<a id="method___construct"></a><div class="element clickable method public method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="public">
+<h2>__construct()
+        </h2>
+<pre>__construct(callable $code) </pre>
+<div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
-<table class="table table-bordered">
-<tr>
-<th>api</th>
-<td></td>
-</tr>
-<tr>
-<th>since</th>
-<td>1.0.0</td>
-</tr>
-</table>
-<h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$code</h4></div>
 </div></div>
 </div>
-<a id="method_getMessage"></a><div class="element clickable method public method_getMessage " data-toggle="collapse" data-target=".method_getMessage .collapse" title="public">
-<h2>Return the message specific for this exception code.</h2>
-<pre>getMessage() </pre>
-<div class="labels"><span class="label label-info">API</span></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<table class="table table-bordered">
-<tr>
-<th>api</th>
-<td></td>
-</tr>
-<tr>
-<th>since</th>
-<td>1.0.0</td>
-</tr>
-</table>
-</div></div>
+<a id="method___invoke"></a><div class="element clickable method public method___invoke " data-toggle="collapse" data-target=".method___invoke .collapse" title="public">
+<h2>__invoke()
+        </h2>
+<pre>__invoke() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_combinator"></a><div class="element clickable method private method_combinator " data-toggle="collapse" data-target=".method_combinator .collapse" title="private">
+<h2>combinator()
+        </h2>
+<pre>combinator() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
-<a id="property_htmlName"> </a><div class="element clickable property private property_htmlName" data-toggle="collapse" data-target=".property_htmlName .collapse" title="private">
-<h2>The HTML name we were given.</h2>
-<pre>$htmlName : string</pre>
+<a id="property_cache"> </a><div class="element clickable property private property_cache" data-toggle="collapse" data-target=".property_cache .collapse" title="private">
+<h2>$cache</h2>
+<pre>$cache </pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
-<div class="subelement argument"></div>
+<div class="subelement argument"><code>array()</code></div>
 </div></div>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<h3>
-<i title="Constants" class="icon-custom icon-constant"></i> Constants</h3>
-<a id="constant_NOT_UPLOADED"> </a><div class="element clickable constant  constant_NOT_UPLOADED" data-toggle="collapse" data-target=".constant_NOT_UPLOADED .collapse" title="">
-<h2>NOT_UPLOADED</h2>
-<pre>NOT_UPLOADED = 1 </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="constant_UNKNOWN_CODE"> </a><div class="element clickable constant  constant_UNKNOWN_CODE" data-toggle="collapse" data-target=".constant_UNKNOWN_CODE .collapse" title="">
-<h2>UNKNOWN_CODE</h2>
-<pre>UNKNOWN_CODE = 2 </pre>
+<a id="property_code"> </a><div class="element clickable property private property_code" data-toggle="collapse" data-target=".property_code .collapse" title="private">
+<h2>$code</h2>
+<pre>$code </pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>null</code></div>
+</div></div>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
