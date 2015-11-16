@@ -4,6 +4,3 @@
 [submodule "modules/customs"]
 	path = modules/customs
 	url = https://github.com/haldayne/customs.git
-[submodule "fox"]
-	path = fox
-	url = https://github.com/haldayne/fox
