@@ -1,6 +1,6 @@
 site_name: 'Haldayne PHP Componentry'
 pages:
 -  Haldayne\Fox:
-   - 'Introduction': 'index.md'
-   - 'Class design and advantages of higher order functions': 'design-and-advantage.md'
-   - 'List of implemented generic functions': 'list-of-generic-functions.md'
+   - 'Introduction': 'fox/index.md'
+   - 'Class design and advantages of higher order functions': 'fox/design-and-advantage.md'
+   - 'List of implemented generic functions': 'fox/list-of-generic-functions.md'
