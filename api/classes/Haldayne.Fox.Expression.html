@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">62</span></a></li>
+                <span class="label label-info">61</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -71,8 +71,7 @@ object itself.</span><pre>__invoke()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header private">» Private
-                    <ul><li class="method private "><a href="#method_makeCallable" title="makeCallable() :: "><span class="description">makeCallable()
-        </span><pre>makeCallable()</pre></a></li></ul>
+                    <ul><li class="method private "><a href="#method_makeCallable" title="makeCallable() :: Given a string expression, turn that into an anonymous function."><span class="description">Given a string expression, turn that into an anonymous function.</span><pre>makeCallable()</pre></a></li></ul>
 </li>
 <li class="nav-header">
 <i title="Properties" class="icon-custom icon-property"></i> Properties
@@ -159,23 +158,34 @@ print_r(filter([ 'bee', 'bear', 'goose' ], '4 &lt;= strlen($_0)'));</code></pre>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>If the expression is already callable, returns it untouched. If the
 expression is a string, a closure will be wrapped around the string
-returning it as a single line. In this case, the first nine positional
+returning it as a single value. In this case, the first 10 positional
 arguments are available as $_0, $_1, ..., $_9.</p>
-<pre><code>$lt = new Expression('$_0 &lt; $_1');
+<pre><code>$lt = new Expression('$_0 &lt; $_1'); // expressions is a comparison
 var_dump($lt(0, 1)); // true
 var_dump($lt(1, 0)); // false
 var_dump($lt());     // false (null not less than null)
-var_dump($lt(-1));   // true (-1 is less than null)</code></pre></div>
+var_dump($lt(-1));   // true (-1 is less than null)</code></pre>
+<p>Do not include a <code>return</code> in your expression.</p></div>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td><a href="http://php.net/manual/en/language.expressions.php">Definition of PHP expression</a></td>
+</tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$expression</h4>
 <code>callable</code><code>string</code>
 </div>
 <h3>Exceptions</h3>
-<table class="table table-bordered"><tr>
+<table class="table table-bordered">
+<tr>
 <th><code>\InvalidArgumentException</code></th>
 <td>When $expression not of expected type</td>
-</tr></table>
+</tr>
+<tr>
+<th><code>\LogicException</code></th>
+<td>When $expression does not form valid PHP code</td>
+</tr>
+</table>
 </div></div>
 </div>
 <a id="method___invoke"></a><div class="element clickable method public method___invoke " data-toggle="collapse" data-target=".method___invoke .collapse" title="public">
@@ -200,12 +210,11 @@ object itself.</h2>
 </div></div>
 </div>
 <a id="method_makeCallable"></a><div class="element clickable method private method_makeCallable " data-toggle="collapse" data-target=".method_makeCallable .collapse" title="private">
-<h2>makeCallable()
-        </h2>
+<h2>Given a string expression, turn that into an anonymous function.</h2>
 <pre>makeCallable($expression) </pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
+<div class="long_description"><p>Cache the result, so as to keep memory</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument"><h4>$expression</h4></div>
 </div></div>
@@ -214,7 +223,7 @@ object itself.</h2>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
 <a id="property_map"> </a><div class="element clickable property private property_map" data-toggle="collapse" data-target=".property_map .collapse" title="private">
 <h2>In memory cache of built expressions.</h2>
-<pre>$map : \Haldayne\ArraySugar\Map</pre>
+<pre>$map : \Haldayne\Boost\Map</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"><code>array()</code></div>
@@ -240,7 +249,7 @@ to 10 parameters to be passed in, accessible as $_N, where 0 &lt;= N &lt;= 9.</h
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2015-11-16T13:40:44-05:00.<br></footer></div>
+            generated on 2015-11-17T10:05:19-05:00.<br></footer></div>
 </div>
 </body>
 </html>

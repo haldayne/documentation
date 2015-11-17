@@ -6536,7 +6536,7 @@ an exception if one would be warranted by the error.</description>
     </parse_markers>
     <source>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</source>
   </file>
-  <file path="fox/src/Expression.php" generated-path="fox.src.Expression.html" hash="93390efd34e1ac9c2a6dab5119cfcddc" package="Haldayne">
+  <file path="fox/src/Expression.php" generated-path="fox.src.Expression.html" hash="bcd5b77851496ee137cdd8dfaac0956e" package="Haldayne">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -6580,53 +6580,59 @@ print_r(filter([ 'bee', 'bear', 'goose' ], '4 &lt;= strlen($_0)'));
         <tag name="see" line="39" description="" link="https://linepogl.wordpress.com/2011/08/04/short-closures-for-php-an-implementation/"/>
         <tag name="package" line="39" description="Haldayne"/>
       </docblock>
-      <property static="true" visibility="private" namespace="Haldayne\Fox" line="105" package="Haldayne">
+      <property static="true" visibility="private" namespace="Haldayne\Fox" line="110" package="Haldayne">
         <name>$signature</name>
         <full_name>\Haldayne\Fox\Expression::signature</full_name>
         <default>'$_0=null, $_1=null, $_2=null, $_3=null, $_4=null,$_5=null, $_6=null, $_7=null, $_8=null, $_9=null'</default>
-        <docblock line="105">
+        <docblock line="110">
           <description>Manufactured callables all have this formal signature, which allows up
 to 10 parameters to be passed in, accessible as $_N, where 0 &lt;= N &lt;= 9.</description>
           <long-description></long-description>
-          <tag name="var" line="105" description="" type="" variable="$signature"/>
+          <tag name="var" line="110" description="" type="" variable="$signature"/>
         </docblock>
       </property>
-      <property static="true" visibility="private" namespace="Haldayne\Fox" line="111" package="Haldayne">
+      <property static="true" visibility="private" namespace="Haldayne\Fox" line="116" package="Haldayne">
         <name>$map</name>
         <full_name>\Haldayne\Fox\Expression::map</full_name>
         <default>array()</default>
-        <docblock line="111">
+        <docblock line="116">
           <description>In memory cache of built expressions.</description>
           <long-description></long-description>
-          <tag name="var" line="111" description="" type="\Haldayne\ArraySugar\Map" variable="$map">
-            <type>\Haldayne\ArraySugar\Map</type>
+          <tag name="var" line="116" description="" type="\Haldayne\Boost\Map" variable="$map">
+            <type>\Haldayne\Boost\Map</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Fox" line="60" package="Haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Fox" line="65" package="Haldayne">
         <name>__construct</name>
         <full_name>\Haldayne\Fox\Expression::__construct()</full_name>
-        <docblock line="60">
+        <docblock line="65">
           <description>Creates a callable returning the given expression.</description>
           <long-description>If the expression is already callable, returns it untouched. If the
 expression is a string, a closure will be wrapped around the string
-returning it as a single line. In this case, the first nine positional
+returning it as a single value. In this case, the first 10 positional
 arguments are available as $_0, $_1, ..., $_9.
 
 ```
-$lt = new Expression('$_0 &lt; $_1');
+$lt = new Expression('$_0 &lt; $_1'); // expressions is a comparison
 var_dump($lt(0, 1)); // true
 var_dump($lt(1, 0)); // false
 var_dump($lt());     // false (null not less than null)
 var_dump($lt(-1));   // true (-1 is less than null)
-```</long-description>
-          <tag name="param" line="60" description="" type="callable|string" variable="$expression">
+```
+
+Do not include a `return` in your expression.</long-description>
+          <tag name="param" line="65" description="" type="callable|string" variable="$expression">
             <type>callable</type>
             <type>string</type>
           </tag>
-          <tag name="throws" line="60" description="When $expression not of expected type" type="\InvalidArgumentException">
+          <tag name="throws" line="65" description="When $expression not of expected type" type="\InvalidArgumentException">
             <type>\InvalidArgumentException</type>
           </tag>
+          <tag name="throws" line="65" description="When $expression does not form valid PHP code" type="\LogicException">
+            <type>\LogicException</type>
+          </tag>
+          <tag name="see" line="65" description="Definition of PHP expression" link="http://php.net/manual/en/language.expressions.php"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$expression</name>
@@ -6634,38 +6640,38 @@ var_dump($lt(-1));   // true (-1 is less than null)
           <type>callable|string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Fox" line="83" package="Haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Fox" line="88" package="Haldayne">
         <name>__invoke</name>
         <full_name>\Haldayne\Fox\Expression::__invoke()</full_name>
-        <docblock line="83">
+        <docblock line="88">
           <description>Convenience method to execute the the manufactured callable from the
 object itself.</description>
           <long-description></long-description>
-          <tag name="param" line="83" description="&lt;p&gt;...args Up to 10 arguments passed into the built callable&lt;/p&gt;" type="mixed" variable="">
+          <tag name="param" line="88" description="&lt;p&gt;...args Up to 10 arguments passed into the built callable&lt;/p&gt;" type="mixed" variable="">
             <type>mixed</type>
           </tag>
-          <tag name="return" line="83" description="" type="mixed">
+          <tag name="return" line="88" description="" type="mixed">
             <type>mixed</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Fox" line="93" package="Haldayne">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Haldayne\Fox" line="98" package="Haldayne">
         <name>getCallable</name>
         <full_name>\Haldayne\Fox\Expression::getCallable()</full_name>
-        <docblock line="93">
+        <docblock line="98">
           <description>Get the callable manufactured for this expression.</description>
           <long-description></long-description>
-          <tag name="return" line="93" description="" type="callable">
+          <tag name="return" line="98" description="" type="callable">
             <type>callable</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="private" namespace="Haldayne\Fox" line="112" package="Haldayne">
+      <method final="false" abstract="false" static="true" visibility="private" namespace="Haldayne\Fox" line="122" package="Haldayne">
         <name>makeCallable</name>
         <full_name>\Haldayne\Fox\Expression::makeCallable()</full_name>
-        <docblock line="112">
-          <description></description>
-          <long-description></long-description>
+        <docblock line="122">
+          <description>Given a string expression, turn that into an anonymous function.</description>
+          <long-description>Cache the result, so as to keep memory</long-description>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$expression</name>
@@ -6676,10 +6682,9 @@ object itself.</description>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="112" code="PPC:ERR-50015">Argument $expression is missing from the Docblock of makeCallable</error>
-      <error line="112" code="PPC:ERR-50008">No summary for method makeCallable()</error>
+      <error line="122" code="PPC:ERR-50015">Argument $expression is missing from the Docblock of makeCallable</error>
     </parse_markers>
-    <source>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</source>
+    <source>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</source>
   </file>
   <file path="fox/src/CaptureErrors.php" generated-path="fox.src.CaptureErrors.html" hash="89952517425bcefb05d9b8f96072ed0a" package="Haldayne">
     <docblock line="0">
