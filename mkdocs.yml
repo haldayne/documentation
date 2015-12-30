@@ -2,7 +2,7 @@ site_name: 'Haldayne PHP Componentry'
 pages:
 - 'About Haldayne': 'index.md'
 -  Haldayne\Boost:
-   - 'Introduction': 'fox/index.md'
+   - 'Introduction': 'boost/index.md'
 -  Haldayne\Fox:
    - 'Introduction': 'fox/index.md'
    - 'Class design and advantages of higher order functions': 'fox/design-and-advantage.md'
