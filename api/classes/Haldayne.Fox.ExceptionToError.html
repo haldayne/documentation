@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta charset="utf-8">
-<title>Haldayne PHP Componentry » \Haldayne\Fox\CaptureErrors</title>
+<title>Haldayne PHP Componentry » \Haldayne\Fox\ExceptionToError</title>
 <meta name="author" content="Mike van Riel">
 <meta name="description" content="">
 <link href="../css/template.css" rel="stylesheet" media="all">
@@ -63,18 +63,33 @@
 <li class="nav-header">
 <i title="Methods" class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public "><a href="#method___construct" title="__construct() :: Create a new callable object that captures errors when the given code
-is invoked. By default, all errors (E_ALL) are captured. You can set
-which errors will be captured using the `setCapturedErrorTypes` method."><span class="description">Create a new callable object that captures errors when the given code
-is invoked. By default, all errors (E_ALL) are captured. You can set
-which errors will be captured using the `setCapturedErrorTypes` method.</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method___construct" title="__construct() :: Create a new callable object that captures any exception when the given
+callable is invoked."><span class="description">Create a new callable object that captures any exception when the given
+callable is invoked.</span><pre>__construct()</pre></a></li>
 <li class="method public "><a href="#method___invoke" title="__invoke() :: Invoke the helper. Passes any arguments into the callable given during
-helper construction. Returns any result from the callable."><span class="description">Invoke the helper. Passes any arguments into the callable given during
-helper construction. Returns any result from the callable.</span><pre>__invoke()</pre></a></li>
-<li class="method public "><a href="#method_getCapturedErrors" title="getCapturedErrors() :: Get the captured errors."><span class="description">Get the captured errors.</span><pre>getCapturedErrors()</pre></a></li>
-<li class="method public "><a href="#method_setCapturedErrorTypes" title="setCapturedErrorTypes() :: Set the error types to capture. Acts as a filter: only those errors
-matching this value will be captured."><span class="description">Set the error types to capture. Acts as a filter: only those errors
-matching this value will be captured.</span><pre>setCapturedErrorTypes()</pre></a></li>
+helper construction. Returns any result from the callable, unless the
+callable raises an exception: in which case, returns false."><span class="description">Invoke the helper. Passes any arguments into the callable given during
+helper construction. Returns any result from the callable, unless the
+callable raises an exception: in which case, returns false.</span><pre>__invoke()</pre></a></li>
+<li class="method public "><a href="#method_formatException" title="formatException() :: Pass the given exception into the error message format string."><span class="description">Pass the given exception into the error message format string.</span><pre>formatException()</pre></a></li>
+<li class="method public "><a href="#method_getErrorCode" title="getErrorCode() :: Gets the current error code."><span class="description">Gets the current error code.</span><pre>getErrorCode()</pre></a></li>
+<li class="method public "><a href="#method_getErrorMessageFormat" title="getErrorMessageFormat() :: Gets the current error message format."><span class="description">Gets the current error message format.</span><pre>getErrorMessageFormat()</pre></a></li>
+<li class="method public "><a href="#method_setErrorCode" title="setErrorCode() :: Change the code used to deliver the exceptions. By default, exceptions
+converted to E_USER_ERROR errors."><span class="description">Change the code used to deliver the exceptions. By default, exceptions
+converted to E_USER_ERROR errors.</span><pre>setErrorCode()</pre></a></li>
+<li class="method public "><a href="#method_setErrorMessageFormat" title="setErrorMessageFormat() :: Change the format of the generated error messages. Accepts a printf-
+style format string, where the following parameters are replaced:
+- %1$s The exception message
+- %2$d The exception code
+- %3$s The file where the exception occurred
+- %4$d The line where the exception occurred
+- %5$s The class of the raised exception"><span class="description">Change the format of the generated error messages. Accepts a printf-
+style format string, where the following parameters are replaced:
+- %1$s The exception message
+- %2$d The exception code
+- %3$s The file where the exception occurred
+- %4$d The line where the exception occurred
+- %5$s The class of the raised exception</span><pre>setErrorMessageFormat()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header">
@@ -83,15 +98,15 @@ matching this value will be captured.</span><pre>setCapturedErrorTypes()</pre></
 </li>
 <li class="nav-header private">» Private
                     <ul>
-<li class="property private "><a href="#property_capturedErrorTypes" title="$capturedErrorTypes() :: "><span class="description"></span><pre>$capturedErrorTypes</pre></a></li>
 <li class="property private "><a href="#property_code" title="$code() :: "><span class="description"></span><pre>$code</pre></a></li>
-<li class="property private "><a href="#property_map" title="$map() :: "><span class="description"></span><pre>$map</pre></a></li>
+<li class="property private "><a href="#property_errorCode" title="$errorCode() :: "><span class="description"></span><pre>$errorCode</pre></a></li>
+<li class="property private "><a href="#property_errorMessageFormat" title="$errorMessageFormat() :: "><span class="description"></span><pre>$errorMessageFormat</pre></a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="span8">
-<a xmlns:php="http://php.net/xsl" id="\Haldayne\Fox\CaptureErrors"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
+<a xmlns:php="http://php.net/xsl" id="\Haldayne\Fox\ExceptionToError"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
 <li>
 <a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
@@ -100,27 +115,33 @@ matching this value will be captured.</span><pre>setCapturedErrorTypes()</pre></
 <span class="divider">\</span><a href="../namespaces/Haldayne.Fox.html">Fox</a>
 </li>
 <li class="active">
-<span class="divider">\</span><a href="../classes/Haldayne.Fox.CaptureErrors.html">CaptureErrors</a>
+<span class="divider">\</span><a href="../classes/Haldayne.Fox.ExceptionToError.html">ExceptionToError</a>
 </li>
 </ul>
 <div xmlns:php="http://php.net/xsl" class="element class">
-<p class="short_description">Runs a callable, capturing all error messages, then provides a method to
-extract any errors raised during execution.</p>
+<p class="short_description">Runs a callable, catching any exception and reflecting it into a triggered
+error.</p>
 <div class="details">
-<div class="long_description"><pre><code>use Haldayne\Fox\CaptureErrors;
-$helper = new CaptureErrors(function ($src, $dst) { return copy($src, $dst); });
-if (false === $helper('foo', 'bar')) {
-    throw new \RuntimeException($helper-&gt;getCapturedErrors()-&gt;pop()-&gt;get('message'));
-}</code></pre>
-<p>PHP itself, as well as many libraries, rely upon triggered errors to notify
-developers of problems. Many frameworks provide methods to capure these
-errors globally and convert them to exceptions, but you do not always have
-access to those frameworks.  Worse, you may be using code that deliberately
-silences errors.</p>
-<p>Errors raised inside the CaptureErrors helper is pushed into a Map stack,
-with each element also a Map of the error details: error code, error
-string, file and line where raised, and an array context of variables
-set at time of error.</p></div>
+<div class="long_description"><p>This allows you to combine exception generating code with retry code to
+trace the execution over the retry cycle. Example:</p>
+<pre><code>
+$retry = new \Haldayne\Fox\Retry(
+     $capture = new \Haldayne\Fox\CaptureErrors(
+         new \Haldayne\Fox\ExceptionToError(
+             function () { throw new \Exception('Oops!', rand(1,10)); }
+         )
+     )
+);
+$result = $retry();
+if (false === $result) {
+    die(
+        $capture-&gt;
+        getCapturedErrors()-&gt;
+        pluck('message')-&gt;
+        into(new MapOfStrings)-&gt;
+        join(PHP_EOL)
+    );
+}</code></pre></div>
 <table class="table table-bordered"><tr>
 <th>package</th>
 <td><a href="../packages/Haldayne.html">Haldayne</a></td>
@@ -128,9 +149,8 @@ set at time of error.</p></div>
 <h3>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
 <a id="method___construct"></a><div class="element clickable method public method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="public">
-<h2>Create a new callable object that captures errors when the given code
-is invoked. By default, all errors (E_ALL) are captured. You can set
-which errors will be captured using the `setCapturedErrorTypes` method.</h2>
+<h2>Create a new callable object that captures any exception when the given
+callable is invoked.</h2>
 <pre>__construct(callable $code) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -144,51 +164,64 @@ which errors will be captured using the `setCapturedErrorTypes` method.</h2>
 </div>
 <a id="method___invoke"></a><div class="element clickable method public method___invoke " data-toggle="collapse" data-target=".method___invoke .collapse" title="public">
 <h2>Invoke the helper. Passes any arguments into the callable given during
-helper construction. Returns any result from the callable.</h2>
+helper construction. Returns any result from the callable, unless the
+callable raises an exception: in which case, returns false.</h2>
 <pre>__invoke() </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a id="method_getCapturedErrors"></a><div class="element clickable method public method_getCapturedErrors " data-toggle="collapse" data-target=".method_getCapturedErrors .collapse" title="public">
-<h2>Get the captured errors.</h2>
-<pre>getCapturedErrors() : \Haldayne\Boost\MapOfCollections</pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<h3>Returns</h3>
-<div class="subelement response"><code>\Haldayne\Boost\MapOfCollections</code></div>
-</div></div>
-</div>
-<a id="method_setCapturedErrorTypes"></a><div class="element clickable method public method_setCapturedErrorTypes " data-toggle="collapse" data-target=".method_setCapturedErrorTypes .collapse" title="public">
-<h2>Set the error types to capture. Acts as a filter: only those errors
-matching this value will be captured.</h2>
-<pre>setCapturedErrorTypes(integer $capturedErrorTypes) : void</pre>
+<a id="method_formatException"></a><div class="element clickable method public method_formatException " data-toggle="collapse" data-target=".method_formatException .collapse" title="public">
+<h2>Pass the given exception into the error message format string.</h2>
+<pre>formatException(\Exception $ex) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$capturedErrorTypes</h4>
-<code>integer</code><p>One or more of the E_* error constants</p></div>
-<h3>Exceptions</h3>
-<table class="table table-bordered"><tr>
-<th><code>\InvalidArgumentException</code></th>
-<td>If $capturedErrorTypes isn't an int</td>
-</tr></table>
+<div class="subelement argument"><h4>$ex</h4></div>
+</div></div>
+</div>
+<a id="method_getErrorCode"></a><div class="element clickable method public method_getErrorCode " data-toggle="collapse" data-target=".method_getErrorCode .collapse" title="public">
+<h2>Gets the current error code.</h2>
+<pre>getErrorCode() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_getErrorMessageFormat"></a><div class="element clickable method public method_getErrorMessageFormat " data-toggle="collapse" data-target=".method_getErrorMessageFormat .collapse" title="public">
+<h2>Gets the current error message format.</h2>
+<pre>getErrorMessageFormat() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_setErrorCode"></a><div class="element clickable method public method_setErrorCode " data-toggle="collapse" data-target=".method_setErrorCode .collapse" title="public">
+<h2>Change the code used to deliver the exceptions. By default, exceptions
+converted to E_USER_ERROR errors.</h2>
+<pre>setErrorCode($code) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$code</h4></div>
+</div></div>
+</div>
+<a id="method_setErrorMessageFormat"></a><div class="element clickable method public method_setErrorMessageFormat " data-toggle="collapse" data-target=".method_setErrorMessageFormat .collapse" title="public">
+<h2>Change the format of the generated error messages. Accepts a printf-
+style format string, where the following parameters are replaced:
+- %1$s The exception message
+- %2$d The exception code
+- %3$s The file where the exception occurred
+- %4$d The line where the exception occurred
+- %5$s The class of the raised exception</h2>
+<pre>setErrorMessageFormat($format) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The default format is:
+%1$s (%2$d) thrown at %3$s:%4$d as %5$s exception.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$format</h4></div>
 </div></div>
 </div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
-<a id="property_capturedErrorTypes"> </a><div class="element clickable property private property_capturedErrorTypes" data-toggle="collapse" data-target=".property_capturedErrorTypes .collapse" title="private">
-<h2>$capturedErrorTypes</h2>
-<pre>$capturedErrorTypes </pre>
-<div class="row collapse"><div class="detail-description">
-<h3>Default</h3>
-<div class="subelement argument"><code>null</code></div>
-</div></div>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
 <a id="property_code"> </a><div class="element clickable property private property_code" data-toggle="collapse" data-target=".property_code .collapse" title="private">
 <h2>$code</h2>
 <pre>$code </pre>
@@ -199,12 +232,22 @@ matching this value will be captured.</h2>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a id="property_map"> </a><div class="element clickable property private property_map" data-toggle="collapse" data-target=".property_map .collapse" title="private">
-<h2>$map</h2>
-<pre>$map </pre>
+<a id="property_errorCode"> </a><div class="element clickable property private property_errorCode" data-toggle="collapse" data-target=".property_errorCode .collapse" title="private">
+<h2>$errorCode</h2>
+<pre>$errorCode </pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
-<div class="subelement argument"><code>null</code></div>
+<div class="subelement argument"><code>E_USER_ERROR</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_errorMessageFormat"> </a><div class="element clickable property private property_errorMessageFormat" data-toggle="collapse" data-target=".property_errorMessageFormat .collapse" title="private">
+<h2>$errorMessageFormat</h2>
+<pre>$errorMessageFormat </pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>'%1$s (%2$d) thrown at %3$s:%4$d as %5$s exception.'</code></div>
 </div></div>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
