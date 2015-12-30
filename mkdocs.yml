@@ -1,7 +1,8 @@
 site_name: 'Haldayne PHP Componentry'
-theme: readable
 pages:
 - 'About Haldayne': 'index.md'
+-  Haldayne\Boost:
+   - 'Introduction': 'fox/index.md'
 -  Haldayne\Fox:
    - 'Introduction': 'fox/index.md'
    - 'Class design and advantages of higher order functions': 'fox/design-and-advantage.md'
