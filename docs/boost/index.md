@@ -1,5 +1,5 @@
-[`Haldayne\Boost`][1] boosts the readability of PHP code that does a lot of
-array manipulation.<sup>&dagger;</sup> Using a fluent interface wrapping any
+[`Haldayne\Boost`][1] improves the readability of PHP code that does a lot of
+array manipulation.<sup>&dagger;</sup> Using a fluent interface that wraps any
 collection-like data structure, you can build compact and readable expressions
 to manipulate the elements in that collection.
 
