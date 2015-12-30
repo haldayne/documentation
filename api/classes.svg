@@ -49,7 +49,7 @@
 <text text-anchor="middle" x="653.323" y="-1107.2" font-family="Courier,monospace" font-size="11.00">MapOfStrings</text>
 </g>
 <!-- \\Haldayne\\Boost\\GuardedMapAbstract -->
-<g id="node7" class="node"><title>\\Haldayne\\Boost\\GuardedMapAbstract</title>
+<g id="node8" class="node"><title>\\Haldayne\\Boost\\GuardedMapAbstract</title>
 <polygon fill="none" stroke="black" points="500.186,-1020 362.186,-1020 362.186,-984 500.186,-984 500.186,-1020"/>
 <text text-anchor="start" x="397.186" y="-1005.2" font-family="Courier,monospace" font-size="11.00">«abstract»</text>
 <text text-anchor="start" x="370.186" y="-993.2" font-family="Courier,monospace" font-size="11.00">GuardedMapAbstract</text>
@@ -65,7 +65,7 @@
 <text text-anchor="middle" x="885.667" y="-1080.2" font-family="Courier,monospace" font-size="11.00">MapOfFloats</text>
 </g>
 <!-- \\Haldayne\\Boost\\MapOfNumerics -->
-<g id="node6" class="node"><title>\\Haldayne\\Boost\\MapOfNumerics</title>
+<g id="node7" class="node"><title>\\Haldayne\\Boost\\MapOfNumerics</title>
 <polygon fill="none" stroke="black" points="705.323,-1074 601.323,-1074 601.323,-1038 705.323,-1038 705.323,-1074"/>
 <text text-anchor="middle" x="653.323" y="-1053.2" font-family="Courier,monospace" font-size="11.00">MapOfNumerics</text>
 </g>
@@ -84,8 +84,18 @@
 <path fill="none" stroke="black" d="M847.145,-1033.4C811.578,-1037.57 757.518,-1043.9 715.68,-1048.81"/>
 <polygon fill="none" stroke="black" points="715.122,-1045.35 705.598,-1049.99 715.937,-1052.3 715.122,-1045.35"/>
 </g>
+<!-- \\Haldayne\\Boost\\MapOfObjects -->
+<g id="node6" class="node"><title>\\Haldayne\\Boost\\MapOfObjects</title>
+<polygon fill="none" stroke="black" points="702.323,-1020 604.323,-1020 604.323,-984 702.323,-984 702.323,-1020"/>
+<text text-anchor="middle" x="653.323" y="-999.2" font-family="Courier,monospace" font-size="11.00">MapOfObjects</text>
+</g>
+<!-- \\Haldayne\\Boost\\MapOfObjects&#45;&gt;\\Haldayne\\Boost\\GuardedMapAbstract -->
+<g id="edge6" class="edge"><title>\\Haldayne\\Boost\\MapOfObjects&#45;&gt;\\Haldayne\\Boost\\GuardedMapAbstract</title>
+<path fill="none" stroke="black" d="M604.285,-1002C576.888,-1002 541.878,-1002 510.596,-1002"/>
+<polygon fill="none" stroke="black" points="510.585,-998.5 500.585,-1002 510.585,-1005.5 510.585,-998.5"/>
+</g>
 <!-- \\Haldayne\\Boost\\MapOfNumerics&#45;&gt;\\Haldayne\\Boost\\GuardedMapAbstract -->
-<g id="edge10" class="edge"><title>\\Haldayne\\Boost\\MapOfNumerics&#45;&gt;\\Haldayne\\Boost\\GuardedMapAbstract</title>
+<g id="edge11" class="edge"><title>\\Haldayne\\Boost\\MapOfNumerics&#45;&gt;\\Haldayne\\Boost\\GuardedMapAbstract</title>
 <path fill="none" stroke="black" d="M601.266,-1043.48C574.335,-1036.87 540.713,-1028.62 510.56,-1021.23"/>
 <polygon fill="none" stroke="black" points="511.028,-1017.74 500.482,-1018.75 509.36,-1024.53 511.028,-1017.74"/>
 </g>
@@ -95,29 +105,19 @@
 <text text-anchor="middle" x="252.893" y="-949.2" font-family="Courier,monospace" font-size="11.00">Map</text>
 </g>
 <!-- \\Haldayne\\Boost\\GuardedMapAbstract&#45;&gt;\\Haldayne\\Boost\\Map -->
-<g id="edge11" class="edge"><title>\\Haldayne\\Boost\\GuardedMapAbstract&#45;&gt;\\Haldayne\\Boost\\Map</title>
+<g id="edge12" class="edge"><title>\\Haldayne\\Boost\\GuardedMapAbstract&#45;&gt;\\Haldayne\\Boost\\Map</title>
 <path fill="none" stroke="black" d="M366.54,-983.949C340.827,-976.656 312.093,-968.506 290.081,-962.263"/>
 <polygon fill="none" stroke="black" points="290.743,-958.813 280.167,-959.452 288.833,-965.548 290.743,-958.813"/>
 </g>
 <!-- \\Haldayne\\Boost\\MapOfCollections -->
-<g id="node8" class="node"><title>\\Haldayne\\Boost\\MapOfCollections</title>
-<polygon fill="none" stroke="black" points="715.823,-1020 590.823,-1020 590.823,-984 715.823,-984 715.823,-1020"/>
-<text text-anchor="middle" x="653.323" y="-999.2" font-family="Courier,monospace" font-size="11.00">MapOfCollections</text>
+<g id="node9" class="node"><title>\\Haldayne\\Boost\\MapOfCollections</title>
+<polygon fill="none" stroke="black" points="715.823,-966 590.823,-966 590.823,-930 715.823,-930 715.823,-966"/>
+<text text-anchor="middle" x="653.323" y="-945.2" font-family="Courier,monospace" font-size="11.00">MapOfCollections</text>
 </g>
 <!-- \\Haldayne\\Boost\\MapOfCollections&#45;&gt;\\Haldayne\\Boost\\GuardedMapAbstract -->
-<g id="edge12" class="edge"><title>\\Haldayne\\Boost\\MapOfCollections&#45;&gt;\\Haldayne\\Boost\\GuardedMapAbstract</title>
-<path fill="none" stroke="black" d="M590.71,-1002C565.894,-1002 536.972,-1002 510.677,-1002"/>
-<polygon fill="none" stroke="black" points="510.36,-998.5 500.36,-1002 510.36,-1005.5 510.36,-998.5"/>
-</g>
-<!-- \\Haldayne\\Boost\\MapOfObjects -->
-<g id="node9" class="node"><title>\\Haldayne\\Boost\\MapOfObjects</title>
-<polygon fill="none" stroke="black" points="702.323,-966 604.323,-966 604.323,-930 702.323,-930 702.323,-966"/>
-<text text-anchor="middle" x="653.323" y="-945.2" font-family="Courier,monospace" font-size="11.00">MapOfObjects</text>
-</g>
-<!-- \\Haldayne\\Boost\\MapOfObjects&#45;&gt;\\Haldayne\\Boost\\GuardedMapAbstract -->
-<g id="edge13" class="edge"><title>\\Haldayne\\Boost\\MapOfObjects&#45;&gt;\\Haldayne\\Boost\\GuardedMapAbstract</title>
-<path fill="none" stroke="black" d="M604.285,-959.784C576.888,-966.504 541.878,-975.092 510.596,-982.766"/>
-<polygon fill="none" stroke="black" points="509.463,-979.44 500.585,-985.222 511.131,-986.238 509.463,-979.44"/>
+<g id="edge13" class="edge"><title>\\Haldayne\\Boost\\MapOfCollections&#45;&gt;\\Haldayne\\Boost\\GuardedMapAbstract</title>
+<path fill="none" stroke="black" d="M590.71,-963.114C565.784,-969.228 536.716,-976.359 510.328,-982.832"/>
+<polygon fill="none" stroke="black" points="509.238,-979.495 500.36,-985.277 510.906,-986.294 509.238,-979.495"/>
 </g>
 <!-- \\Haldayne\\Boost\\Map&#45;&gt;\\Haldayne\\Boost\\Contract\\Arrayable -->
 <g id="edge15" class="edge"><title>\\Haldayne\\Boost\\Map&#45;&gt;\\Haldayne\\Boost\\Contract\\Arrayable</title>
@@ -190,7 +190,7 @@
 <text text-anchor="middle" x="885.667" y="-811.2" font-family="Courier,monospace" font-size="11.00">SecurityConcernException</text>
 </g>
 <!-- \\Haldayne\\Customs\\SecurityConcernException&#45;&gt;\\Haldayne\\Customs\\UploadException -->
-<g id="edge6" class="edge"><title>\\Haldayne\\Customs\\SecurityConcernException&#45;&gt;\\Haldayne\\Customs\\UploadException</title>
+<g id="edge7" class="edge"><title>\\Haldayne\\Customs\\SecurityConcernException&#45;&gt;\\Haldayne\\Customs\\UploadException</title>
 <path fill="none" stroke="black" d="M795.939,-814C771.541,-814 745.469,-814 722.432,-814"/>
 <polygon fill="none" stroke="black" points="722.419,-810.5 712.419,-814 722.419,-817.5 722.419,-810.5"/>
 </g>
@@ -215,7 +215,7 @@
 <text text-anchor="middle" x="885.667" y="-595.2" font-family="Courier,monospace" font-size="11.00">UploadIterator</text>
 </g>
 <!-- \\Haldayne\\Customs\\UploadIterator&#45;&gt;\\ArrayAccess -->
-<g id="edge7" class="edge"><title>\\Haldayne\\Customs\\UploadIterator&#45;&gt;\\ArrayAccess</title>
+<g id="edge8" class="edge"><title>\\Haldayne\\Customs\\UploadIterator&#45;&gt;\\ArrayAccess</title>
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M830.149,-588.153C818.133,-584.208 806.055,-578.695 796.167,-571 602.649,-420.403 717.493,-230.43 510.479,-99 413.674,-37.5395 368.223,-80.798 253.893,-72"/>
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M251.893,-72C227.521,-69.3671 168.632,-49.8143 126.469,-34.9872"/>
 <polygon fill="none" stroke="black" points="127.54,-31.6534 116.945,-31.6185 125.205,-38.2528 127.54,-31.6534"/>
@@ -226,12 +226,12 @@
 <text text-anchor="middle" x="653.323" y="-22.3" font-family="Times,serif" font-size="14.00" fill="gray">\SeekableIterator</text>
 </g>
 <!-- \\Haldayne\\Customs\\UploadIterator&#45;&gt;\\SeekableIterator -->
-<g id="edge8" class="edge"><title>\\Haldayne\\Customs\\UploadIterator&#45;&gt;\\SeekableIterator</title>
+<g id="edge9" class="edge"><title>\\Haldayne\\Customs\\UploadIterator&#45;&gt;\\SeekableIterator</title>
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M829.909,-591.562C817.176,-587.539 804.828,-581.137 796.167,-571 646.606,-395.958 861.718,-242.628 724.167,-58 720.297,-52.8059 715.382,-48.4309 709.958,-44.7511"/>
 <polygon fill="none" stroke="black" points="711.483,-41.5876 701.092,-39.5231 707.928,-47.6174 711.483,-41.5876"/>
 </g>
 <!-- \\Haldayne\\Customs\\UploadIterator&#45;&gt;\\Countable -->
-<g id="edge9" class="edge"><title>\\Haldayne\\Customs\\UploadIterator&#45;&gt;\\Countable</title>
+<g id="edge10" class="edge"><title>\\Haldayne\\Customs\\UploadIterator&#45;&gt;\\Countable</title>
 <path fill="none" stroke="black" stroke-dasharray="1,5" d="M251.893,-72C214.032,-69.0865 171.355,-69.0609 137.936,-69.7763"/>
 <polygon fill="none" stroke="black" points="137.789,-66.2787 127.877,-70.0197 137.959,-73.2767 137.789,-66.2787"/>
 </g>

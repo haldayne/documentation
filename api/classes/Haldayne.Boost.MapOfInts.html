@@ -68,9 +68,9 @@
 satisfy the expression."><span class="description">Create a new map containing all members from this map whose elements
 satisfy the expression.</span><pre>all()</pre></a></li>
 <li class="method public inherited"><a href="#method_count" title="count() :: Count the number of items in the map."><span class="description">Count the number of items in the map.</span><pre>count()</pre></a></li>
-<li class="method public inherited"><a href="#method_diff" title="diff() :: Return a new map containing those keys and values that are not present in
-the given collection."><span class="description">Return a new map containing those keys and values that are not present in
-the given collection.</span><pre>diff()</pre></a></li>
+<li class="method public inherited"><a href="#method_diff" title="diff() :: Return a new map containing those keys and values that are not present
+in the given collection."><span class="description">Return a new map containing those keys and values that are not present
+in the given collection.</span><pre>diff()</pre></a></li>
 <li class="method public inherited"><a href="#method_every" title="every() :: Test if every element passes the expression."><span class="description">Test if every element passes the expression.</span><pre>every()</pre></a></li>
 <li class="method public inherited"><a href="#method_filter" title="filter() :: Apply the filter to every element, creating a new map with only those
 elements from the original map that do not fail this filter."><span class="description">Apply the filter to every element, creating a new map with only those
@@ -111,9 +111,9 @@ elements, throws a \RangeException.</span><pre>min()</pre></a></li>
 <li class="method public inherited"><a href="#method_reduce" title="reduce() :: Walk the map, applying a reducing expression to every element, so as to
 reduce the map to a single value."><span class="description">Walk the map, applying a reducing expression to every element, so as to
 reduce the map to a single value.</span><pre>reduce()</pre></a></li>
-<li class="method public inherited"><a href="#method_rekey" title="rekey() :: Apply the expression to each element of the map, and creating a new
-map with keys corresponding to the expression's return value."><span class="description">Apply the expression to each element of the map, and creating a new
-map with keys corresponding to the expression's return value.</span><pre>rekey()</pre></a></li>
+<li class="method public inherited"><a href="#method_rekey" title="rekey() :: Change the key for every element in the map using an expression to
+calculate the new key."><span class="description">Change the key for every element in the map using an expression to
+calculate the new key.</span><pre>rekey()</pre></a></li>
 <li class="method public inherited"><a href="#method_scale" title="scale() :: Scale this map by the factors given in the other collection."><span class="description">Scale this map by the factors given in the other collection.</span><pre>scale()</pre></a></li>
 <li class="method public inherited"><a href="#method_set" title="set() :: Set a key and its corresponding value into the map."><span class="description">Set a key and its corresponding value into the map.</span><pre>set()</pre></a></li>
 <li class="method public inherited"><a href="#method_some" title="some() :: Test if at least one element passes the expression."><span class="description">Test if at least one element passes the expression.</span><pre>some()</pre></a></li>
@@ -250,7 +250,7 @@ etc.</p></div>
 <a id="method_all"></a><div class="element clickable method public method_all inherited" data-toggle="collapse" data-target=".method_all .collapse" title="public">
 <h2>Create a new map containing all members from this map whose elements
 satisfy the expression.</h2>
-<pre>all(callable|string $expression) : \Haldayne\Boost\Map</pre>
+<pre>all(callable|string $expression) : \Haldayne\Boost\new</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>The expression decides whether an element is in or out. If the
@@ -265,7 +265,8 @@ $odds = $nums-&gt;all('$_0 &amp; 1');</code></pre></div>
 <code>callable</code><code>string</code>
 </div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
+<div class="subelement response">
+<code>\Haldayne\Boost\new</code>static</div>
 </div></div>
 </div>
 <a id="method_count"></a><div class="element clickable method public method_count inherited" data-toggle="collapse" data-target=".method_count .collapse" title="public">
@@ -279,9 +280,9 @@ $odds = $nums-&gt;all('$_0 &amp; 1');</code></pre></div>
 </div></div>
 </div>
 <a id="method_diff"></a><div class="element clickable method public method_diff inherited" data-toggle="collapse" data-target=".method_diff .collapse" title="public">
-<h2>Return a new map containing those keys and values that are not present in
-the given collection.</h2>
-<pre>diff(\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array $collection, \Haldayne\Boost\enum $comparison<code> = \Haldayne\Boost\Map::LOOSE</code>) : \Haldayne\Boost\Map</pre>
+<h2>Return a new map containing those keys and values that are not present
+in the given collection.</h2>
+<pre>diff(\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array $collection, \Haldayne\Boost\enum $comparison<code> = \Haldayne\Boost\Map::LOOSE</code>) : \Haldayne\Boost\new</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>If comparison is loose, then only those elements whose values match will
@@ -297,7 +298,8 @@ and values match will be removed.</p></div>
 <code>\Haldayne\Boost\enum</code>
 </div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
+<div class="subelement response">
+<code>\Haldayne\Boost\new</code>static</div>
 </div></div>
 </div>
 <a id="method_every"></a><div class="element clickable method public method_every inherited" data-toggle="collapse" data-target=".method_every .collapse" title="public">
@@ -320,7 +322,7 @@ and values match will be removed.</p></div>
 <a id="method_filter"></a><div class="element clickable method public method_filter inherited" data-toggle="collapse" data-target=".method_filter .collapse" title="public">
 <h2>Apply the filter to every element, creating a new map with only those
 elements from the original map that do not fail this filter.</h2>
-<pre>filter(callable|string $expression) : \Haldayne\Boost\Map</pre>
+<pre>filter(callable|string $expression) : \Haldayne\Boost\new</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>The filter expressions receives two arguments:</p>
@@ -337,13 +339,14 @@ into the new map.</p></div>
 <code>callable</code><code>string</code>
 </div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
+<div class="subelement response">
+<code>\Haldayne\Boost\new</code>static</div>
 </div></div>
 </div>
 <a id="method_first"></a><div class="element clickable method public method_first inherited" data-toggle="collapse" data-target=".method_first .collapse" title="public">
 <h2>Return a new map containing the first N elements passing the
 expression.</h2>
-<pre>first(callable|string $expression, integer $n<code> = 1</code>) : \Haldayne\Boost\Map</pre>
+<pre>first(callable|string $expression, integer $n<code> = 1</code>) : \Haldayne\Boost\new</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>Like <code>find</code>, but stop after finding N elements from the front. Defaults
@@ -360,7 +363,8 @@ $odd3 = $nums-&gt;first('1 == ($_0 % 2)', 3); // first three odds</code></pre></
 <code>integer</code>
 </div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
+<div class="subelement response">
+<code>\Haldayne\Boost\new</code>static</div>
 </div></div>
 </div>
 <a id="method_forget"></a><div class="element clickable method public method_forget inherited" data-toggle="collapse" data-target=".method_forget .collapse" title="public">
@@ -430,7 +434,7 @@ $odd3 = $nums-&gt;first('1 == ($_0 % 2)', 3); // first three odds</code></pre></
 <a id="method_intersect"></a><div class="element clickable method public method_intersect inherited" data-toggle="collapse" data-target=".method_intersect .collapse" title="public">
 <h2>Return a new map containing those keys and values that are present in
 the given collection.</h2>
-<pre>intersect(\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array $collection, \Haldayne\Boost\enum $comparison<code> = \Haldayne\Boost\Map::LOOSE</code>) : \Haldayne\Boost\Map</pre>
+<pre>intersect(\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array $collection, \Haldayne\Boost\enum $comparison<code> = \Haldayne\Boost\Map::LOOSE</code>) : \Haldayne\Boost\new</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>If comparison is loose, then only those elements whose value match will
@@ -446,7 +450,8 @@ values match will be included.</p></div>
 <code>\Haldayne\Boost\enum</code>
 </div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
+<div class="subelement response">
+<code>\Haldayne\Boost\new</code>static</div>
 </div></div>
 </div>
 <a id="method_into"></a><div class="element clickable method public method_into inherited" data-toggle="collapse" data-target=".method_into .collapse" title="public">
@@ -457,8 +462,8 @@ values match will be included.</p></div>
 <div class="long_description"><pre><code>$words = new MapOfStrings([ 'foo', 'bar' ]);
 $words-&gt;map('strlen($_0)')-&gt;into(new MapOfInts)-&gt;sum(); // 6</code></pre>
 <p>Use when you've mapped your elements into a different type, and you
-want to fluently perform operations on the new new type. In the
-example, the sum of the words' lengths was calculated.</p></div>
+want to fluently perform operations on the new type. In the example,
+the sum of the words' lengths was calculated.</p></div>
 <h3>Parameters</h3>
 <div class="subelement argument"><h4>$target</h4></div>
 <h3>Returns</h3>
@@ -477,7 +482,7 @@ example, the sum of the words' lengths was calculated.</p></div>
 </div>
 <a id="method_last"></a><div class="element clickable method public method_last inherited" data-toggle="collapse" data-target=".method_last .collapse" title="public">
 <h2>Return a new map containing the last N elements passing the expression.</h2>
-<pre>last(callable|string $expression, integer $n<code> = 1</code>) : \Haldayne\Boost\Map</pre>
+<pre>last(callable|string $expression, integer $n<code> = 1</code>) : \Haldayne\Boost\new</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>Like <code>first</code>, but stop after finding N elements from the <em>end</em>.
@@ -494,7 +499,8 @@ $odds = $nums-&gt;last('1 == ($_0 % 2)', 2); // last two odd numbers</code></pre
 <code>integer</code>
 </div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
+<div class="subelement response">
+<code>\Haldayne\Boost\new</code>static</div>
 </div></div>
 </div>
 <a id="method_map"></a><div class="element clickable method public method_map inherited" data-toggle="collapse" data-target=".method_map .collapse" title="public">
@@ -785,9 +791,9 @@ reduced value. The <code>$finisher</code> must return the new final value.</p></
 </div></div>
 </div>
 <a id="method_rekey"></a><div class="element clickable method public method_rekey inherited" data-toggle="collapse" data-target=".method_rekey .collapse" title="public">
-<h2>Apply the expression to each element of the map, and creating a new
-map with keys corresponding to the expression's return value.</h2>
-<pre>rekey(callable|string $expression) : \Haldayne\Boost\Map</pre>
+<h2>Change the key for every element in the map using an expression to
+calculate the new key.</h2>
+<pre>rekey(callable|string $expression) : \Haldayne\Boost\new</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><pre><code>$keyed_by_bytecode = new Map(count_chars('war of the worlds', 1));
@@ -798,7 +804,8 @@ $keyed_by_letter   = $keyed_by_bytecode-&gt;rekey('chr($_1)');</code></pre></div
 <code>callable</code><code>string</code>
 </div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
+<div class="subelement response">
+<code>\Haldayne\Boost\new</code>static</div>
 </div></div>
 </div>
 <a id="method_scale"></a><div class="element clickable method public method_scale inherited" data-toggle="collapse" data-target=".method_scale .collapse" title="public">
@@ -1055,7 +1062,7 @@ structure is given.</h2>
 <a id="method_grep"></a><div class="element clickable method protected method_grep inherited" data-toggle="collapse" data-target=".method_grep .collapse" title="protected">
 <h2>Finds elements for which the given code passes, optionally limited to a
 maximum count.</h2>
-<pre>grep(callable|string $expression, integer|null $limit<code> = null</code>) : \Haldayne\Boost\Map</pre>
+<pre>grep(callable|string $expression, integer|null $limit<code> = null</code>) : \Haldayne\Boost\new</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>If limit is null, no limit on number of matches. If limit is positive,
@@ -1071,7 +1078,8 @@ return that many from the end of the array.</p></div>
 <code>integer</code><code>null</code>
 </div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\Haldayne\Boost\Map</code></div>
+<div class="subelement response">
+<code>\Haldayne\Boost\new</code>static</div>
 </div></div>
 </div>
 <a id="method_is_collection_like"></a><div class="element clickable method protected method_is_collection_like inherited" data-toggle="collapse" data-target=".method_is_collection_like .collapse" title="protected">
@@ -1288,7 +1296,7 @@ created.</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2015-12-30T13:03:13-05:00.<br></footer></div>
+            generated on 2015-12-30T13:56:31-05:00.<br></footer></div>
 </div>
 </body>
 </html>
