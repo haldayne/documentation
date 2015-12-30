@@ -5,6 +5,7 @@ to manipulate the elements in that collection.
 
 `Map` is the Boost wrapper around collection-like data. That means, you can
 create a map from any of these types:
+
 * [`\Haldayne\Boost\Map`][2]
 * [`\Haldayne\Boost\Contract\Arrayable`][3]
 * [`\Haldayne\Boost\Contract\Jsonable`][4]
