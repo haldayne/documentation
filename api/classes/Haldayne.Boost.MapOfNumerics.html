@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">78</span></a></li>
+                <span class="label label-info">76</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -230,11 +230,17 @@ expressions, these are represented by <code>$_0</code> and <code>$_1</code> resp
 <a id="method___construct"></a><div class="element clickable method public method___construct inherited" data-toggle="collapse" data-target=".method___construct .collapse" title="public">
 <h2>Create a new map.</h2>
 <pre>__construct(\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array $collection<code> = null</code>) </pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>Initialize the map with the given collection, which can be any type
 that is &quot;collection-like&quot;: array, object, Traversable, another Map,
 etc.</p></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$collection</h4>
@@ -251,7 +257,9 @@ etc.</p></div>
 <h2>Create a new map containing all members from this map whose elements
 satisfy the expression.</h2>
 <pre>all(callable|string $expression) : \Haldayne\Boost\new</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>The expression decides whether an element is in or out. If the
 expression returns boolean false, the element is out.  Otherwise, it's
@@ -259,6 +267,10 @@ in.</p>
 <pre><code>$nums = new Map(range(0, 9));
 $even = $nums-&gt;all(function ($val, $key) { return 0 == $val % 2; });
 $odds = $nums-&gt;all('$_0 &amp; 1');</code></pre></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$expression</h4>
@@ -272,9 +284,15 @@ $odds = $nums-&gt;all('$_0 &amp; 1');</code></pre></div>
 <a id="method_count"></a><div class="element clickable method public method_count inherited" data-toggle="collapse" data-target=".method_count .collapse" title="public">
 <h2>Count the number of items in the map.</h2>
 <pre>count() : integer</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Returns</h3>
 <div class="subelement response"><code>integer</code></div>
 </div></div>
@@ -283,11 +301,17 @@ $odds = $nums-&gt;all('$_0 &amp; 1');</code></pre></div>
 <h2>Return a new map containing those keys and values that are not present
 in the given collection.</h2>
 <pre>diff(\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array $collection, \Haldayne\Boost\enum $comparison<code> = \Haldayne\Boost\Map::LOOSE</code>) : \Haldayne\Boost\new</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>If comparison is loose, then only those elements whose values match will
 be removed.  Otherwise, comparison is strict, and elements whose keys
 and values match will be removed.</p></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$collection</h4>
@@ -304,12 +328,14 @@ and values match will be removed.</p></div>
 </div>
 <a id="method_every"></a><div class="element clickable method public method_every inherited" data-toggle="collapse" data-target=".method_every .collapse" title="public">
 <h2>Test if every element passes the expression.</h2>
-<pre>every(callable|string $expression) </pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<pre>every(callable|string $expression) : boolean</pre>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <table class="table table-bordered"><tr>
-<th>bool</th>
+<th>api</th>
 <td></td>
 </tr></table>
 <h3>Parameters</h3>
@@ -317,13 +343,17 @@ and values match will be removed.</p></div>
 <h4>$expression</h4>
 <code>callable</code><code>string</code>
 </div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
 <a id="method_filter"></a><div class="element clickable method public method_filter inherited" data-toggle="collapse" data-target=".method_filter .collapse" title="public">
 <h2>Apply the filter to every element, creating a new map with only those
 elements from the original map that do not fail this filter.</h2>
 <pre>filter(callable|string $expression) : \Haldayne\Boost\new</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>The filter expressions receives two arguments:</p>
 <ul>
@@ -333,6 +363,10 @@ elements from the original map that do not fail this filter.</h2>
 <p>If the filter returns exactly boolean false, the element is not copied
 into the new map.  Otherwise, it is.  Keys from the original map carry
 into the new map.</p></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$expression</h4>
@@ -347,12 +381,18 @@ into the new map.</p></div>
 <h2>Return a new map containing the first N elements passing the
 expression.</h2>
 <pre>first(callable|string $expression, integer $n<code> = 1</code>) : \Haldayne\Boost\new</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>Like <code>find</code>, but stop after finding N elements from the front. Defaults
 to N = 1.</p>
 <pre><code>$nums = new Map(range(0, 9));
 $odd3 = $nums-&gt;first('1 == ($_0 % 2)', 3); // first three odds</code></pre></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$expression</h4>
@@ -370,13 +410,21 @@ $odd3 = $nums-&gt;first('1 == ($_0 % 2)', 3); // first three odds</code></pre></
 <a id="method_forget"></a><div class="element clickable method public method_forget inherited" data-toggle="collapse" data-target=".method_forget .collapse" title="public">
 <h2>Remove a key and its corresponding value from the map.</h2>
 <pre>forget(mixed $key) : \Haldayne\Boost\MapOfNumerics</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>This is the object method equivalent of the magic unset($map[$key]);</p></div>
-<table class="table table-bordered"><tr>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td></td>
+</tr>
+<tr>
 <th>fluent</th>
 <td>This method is part of a fluent interface and will return the same instance</td>
-</tr></table>
+</tr>
+</table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$key</h4>
@@ -389,10 +437,16 @@ $odd3 = $nums-&gt;first('1 == ($_0 % 2)', 3); // first three odds</code></pre></
 <a id="method_get"></a><div class="element clickable method public method_get inherited" data-toggle="collapse" data-target=".method_get .collapse" title="public">
 <h2>Get the value corresponding to the given key.</h2>
 <pre>get(mixed $key, mixed $default<code> = null</code>) : mixed</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>If the key does not exist in the map, return the default.</p>
 <p>This is the object method equivalent of the magic $map[$key].</p></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$key</h4>
@@ -409,9 +463,15 @@ $odd3 = $nums-&gt;first('1 == ($_0 % 2)', 3); // first three odds</code></pre></
 <a id="method_getIterator"></a><div class="element clickable method public method_getIterator inherited" data-toggle="collapse" data-target=".method_getIterator .collapse" title="public">
 <h2>Get an iterator for a copy of the map.</h2>
 <pre>getIterator() : \ArrayIterator</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Returns</h3>
 <div class="subelement response"><code>\ArrayIterator</code></div>
 </div></div>
@@ -419,9 +479,15 @@ $odd3 = $nums-&gt;first('1 == ($_0 % 2)', 3); // first three odds</code></pre></
 <a id="method_has"></a><div class="element clickable method public method_has inherited" data-toggle="collapse" data-target=".method_has .collapse" title="public">
 <h2>Determine if a key exists the map.</h2>
 <pre>has(mixed $key) : boolean</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>This is the object method equivalent of the magic isset($map[$key]);</p></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$key</h4>
@@ -435,11 +501,17 @@ $odd3 = $nums-&gt;first('1 == ($_0 % 2)', 3); // first three odds</code></pre></
 <h2>Return a new map containing those keys and values that are present in
 the given collection.</h2>
 <pre>intersect(\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array $collection, \Haldayne\Boost\enum $comparison<code> = \Haldayne\Boost\Map::LOOSE</code>) : \Haldayne\Boost\new</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>If comparison is loose, then only those elements whose value match will
 be included.  Otherise, comparison is strict, and elements whose keys &amp;
 values match will be included.</p></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$collection</h4>
@@ -457,13 +529,19 @@ values match will be included.</p></div>
 <a id="method_into"></a><div class="element clickable method public method_into inherited" data-toggle="collapse" data-target=".method_into .collapse" title="public">
 <h2>Put all of this map's elements into the target and return the target.</h2>
 <pre>into(\Haldayne\Boost\Map $target) : \Haldayne\Boost\$target</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><pre><code>$words = new MapOfStrings([ 'foo', 'bar' ]);
 $words-&gt;map('strlen($_0)')-&gt;into(new MapOfInts)-&gt;sum(); // 6</code></pre>
 <p>Use when you've mapped your elements into a different type, and you
 want to fluently perform operations on the new type. In the example,
 the sum of the words' lengths was calculated.</p></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument"><h4>$target</h4></div>
 <h3>Returns</h3>
@@ -473,9 +551,15 @@ the sum of the words' lengths was calculated.</p></div>
 <a id="method_isEmpty"></a><div class="element clickable method public method_isEmpty inherited" data-toggle="collapse" data-target=".method_isEmpty .collapse" title="public">
 <h2>Determine if any key and their values have been set into the map.</h2>
 <pre>isEmpty() : boolean</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Returns</h3>
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
@@ -483,12 +567,18 @@ the sum of the words' lengths was calculated.</p></div>
 <a id="method_last"></a><div class="element clickable method public method_last inherited" data-toggle="collapse" data-target=".method_last .collapse" title="public">
 <h2>Return a new map containing the last N elements passing the expression.</h2>
 <pre>last(callable|string $expression, integer $n<code> = 1</code>) : \Haldayne\Boost\new</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>Like <code>first</code>, but stop after finding N elements from the <em>end</em>.
 Defaults to N = 1.</p>
 <pre><code>$nums = new Map(range(0, 9));
 $odds = $nums-&gt;last('1 == ($_0 % 2)', 2); // last two odd numbers</code></pre></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$expression</h4>
@@ -507,7 +597,9 @@ $odds = $nums-&gt;last('1 == ($_0 % 2)', 2); // last two odd numbers</code></pre
 <h2>Walk the map, applying the expression to every element, transforming
 them into a new map.</h2>
 <pre>map(callable|string $expression) : \Haldayne\Boost\Map</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><pre><code>$nums = new Map(range(0, 9));
 $doubled = $nums-&gt;map('$_0 * 2');</code></pre>
@@ -521,6 +613,10 @@ original map: only the values have (potentially) changed.</p>
 <p>Recommended to use this method when you are mapping from one type to
 the same type: int to int, string to string, etc. If you are changing
 types, use the more powerful <code>transform</code> method.</p></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$expression</h4>
@@ -534,9 +630,13 @@ types, use the more powerful <code>transform</code> method.</p></div>
 <h2>Return the maximum value from the elements in the map. If there are no
 elements, throws a \RangeException.</h2>
 <pre>max() : \Haldayne\Boost\numeric</pre>
-<div class="labels"></div>
+<div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\RangeException</code></th>
@@ -549,9 +649,13 @@ elements, throws a \RangeException.</h2>
 <a id="method_mean"></a><div class="element clickable method public method_mean " data-toggle="collapse" data-target=".method_mean .collapse" title="public">
 <h2>Return the arithmetic mean ("average") of all elements in the map.</h2>
 <pre>mean() : \Haldayne\Boost\numeric</pre>
-<div class="labels"></div>
+<div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Returns</h3>
 <div class="subelement response"><code>\Haldayne\Boost\numeric</code></div>
 </div></div>
@@ -559,7 +663,9 @@ elements, throws a \RangeException.</h2>
 <a id="method_merge"></a><div class="element clickable method public method_merge inherited" data-toggle="collapse" data-target=".method_merge .collapse" title="public">
 <h2>Merge the given collection into this map.</h2>
 <pre>merge(\Haldayne\Boost\Map|\Haldayne\Boost\Contract\Arrayable|\Haldayne\Boost\Contract\Jsonable|\Haldayne\Boost\Traversable|object|array $collection, callable $merger, mixed $default<code> = null</code>) : \Haldayne\Boost\MapOfNumerics</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>The merger callable decides how to merge the current map's value with
 the given collection's value.  The merger callable receives two
@@ -570,10 +676,16 @@ arguments:</p>
 </ul>
 <p>If the current map does not have a value for a key in the collection,
 then the default value is assumed.</p></div>
-<table class="table table-bordered"><tr>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td></td>
+</tr>
+<tr>
 <th>fluent</th>
 <td>This method is part of a fluent interface and will return the same instance</td>
-</tr></table>
+</tr>
+</table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$collection</h4>
@@ -595,9 +707,13 @@ then the default value is assumed.</p></div>
 <h2>Return the minimum value from the elements in the map. If there are no
 elements, throws a \RangeException.</h2>
 <pre>min() : \Haldayne\Boost\numeric</pre>
-<div class="labels"></div>
+<div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\RangeException</code></th>
@@ -609,12 +725,14 @@ elements, throws a \RangeException.</h2>
 </div>
 <a id="method_none"></a><div class="element clickable method public method_none inherited" data-toggle="collapse" data-target=".method_none .collapse" title="public">
 <h2>Test that no elements pass the expression.</h2>
-<pre>none(callable|string $expression) </pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<pre>none(callable|string $expression) : boolean</pre>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <table class="table table-bordered"><tr>
-<th>bool</th>
+<th>api</th>
 <td></td>
 </tr></table>
 <h3>Parameters</h3>
@@ -622,6 +740,8 @@ elements, throws a \RangeException.</h2>
 <h4>$expression</h4>
 <code>callable</code><code>string</code>
 </div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
 <a id="method_offsetExists"></a><div class="element clickable method public method_offsetExists inherited" data-toggle="collapse" data-target=".method_offsetExists .collapse" title="public">
@@ -689,7 +809,9 @@ type: boolean, int, float, string, array, object, closure, resource.</p></div>
 <a id="method_partition"></a><div class="element clickable method public method_partition inherited" data-toggle="collapse" data-target=".method_partition .collapse" title="public">
 <h2>Groups elements of this map based on the result of an expression.</h2>
 <pre>partition(callable|string $expression) : \Haldayne\Boost\MapOfCollections</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>Calls the expression for each element in this map. The expression
 receives the value and key, respectively.  The expression may return
@@ -703,6 +825,10 @@ var_dump(
     $part['odd']-&gt;count(), // 5
     array_sum($part['even']-&gt;toArray()) // 20
 );</code></pre></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$expression</h4>
@@ -715,9 +841,15 @@ var_dump(
 <a id="method_pop"></a><div class="element clickable method public method_pop inherited" data-toggle="collapse" data-target=".method_pop .collapse" title="public">
 <h2>Treat the map as a stack and pop an element off its end.</h2>
 <pre>pop() : mixed</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Returns</h3>
 <div class="subelement response"><code>mixed</code></div>
 </div></div>
@@ -725,9 +857,13 @@ var_dump(
 <a id="method_product"></a><div class="element clickable method public method_product " data-toggle="collapse" data-target=".method_product .collapse" title="public">
 <h2>Return the product of all elements in the map.</h2>
 <pre>product() : \Haldayne\Boost\numeric</pre>
-<div class="labels"></div>
+<div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Returns</h3>
 <div class="subelement response"><code>\Haldayne\Boost\numeric</code></div>
 </div></div>
@@ -735,13 +871,21 @@ var_dump(
 <a id="method_push"></a><div class="element clickable method public method_push inherited" data-toggle="collapse" data-target=".method_push .collapse" title="public">
 <h2>Treat the map as a stack and push an element onto its end.</h2>
 <pre>push($element) : \Haldayne\Boost\MapOfNumerics</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
-<table class="table table-bordered"><tr>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td></td>
+</tr>
+<tr>
 <th>fluent</th>
 <td>This method is part of a fluent interface and will return the same instance</td>
-</tr></table>
+</tr>
+</table>
 <h3>Parameters</h3>
 <div class="subelement argument"><h4>$element</h4></div>
 <h3>Returns</h3>
@@ -752,7 +896,9 @@ var_dump(
 <h2>Walk the map, applying a reducing expression to every element, so as to
 reduce the map to a single value.</h2>
 <pre>reduce(callable|string $reducer, mixed $initial<code> = null</code>, callable|string|null $finisher<code> = null</code>) : mixed</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>The <code>$reducer</code> expression receives three arguments:</p>
 <ul>
@@ -769,10 +915,16 @@ $sum = $nums-&gt;reduce('$_0 + $_1');
 <p>If <code>$finisher</code> is a callable or string expression, then it will be
 called last, after iterating over all elements. It will be passed
 reduced value. The <code>$finisher</code> must return the new final value.</p></div>
-<table class="table table-bordered"><tr>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td></td>
+</tr>
+<tr>
 <th>see</th>
 <td><a href="http://php.net/manual/en/function.array-reduce.php"></a></td>
-</tr></table>
+</tr>
+</table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$reducer</h4>
@@ -794,10 +946,16 @@ reduced value. The <code>$finisher</code> must return the new final value.</p></
 <h2>Change the key for every element in the map using an expression to
 calculate the new key.</h2>
 <pre>rekey(callable|string $expression) : \Haldayne\Boost\new</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><pre><code>$keyed_by_bytecode = new Map(count_chars('war of the worlds', 1));
 $keyed_by_letter   = $keyed_by_bytecode-&gt;rekey('chr($_1)');</code></pre></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$expression</h4>
@@ -811,10 +969,14 @@ $keyed_by_letter   = $keyed_by_bytecode-&gt;rekey('chr($_1)');</code></pre></div
 <a id="method_scale"></a><div class="element clickable method public method_scale " data-toggle="collapse" data-target=".method_scale .collapse" title="public">
 <h2>Scale this map by the factors given in the other collection.</h2>
 <pre>scale(\Haldayne\Boost\Map|\Haldayne\Boost\Arrayable|\Haldayne\Boost\Jsonable|\Haldayne\Boost\Traversable|object|array $collection) : \Haldayne\Boost\MapOfNumerics</pre>
-<div class="labels"></div>
+<div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
+<div class="long_description"><p>This is like multiplication or division.</p></div>
 <table class="table table-bordered">
+<tr>
+<th>api</th>
+<td></td>
+</tr>
 <tr>
 <th>see</th>
 <td><a href="https://en.wikipedia.org/wiki/Scaling_(geometry)"></a></td>
@@ -836,13 +998,21 @@ $keyed_by_letter   = $keyed_by_bytecode-&gt;rekey('chr($_1)');</code></pre></div
 <a id="method_set"></a><div class="element clickable method public method_set inherited" data-toggle="collapse" data-target=".method_set .collapse" title="public">
 <h2>Set a key and its corresponding value into the map.</h2>
 <pre>set(mixed $key, mixed $value) : \Haldayne\Boost\MapOfNumerics</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><p>This is the object method equivalent of the magic $map[$key] = 'foo'.</p></div>
-<table class="table table-bordered"><tr>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td></td>
+</tr>
+<tr>
 <th>fluent</th>
 <td>This method is part of a fluent interface and will return the same instance</td>
-</tr></table>
+</tr>
+</table>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$key</h4>
@@ -858,12 +1028,14 @@ $keyed_by_letter   = $keyed_by_bytecode-&gt;rekey('chr($_1)');</code></pre></div
 </div>
 <a id="method_some"></a><div class="element clickable method public method_some inherited" data-toggle="collapse" data-target=".method_some .collapse" title="public">
 <h2>Test if at least one element passes the expression.</h2>
-<pre>some(callable|string $expression) </pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<pre>some(callable|string $expression) : boolean</pre>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <table class="table table-bordered"><tr>
-<th>bool</th>
+<th>api</th>
 <td></td>
 </tr></table>
 <h3>Parameters</h3>
@@ -871,14 +1043,20 @@ $keyed_by_letter   = $keyed_by_bytecode-&gt;rekey('chr($_1)');</code></pre></div
 <h4>$expression</h4>
 <code>callable</code><code>string</code>
 </div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
 <a id="method_sum"></a><div class="element clickable method public method_sum " data-toggle="collapse" data-target=".method_sum .collapse" title="public">
 <h2>Return the sum of all elements in the map.</h2>
 <pre>sum() : \Haldayne\Boost\numeric</pre>
-<div class="labels"></div>
+<div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Returns</h3>
 <div class="subelement response"><code>\Haldayne\Boost\numeric</code></div>
 </div></div>
@@ -887,25 +1065,41 @@ $keyed_by_letter   = $keyed_by_bytecode-&gt;rekey('chr($_1)');</code></pre></div
 <h2>Copy this map into an array, recursing as necessary to convert
 contained collections into arrays.</h2>
 <pre>toArray() </pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
-<table class="table table-bordered"><tr>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td></td>
+</tr>
+<tr>
 <th>inherited_from</th>
 <td>\Haldayne\Boost\Contract\Arrayable::toArray()</td>
-</tr></table>
+</tr>
+</table>
 </div></div>
 </div>
 <a id="method_toJson"></a><div class="element clickable method public method_toJson inherited" data-toggle="collapse" data-target=".method_toJson .collapse" title="public">
 <h2>Return a JSON representation of the object.</h2>
 <pre>toJson($options<code> = 0</code>) </pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
-<table class="table table-bordered"><tr>
+<table class="table table-bordered">
+<tr>
+<th>api</th>
+<td></td>
+</tr>
+<tr>
 <th>inherited_from</th>
 <td>\Haldayne\Boost\Contract\Jsonable::toJson()</td>
-</tr></table>
+</tr>
+</table>
 <h3>Parameters</h3>
 <div class="subelement argument"><h4>$options</h4></div>
 </div></div>
@@ -913,7 +1107,9 @@ contained collections into arrays.</h2>
 <a id="method_transform"></a><div class="element clickable method public method_transform inherited" data-toggle="collapse" data-target=".method_transform .collapse" title="public">
 <h2>Flexibly and thoroughly change this map into another map.</h2>
 <pre>transform(callable $transformer, callable|null $creator<code> = null</code>, callable|null $finisher<code> = null</code>) : mixed</pre>
-<div class="labels"><span class="label">Inherited</span></div>
+<div class="labels">
+<span class="label label-info">API</span><span class="label">Inherited</span>
+</div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"><pre><code>// transform a word list into a map of word to frequency in the list
 use Haldayne\Boost\Map;
@@ -971,6 +1167,10 @@ that was modified by the transformer calls. The finisher may transform
 that value once more as needed. If no finisher given, then no finishing
 step is made.</li>
 </ol></div>
+<table class="table table-bordered"><tr>
+<th>api</th>
+<td></td>
+</tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument"><h4>$transformer</h4></div>
 <div class="subelement argument">
@@ -988,10 +1188,14 @@ step is made.</li>
 <a id="method_translate"></a><div class="element clickable method public method_translate " data-toggle="collapse" data-target=".method_translate .collapse" title="public">
 <h2>Translate this map by the quantities given in the other collection.</h2>
 <pre>translate(\Haldayne\Boost\Map|\Haldayne\Boost\Arrayable|\Haldayne\Boost\Jsonable|\Haldayne\Boost\Traversable|object|array $collection) : \Haldayne\Boost\MapOfNumerics</pre>
-<div class="labels"></div>
+<div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
+<div class="long_description"><p>This is like addition or subtraction.</p></div>
 <table class="table table-bordered">
+<tr>
+<th>api</th>
+<td></td>
+</tr>
 <tr>
 <th>see</th>
 <td><a href="https://en.wikipedia.org/wiki/Translation_(geometry)"></a></td>
@@ -1256,7 +1460,7 @@ created.</h2>
 <a id="constant_LOOSE"> </a><div class="element clickable constant  constant_LOOSE" data-toggle="collapse" data-target=".constant_LOOSE .collapse" title="">
 <h2>Should the comparison be made loosely?</h2>
 <pre>LOOSE = true </pre>
-<div class="labels"></div>
+<div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <table class="table table-bordered">
@@ -1267,6 +1471,10 @@ created.</h2>
 <tr>
 <th>see</th>
 <td><a href="%5CHaldayne%5CBoost%5CMap::intersect"></a></td>
+</tr>
+<tr>
+<th>api</th>
+<td></td>
 </tr>
 </table>
 </div></div>
@@ -1274,7 +1482,7 @@ created.</h2>
 <a id="constant_STRICT"> </a><div class="element clickable constant  constant_STRICT" data-toggle="collapse" data-target=".constant_STRICT .collapse" title="">
 <h2>Should the comparison be made strictly?</h2>
 <pre>STRICT = false </pre>
-<div class="labels"></div>
+<div class="labels"><span class="label label-info">API</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <table class="table table-bordered">
@@ -1285,6 +1493,10 @@ created.</h2>
 <tr>
 <th>see</th>
 <td><a href="%5CHaldayne%5CBoost%5CMap::intersect"></a></td>
+</tr>
+<tr>
+<th>api</th>
+<td></td>
 </tr>
 </table>
 </div></div>
@@ -1296,7 +1508,7 @@ created.</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.8.5</a> and<br>
-            generated on 2015-12-31T16:55:21-05:00.<br></footer></div>
+            generated on 2015-12-31T17:01:38-05:00.<br></footer></div>
 </div>
 </body>
 </html>
